@@ -1,0 +1,53 @@
+{:uriI"ˆfile://app/assets/javascripts/templates/index.html?type=text/ng-html&id=e668fe1683b1b055e9810c398e1262408cf8f64214b1685dce387d0f1cfd3a19:ET:load_pathI"app/assets/javascripts;T:filenameI"0app/assets/javascripts/templates/index.html;T:	nameI"templates/index;T:logical_pathI"templates/index.html;T:content_typeI"text/ng-html;T:sourceI"ş<header class="row">
+  <h1 class="text-center col-md-6 col-md-offset-3">Test Page</h1>
+</header>
+
+
+
+<div class="loginInfo">
+<section>
+  <button type="button" class="btn btn-primary btn-large" data-ng-click="loginFacebook()">Login with Facebook</button> 
+</section>
+<section ng-if="cmbInfo">  
+  <div class="cmb_info">
+    <div> FaceBook Token : <span class='my_info'>{{cmbInfo[0].loginResult}}</span></div>
+    <div> session id : <span class='my_info'>{{cmbInfo[0].sessionid}}</span> </div>
+    <div> user id : <span class='my_info'>{{cmbInfo[0].jsonObj.id}}</span></div>
+    <div> gender : <span class='my_info'>{{cmbInfo[0].jsonObj.gender}}</span></div>
+    <div> birthday : <span class='my_info'>{{cmbInfo[0].jsonObj.birthday}}</span></div>
+    <div> criteria__gender : <span class='my_info'>{{cmbInfo[0].jsonObj.criteria__gender}}</span></div>
+    <div> user__email : <span class='my_info'>{{cmbInfo[0].jsonObj.user__email}}</span></div>   
+  </div>
+</section>
+</div>
+<div class="setInfo">
+  <form name='myForm'>
+<section>
+  <button type="button" class="btn btn-primary btn-large" data-ng-click="setMyProfile()">Set my profile</button>
+</section>
+    <label>User Name</label> <input type='text' ng-model='user_name' placeholder="User Name" /> <br />
+    <label>User Gender</label> <input type='text' ng-model='user_gender'  placeholder="m/f" /><br />
+    <label>Birthday</label> <input type="date" id="user_birthday" name="user_birthday" ng-model="user_birthday"
+       placeholder="YYYY-MM-DD" min="1900-01-01" max="2099-12-31" required />
+       <span role="alert">
+         <span class="error" ng-show="myForm.user_birthday.$error.required">
+             Required!</span>
+         <span class="error" ng-show="myForm.user_birthday.$error.date">
+             Not a valid date!</span>
+      </span>
+    <br />
+    <label>Criteria Gender</label> <input type='text' ng-model='user_criteria_gender'   placeholder="m/f" /><br />
+    <label>User Email</label>
+    <input type="email" name="input" placeholder="example@email.com"  ng-model="user_email" required>
+    <span role="alert">
+      <span class="error" ng-show="myForm.input.$error.required">
+        Required!</span>
+      <span class="error" ng-show="myForm.input.$error.email">
+        Not valid email!</span>
+    </span>    
+</form>
+</div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI">file-digest://app/assets/javascripts/templates/index.html;TTF:charsetI"
+utf-8;F:digest"%{õw¢õ$1â†«	k›#N}z­k¡\qƒ3i‰ÕªO^:lengthiş:dependencies_digest"%gÚ/]ruB(¶SXĞMÎ(êJÄ¥Aseàb—¯:idI"Ee668fe1683b1b055e9810c398e1262408cf8f64214b1685dce387d0f1cfd3a19;F:
+mtimel+Õ}cX

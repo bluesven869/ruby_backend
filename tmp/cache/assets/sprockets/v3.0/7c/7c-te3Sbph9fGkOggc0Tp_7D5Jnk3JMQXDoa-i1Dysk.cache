@@ -1,0 +1,107 @@
+I"˜(function() {
+  var aggregate_dating, cmbInfo, controllers;
+
+  aggregate_dating = angular.module('aggregate_dating', ['templates', 'ngRoute', 'ngResource', 'controllers', 'facebook']);
+
+  aggregate_dating.config([
+    '$routeProvider', function($routeProvider) {
+      return $routeProvider.when('/', {
+        templateUrl: "index.html",
+        controller: 'CMBController'
+      });
+    }
+  ]);
+
+  aggregate_dating.config([
+    '$facebookProvider', function($facebookProvider) {
+      return $facebookProvider.init({
+        appId: '349609268750448'
+      });
+    }
+  ]);
+
+  aggregate_dating.config([
+    '$qProvider', function($qProvider) {
+      return $qProvider.errorOnUnhandledRejections(false);
+    }
+  ]);
+
+  cmbInfo = [];
+
+  controllers = angular.module('controllers', []);
+
+  controllers.controller("CMBController", [
+    '$scope', '$routeParams', '$location', '$facebook', '$http', '$resource', function($scope, $routeParams, $location, $facebook, $http, $resource) {
+      $scope.loginFacebook = function() {
+        return $facebook.login({
+          scope: 'email'
+        }).then((function(response) {
+          var authtoken;
+          authtoken = response.authResponse.accessToken;
+          console.log('FB Login Success', authtoken);
+          $scope.fbToken = authtoken;
+          return $scope.loginCMB(authtoken);
+        }), function(response) {
+          return console.log('FB Login Error', response);
+        });
+      };
+      $scope.loginCMB = function(authtoken) {
+        var Cmb;
+        console.log('LOGIN CMB');
+        Cmb = $resource('/cmb', {
+          format: 'json'
+        });
+        return Cmb.query({
+          fbToken: authtoken
+        }, function(results) {
+          $scope.cmbInfo = results;
+          $scope.sessionid = results[0].sessionid;
+          $scope.user_gender = results[0].jsonObj.gender;
+          $scope.user_name = results[0].jsonObj.full_name;
+          $scope.user_email = results[0].jsonObj.user__email;
+          $scope.user_criteria_gender = results[0].jsonObj.criteria__gender;
+          return $scope.user_birthday = new Date(results[0].jsonObj.birthday);
+        });
+      };
+      return $scope.setMyProfile = function() {
+        if ($scope.fbToken == null) {
+          alert("Please Click 'Login with Facebook'.");
+          return;
+        }
+        if ($scope.user_name == null) {
+          alert("Please Input 'User Name'.");
+          return;
+        }
+        if ($scope.user_gender == null) {
+          alert("Please Input 'User Gender'.");
+          return;
+        }
+        if ($scope.user_gender !== "f" && $scope.user_gender !== "m") {
+          alert("'User Gender' must be 'm/f'.");
+          return;
+        }
+        if ($scope.user_criteria_gender == null) {
+          alert("Please Input 'Criteria Gender'.");
+          return;
+        }
+        if ($scope.user_criteria_gender !== "f" && $scope.user_criteria_gender !== "m") {
+          alert("'Criteria Gender' must be 'm/f'.");
+          return;
+        }
+        if ($scope.user_email == null) {
+          alert("Please Input 'User Email'.");
+          return;
+        }
+        $scope.user = {};
+        $scope.user.name = $scope.user_name;
+        $scope.user.gender = $scope.user_gender;
+        $scope.user.birthday = $scope.user_birthday;
+        $scope.user.email = $scope.user_email;
+        $scope.user.criteria_gender = $scope.user_criteria_gender;
+        return console.log($scope.user);
+      };
+    }
+  ]);
+
+}).call(this);
+:ET

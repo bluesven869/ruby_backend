@@ -1,0 +1,76 @@
+I"¾(function() {
+  var aggregate_dating, cmbInfo, controllers;
+
+  aggregate_dating = angular.module('aggregate_dating', ['templates', 'ngRoute', 'ngResource', 'controllers', 'facebook']);
+
+  aggregate_dating.config([
+    '$routeProvider', function($routeProvider) {
+      return $routeProvider.when('/', {
+        templateUrl: "index.html",
+        controller: 'CMBController'
+      });
+    }
+  ]);
+
+  aggregate_dating.config([
+    '$facebookProvider', function($facebookProvider) {
+      return $facebookProvider.init({
+        appId: '349609268750448'
+      });
+    }
+  ]);
+
+  aggregate_dating.config([
+    '$qProvider', function($qProvider) {
+      return $qProvider.errorOnUnhandledRejections(false);
+    }
+  ]);
+
+  cmbInfo = [];
+
+  controllers = angular.module('controllers', []);
+
+  controllers.controller("CMBController", [
+    '$scope', '$routeParams', '$location', '$facebook', '$http', '$resource', function($scope, $routeParams, $location, $facebook, $http, $resource) {
+      $scope.loginFacebook = function() {
+        return $facebook.login({
+          scope: 'email'
+        }).then((function(response) {
+          var authtoken;
+          authtoken = response.authResponse.accessToken;
+          console.log('FB Login Success', authtoken);
+          return $scope.loginCMB(authtoken);
+        }), function(response) {
+          return console.log('FB Login Error', response);
+        });
+      };
+      $scope.meFacebook = function() {
+        return $facebook.api('/me', {
+          fields: 'id, name, email'
+        }).then(function(response) {
+          Auth.loginFacebook(response).then(function() {
+            return console.log('FB Auth Token Get Success', response);
+          });
+          return function(err) {
+            return console.log('FB Auth Token Get Error', err);
+          };
+        });
+      };
+      return $scope.loginCMB = function(authtoken) {
+        var Cmb;
+        console.log('LOGIN CMB');
+        Cmb = $resource('/cmb', {
+          format: 'json'
+        });
+        return Cmb.query({
+          fbToken: authtoken
+        }, function(results) {
+          $scope.cmbInfo = results;
+          return $scope.sessionid = results[0].sessionid;
+        });
+      };
+    }
+  ]);
+
+}).call(this);
+:ET
