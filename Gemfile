@@ -27,7 +27,6 @@ gem 'sass', '3.2.19'
 gem 'bower-rails'
 gem 'angular-rails-templates'
 gem 'httparty', '~> 0.13.7'
-
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -59,3 +58,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'rails_12factor', group: :production
