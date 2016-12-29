@@ -47,10 +47,9 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         $scope.loginCMB(authtoken)
     ), (response) ->
         console.log 'FB Login Error', response
- 
 	
     $scope.loginCMB = (authtoken) ->
-      console.log 'LOGIN CMB'     
+      $scope.cmbInfo = [] 
       Cmb = $resource('/cmb', { format: 'json' })
       Cmb.query(fbToken: authtoken , (results) -> 
         $scope.cmbInfo = results
@@ -85,6 +84,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       if(not $scope.user_email?)
         alert "Please Input 'User Email'."
         return
+      $scope.profile_flag = true
       $scope.user = {}
       $scope.user.name = $scope.user_name
       $scope.user.id = $scope.userid
@@ -103,12 +103,15 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         $scope.user_email = results[0].jsonObj.user__email        
         $scope.user_criteria_gender = results[0].jsonObj.criteria__gender        
         $scope.user_birthday = new Date(results[0].jsonObj.birthday)
+        $scope.profile_flag = false
         console.log 'data OK'   
       )
     $scope.setBagels = ->
       if(not $scope.fbToken?)
         alert "Please Click 'Login with Facebook'."
         return     
+      $scope.bagels_flag = true
+      $scope.BagelsInfo = [] 
       Cmb = $resource('/cmb/get_bagels', { format: 'json' })
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
         $scope.BagelsInfo = results
@@ -118,6 +121,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         $scope.BagelInfo.cursor_before = results[0].jsonObj.cursor_before
         $scope.BagelInfo.more_after = results[0].jsonObj.more_after
         $scope.BagelInfo.more_before = results[0].jsonObj.more_before
+        $scope.bagels_flag = false
         console.log 'Bagles OK'   
       )
     $scope.getBagelsHistory = ->
@@ -128,16 +132,21 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       if(not $scope.BagelInfo.hex_id?)
         alert "Please Click 'Set Bagels'."
         return    
-      
+      $scope.bagels_history_flag = true
+      $scope.BagelsList = [] 
       Cmb = $resource('/cmb/get_bagels_history', { format: 'json' })
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, bagel: $scope.BagelInfo, (results) -> 
-        $scope.BagelsList = results       
+        $scope.BagelsList = results    
+        $scope.bagels_history_flag = false   
         console.log 'Bagles History OK'   
       )
     $scope.getResources = ->
+      $scope.get_resources_flag = true
       Cmb = $resource('/cmb/get_resources', { format: 'json' })
+      $scope.ResourceInfo = [] 
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
         $scope.ResourceInfo = results
+        $scope.get_resources_flag = false
         console.log 'ResourceOk'
       )
 
@@ -145,9 +154,12 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       if(not $scope.fbToken?)
         alert "Please Click 'Login with Facebook'."
         return
+      $scope.photolabs_flag = true
+      $scope.PhotoLabs = []
       Cmb = $resource('/cmb/get_photolabs', { format: 'json' })
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
         $scope.PhotoLabs = results
+        $scope.photolabs_flag = false
         console.log 'get_photoLabs'
       )
 
@@ -155,10 +167,13 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       if(not $scope.fbToken?)
         alert "Please Click 'Login with Facebook'."
         return
+      $scope.give_take_flag = true
       $scope.girl_id = '2244848'
+      $scope.GiveTaskResult = []
       Cmb = $resource('/cmb/give_take', { format: 'json' })      
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, customer_id: $scope.girl_id, (results) -> 
         $scope.GiveTaskResult = results
+        $scope.give_take_flag = false
         console.log 'giveTake'
       )
 
@@ -179,15 +194,17 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       if(not $scope.give_ten_id?)
         alert "Please Input 'Given ten id'."
         return
+      $scope.purchase_flag = true
       $scope.Purchase = {}
       $scope.Purchase.item_name = $scope.item_name
       $scope.Purchase.item_count = $scope.item_count
       $scope.Purchase.expected_price = $scope.expected_price
       $scope.Purchase.give_ten_id = $scope.give_ten_id
-      
+      $scope.PurchaseResult = []
       Cmb = $resource('/cmb/purchase', { format: 'json' })      
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, purchase: $scope.Purchase, (results) -> 
-        $scope.GiveTaskResult = results
+        $scope.PurchaseResult = results
+        $scope.purchase_flag = false
         console.log 'PurchaseOK'
       )
 
@@ -197,8 +214,11 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         return
       Cmb = $resource('/cmb/report', { format: 'json' })      
       $scope.report_num = "4"
+      $scope.report_flag = true
+      $scope.ReportResult = []
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
         $scope.ReportResult = results
+        $scope.report_flag = false
         console.log 'Report'
       )
 

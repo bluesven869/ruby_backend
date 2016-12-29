@@ -150,7 +150,7 @@ class CmbController < ApplicationController
 	end
 	def get_bagels_history
 		#Get Bagels History
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)) || (not params.has_key(:bagel))
+		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)) || (not params.has_key?(:bagel))
 			@BaglesInfo = [{"success": false, "jsonObj": "Params Error"}]
 		else
 			fbToken = params[:fbToken].to_str
@@ -184,7 +184,7 @@ class CmbController < ApplicationController
 	end
 	def send_batch
 		#send_batch
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)) || (not params.has_key(:hex_id))
+		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)) || (not params.has_key?(:hex_id))
 			@BaglesInfo = [{"success": false, "jsonObj": "Params Error"}]
 		else
 			fbToken = params[:fbToken].to_str
@@ -305,7 +305,7 @@ class CmbController < ApplicationController
 
 	def give_take
 		#Give Take
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)) || (not params.has_key?(:sessionid) )
+		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)) || (not params.has_key?(:customer_id) )
 			@GiveTakeResult = [{"success": false, "jsonObj": "Params Error"}]
 		else
 			fbToken 		= params[:fbToken].to_str
