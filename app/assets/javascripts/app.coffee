@@ -162,5 +162,34 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         console.log 'giveTake'
       )
 
+    $scope.purchase = ->
+      if(not $scope.fbToken?)
+        alert "Please Click 'Login with Facebook'."
+        return
+      $scope.girl_id = '2244848'
+      if(not $scope.item_count?)
+        alert "Please Input 'Item Count'."
+        return
+      if(not $scope.item_name?)
+        alert "Please Input 'Item Name'."
+        return
+      if(not $scope.expected_price?)
+        alert "Please Input 'expected_price'."
+        return
+      if(not $scope.give_ten_id?)
+        alert "Please Input 'Given ten id'."
+        return
+      $scope.Purchase = {}
+      $scope.Purchase.item_name = $scope.item_name
+      $scope.Purchase.item_count = $scope.item_count
+      $scope.Purchase.expected_price = $scope.expected_price
+      $scope.Purchase.give_ten_id = $scope.give_ten_id
+      
+      Cmb = $resource('/cmb/purchase', { format: 'json' })      
+      Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, purchase: $scope.Purchase, (results) -> 
+        $scope.GiveTaskResult = results
+        console.log 'PurchaseOK'
+      )
+
 ])
 

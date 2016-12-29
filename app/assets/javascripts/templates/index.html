@@ -95,7 +95,7 @@
 </section>    
 </div>
 
-<div class="general_div">  
+<div class="general_div completed">  
 <section>
   <button type="button" class="btn btn-primary btn-large" data-ng-click="purchase()">Purchase</button>
 </section>
@@ -105,8 +105,8 @@
 <label> Expected Price </label> <input type='text' ng-model='expected_price' placeholder="Expected Price" /> <br />
 <label> Give ten id </label> <input type='text' ng-model='give_ten_id' placeholder="Give ten id" /> <br />
 
-<section ng-if="GiveTake">  
-  <label> success </label><span class='my_info'>{{GiveTake.success}}/span><br />  
+<section ng-if="GiveTaskResult">  
+  <span class='my_info'>{{GiveTaskResult}}</span>
 </section>    
 </div>
 

@@ -9370,3 +9370,46 @@ Processing by CmbController#give_take as JSON
 Completed 200 OK in 2804ms (Views: 4.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-12-29 20:23:40 +0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 543ms (Views: 541.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAOg7549Ic4O0kFZBELeOWZCXsqt6afm6BAf637ZCYEfEtzjoZCgqZCLGZCzTNzjfa5cBhLYgu5QT3b0I1WyOj05LkeRtLFyRkbRlBHJDifJYs4DDvQZAAYuGDUf7gvVDDTaqgyYRZBLyyy4GXQ4ju9flPlgywYsVZAwZDZD&format=json" for 127.0.0.1 at 2016-12-29 20:23:46 +0800
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAOg7549Ic4O0kFZBELeOWZCXsqt6afm6BAf637ZCYEfEtzjoZCgqZCLGZCzTNzjfa5cBhLYgu5QT3b0I1WyOj05LkeRtLFyRkbRlBHJDifJYs4DDvQZAAYuGDUf7gvVDDTaqgyYRZBLyyy4GXQ4ju9flPlgywYsVZAwZDZD"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.2ms)
+  Rendered cmb/index.json.jbuilder (1.8ms)
+Completed 200 OK in 5777ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/purchase?fbToken=EAAE998BGKHABAOg7549Ic4O0kFZBELeOWZCXsqt6afm6BAf637ZCYEfEtzjoZCgqZCLGZCzTNzjfa5cBhLYgu5QT3b0I1WyOj05LkeRtLFyRkbRlBHJDifJYs4DDvQZAAYuGDUf7gvVDDTaqgyYRZBLyyy4GXQ4ju9flPlgywYsVZAwZDZD&format=json&purchase=%7B%22item_name%22:%22Take%22,%22item_count%22:%221%22,%22expected_price%22:%22385%22,%22give_ten_id%22:%222923597%22%7D&sessionid=ias0fdrx4t5ve7fq4ojvcdm8k05fqpds" for 127.0.0.1 at 2016-12-29 20:24:35 +0800
+Processing by CmbController#purchase as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAOg7549Ic4O0kFZBELeOWZCXsqt6afm6BAf637ZCYEfEtzjoZCgqZCLGZCzTNzjfa5cBhLYgu5QT3b0I1WyOj05LkeRtLFyRkbRlBHJDifJYs4DDvQZAAYuGDUf7gvVDDTaqgyYRZBLyyy4GXQ4ju9flPlgywYsVZAwZDZD", "purchase"=>"{\"item_name\":\"Take\",\"item_count\":\"1\",\"expected_price\":\"385\",\"give_ten_id\":\"2923597\"}", "sessionid"=>"ias0fdrx4t5ve7fq4ojvcdm8k05fqpds"}
+  Rendering cmb/purchase.json.jbuilder
+  Rendered cmb/_giveTakeElement.json.jbuilder (0.5ms)
+  Rendered cmb/purchase.json.jbuilder (1.6ms)
+Completed 200 OK in 2547ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/purchase?fbToken=EAAE998BGKHABAOg7549Ic4O0kFZBELeOWZCXsqt6afm6BAf637ZCYEfEtzjoZCgqZCLGZCzTNzjfa5cBhLYgu5QT3b0I1WyOj05LkeRtLFyRkbRlBHJDifJYs4DDvQZAAYuGDUf7gvVDDTaqgyYRZBLyyy4GXQ4ju9flPlgywYsVZAwZDZD&format=json&purchase=%7B%22item_name%22:%22Take%22,%22item_count%22:%221%22,%22expected_price%22:%22385%22,%22give_ten_id%22:%222244848%22%7D&sessionid=ias0fdrx4t5ve7fq4ojvcdm8k05fqpds" for 127.0.0.1 at 2016-12-29 20:25:34 +0800
+Processing by CmbController#purchase as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAOg7549Ic4O0kFZBELeOWZCXsqt6afm6BAf637ZCYEfEtzjoZCgqZCLGZCzTNzjfa5cBhLYgu5QT3b0I1WyOj05LkeRtLFyRkbRlBHJDifJYs4DDvQZAAYuGDUf7gvVDDTaqgyYRZBLyyy4GXQ4ju9flPlgywYsVZAwZDZD", "purchase"=>"{\"item_name\":\"Take\",\"item_count\":\"1\",\"expected_price\":\"385\",\"give_ten_id\":\"2244848\"}", "sessionid"=>"ias0fdrx4t5ve7fq4ojvcdm8k05fqpds"}
+  Rendering cmb/purchase.json.jbuilder
+  Rendered cmb/_giveTakeElement.json.jbuilder (0.3ms)
+  Rendered cmb/purchase.json.jbuilder (1.2ms)
+Completed 200 OK in 6555ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/purchase?fbToken=EAAE998BGKHABAOg7549Ic4O0kFZBELeOWZCXsqt6afm6BAf637ZCYEfEtzjoZCgqZCLGZCzTNzjfa5cBhLYgu5QT3b0I1WyOj05LkeRtLFyRkbRlBHJDifJYs4DDvQZAAYuGDUf7gvVDDTaqgyYRZBLyyy4GXQ4ju9flPlgywYsVZAwZDZD&format=json&purchase=%7B%22item_name%22:%22Take%22,%22item_count%22:%221%22,%22expected_price%22:%22385%22,%22give_ten_id%22:%222244848%22%7D&sessionid=ias0fdrx4t5ve7fq4ojvcdm8k05fqpds" for 127.0.0.1 at 2016-12-29 20:26:20 +0800
+Processing by CmbController#purchase as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAOg7549Ic4O0kFZBELeOWZCXsqt6afm6BAf637ZCYEfEtzjoZCgqZCLGZCzTNzjfa5cBhLYgu5QT3b0I1WyOj05LkeRtLFyRkbRlBHJDifJYs4DDvQZAAYuGDUf7gvVDDTaqgyYRZBLyyy4GXQ4ju9flPlgywYsVZAwZDZD", "purchase"=>"{\"item_name\":\"Take\",\"item_count\":\"1\",\"expected_price\":\"385\",\"give_ten_id\":\"2244848\"}", "sessionid"=>"ias0fdrx4t5ve7fq4ojvcdm8k05fqpds"}
+  Rendering cmb/purchase.json.jbuilder
+  Rendered cmb/_giveTakeElement.json.jbuilder (0.2ms)
+  Rendered cmb/purchase.json.jbuilder (1.1ms)
+Completed 200 OK in 2400ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+

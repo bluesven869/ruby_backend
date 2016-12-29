@@ -308,4 +308,36 @@ class CmbController < ApplicationController
 		  	@GiveTakeResult = [{"success": false}]
 		end	      
 	end
+
+	def purchase
+		#Give Take
+		fbToken 		= params[:fbToken].to_str
+		sessionid 		= params[:sessionid].to_str
+		@purchase 	= JSON.parse params[:purchase];
+		base_uri 		= 'https://api.coffeemeetsbagel.com/purchase'		
+		my_cookie = "sessionid="+sessionid
+      	headers = {
+	    	'AppStore-Version': '3.4.1.779',
+			'App-Version': '779',
+			'Client': 'Android',
+			'Content-Type': 'application/json',
+			'Facebook-Auth-Token': fbToken,
+			'Cookie': my_cookie	
+      	}
+      	options = {	    	
+	    	"item_count":@purchase["item_count"],
+	    	"item_name":@purchase["item_name"],
+	    	"expected_price":@purchase["expected_price"],
+	    	"give_ten_id":@purchase["give_ten_id"]
+		}	
+	    response = self.class.post(base_uri.to_str,
+	    	:body=> options.to_json,
+	      	:headers => headers)	    
+	    if response.success?
+	      	@PurchaseResult = [{"success": true}]
+	    else
+		  	@PurchaseResult = [{"success": false}]
+		end	      
+	end
+
 end
