@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get '/cmb/get_photolabs'
   get '/cmb/give_take'
   get '/cmb/purchase'
+  get '/cmb/report'
 end

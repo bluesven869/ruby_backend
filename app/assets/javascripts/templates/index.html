@@ -5,9 +5,8 @@
 <div class="general_div completed">
 <section>
   <button type="button" class="btn btn-primary btn-large" data-ng-click="loginFacebook()">Login with Facebook</button>
-  &nbsp;&nbsp;&nbsp;&nbsp;<img src='assets/facebook-loader.gif' height=20px ng-if="login_flag" /> 
+  &nbsp;&nbsp;&nbsp;&nbsp;<img src='assets/facebook-loader.gif' height=20px ng-if="login_flag" />   
 </section>
-<img src='assets/completed.png' class='mark' />
 <section ng-if="cmbInfo">  
   <div class="cmb_info">
     <label>FaceBook Token</label> <span class='my_info'>{{cmbInfo[0].loginResult}}</span><br />
@@ -110,7 +109,7 @@
 </section>    
 </div>
 
-<div class="general_div">  
+<div class="general_div completed">  
 <section>
   <button type="button" class="btn btn-primary btn-large" data-ng-click="getResources()">Resource</button>
 </section>
@@ -125,10 +124,14 @@
 </section>    
 </div>
 </div>
-<div class="general_div">  
+<div class="general_div completed">  
 <section>
   <button type="button" class="btn btn-primary btn-large" ata-ng-click="report()">Report</button>
+
 </section>
+<section ng-if="ReportResult">  
+  <span class='my_info'>{{ReportResult}}</span>
+</section>    
 </div>
 
 <div class="general_div">  

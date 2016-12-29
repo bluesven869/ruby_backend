@@ -191,5 +191,16 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         console.log 'PurchaseOK'
       )
 
+    $scope.report = ->
+      if(not $scope.fbToken?)
+        alert "Please Click 'Login with Facebook'."
+        return
+      Cmb = $resource('/cmb/report', { format: 'json' })      
+      $scope.report_num = "4"
+      Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
+        $scope.ReportResult = results
+        console.log 'Report'
+      )
+
 ])
 
