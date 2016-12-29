@@ -46,4 +46,11 @@ body{
 		background:black;
 		color:white;
 	}	
+	.loading-bar{
+		height:20px;
+		width:30px;
+		background-image:image-url('facebook-loader.gif');
+		background-size:30px 20px ;
+		background-repeat:no-repeat;
+	}
 }
