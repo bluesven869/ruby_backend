@@ -171,7 +171,6 @@ class CmbController < ApplicationController
 		  	@BaglesList = [{"success": false, "jsonObj": response}]
 		end	  
 	end
-
 	def send_batch
 		#send_batch
 		fbToken = params[:fbToken].to_str

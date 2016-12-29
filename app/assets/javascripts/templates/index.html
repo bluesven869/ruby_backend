@@ -5,7 +5,7 @@
 <div class="general_div completed">
 <section>
   <button type="button" class="btn btn-primary btn-large" data-ng-click="loginFacebook()">Login with Facebook</button>
-  &nbsp;&nbsp;&nbsp;&nbsp;<img src='assets/facebook-loader.gif' height=20px ng-if="loading_flag" /> 
+  &nbsp;&nbsp;&nbsp;&nbsp;<img src='assets/facebook-loader.gif' height=20px ng-if="login_flag" /> 
 </section>
 <img src='assets/completed.png' class='mark' />
 <section ng-if="cmbInfo">  
@@ -17,7 +17,7 @@
     <label>birthday </label>  <span class='my_info'>{{cmbInfo[0].jsonObj.birthday}}</span><br />
     <label>criteria__gender</label> <span class='my_info'>{{cmbInfo[0].jsonObj.criteria__gender}}</span><br />
     <label>user__email</label> <span class='my_info'>{{cmbInfo[0].jsonObj.user__email}}</span><br />
-  </div>
+
 </section>
 </div>
 <div class="general_div completed">
@@ -67,7 +67,7 @@
   </ul>
 </section>    
 </div>
-<div class="general_div">  
+<div class="general_div completed">  
 <section>
   <button type="button" class="btn btn-primary btn-large" data-ng-click="getBagelsHistory()">Bagels History</button>
 </section>
@@ -75,7 +75,6 @@
   <span class='my_info'>{{BagelsList}}</span>
 </section>    
 </div>
-
 <div class="general_div completed">  
 <section>
   <button type="button" class="btn btn-primary btn-large" data-ng-click="sendBaches()">Send Baches</button>
@@ -85,7 +84,6 @@
   <label>data </label><span class='my_info'>{{BachesInfo}}</span><br />  
 </section>    
 </div>
-
 
 <div class="general_div">  
 <section>
@@ -110,7 +108,7 @@
 <label> Give ten id </label> <input type='text' ng-model='give_ten_id' placeholder="Give ten id" /> <br />
 
 <section ng-if="GiveTake">  
-  <label> success </label><span class='my_info'>{{GiveTake.success}}</span><br />  
+  <label> success </label><span class='my_info'>{{GiveTake.success}}/span><br />  
 </section>    
 </div>
 
@@ -128,7 +126,7 @@
 </div>
 <div class="general_div">  
 <section>
-  <button type="button" class="btn btn-primary btn-large" data-ng-click="report()">Report</button>
+  <button type="button" class="btn btn-primary btn-large" ata-ng-click="report()">Report</button>
 </section>
 </div>
 

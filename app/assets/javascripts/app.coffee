@@ -36,10 +36,10 @@ cmbInfo = []
 controllers = angular.module('controllers',[])
 controllers.controller("CMBController", [ '$scope', '$routeParams', '$location', '$facebook', '$http', '$resource'
   ($scope,$routeParams,$location,$facebook,$http,$resource)->
-    $scope.loading_flag = false
-    $scope.selected_girl_flag = false
+    
+    $scope.login_flag = false
     $scope.loginFacebook = ->           
-      $scope.loading_flag = true
+      $scope.login_flag = true
       $facebook.login(scope: 'email').then ((response) ->
         authtoken = response.authResponse.accessToken
         console.log 'FB Login Success', authtoken
@@ -61,7 +61,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         $scope.user_email = results[0].jsonObj.user__email        
         $scope.user_criteria_gender = results[0].jsonObj.criteria__gender        
         $scope.user_birthday = new Date(results[0].jsonObj.birthday)
-        $scope.loading_flag = false
+        $scope.login_flag = false
       )
     $scope.setMyProfile = ->
       if(not $scope.fbToken?)
@@ -131,20 +131,14 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       
       Cmb = $resource('/cmb/get_bagels_history', { format: 'json' })
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, bagel: $scope.BagelInfo, (results) -> 
-        $scope.BagelsList = results
-        
+        $scope.BagelsList = results       
         console.log 'Bagles History OK'   
       )
     $scope.getResources = ->
-      if(not $scope.fbToken?)
-        alert "Please Click 'Login with Facebook'."
-        return
-      
       Cmb = $resource('/cmb/get_resources', { format: 'json' })
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
         $scope.ResourceInfo = results
-        console.log 'ResourceOk'   
+        console.log 'ResourceOk'
       )
-
 ])
 
