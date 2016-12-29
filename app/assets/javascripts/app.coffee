@@ -140,5 +140,15 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         $scope.ResourceInfo = results
         console.log 'ResourceOk'
       )
+
+    $scope.photolabs = ->
+      if(not $scope.fbToken?)
+        alert "Please Click 'Login with Facebook'."
+        return
+      Cmb = $resource('/cmb/get_photolabs', { format: 'json' })
+      Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
+        $scope.PhotoLabs = results
+        console.log 'get_photoLabs'
+      )
 ])
 

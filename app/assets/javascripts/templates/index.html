@@ -39,15 +39,13 @@
     <label>Criteria Gender</label> <input type='text' ng-model='user_criteria_gender'   placeholder="m/f" /><br />
     <label>User Email</label>
     <input type="email" name="input" placeholder="example@email.com"  ng-model="user_email" required>
-    <span role="alert">
+     <span role="alert">
       <span class="error" ng-show="myForm.input.$error.required">
         Required!</span>
       <span class="error" ng-show="myForm.input.$error.email">
         Not valid email!</span>
     </span>    
 </form>
-
-
 </div>
 
 
@@ -119,10 +117,14 @@
 <p>{{ResourceInfo[0].what_is_your_ideal_next_vacation}}</p>
 </div>
 
-<div class="general_div">  
+<div class="general_div completed">  
 <section>
   <button type="button" class="btn btn-primary btn-large" data-ng-click="photolabs()">Photo Labs</button>
 </section>
+<section ng-if="PhotoLabs">  
+  <span class='my_info'>{{PhotoLabs}}</span>
+</section>    
+</div>
 </div>
 <div class="general_div">  
 <section>

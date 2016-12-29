@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get '/cmb/send_batch'
   get '/cmb/get_resources'
   get '/cmb/get_bagels_history'
+  get '/cmb/get_photolabs'
 end

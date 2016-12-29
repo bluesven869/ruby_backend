@@ -253,4 +253,30 @@ class CmbController < ApplicationController
 		  	@ResourceInfo = [{"success": false, "jsonObj": response}]
 		end	  
 	end
+	def get_photolabs
+		#Get Bagels
+		fbToken = params[:fbToken].to_str
+		sessionid = params[:sessionid].to_str
+		base_uri = 'https://api.coffeemeetsbagel.com/photolabs'		
+		my_cookie = "sessionid="+sessionid
+      	headers = {
+	    	'AppStore-Version': '3.4.1.779',
+			'App-Version': '779',
+			'Client': 'Android',
+			'Content-Type': 'application/json',
+			'Facebook-Auth-Token': fbToken,
+			'Cookie': my_cookie	
+      	}
+      	options = {	    	
+	    	
+		}	
+	    response = self.class.get(base_uri.to_str,
+	    	:body=> options.to_json,
+	      	:headers => headers)
+	    if response.success?
+	      	@PhotoLabs = [{"success": true, "jsonObj": response}]
+	    else
+		  	@PhotoLabs = [{"success": false, "jsonObj": response}]
+		end	  
+	end
 end
