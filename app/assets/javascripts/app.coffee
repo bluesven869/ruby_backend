@@ -37,6 +37,7 @@ controllers = angular.module('controllers',[])
 controllers.controller("CMBController", [ '$scope', '$routeParams', '$location', '$facebook', '$http', '$resource'
   ($scope,$routeParams,$location,$facebook,$http,$resource)->
     $scope.loading_flag = false
+    $scope.selected_girl_flag = false
     $scope.loginFacebook = ->           
       $scope.loading_flag = true
       $facebook.login(scope: 'email').then ((response) ->
@@ -111,21 +112,38 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       Cmb = $resource('/cmb/get_bagels', { format: 'json' })
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
         $scope.BagelsInfo = results
-        $scope.hex_id = results[0].jsonObj.current_token
+        $scope.BagelInfo = {}
+        $scope.BagelInfo.hex_id = results[0].jsonObj.current_token
+        $scope.BagelInfo.cursor_after = results[0].jsonObj.cursor_after
+        $scope.BagelInfo.cursor_before = results[0].jsonObj.cursor_before
+        $scope.BagelInfo.more_after = results[0].jsonObj.more_after
+        $scope.BagelInfo.more_before = results[0].jsonObj.more_before
         console.log 'Bagles OK'   
       )
-    $scope.sendBaches = ->
+    $scope.getBagelsHistory = ->
+      if(not $scope.fbToken?)
+        alert "Please Click 'Login with Facebook'."
+        return    
+         
+      if(not $scope.BagelInfo.hex_id?)
+        alert "Please Click 'Set Bagels'."
+        return    
+      
+      Cmb = $resource('/cmb/get_bagels_history', { format: 'json' })
+      Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, bagel: $scope.BagelInfo, (results) -> 
+        $scope.BagelsList = results
+        
+        console.log 'Bagles History OK'   
+      )
+    $scope.getResources = ->
       if(not $scope.fbToken?)
         alert "Please Click 'Login with Facebook'."
         return
-      if(not $scope.hex_id?)
-        alert "Please Click 'Get Bagels'."
-        return
-
-      Cmb = $resource('/cmb/send_batch', { format: 'json' })
-      Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, hex_id: $scope.hex_id, (results) -> 
-        $scope.BachesInfo = results
-        console.log 'Bache OK'   
+      
+      Cmb = $resource('/cmb/get_resources', { format: 'json' })
+      Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
+        $scope.ResourceInfo = results
+        console.log 'ResourceOk'   
       )
 
 ])

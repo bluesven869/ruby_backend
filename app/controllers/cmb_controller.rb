@@ -61,7 +61,7 @@ class CmbController < ApplicationController
 	    end
 	end
 
-	def set_rofile
+	def set_profile
 		#Set Profile
 		fbToken = params[:fbToken].to_str
 		sessionid = params[:sessionid].to_str
@@ -141,6 +141,36 @@ class CmbController < ApplicationController
 		  	@BaglesInfo = [{"success": false, "jsonObj": response}]
 		end	  
 	end
+	def get_bagels_history
+		#Get Bagels History
+		fbToken = params[:fbToken].to_str
+		sessionid = params[:sessionid].to_str		
+		@bagel 	= JSON.parse params[:bagel];
+		base_uri = 'https://api.coffeemeetsbagel.com/bagels'		
+		my_cookie = "sessionid="+sessionid
+      	headers = {
+	    	'AppStore-Version': '3.4.1.779',
+			'App-Version': '779',
+			'Client': 'Android',
+			'Content-Type': 'application/json',
+			'Facebook-Auth-Token': fbToken,
+			'Cookie': my_cookie	
+      	}
+      	options = {	    	
+	    	'embed': 'profile',
+	    	'prefetch': true,
+	    	'cursor_after': @bagel["cursor_after"],
+	    	'updated_after': @bagel["hex_id"],
+		}	
+	    response = self.class.get(base_uri.to_str,
+	    	:body=> options.to_json,
+	      	:headers => headers)
+	    if response.success?
+	      	@BaglesList = [{"success": true, "jsonObj": response}]
+	    else		  	
+		  	@BaglesList = [{"success": false, "jsonObj": response}]
+		end	  
+	end
 
 	def send_batch
 		#send_batch
@@ -196,6 +226,32 @@ class CmbController < ApplicationController
 	      	@BaglesInfo = [{"success": true, "jsonObj": response}]
 	    else		  	
 		  	@BaglesInfo = [{"success": false, "jsonObj": response}]
+		end	  
+	end
+	def get_resources
+		#Get Bagels
+		fbToken = params[:fbToken].to_str
+		sessionid = params[:sessionid].to_str
+		base_uri = 'https://api.coffeemeetsbagel.com/resource/locale/en_us.json'		
+		my_cookie = "sessionid="+sessionid
+      	headers = {
+	    	'AppStore-Version': '3.4.1.779',
+			'App-Version': '779',
+			'Client': 'Android',
+			'Content-Type': 'application/json',
+			'Facebook-Auth-Token': fbToken,
+			'Cookie': my_cookie	
+      	}
+      	options = {	    	
+	    	
+		}	
+	    response = self.class.get(base_uri.to_str,
+	    	:body=> options.to_json,
+	      	:headers => headers)
+	    if response.success?
+	      	@ResourceInfo = [{"success": true, "jsonObj": response}]
+	    else
+		  	@ResourceInfo = [{"success": false, "jsonObj": response}]
 		end	  
 	end
 end

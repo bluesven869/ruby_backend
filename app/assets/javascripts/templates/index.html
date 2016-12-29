@@ -2,7 +2,7 @@
   <h1 class="text-center col-md-6 col-md-offset-3">Test Page</h1>
 </header>
 
-<div class="loginInfo completed">
+<div class="general_div completed">
 <section>
   <button type="button" class="btn btn-primary btn-large" data-ng-click="loginFacebook()">Login with Facebook</button>
   &nbsp;&nbsp;&nbsp;&nbsp;<img src='assets/facebook-loader.gif' height=20px ng-if="loading_flag" /> 
@@ -10,17 +10,17 @@
 <img src='assets/completed.png' class='mark' />
 <section ng-if="cmbInfo">  
   <div class="cmb_info">
-    <div> FaceBook Token : <span class='my_info'>{{cmbInfo[0].loginResult}}</span></div>
-    <div> session id : <span class='my_info'>{{cmbInfo[0].sessionid}}</span> </div>
-    <div> user id : <span class='my_info'>{{cmbInfo[0].jsonObj.id}}</span></div>
-    <div> gender : <span class='my_info'>{{cmbInfo[0].jsonObj.gender}}</span></div>
-    <div> birthday : <span class='my_info'>{{cmbInfo[0].jsonObj.birthday}}</span></div>
-    <div> criteria__gender : <span class='my_info'>{{cmbInfo[0].jsonObj.criteria__gender}}</span></div>
-    <div> user__email : <span class='my_info'>{{cmbInfo[0].jsonObj.user__email}}</span></div>   
+    <label>FaceBook Token</label> <span class='my_info'>{{cmbInfo[0].loginResult}}</span><br />
+    <label>session id</label><span class='my_info'>{{cmbInfo[0].sessionid}}</span> <br />
+    <label>user id</label> <span class='my_info'>{{cmbInfo[0].jsonObj.id}}</span> <br />
+    <label>gender</label>  <span class='my_info'>{{cmbInfo[0].jsonObj.gender}}</span><br />
+    <label>birthday </label>  <span class='my_info'>{{cmbInfo[0].jsonObj.birthday}}</span><br />
+    <label>criteria__gender</label> <span class='my_info'>{{cmbInfo[0].jsonObj.criteria__gender}}</span><br />
+    <label>user__email</label> <span class='my_info'>{{cmbInfo[0].jsonObj.user__email}}</span><br />
   </div>
 </section>
 </div>
-<div class="setInfo completed">
+<div class="general_div completed">
   <form name='myForm'>
 <section>
   <button type="button" class="btn btn-primary btn-large" data-ng-click="setMyProfile()">Set my profile</button>
@@ -51,7 +51,7 @@
 </div>
 
 
-<div class="Bagels completed">  
+<div class="general_div completed">  
 <section>
   <button type="button" class="btn btn-primary btn-large" data-ng-click="setBagels()">Get Bagels</button>
 </section>
@@ -67,8 +67,16 @@
   </ul>
 </section>    
 </div>
+<div class="general_div">  
+<section>
+  <button type="button" class="btn btn-primary btn-large" data-ng-click="getBagelsHistory()">Bagels History</button>
+</section>
+<section ng-if="BagelsList">
+  <span class='my_info'>{{BagelsList}}</span>
+</section>    
+</div>
 
-<div class="Baches completed">  
+<div class="general_div completed">  
 <section>
   <button type="button" class="btn btn-primary btn-large" data-ng-click="sendBaches()">Send Baches</button>
 </section>
@@ -76,4 +84,56 @@
 
   <label>data </label><span class='my_info'>{{BachesInfo}}</span><br />  
 </section>    
+</div>
+
+
+<div class="general_div">  
+<section>
+  <button type="button" class="btn btn-primary btn-large" data-ng-click="giveTake()">Give Take</button>
+</section>
+<section ng-if="selected_girl_flag">  
+<label> girl id </label><span class='my_info'>{{girl_id}}
+</span></section>
+<section ng-if="GiveTake">  
+  <label> success </label><span class='my_info'>{{GiveTake.success}}</span><br />  
+</section>    
+</div>
+
+<div class="general_div">  
+<section>
+  <button type="button" class="btn btn-primary btn-large" data-ng-click="purchase()">Purchase</button>
+</section>
+
+<label> Item Count </label> <input type='text' ng-model='item_count' placeholder="Item Count" /> <br />
+<label> Item Name </label> <input type='text' ng-model='item_name' placeholder="Item Name" /> <br />
+<label> Expected Price </label> <input type='text' ng-model='expected_price' placeholder="Expected Price" /> <br />
+<label> Give ten id </label> <input type='text' ng-model='give_ten_id' placeholder="Give ten id" /> <br />
+
+<section ng-if="GiveTake">  
+  <label> success </label><span class='my_info'>{{GiveTake.success}}</span><br />  
+</section>    
+</div>
+
+<div class="general_div">  
+<section>
+  <button type="button" class="btn btn-primary btn-large" data-ng-click="getResources()">Resource</button>
+</section>
+<p>{{ResourceInfo[0].what_is_your_ideal_next_vacation}}</p>
+</div>
+
+<div class="general_div">  
+<section>
+  <button type="button" class="btn btn-primary btn-large" data-ng-click="photolabs()">Photo Labs</button>
+</section>
+</div>
+<div class="general_div">  
+<section>
+  <button type="button" class="btn btn-primary btn-large" data-ng-click="report()">Report</button>
+</section>
+</div>
+
+<div class="general_div">  
+<section>
+  <button type="button" class="btn btn-primary btn-large" data-ng-click="photo()">Photo</button>
+</section>
 </div>

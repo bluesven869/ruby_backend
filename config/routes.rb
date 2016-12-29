@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get '/cmb/set_profile'
   get '/cmb/get_bagels'
   get '/cmb/send_batch'
+  get '/cmb/get_resources'
+  get '/cmb/get_bagels_history'
 end

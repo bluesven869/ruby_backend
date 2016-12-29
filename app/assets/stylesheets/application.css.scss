@@ -29,59 +29,18 @@ body{
 	}
 }
 
-.loginInfo{
+.general_div{
 	width:48%;
 	float:left;
 	border:1px dotted #999;
 	min-height:250px;
 	padding:10px;
 	margin:10px;
+	label {
+	width:120px;
+	}
 	input{
-		width:100%;
-	}
-	.my_info{
-		background:black;
-		color:white;
-	}	
-}
-.setInfo{
-	width:48%;
-	float:left;
-	border:1px dotted #999;
-	min-height:250px;
-	padding:10px;
-	margin:10px;
-	label{
-		width:100px;
-	}
-}
-
-
-.Bagels{
-	width:48%;
-	float:left;
-	border:1px dotted #999;
-	min-height:250px;
-	padding:10px;
-	margin:10px;
-	label{
-		width:100px;
-	}
-	.my_info{
-		background:black;
-		color:white;
-	}	
-}
-
-.Baches{
-	width:48%;
-	float:left;
-	border:1px dotted #999;
-	min-height:250px;
-	padding:10px;
-	margin:10px;
-	label{
-		width:100px;
+		width:60%;
 	}
 	.my_info{
 		background:black;
