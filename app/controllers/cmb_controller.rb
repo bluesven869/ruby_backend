@@ -279,4 +279,33 @@ class CmbController < ApplicationController
 		  	@PhotoLabs = [{"success": false, "jsonObj": response}]
 		end	  
 	end
+
+	def give_take
+		#Give Take
+		fbToken 		= params[:fbToken].to_str
+		sessionid 		= params[:sessionid].to_str
+		customer_id 	= params[:customer_id].to_str
+		base_uri 		= 'https://api.coffeemeetsbagel.com/givetake'		
+		my_cookie = "sessionid="+sessionid
+      	headers = {
+	    	'AppStore-Version': '3.4.1.779',
+			'App-Version': '779',
+			'Client': 'Android',
+			'Content-Type': 'application/json',
+			'Facebook-Auth-Token': fbToken,
+			'Cookie': my_cookie	
+      	}
+      	options = {	    	
+	    	"id":customer_id,
+	    	"shown":true
+		}	
+	    response = self.class.put(base_uri.to_str,
+	    	:body=> options.to_json,
+	      	:headers => headers)	    
+	    if response.success?
+	      	@GiveTakeResult = [{"success": true}]
+	    else
+		  	@GiveTakeResult = [{"success": false}]
+		end	      
+	end
 end

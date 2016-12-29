@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get '/cmb/get_resources'
   get '/cmb/get_bagels_history'
   get '/cmb/get_photolabs'
+  get '/cmb/give_take'
 end

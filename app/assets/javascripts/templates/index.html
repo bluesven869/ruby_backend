@@ -83,15 +83,15 @@
 </section>    
 </div>
 
-<div class="general_div">  
+<div class="general_div completed">  
 <section>
   <button type="button" class="btn btn-primary btn-large" data-ng-click="giveTake()">Give Take</button>
 </section>
-<section ng-if="selected_girl_flag">  
+<section ng-if="girl_id">  
 <label> girl id </label><span class='my_info'>{{girl_id}}
 </span></section>
-<section ng-if="GiveTake">  
-  <label> success </label><span class='my_info'>{{GiveTake.success}}</span><br />  
+<section ng-if="GiveTaskResult">  
+  <span class='my_info'>{{GiveTaskResult}}</span>
 </section>    
 </div>
 
@@ -116,7 +116,6 @@
 </section>
 <p>{{ResourceInfo[0].what_is_your_ideal_next_vacation}}</p>
 </div>
-
 <div class="general_div completed">  
 <section>
   <button type="button" class="btn btn-primary btn-large" data-ng-click="photolabs()">Photo Labs</button>

@@ -150,5 +150,17 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         $scope.PhotoLabs = results
         console.log 'get_photoLabs'
       )
+
+    $scope.giveTake = ->
+      if(not $scope.fbToken?)
+        alert "Please Click 'Login with Facebook'."
+        return
+      $scope.girl_id = '2244848'
+      Cmb = $resource('/cmb/give_take', { format: 'json' })      
+      Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, customer_id: $scope.girl_id, (results) -> 
+        $scope.GiveTaskResult = results
+        console.log 'giveTake'
+      )
+
 ])
 
