@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get '/cmb/give_take'
   get '/cmb/purchase'
   get '/cmb/report'
+  get '/cmb/photo'
 end

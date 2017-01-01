@@ -38,7 +38,8 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
   ($scope,$routeParams,$location,$facebook,$http,$resource)->
     
     $scope.login_flag = false
-    $scope.loginFacebook = ->           
+    $scope.loginFacebook = ->
+      #   Login with FaceBook           
       $scope.login_flag = true
       $facebook.login(scope: 'email').then ((response) ->
         authtoken = response.authResponse.accessToken
@@ -49,6 +50,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         console.log 'FB Login Error', response
 	
     $scope.loginCMB = (authtoken) ->
+      #login with CMB
       $scope.cmbInfo = [] 
       Cmb = $resource('/cmb', { format: 'json' })
       Cmb.query(fbToken: authtoken , (results) -> 
@@ -63,6 +65,8 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         $scope.login_flag = false
       )
     $scope.setMyProfile = ->
+      # Set my profile
+      # Check Input values
       if(not $scope.fbToken?)
         alert "Please Click 'Login with Facebook'."
         return
@@ -84,6 +88,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       if(not $scope.user_email?)
         alert "Please Input 'User Email'."
         return
+      # Set values and Send to Server
       $scope.profile_flag = true
       $scope.user = {}
       $scope.user.name = $scope.user_name
@@ -106,6 +111,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         $scope.profile_flag = false
         console.log 'data OK'   
       )
+      
     $scope.setBagels = ->
       if(not $scope.fbToken?)
         alert "Please Click 'Login with Facebook'."
@@ -129,7 +135,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         alert "Please Click 'Login with Facebook'."
         return    
          
-      if(not $scope.BagelInfo.hex_id?)
+      if(not $scope.BagelInfo?) || (not $scope.BagelInfo.hex_id?) 
         alert "Please Click 'Set Bagels'."
         return    
       $scope.bagels_history_flag = true
@@ -222,5 +228,56 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         console.log 'Report'
       )
 
+    $scope.uploadFile = ($files) ->      
+      console.log $files[0]      
+
 ])
 
+controllers.controller 'FileUploadCtrl', [
+  '$scope', 
+  '$upload', 
+  '$timeout', 
+  ($scope, $upload, $timeout) ->
+
+    $scope.myUpload = (files) ->
+      len = files.length
+      i = 0
+      fileReader = undefined
+      csrf_token = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+
+      for file in files
+        fileReader = new FileReader()
+
+        #-------
+        fileReader.onload = (e) ->
+
+          #Define function for timeout, e.g. $timeout(timeout_func, 5000) 
+          timeout_func = ->
+            file.upload = $upload.http {
+              url: "ttps://api.coffeemeetsbagel.com/photo",
+              method: 'POST',
+              headers: {
+                'Content-Type': file.type,
+                'X-CSRF-TOKEN': csrf_token
+              },
+              data: e.target.result #the file's contents as an ArrayBuffer
+            }
+
+            file.upload.then(
+              (success_resp) -> file.result = success_resp.data,  #response from server (=upload.html)
+              (failure_resp) -> 
+                if failure_resp.status > 0
+                  $scope.errorMsg = "#{failure_resp.status}: #{response.data}"
+            )
+
+            file.upload.progress( (evt) ->
+              file.progress = Math.min 100, parseInt(100.0 * evt.loaded / evt.total)
+            )
+          #end of timeout_func
+
+          $timeout timeout_func, 5000 
+
+        #end of FileReader.onload
+
+        fileReader.readAsArrayBuffer file
+]

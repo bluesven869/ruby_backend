@@ -30,7 +30,7 @@ body{
 }
 
 .general_div{
-	width:48%;
+	width:46%;
 	float:left;
 	border:1px dotted #999;
 	min-height:250px;
@@ -52,5 +52,9 @@ body{
 		background-image:image-url('facebook-loader.gif');
 		background-size:40% ;
 		background-repeat:no-repeat;
+	}
+	.report_section{
+		height:200px;
+		overflow:auto;
 	}
 }

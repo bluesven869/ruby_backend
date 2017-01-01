@@ -7,6 +7,9 @@ class CmbController < ApplicationController
 
 	def index
 		# Login to CoffeeMeetBagel		
+		# IN    fbToken : FaceBook Token
+		# Return sessionid
+
 		if (not params.has_key?(:fbToken))
 			@cmbInfo = [{"loginResult": "Token Error", "sessionid":"NoSession","jsonObj": "Token"}]
 		else
@@ -62,6 +65,12 @@ class CmbController < ApplicationController
 
 	def set_profile
 		#Set Profile
+		#  IN     fbToken  : FaceBook Token
+		#         sessionid: CMB session id
+		#         user     : User Profile Info
+		#  Return
+		#         jsonObj  : User Profile Info (changed)
+
 		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
 			@cmbInfo = [{"loginResult": "Token Error", "sessionid":"NoSession","jsonObj": "Token"}]
 		else
@@ -117,7 +126,12 @@ class CmbController < ApplicationController
 	end
 
 	def get_bagels
-		#Get Bagels
+		# Get Bagels
+		#    IN      fbToken : FaceBook Token
+		#            sessionid: CMB Session ID
+		#    OUT     
+		#	         jsonObj : Today's Bagel Info 
+
 		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
 			@BaglesInfo = [{"success": false, "jsonObj": "No Authenticated"}]
 		else
@@ -149,7 +163,13 @@ class CmbController < ApplicationController
 		end
 	end
 	def get_bagels_history
-		#Get Bagels History
+		# Get Bagels History
+		#    IN      fbToken : FaceBook Token
+		#            sessionid: CMB Session ID
+		#            @bagel : BagelObject(hex_id, cursor_after)
+		#    OUT     
+		#	         jsonObj : Bagels History before cursor_after 
+
 		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)) || (not params.has_key?(:bagel))
 			@BaglesInfo = [{"success": false, "jsonObj": "Params Error"}]
 		else
@@ -183,7 +203,7 @@ class CmbController < ApplicationController
 		end
 	end
 	def send_batch
-		#send_batch
+		# Batch Command
 		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)) || (not params.has_key?(:hex_id))
 			@BaglesInfo = [{"success": false, "jsonObj": "Params Error"}]
 		else
@@ -243,7 +263,11 @@ class CmbController < ApplicationController
 		end
 	end
 	def get_resources
-		#Get Bagels
+		# Get Resource
+		#    IN      fbToken : FaceBook Token
+		#            sessionid: CMB Session ID
+		#    OUT     
+		#	         jsonObj : Resource of App.
 		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
 			@ResourceInfo = [{"success": false, "jsonObj": "No Authenticated"}]
 		else
@@ -274,6 +298,11 @@ class CmbController < ApplicationController
 	end
 	def get_photolabs
 		#Get Bagels
+		#    IN      fbToken : FaceBook Token
+		#            sessionid: CMB Session ID
+		#    OUT     
+		#	         jsonObj : Photo Labs
+
 		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
 			@PhotoLabs = [{"success": false, "jsonObj": "No Authenticated"}]
 		else
@@ -304,7 +333,13 @@ class CmbController < ApplicationController
 	end
 
 	def give_take
-		#Give Take
+		# Give Take
+		#    IN      fbToken : FaceBook Token
+		#            sessionid: CMB Session ID
+		#  			 customer_id : Bagel_id
+		#    OUT     
+		#	         success : take result
+
 		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)) || (not params.has_key?(:customer_id) )
 			@GiveTakeResult = [{"success": false, "jsonObj": "Params Error"}]
 		else
@@ -337,7 +372,13 @@ class CmbController < ApplicationController
 	end
 
 	def purchase
-		#Give Take
+		# Purchase
+		#    IN      fbToken : FaceBook Token
+		#            sessionid: CMB Session ID
+		#  			 @purchase : Purchase Info(item_count, item_name, expected_price, give_ten_id)
+		#    OUT     
+		#	         success : take result
+
 		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)) || (not params.has_key?(:purchase))
 			@PurchaseResult = [{"success": false, "jsonObj": "Params Error"}]
 		else
@@ -372,7 +413,11 @@ class CmbController < ApplicationController
 	end
 
 	def report
-		#Give Take
+		#Report
+		#    IN      fbToken : FaceBook Token
+		#            sessionid: CMB Session ID
+		#    OUT     
+		#	         jsonObj : Report Result
 		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
 			@ReportResult = [{"success": false, "jsonObj": "No Authenticated"}]
 		else
@@ -399,5 +444,4 @@ class CmbController < ApplicationController
 			end	   
 		end   
 	end
-
 end
