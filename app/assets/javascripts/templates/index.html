@@ -10,25 +10,23 @@
 <section ng-if="!login_flag && cmbInfo">  
   <div class="cmb_info">
     <label>FaceBook Token</label> <span class='my_info'>{{fbToken}}</span><br />
-    <label>session id</label><span class='my_info'>{{cmbInfo[0].sessionid}}</span> <br />
-    <label>user id</label> <span class='my_info'>{{cmbInfo[0].jsonObj.id}}</span> <br />
-    <label>gender</label>  <span class='my_info'>{{cmbInfo[0].jsonObj.gender}}</span><br />
-    <label>birthday </label>  <span class='my_info'>{{cmbInfo[0].jsonObj.birthday}}</span><br />
-    <label>criteria__gender</label> <span class='my_info'>{{cmbInfo[0].jsonObj.criteria__gender}}</span><br />
-    <label>user__email</label> <span class='my_info'>{{cmbInfo[0].jsonObj.user__email}}</span><br />
+    <label>Session ID</label><span class='my_info'>{{sessionid}}</span> <br />
+    <label>User ID</label> <span class='my_info'>{{cmbInfo[0].jsonObj.profile_id}}</span> <br />
+    <label>Upgrade Available</label>  <span class='my_info'>{{cmbInfo[0].jsonObj.upgrade_available}}</span><br />
+    <label>Success </label>  <span class='my_info'>{{cmbInfo[0].jsonObj.success}}</span><br />
     <label>Received From CMB</label> <span class='my_info'>{{cmbInfo[0]}}</span><br />
 </section>
 </div>
 <div class="general_div completed">
   <form name='myForm'>
 <section>
-  <button type="button" class="btn btn-primary btn-large" data-ng-click="setMyProfile()">Set my profile</button>
-  &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="profile_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <button type="button" class="btn btn-primary btn-large" data-ng-click="getMyProfile()">Get my profile</button>
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="get_profile_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 </section>
     <label>User Name</label> <input type='text' ng-model='user_name' placeholder="User Name" /> <br />
     <label>User Gender</label> <input type='text' ng-model='user_gender'  placeholder="m/f" /><br />
     <label>Birthday</label> <input type="date" id="user_birthday" name="user_birthday" ng-model="user_birthday"
-       placeholder="YYYY-MM-DD" min="1900-01-01" max="2099-12-31" required />
+       placeholder="YYYY-MM-DD" min="1600-01-01" max="2099-12-31" required />
        <span role="alert">
          <span class="error" ng-show="myForm.user_birthday.$error.required">
              Required!</span>
@@ -45,6 +43,17 @@
       <span class="error" ng-show="myForm.input.$error.email">
         Not valid email!</span>
     </span>    
+    <section>
+    <button type="button" class="btn btn-primary btn-large" data-ng-click="setMyProfile()">Set my profile</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="profile_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  </section>
+    <span class="my_info">
+    {{profileInfo[0].jsonObj}}
+    </span> &nbsp;&nbsp;
+    <span class="my_info">
+    {{setProfileInfo[0].jsonObj}}
+    </span>
+
 </form>
 </div>
 
@@ -63,6 +72,7 @@
   <ul>
     <li ng-repeat="bagel in BagelsInfo[0].jsonObj.results">{{bagel.name}}</li>
   </ul>
+  <span class="my_info">{{BagelsInfo[0].jsonObj}}</span>
 </section>    
 </div>
 <div class="general_div completed">  

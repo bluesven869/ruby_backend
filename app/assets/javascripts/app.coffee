@@ -56,14 +56,33 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       Cmb.query(fbToken: authtoken , (results) -> 
         $scope.cmbInfo = results
         $scope.sessionid = results[0].sessionid
+        $scope.login_flag = false
+      )
+    $scope.getMyProfile = ->
+      # Set my profile
+      # Check Input values
+      if(not $scope.fbToken?)
+        alert "Please Click 'Login with Facebook'."
+        return
+      # Set values and Send to Server
+      $scope.get_profile_flag = true
+      
+
+      Cmb = $resource('/cmb/get_profile', { format: 'json' })
+      Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
+        $scope.profileInfo = results
+        
         $scope.userid = results[0].jsonObj.id
         $scope.user_gender = results[0].jsonObj.gender
         $scope.user_name = results[0].jsonObj.full_name
         $scope.user_email = results[0].jsonObj.user__email        
         $scope.user_criteria_gender = results[0].jsonObj.criteria__gender        
         $scope.user_birthday = new Date(results[0].jsonObj.birthday)
-        $scope.login_flag = false
+        $scope.get_profile_flag = false
+         
       )
+      
+    
     $scope.setMyProfile = ->
       # Set my profile
       # Check Input values
@@ -100,14 +119,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
 
       Cmb = $resource('/cmb/set_profile', { format: 'json' })
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, user: $scope.user , (results) -> 
-        $scope.cmbInfo = results
-        $scope.sessionid = results[0].sessionid
-        $scope.userid = results[0].jsonObj.id
-        $scope.user_gender = results[0].jsonObj.gender
-        $scope.user_name = results[0].jsonObj.full_name
-        $scope.user_email = results[0].jsonObj.user__email        
-        $scope.user_criteria_gender = results[0].jsonObj.criteria__gender        
-        $scope.user_birthday = new Date(results[0].jsonObj.birthday)
+        $scope.setProfileInfo = results
         $scope.profile_flag = false
         console.log 'data OK'   
       )

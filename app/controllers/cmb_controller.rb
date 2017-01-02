@@ -32,36 +32,51 @@ class CmbController < ApplicationController
 				:headers => headers
 			)
 		    if response.success?
-		      loginResult = 1
 		      resHeader = response.headers['set-cookie']
 		      splittedStr = resHeader.split(/[;]/)
 		      splittedStr = splittedStr[3].split(/[=]/)
-		      sessionid = splittedStr[2]      
-		      #@cmbInfo = [{"loginResult": "success get me", "sessionid": resHeader}]	      
-
-	          base_uri = "https://api.coffeemeetsbagel.com/profile/me"
-	          my_cookie = "sessionid="+sessionid
-		      headers = {
-		    	'AppStore-Version': '3.4.1.779',
-				'App-Version': '779',
-				'Client': 'Android',
-				'Content-Type': 'application/json',
-				'Facebook-Auth-Token': fbToken,
-				'Cookie': my_cookie	
-		      }
-		      response = self.class.get(base_uri.to_str,
-		      	:body=> options.to_json,
-		      	:headers => headers)
-			  if response.success?
-			  	@cmbInfo = [{"loginResult": "success get me", "sessionid":sessionid,"jsonObj": response}]
-			  else
-				@cmbInfo = [{"loginResult": "failed", "sessionid": sessionid, "jsonObj": response}]
-			  end		  
+		      sessionid = splittedStr[2]		      
+		      @cmbInfo = [{"loginResult": "success", "sessionid":sessionid,"jsonObj": response}]
 		    else
 		      @cmbInfo = [{"loginResult": "failed", "sessionid": "NONE", "jsonObj":response}]
 		    end
 		end
 	end
+
+	def get_profile
+		#Get Profile
+		#  IN     fbToken  : FaceBook Token
+		#         sessionid: CMB session id
+		#  Return
+		#         jsonObj  : User Profile Info
+		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
+			@profileInfo = [{"loginResult": "Token Error", "sessionid":"NoSession","jsonObj": "Token"}]
+		else
+			fbToken = params[:fbToken].to_str
+			sessionid = params[:sessionid].to_str
+			base_uri = "https://api.coffeemeetsbagel.com/profile/me"
+          	my_cookie = "sessionid="+sessionid
+          	options = {
+
+          	}
+	      	headers = {
+	    	  'AppStore-Version': '3.4.1.779',
+			  'App-Version': '779',
+			  'Client': 'Android',
+			  'Content-Type': 'application/json',
+			  'Facebook-Auth-Token': fbToken,
+			  'Cookie': my_cookie	
+	      	}
+	      	response = self.class.get(base_uri.to_str,
+	      	  :body=> options.to_json,
+	      	  :headers => headers)
+		  	if response.success?
+		  	  @profileInfo = [{"loginResult": "success", "sessionid":sessionid,"jsonObj": response}]
+		  	else
+			  @profileInfo = [{"loginResult": "failed", "sessionid": sessionid, "jsonObj": response}]
+			end	 
+		end
+	end 
 
 	def set_profile
 		#Set Profile
@@ -99,28 +114,9 @@ class CmbController < ApplicationController
 		    	:body=> options.to_json,
 		      	:headers => headers)
 		    if response.success?
-		      	base_uri = "https://api.coffeemeetsbagel.com/profile/me"
-	          	my_cookie = "sessionid="+sessionid
-		      	headers = {
-		    	  'AppStore-Version': '3.4.1.779',
-				  'App-Version': '779',
-				  'Client': 'Android',
-				  'Content-Type': 'application/json',
-				  'Facebook-Auth-Token': fbToken,
-				  'Cookie': my_cookie	
-		      	}
-		      	response = self.class.get(base_uri.to_str,
-		      	  :body=> options.to_json,
-		      	  :headers => headers)
-			  	if response.success?
-			  	  @cmbInfo = [{"loginResult": "success get me", "sessionid":sessionid,"jsonObj": response}]
-			  	else
-				  loginResult = "fail getting profile"
-				  @cmbInfo = [{"loginResult": loginResult, "sessionid": sessionid, "jsonObj": response}]
-				end	
+		      	@profileInfo = [{"loginResult": "Set Profile Success", "sessionid":sessionid,"jsonObj": response}]			  	
 			else
-			  	loginResult = "fail setting profile"
-			  	@cmbInfo = [{"loginResult": loginResult, "sessionid": sessionid, "jsonObj": response}]
+			  	@profileInfo = [{"loginResult": "Set Profile Failed", "sessionid": sessionid, "jsonObj": response}]
 			end	  
 		end
 	end
