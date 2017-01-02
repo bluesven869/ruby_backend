@@ -227,57 +227,31 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         $scope.report_flag = false
         console.log 'Report'
       )
+    $scope.get_bundary_id = ->
+      uniqueId = (length=8) ->
+        id = ""
+        id += Math.random().toString(36).substr(2) while id.length < length
+        id.substr 0, length
+      #var boundary_id = uniqueId(8) + "-" + uniqueId(4) + "-" + + uniqueId(4) + "-" + uniqueId(4) + "-" + uniqueId(12) 
+      b_1 = uniqueId(8)
+      b_2 = uniqueId(4)
+      b_3 = uniqueId(4)
+      b_4 = uniqueId(4)
+      b_5 = uniqueId(12)
+      #$scope.boundary_id = "#{b_1}-#{b_2}-#{b_3}-#{b_4}-#{b_5}"      
+      return "#{b_1}-#{b_2}-#{b_3}-#{b_4}-#{b_5}"
 
-    $scope.uploadFile = ($files) ->      
-      console.log $files[0]      
+    $scope.photo = ->           
+      boundary_id = $scope.get_bundary_id()
+      fileReader = new FileReader()
+      file = "/home/hong-pc-1/Documents/aaa.png"
+      fileReader.onload = (e) ->
+        #Define function for timeout, e.g. $timeout(timeout_func, 5000) 
+        console.log e.target.result
+
+      #end of FileReader.onload
+
+      fileReader.readAsArrayBuffer file
+          
 
 ])
-
-controllers.controller 'FileUploadCtrl', [
-  '$scope', 
-  '$upload', 
-  '$timeout', 
-  ($scope, $upload, $timeout) ->
-
-    $scope.myUpload = (files) ->
-      len = files.length
-      i = 0
-      fileReader = undefined
-      csrf_token = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-
-      for file in files
-        fileReader = new FileReader()
-
-        #-------
-        fileReader.onload = (e) ->
-
-          #Define function for timeout, e.g. $timeout(timeout_func, 5000) 
-          timeout_func = ->
-            file.upload = $upload.http {
-              url: "ttps://api.coffeemeetsbagel.com/photo",
-              method: 'POST',
-              headers: {
-                'Content-Type': file.type,
-                'X-CSRF-TOKEN': csrf_token
-              },
-              data: e.target.result #the file's contents as an ArrayBuffer
-            }
-
-            file.upload.then(
-              (success_resp) -> file.result = success_resp.data,  #response from server (=upload.html)
-              (failure_resp) -> 
-                if failure_resp.status > 0
-                  $scope.errorMsg = "#{failure_resp.status}: #{response.data}"
-            )
-
-            file.upload.progress( (evt) ->
-              file.progress = Math.min 100, parseInt(100.0 * evt.loaded / evt.total)
-            )
-          #end of timeout_func
-
-          $timeout timeout_func, 5000 
-
-        #end of FileReader.onload
-
-        fileReader.readAsArrayBuffer file
-]
