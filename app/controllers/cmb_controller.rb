@@ -63,6 +63,7 @@ class CmbController < ApplicationController
 	    	  'AppStore-Version': '3.4.1.779',
 			  'App-Version': '779',
 			  'Client': 'Android',
+			  'Device-Name': 'Genymotion Samsung Galaxy S4 - 4.4.4 - API 19 - 1080x1920',
 			  'Content-Type': 'application/json',
 			  'Facebook-Auth-Token': fbToken,
 			  'Cookie': my_cookie	
