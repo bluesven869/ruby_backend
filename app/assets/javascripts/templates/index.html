@@ -160,7 +160,7 @@
 
 <div class="general_div">  
 <section>
-  <button type="button" class="btn btn-primary btn-large" data-ng-click="photo()">Photo</button>
+  <button type="button" class="btn btn-primary btn-large" data-ng-click="photo()">Photo Upload</button>
   &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="photo_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 </section>
 <section>
@@ -169,9 +169,7 @@
   <label>Position</label> <input type='text' ng-model='photo_position' placeholder="Please input postion of photo" /> <br />
   <label>Caption</label> <input type='text' ng-model='photo_caption'  placeholder="This is my 4th photo!" /><br />
   </div>
-   <button class="btn" ng-click="isCollapsed = !isCollapsed">Toggle collapse</button>
-    <input type="file" ng-model="filepick" onchange="angular.element(this).scope().pickimg(this.files)" accept='image/*' multiple />
-    <output id="list"></output> 
+   <div class="button" ngf-select="upload($file)">Upload on file select</div>
 </section>
 </div>
 
@@ -179,9 +177,9 @@
 <div class="general_div">  
 <section>
   <button type="button" class="btn btn-primary btn-large" data-ng-click="login_ChatMessage()">Chat Messages</button>
-  &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="report_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="chat_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 </section>
-<section class='report_section' ng-if="!report_flag && ReportResult">  
+<section class='report_section' ng-if="!chat_flag && ReportResult">  
   <span class='my_info'>{{ReportResult}}</span>
 </section>    
 </div>

@@ -3,7 +3,8 @@ aggregate_dating = angular.module('aggregate_dating',[
   	'ngRoute',
     'ngResource',
   	'controllers',
-  	'facebook'
+  	'facebook',
+    'ngFileUpload'
 ])
 
 aggregate_dating.config([ '$routeProvider',
@@ -32,8 +33,8 @@ aggregate_dating.config(['$qProvider',
 cmbInfo = []
 
 controllers = angular.module('controllers',[])
-controllers.controller("CMBController", [ '$scope', '$routeParams', '$location', '$facebook', '$http', '$resource'
-  ($scope,$routeParams,$location,$facebook,$http,$resource)->
+controllers.controller("CMBController", [ '$scope', '$routeParams', '$location', '$facebook', '$http', '$resource', 'Upload'
+  ($scope,$routeParams,$location,$facebook,$http,$resource, Upload)->
     
     $scope.login_flag = false
     $scope.loginFacebook = ->
@@ -278,9 +279,32 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         $scope.ReportResult = results
         $scope.report_flag = false
         console.log 'Report'
-      )     
-      
-        
-    
-   
-])
+      )    
+
+      # upload on file select or drop
+    $scope.upload = (file) ->
+      console.log file
+      Upload.upload({
+          url: 'https://api.coffeemeetsbagel.com/photo',
+          data: {file: file, 'position': $scope.file_photo_position, "caption": $scope.file_photo_caption},
+          method: "POST",
+          header: {
+            'AppStore-Version': '3.4.1.779',
+            'App-Version': '779',
+            'Client': 'Android',
+            'Content-Type': 'multipart/form-data',
+            'Access-Control-Allow-Origin': "*",
+            'crossOrigin': true,
+            'Facebook-Auth-Token': $scope.fbToken,
+            'Cookie': "sessionid="+$scope.sessionid 
+          }
+      }).then((resp) ->
+          console.log 'Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data
+      , (resp) ->
+          console.log('Error status: ' + resp.status);
+      , (evt) ->
+          $scope.progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+          console.log 'progress: ' + $scope.progressPercentage + '% ' + evt.config.data.file.name
+      )
+  ])
+

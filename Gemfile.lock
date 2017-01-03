@@ -44,6 +44,7 @@ GEM
       railties (>= 4.2, < 6)
       sprockets (>= 3.0, < 5)
       tilt
+    angularjs-file-upload-rails (2.2.0)
     arel (7.1.4)
     bower-rails (0.11.0)
     builder (3.2.2)
@@ -211,6 +212,7 @@ PLATFORMS
 
 DEPENDENCIES
   angular-rails-templates
+  angularjs-file-upload-rails (~> 2.2.0)
   bower-rails
   byebug
   capybara

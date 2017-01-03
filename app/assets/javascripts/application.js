@@ -16,5 +16,7 @@
 //= require angular-route/angular-route
 //= require angular-resource/angular-resource
 //= require angular-rails-templates
+//= require ng-file-upload-shim
+//= require ng-file-upload
 //= require ngFacebook/dev/src/unmin/ngFacebook
 //= require_tree .
