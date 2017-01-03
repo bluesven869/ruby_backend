@@ -9,7 +9,7 @@ class CmbController < ApplicationController
 		# Login to CoffeeMeetBagel		
 		# IN    fbToken : FaceBook Token
 		# Return sessionid
-
+		
 		if (not params.has_key?(:fbToken))
 			@cmbInfo = [{"loginResult": "Token Error", "sessionid":"NoSession","jsonObj": "Token"}]
 		else

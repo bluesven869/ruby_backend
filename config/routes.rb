@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   get '/cmb/purchase'
   get '/cmb/report'
   get '/cmb/photo'
+  resources :tinder, only: [:index]
 end

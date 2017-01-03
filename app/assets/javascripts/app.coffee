@@ -45,12 +45,15 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         console.log 'FB Login Success', authtoken
         console.log response.authResponse
         $scope.fbToken = authtoken
+        $scope.fbUserID = response.authResponse.userID
         $scope.loginCMB(authtoken)
     ), (response) ->
         console.log 'FB Login Error', response
 	
     $scope.loginCMB = (authtoken) ->
       #login with CMB
+      #CURL commands:
+      # 1. curl https://api.coffeemeetsbagel.com/profile/me -H "App-version: 779" -H
       $scope.cmbInfo = [] 
       Cmb = $resource('/cmb', { format: 'json' })
       Cmb.query(fbToken: authtoken , (results) -> 
@@ -66,7 +69,6 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         return
       # Set values and Send to Server
       $scope.get_profile_flag = true
-      
 
       Cmb = $resource('/cmb/get_profile', { format: 'json' })
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
@@ -282,21 +284,21 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       )    
 
       # upload on file select or drop
+      # this is angular file upload
+      # 
     $scope.upload = (file) ->
       console.log file
       Upload.upload({
           url: 'https://api.coffeemeetsbagel.com/photo',
-          data: {file: file, 'position': $scope.file_photo_position, "caption": $scope.file_photo_caption},
-          method: "POST",
-          header: {
-            'AppStore-Version': '3.4.1.779',
-            'App-Version': '779',
-            'Client': 'Android',
-            'Content-Type': 'multipart/form-data',
-            'Access-Control-Allow-Origin': "*",
-            'crossOrigin': true,
-            'Facebook-Auth-Token': $scope.fbToken,
-            'Cookie': "sessionid="+$scope.sessionid 
+          data: {"file": file, 'position': $scope.file_photo_position, "caption": $scope.file_photo_caption},
+          headers: {
+            "AppStore-Version": "3.4.1.779",
+            "App-Version": "779",
+            "Client": "Android",
+            "Content-Type": "multipart/form-data",
+            "Access-Control-Allow-Origin": "*",
+            "Facebook-Auth-Token": $scope.fbToken,
+            "Cookie": "sessionid="+$scope.sessionid 
           }
       }).then((resp) ->
           console.log 'Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data
@@ -306,5 +308,25 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
           $scope.progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
           console.log 'progress: ' + $scope.progressPercentage + '% ' + evt.config.data.file.name
       )
+    $scope.loginFacebookForTinder = ->           
+      if(not $scope.fbToken?)
+        $scope.tinder_login_flag = true
+        $facebook.login(scope: 'email').then ((response) ->
+          authtoken = response.authResponse.accessToken
+          console.log response.authResponse
+          $scope.fbToken = authtoken
+          $scope.fbUserID = response.authResponse.userID  
+          $scope.loginTinder()               
+        ), (response) ->
+            console.log 'FB Login Error', response
+      else
+        $scope.loginTinder()
+    $scope.loginTinder = ->
+      $scope.tinderInfo = [] 
+      Tinder = $resource('/tinder', { format: 'json' })
+      Tinder.query(fbToken: $scope.fbToken, fbUserID: $scope.fbUserID , (results) -> 
+        $scope.tinderInfo = results
+        
+        $scope.tinder_login_flag = false
+      )
   ])
-

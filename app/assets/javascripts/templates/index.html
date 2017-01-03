@@ -4,7 +4,7 @@
 </header>
 <div class="general_div completed">
 <section>
-  <button type="button" class="btn btn-primary btn-large" data-ng-click="loginFacebook()">Login with Facebook</button>
+  <button type="button" class="btn btn-primary btn-large" data-ng-click="loginFacebook()">CMB Login with Facebook</button>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <span class='loading-bar' ng-if="login_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 </section>
@@ -57,14 +57,16 @@
 
 </form>
 </div>
-
+<div class= "general_div unverified">
+  <section>
+  </section>
+</div>
 <div class="general_div completed">  
 <section>
   <button type="button" class="btn btn-primary btn-large" data-ng-click="setBagels()">Get Bagels</button>
   &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="bagels_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 </section>
 <section ng-if="!bagels_flag && BagelsInfo">  
-
   <label>current_token </label><span class='my_info'>{{BagelsInfo[0].jsonObj.current_token}}</span><br />
   <label>cursor_after </label><span class='my_info'>{{BagelsInfo[0].jsonObj.cursor_after}}</span><br />
   <label>cursor_before </label><span class='my_info'>{{BagelsInfo[0].jsonObj.cursor_before}}</span><br />
@@ -76,6 +78,7 @@
   <span class="my_info">{{BagelsInfo[0].jsonObj}}</span>
 </section>    
 </div>
+
 <div class="general_div completed">  
 <section>
   <button type="button" class="btn btn-primary btn-large" data-ng-click="getBagelsHistory()">Bagels History</button>
@@ -182,4 +185,18 @@
 <section class='report_section' ng-if="!chat_flag && ReportResult">  
   <span class='my_info'>{{ReportResult}}</span>
 </section>    
+</div>
+
+<div class="general_div unverified">
+<section>
+  <button type="button" class="btn btn-primary btn-large" data-ng-click="loginFacebookForTinder()">Tinder Login with Facebook</button>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <span class='loading-bar' ng-if="tinder_login_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</section>
+<section ng-if="!tinder_login_flag && tinderInfo">  
+  <div>
+    <label>FaceBook Token</label> <span class='my_info'>{{fbToken}}</span><br />
+    <label>FaceBook ID</label><span class='my_info'>{{fbUserID}}</span> <br />
+    <label>Received From Tinder</label> <span class='my_info'>{{tinderInfo[0]}}</span><br />
+</section> 
 </div>
