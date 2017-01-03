@@ -13,8 +13,6 @@ aggregate_dating.config([ '$routeProvider',
           templateUrl: "index.html"
           controller: 'CMBController'
         )
-
-   
 ])
 
 aggregate_dating.config([ '$facebookProvider',
@@ -44,6 +42,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       $facebook.login(scope: 'email').then ((response) ->
         authtoken = response.authResponse.accessToken
         console.log 'FB Login Success', authtoken
+        console.log response.authResponse
         $scope.fbToken = authtoken
         $scope.loginCMB(authtoken)
     ), (response) ->
@@ -70,16 +69,15 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
 
       Cmb = $resource('/cmb/get_profile', { format: 'json' })
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
-        $scope.profileInfo = results
-        
+        $scope.profileInfo = results        
         $scope.userid = results[0].jsonObj.id
         $scope.user_gender = results[0].jsonObj.gender
         $scope.user_name = results[0].jsonObj.full_name
         $scope.user_email = results[0].jsonObj.user__email        
         $scope.user_criteria_gender = results[0].jsonObj.criteria__gender        
         $scope.user_birthday = new Date(results[0].jsonObj.birthday)
-        $scope.get_profile_flag = false
-         
+        $scope.firebaseToken = results[0].jsonObj.firebase_token
+        $scope.get_profile_flag = false         
       )
       
     
@@ -255,15 +253,34 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
 
     $scope.photo = ->           
       boundary_id = $scope.get_bundary_id()
-      fileReader = new FileReader()
-      file = "/home/hong-pc-1/Documents/aaa.png"
-      fileReader.onload = (e) ->
-        #Define function for timeout, e.g. $timeout(timeout_func, 5000) 
-        console.log e.target.result
-
-      #end of FileReader.onload
-
-      fileReader.readAsArrayBuffer file
-          
-
+      if(not $scope.fbToken?)
+        alert "Please Click 'Login with Facebook'."
+        return
+      if(not $scope.photo_position?)
+        alert "Please Input Photo Position."
+        return
+      if(not $scope.photo_caption?)
+        alert "Please Input Photo Caption."
+        return
+      #$file_name      
+      #$file_photo_position
+      #$file_photo_caption
+    $scope.pickimg = (file) ->
+      if(not $scope.fbToken?)
+        alert "Please Click 'Login with Facebook'."
+        return
+      #$file_name 
+      Cmb = $resource('/cmb/msg_login', { format: 'json' })      
+      $scope.report_num = "4"
+      $scope.report_flag = true
+      $scope.ReportResult = []
+      Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
+        $scope.ReportResult = results
+        $scope.report_flag = false
+        console.log 'Report'
+      )     
+      
+        
+    
+   
 ])

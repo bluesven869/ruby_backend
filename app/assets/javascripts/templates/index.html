@@ -1,3 +1,4 @@
+
 <header class="row">
   <h1 class="text-center col-md-6 col-md-offset-3">Test Page</h1>
 </header>
@@ -167,6 +168,20 @@
   <label>My ID</label><span class="my_info">{{$scope.BagelInfo.hex_id}}</span> <br />
   <label>Position</label> <input type='text' ng-model='photo_position' placeholder="Please input postion of photo" /> <br />
   <label>Caption</label> <input type='text' ng-model='photo_caption'  placeholder="This is my 4th photo!" /><br />
+  </div>
+   <button class="btn" ng-click="isCollapsed = !isCollapsed">Toggle collapse</button>
+    <input type="file" ng-model="filepick" onchange="angular.element(this).scope().pickimg(this.files)" accept='image/*' multiple />
+    <output id="list"></output> 
 </section>
 </div>
 
+
+<div class="general_div">  
+<section>
+  <button type="button" class="btn btn-primary btn-large" data-ng-click="login_ChatMessage()">Chat Messages</button>
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="report_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</section>
+<section class='report_section' ng-if="!report_flag && ReportResult">  
+  <span class='my_info'>{{ReportResult}}</span>
+</section>    
+</div>
