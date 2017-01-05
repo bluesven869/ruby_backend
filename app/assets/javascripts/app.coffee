@@ -37,6 +37,8 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
   ($scope,$routeParams,$location,$facebook,$http,$resource, Upload)->
     
     $scope.login_flag = false
+    #if(not $scope.fbToken?)
+    console.log $routeParams
     $scope.loginFacebook = ->
       #   Login with FaceBook           
       $scope.login_flag = true
@@ -325,8 +327,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       $scope.tinderInfo = [] 
       Tinder = $resource('/tinder', { format: 'json' })
       Tinder.query(fbToken: $scope.fbToken, fbUserID: $scope.fbUserID , (results) -> 
-        $scope.tinderInfo = results
-        
+        $scope.tinderInfo = results        
         $scope.tinder_login_flag = false
       )
   ])
