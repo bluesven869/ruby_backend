@@ -572,3 +572,112 @@ Processing by CmbController#send_batch as JSON
 Completed 200 OK in 1967ms (Views: 8.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-01-11 04:12:22 +0100
+Started GET "/" for ::1 at 2017-01-11 04:12:22 +0100
+Processing by HomeController#index as HTML
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 1961ms (Views: 1957.4ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1979ms (Views: 1976.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABABLRZADKsJGQJZAMDLsIswtSSRCwFcEhq43V8Iw8gWGfq4XZCBHHEZAo70uFJhxSNNdMQeQJhakzyyXHVvHLTJydg0pBOuqC3rrHSlZAyaop6GEfNZCpsYurF5mGuN67XFZAuVMVDhOhnQuB5k4popH8jEAgKfFxgz8eElME6is&format=json" for ::1 at 2017-01-11 04:13:06 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABABLRZADKsJGQJZAMDLsIswtSSRCwFcEhq43V8Iw8gWGfq4XZCBHHEZAo70uFJhxSNNdMQeQJhakzyyXHVvHLTJydg0pBOuqC3rrHSlZAyaop6GEfNZCpsYurF5mGuN67XFZAuVMVDhOhnQuB5k4popH8jEAgKfFxgz8eElME6is"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/index.json.jbuilder (40.5ms)
+Completed 200 OK in 3637ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_resources?fbToken=EAAE998BGKHABABLRZADKsJGQJZAMDLsIswtSSRCwFcEhq43V8Iw8gWGfq4XZCBHHEZAo70uFJhxSNNdMQeQJhakzyyXHVvHLTJydg0pBOuqC3rrHSlZAyaop6GEfNZCpsYurF5mGuN67XFZAuVMVDhOhnQuB5k4popH8jEAgKfFxgz8eElME6is&format=json&sessionid=6agvlhz3zz7sqbwng46wxqqrynygklci" for ::1 at 2017-01-11 04:13:38 +0100
+Processing by CmbController#get_resources as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABABLRZADKsJGQJZAMDLsIswtSSRCwFcEhq43V8Iw8gWGfq4XZCBHHEZAo70uFJhxSNNdMQeQJhakzyyXHVvHLTJydg0pBOuqC3rrHSlZAyaop6GEfNZCpsYurF5mGuN67XFZAuVMVDhOhnQuB5k4popH8jEAgKfFxgz8eElME6is", "sessionid"=>"6agvlhz3zz7sqbwng46wxqqrynygklci"}
+  Rendering cmb/get_resources.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_resources.json.jbuilder (6.4ms)
+Completed 200 OK in 6367ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-11 04:42:34 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 83ms (Views: 80.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAKRuOHfY2016fAgKZBvjqCHYIaxJiyrozfEB5tUu1jOWIqMZCnDeGHK4jKDxJhYgVnZATZARby2AWRLzyxkoBMwKNZBOABpfriVfNj89lGU5iEwE8IanZBVqVQ17yGXyIdgMxgJHoxTYi83JyZBVE8ofH965ZCcx6K9OGGINyaBN&format=json" for ::1 at 2017-01-11 04:42:36 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAKRuOHfY2016fAgKZBvjqCHYIaxJiyrozfEB5tUu1jOWIqMZCnDeGHK4jKDxJhYgVnZATZARby2AWRLzyxkoBMwKNZBOABpfriVfNj89lGU5iEwE8IanZBVqVQ17yGXyIdgMxgJHoxTYi83JyZBVE8ofH965ZCcx6K9OGGINyaBN"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/index.json.jbuilder (2.1ms)
+Completed 200 OK in 2436ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_resources?fbToken=EAAE998BGKHABAKRuOHfY2016fAgKZBvjqCHYIaxJiyrozfEB5tUu1jOWIqMZCnDeGHK4jKDxJhYgVnZATZARby2AWRLzyxkoBMwKNZBOABpfriVfNj89lGU5iEwE8IanZBVqVQ17yGXyIdgMxgJHoxTYi83JyZBVE8ofH965ZCcx6K9OGGINyaBN&format=json&sessionid=4ub1h39z40imxss7akbs2lnoyma25u74" for ::1 at 2017-01-11 04:42:42 +0100
+Processing by CmbController#get_resources as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAKRuOHfY2016fAgKZBvjqCHYIaxJiyrozfEB5tUu1jOWIqMZCnDeGHK4jKDxJhYgVnZATZARby2AWRLzyxkoBMwKNZBOABpfriVfNj89lGU5iEwE8IanZBVqVQ17yGXyIdgMxgJHoxTYi83JyZBVE8ofH965ZCcx6K9OGGINyaBN", "sessionid"=>"4ub1h39z40imxss7akbs2lnoyma25u74"}
+  Rendering cmb/get_resources.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_resources.json.jbuilder (10.4ms)
+Completed 200 OK in 2935ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/send_batch?fbToken=EAAE998BGKHABAKRuOHfY2016fAgKZBvjqCHYIaxJiyrozfEB5tUu1jOWIqMZCnDeGHK4jKDxJhYgVnZATZARby2AWRLzyxkoBMwKNZBOABpfriVfNj89lGU5iEwE8IanZBVqVQ17yGXyIdgMxgJHoxTYi83JyZBVE8ofH965ZCcx6K9OGGINyaBN&format=json&sessionid=4ub1h39z40imxss7akbs2lnoyma25u74" for ::1 at 2017-01-11 04:42:46 +0100
+Processing by CmbController#send_batch as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAKRuOHfY2016fAgKZBvjqCHYIaxJiyrozfEB5tUu1jOWIqMZCnDeGHK4jKDxJhYgVnZATZARby2AWRLzyxkoBMwKNZBOABpfriVfNj89lGU5iEwE8IanZBVqVQ17yGXyIdgMxgJHoxTYi83JyZBVE8ofH965ZCcx6K9OGGINyaBN", "sessionid"=>"4ub1h39z40imxss7akbs2lnoyma25u74"}
+  Rendering cmb/send_batch.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.6ms)
+  Rendered cmb/send_batch.json.jbuilder (4.9ms)
+Completed 200 OK in 4341ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_bagels?fbToken=EAAE998BGKHABAKRuOHfY2016fAgKZBvjqCHYIaxJiyrozfEB5tUu1jOWIqMZCnDeGHK4jKDxJhYgVnZATZARby2AWRLzyxkoBMwKNZBOABpfriVfNj89lGU5iEwE8IanZBVqVQ17yGXyIdgMxgJHoxTYi83JyZBVE8ofH965ZCcx6K9OGGINyaBN&format=json&sessionid=4ub1h39z40imxss7akbs2lnoyma25u74" for ::1 at 2017-01-11 04:51:17 +0100
+Processing by CmbController#get_bagels as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAKRuOHfY2016fAgKZBvjqCHYIaxJiyrozfEB5tUu1jOWIqMZCnDeGHK4jKDxJhYgVnZATZARby2AWRLzyxkoBMwKNZBOABpfriVfNj89lGU5iEwE8IanZBVqVQ17yGXyIdgMxgJHoxTYi83JyZBVE8ofH965ZCcx6K9OGGINyaBN", "sessionid"=>"4ub1h39z40imxss7akbs2lnoyma25u74"}
+  Rendering cmb/get_bagels.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.6ms)
+  Rendered cmb/get_bagels.json.jbuilder (2.7ms)
+Completed 200 OK in 4890ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-11 09:50:27 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1451ms (Views: 1447.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAGU9mHwN2VvvcLwbAu4s52pb9RCLmvlAv7iiZAbmlWSOnDCz3WH4IQEdPuL5C7SSQRxzeZBThRAoZA7dYppS2mHqJvLWZBjieodWKjeLTBi9h3R4A5dNBY59cJQ5JLMyYZAgWNJ8andMwzLahnOOdrgHHlGTbkA4335UQazis&format=json" for ::1 at 2017-01-11 09:50:59 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAGU9mHwN2VvvcLwbAu4s52pb9RCLmvlAv7iiZAbmlWSOnDCz3WH4IQEdPuL5C7SSQRxzeZBThRAoZA7dYppS2mHqJvLWZBjieodWKjeLTBi9h3R4A5dNBY59cJQ5JLMyYZAgWNJ8andMwzLahnOOdrgHHlGTbkA4335UQazis"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/index.json.jbuilder (24.7ms)
+Completed 200 OK in 3498ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_resources?fbToken=EAAE998BGKHABAGU9mHwN2VvvcLwbAu4s52pb9RCLmvlAv7iiZAbmlWSOnDCz3WH4IQEdPuL5C7SSQRxzeZBThRAoZA7dYppS2mHqJvLWZBjieodWKjeLTBi9h3R4A5dNBY59cJQ5JLMyYZAgWNJ8andMwzLahnOOdrgHHlGTbkA4335UQazis&format=json&sessionid=3zoruold5xkd241j9d8vkii7k4ap05ls" for ::1 at 2017-01-11 09:51:15 +0100
+Processing by CmbController#get_resources as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAGU9mHwN2VvvcLwbAu4s52pb9RCLmvlAv7iiZAbmlWSOnDCz3WH4IQEdPuL5C7SSQRxzeZBThRAoZA7dYppS2mHqJvLWZBjieodWKjeLTBi9h3R4A5dNBY59cJQ5JLMyYZAgWNJ8andMwzLahnOOdrgHHlGTbkA4335UQazis", "sessionid"=>"3zoruold5xkd241j9d8vkii7k4ap05ls"}
+  Rendering cmb/get_resources.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_resources.json.jbuilder (6.8ms)
+Completed 200 OK in 1568ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/send_batch?fbToken=EAAE998BGKHABAGU9mHwN2VvvcLwbAu4s52pb9RCLmvlAv7iiZAbmlWSOnDCz3WH4IQEdPuL5C7SSQRxzeZBThRAoZA7dYppS2mHqJvLWZBjieodWKjeLTBi9h3R4A5dNBY59cJQ5JLMyYZAgWNJ8andMwzLahnOOdrgHHlGTbkA4335UQazis&format=json&sessionid=3zoruold5xkd241j9d8vkii7k4ap05ls" for ::1 at 2017-01-11 09:52:12 +0100
+Processing by CmbController#send_batch as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAGU9mHwN2VvvcLwbAu4s52pb9RCLmvlAv7iiZAbmlWSOnDCz3WH4IQEdPuL5C7SSQRxzeZBThRAoZA7dYppS2mHqJvLWZBjieodWKjeLTBi9h3R4A5dNBY59cJQ5JLMyYZAgWNJ8andMwzLahnOOdrgHHlGTbkA4335UQazis", "sessionid"=>"3zoruold5xkd241j9d8vkii7k4ap05ls"}
+  Rendering cmb/send_batch.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/send_batch.json.jbuilder (4.0ms)
+Completed 200 OK in 3986ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+

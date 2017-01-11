@@ -1,1 +1,1 @@
-json.array! @BatchesInfo, partial: 'bagelsInfoElement', as: :bagelsInfoElement
+json.array! @BaglesInfo, partial: 'bagelsInfoElement', as: :bagelsInfoElement
