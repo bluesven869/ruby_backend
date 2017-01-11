@@ -201,12 +201,15 @@ class CmbController < ApplicationController
 	end
 	def send_batch
 		# Batch Command
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)) || (not params.has_key?(:hex_id))
+		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))# || (not params.has_key?(:hex_id))
 			@BaglesInfo = [{"success": false, "jsonObj": "Params Error"}]
 		else
 			fbToken = params[:fbToken].to_str
 			sessionid = params[:sessionid].to_str
-			hex_id = params[:hex_id].to_str
+			if params.has_key?(:hex_id)
+				hex_id = params[:hex_id].to_str
+			end
+			
 			base_uri = 'https://api.coffeemeetsbagel.com/batch'		
 			my_cookie = "sessionid="+sessionid
 	      	headers = {
@@ -217,10 +220,15 @@ class CmbController < ApplicationController
 				'Facebook-Auth-Token': fbToken,
 				'Cookie': my_cookie	
 	      	}
+
+	      	addedString = ''
+	      	if hex_id
+	      		addedString = '&updated_after='+hex_id	
+	      	end
 	    
 	      	options = [	    	
 		    	{
-		    		'relative_url': 'givetakes?embed=profile&updated_after='+hex_id,
+		    		'relative_url': 'givetakes?embed=profile'+addedString,
 		    		'method': 'GET'
 		    	},
 		    	{
@@ -228,11 +236,11 @@ class CmbController < ApplicationController
 		    		'method': 'GET'
 		    	},
 		    	{
-		    		'relative_url': 'reportmeta?embed=profile&updated_after='+hex_id,
+		    		'relative_url': 'reportmeta?embed=profile'+addedString,
 		    		'method': 'GET'
 		    	},
 		    	{
-		    		'relative_url': 'risinggivetakes?embed=profile&updated_after='+hex_id,
+		    		'relative_url': 'risinggivetakes?embed=profile'+addedString,
 		    		'method': 'GET'
 		    	},
 		    	{

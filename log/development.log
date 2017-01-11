@@ -212,3 +212,363 @@ Processing by CmbController#get_bagels_history as JSON
 Completed 200 OK in 2365ms (Views: 7.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-01-10 09:10:58 +0100
+  
+ActiveRecord::NoDatabaseError (FATAL:  role "chris" does not exist
+):
+  
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:675:in `rescue in connect'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:729:in `new_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:773:in `checkout_new_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:752:in `try_to_checkout_new_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:713:in `acquire_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:490:in `checkout'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:883:in `retrieve_connection'
+activerecord (5.0.1) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+activerecord (5.0.1) lib/active_record/connection_handling.rb:91:in `connection'
+activerecord (5.0.1) lib/active_record/migration.rb:559:in `connection'
+activerecord (5.0.1) lib/active_record/migration.rb:546:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (133.4ms)
+Started GET "/" for ::1 at 2017-01-10 09:10:58 +0100
+  
+ActiveRecord::NoDatabaseError (FATAL:  role "chris" does not exist
+):
+  
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:675:in `rescue in connect'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:729:in `new_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:773:in `checkout_new_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:752:in `try_to_checkout_new_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:713:in `acquire_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:490:in `checkout'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:883:in `retrieve_connection'
+activerecord (5.0.1) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+activerecord (5.0.1) lib/active_record/connection_handling.rb:91:in `connection'
+activerecord (5.0.1) lib/active_record/migration.rb:559:in `connection'
+activerecord (5.0.1) lib/active_record/migration.rb:546:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.5ms)
+Started GET "/" for ::1 at 2017-01-10 09:44:35 +0100
+  
+ActiveRecord::NoDatabaseError (FATAL:  role "chris" does not exist
+):
+  
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:675:in `rescue in connect'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:729:in `new_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:773:in `checkout_new_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:752:in `try_to_checkout_new_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:713:in `acquire_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:490:in `checkout'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:883:in `retrieve_connection'
+activerecord (5.0.1) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+activerecord (5.0.1) lib/active_record/connection_handling.rb:91:in `connection'
+activerecord (5.0.1) lib/active_record/migration.rb:559:in `connection'
+activerecord (5.0.1) lib/active_record/migration.rb:546:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.6ms)
+Started GET "/" for ::1 at 2017-01-10 10:38:44 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6475ms (Views: 6471.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAAZCXk6y7of71BQ6OzokdNWT56I0wisksiQaaTsZAhWNYSp6TSoQ6KBBsJMZCiGOLRiL1L6Fn1hZA5BfLNjo1Jc8ZBKMWJ8ZA9SjLmcDNxAHEEmZCOfLsaDHZCK9ulveQjeb7nURHGDLAYKdid3nvUHuLQrYsTlQxPJLBKSENMO5&format=json" for ::1 at 2017-01-10 10:39:02 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAAZCXk6y7of71BQ6OzokdNWT56I0wisksiQaaTsZAhWNYSp6TSoQ6KBBsJMZCiGOLRiL1L6Fn1hZA5BfLNjo1Jc8ZBKMWJ8ZA9SjLmcDNxAHEEmZCOfLsaDHZCK9ulveQjeb7nURHGDLAYKdid3nvUHuLQrYsTlQxPJLBKSENMO5"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/index.json.jbuilder (35.7ms)
+Completed 200 OK in 5961ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAE998BGKHABAAZCXk6y7of71BQ6OzokdNWT56I0wisksiQaaTsZAhWNYSp6TSoQ6KBBsJMZCiGOLRiL1L6Fn1hZA5BfLNjo1Jc8ZBKMWJ8ZA9SjLmcDNxAHEEmZCOfLsaDHZCK9ulveQjeb7nURHGDLAYKdid3nvUHuLQrYsTlQxPJLBKSENMO5&format=json&sessionid=x5gh7o7w8islb1hsfs7elxgz3s08eszs" for ::1 at 2017-01-10 10:40:19 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAAZCXk6y7of71BQ6OzokdNWT56I0wisksiQaaTsZAhWNYSp6TSoQ6KBBsJMZCiGOLRiL1L6Fn1hZA5BfLNjo1Jc8ZBKMWJ8ZA9SjLmcDNxAHEEmZCOfLsaDHZCK9ulveQjeb7nURHGDLAYKdid3nvUHuLQrYsTlQxPJLBKSENMO5", "sessionid"=>"x5gh7o7w8islb1hsfs7elxgz3s08eszs"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.5ms)
+  Rendered cmb/get_profile.json.jbuilder (5.4ms)
+Completed 200 OK in 20519ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_bagels?fbToken=EAAE998BGKHABAAZCXk6y7of71BQ6OzokdNWT56I0wisksiQaaTsZAhWNYSp6TSoQ6KBBsJMZCiGOLRiL1L6Fn1hZA5BfLNjo1Jc8ZBKMWJ8ZA9SjLmcDNxAHEEmZCOfLsaDHZCK9ulveQjeb7nURHGDLAYKdid3nvUHuLQrYsTlQxPJLBKSENMO5&format=json&sessionid=x5gh7o7w8islb1hsfs7elxgz3s08eszs" for ::1 at 2017-01-10 14:52:25 +0100
+Processing by CmbController#get_bagels as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAAZCXk6y7of71BQ6OzokdNWT56I0wisksiQaaTsZAhWNYSp6TSoQ6KBBsJMZCiGOLRiL1L6Fn1hZA5BfLNjo1Jc8ZBKMWJ8ZA9SjLmcDNxAHEEmZCOfLsaDHZCK9ulveQjeb7nURHGDLAYKdid3nvUHuLQrYsTlQxPJLBKSENMO5", "sessionid"=>"x5gh7o7w8islb1hsfs7elxgz3s08eszs"}
+  Rendering cmb/get_bagels.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_bagels.json.jbuilder (2.3ms)
+Completed 200 OK in 8349ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_resources?fbToken=EAAE998BGKHABAAZCXk6y7of71BQ6OzokdNWT56I0wisksiQaaTsZAhWNYSp6TSoQ6KBBsJMZCiGOLRiL1L6Fn1hZA5BfLNjo1Jc8ZBKMWJ8ZA9SjLmcDNxAHEEmZCOfLsaDHZCK9ulveQjeb7nURHGDLAYKdid3nvUHuLQrYsTlQxPJLBKSENMO5&format=json&sessionid=x5gh7o7w8islb1hsfs7elxgz3s08eszs" for ::1 at 2017-01-10 14:56:59 +0100
+Processing by CmbController#get_resources as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAAZCXk6y7of71BQ6OzokdNWT56I0wisksiQaaTsZAhWNYSp6TSoQ6KBBsJMZCiGOLRiL1L6Fn1hZA5BfLNjo1Jc8ZBKMWJ8ZA9SjLmcDNxAHEEmZCOfLsaDHZCK9ulveQjeb7nURHGDLAYKdid3nvUHuLQrYsTlQxPJLBKSENMO5", "sessionid"=>"x5gh7o7w8islb1hsfs7elxgz3s08eszs"}
+  Rendering cmb/get_resources.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.6ms)
+  Rendered cmb/get_resources.json.jbuilder (18.9ms)
+Completed 200 OK in 14140ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-10 15:46:23 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 974ms (Views: 971.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAE5CryzFWcIWHLUTXjfIOcFrqLt5XT9gZA8vlnPm81JosFPiyu9NF86LWctSp9B7LN9gfhze4pm3H7x2gkmfZBay7daoXcXLFm1jIZCHw7NADjcRgs8WZCzjVAXS559IvXmccEZBW76vtEDnyGOd2zalNqvRAOASb7uDIZCItN&format=json" for ::1 at 2017-01-10 15:46:34 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAE5CryzFWcIWHLUTXjfIOcFrqLt5XT9gZA8vlnPm81JosFPiyu9NF86LWctSp9B7LN9gfhze4pm3H7x2gkmfZBay7daoXcXLFm1jIZCHw7NADjcRgs8WZCzjVAXS559IvXmccEZBW76vtEDnyGOd2zalNqvRAOASb7uDIZCItN"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.6ms)
+  Rendered cmb/index.json.jbuilder (2.7ms)
+Completed 200 OK in 5513ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-10 20:32:14 +0100
+Started GET "/" for ::1 at 2017-01-10 20:32:14 +0100
+Processing by HomeController#index as HTML
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 3819ms (Views: 3772.6ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 3803ms (Views: 3762.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABABHUr6iDRuBh1Imc6PaeVwk9blNSAWcMqc9AM0tlYBqs8S0aZCBvRER5Hp3jwiXOss5DZAyZBj4TtBmHNGMFISisUWnEZAvsLCgsCRA0AZChZAHpOijD15HT2RcHgWMQhCmADo2LsRZAyk5Xw68NtpItD6aFf3MgNqAyM9wNWZCt&format=json" for ::1 at 2017-01-10 20:32:23 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABABHUr6iDRuBh1Imc6PaeVwk9blNSAWcMqc9AM0tlYBqs8S0aZCBvRER5Hp3jwiXOss5DZAyZBj4TtBmHNGMFISisUWnEZAvsLCgsCRA0AZChZAHpOijD15HT2RcHgWMQhCmADo2LsRZAyk5Xw68NtpItD6aFf3MgNqAyM9wNWZCt"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.5ms)
+  Rendered cmb/index.json.jbuilder (37.3ms)
+Completed 200 OK in 2691ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_resources?fbToken=EAAE998BGKHABABHUr6iDRuBh1Imc6PaeVwk9blNSAWcMqc9AM0tlYBqs8S0aZCBvRER5Hp3jwiXOss5DZAyZBj4TtBmHNGMFISisUWnEZAvsLCgsCRA0AZChZAHpOijD15HT2RcHgWMQhCmADo2LsRZAyk5Xw68NtpItD6aFf3MgNqAyM9wNWZCt&format=json&sessionid=5o7rtsoj7llu8reiodt23dta621m7hfy" for ::1 at 2017-01-10 20:32:33 +0100
+Processing by CmbController#get_resources as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABABHUr6iDRuBh1Imc6PaeVwk9blNSAWcMqc9AM0tlYBqs8S0aZCBvRER5Hp3jwiXOss5DZAyZBj4TtBmHNGMFISisUWnEZAvsLCgsCRA0AZChZAHpOijD15HT2RcHgWMQhCmADo2LsRZAyk5Xw68NtpItD6aFf3MgNqAyM9wNWZCt", "sessionid"=>"5o7rtsoj7llu8reiodt23dta621m7hfy"}
+  Rendering cmb/get_resources.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_resources.json.jbuilder (28.6ms)
+Completed 200 OK in 1373ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-10 21:23:30 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1992ms (Views: 1989.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABANnMquLyONkj2zgU9emYEATQtX8wspx1Udycj5AYWZCx5elotvz4BzQm8eLm2Uctd6NICTUYbZBrGrZAzPOm9efRZC5GF6y3resWrbutlzReNlDslWnXGZBZAMDXeTLVQ0ZCWPv6T7I9lyjUNpYpTpDCdYy7gCR8FJcCHyIxeBL&format=json" for ::1 at 2017-01-10 21:23:35 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABANnMquLyONkj2zgU9emYEATQtX8wspx1Udycj5AYWZCx5elotvz4BzQm8eLm2Uctd6NICTUYbZBrGrZAzPOm9efRZC5GF6y3resWrbutlzReNlDslWnXGZBZAMDXeTLVQ0ZCWPv6T7I9lyjUNpYpTpDCdYy7gCR8FJcCHyIxeBL"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.5ms)
+  Rendered cmb/index.json.jbuilder (3.7ms)
+Completed 200 OK in 2712ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_resources?fbToken=EAAE998BGKHABANnMquLyONkj2zgU9emYEATQtX8wspx1Udycj5AYWZCx5elotvz4BzQm8eLm2Uctd6NICTUYbZBrGrZAzPOm9efRZC5GF6y3resWrbutlzReNlDslWnXGZBZAMDXeTLVQ0ZCWPv6T7I9lyjUNpYpTpDCdYy7gCR8FJcCHyIxeBL&format=json&sessionid=30t7nqzrslu2r479kb11ziv4oepzdxw5" for ::1 at 2017-01-10 21:23:44 +0100
+Processing by CmbController#get_resources as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABANnMquLyONkj2zgU9emYEATQtX8wspx1Udycj5AYWZCx5elotvz4BzQm8eLm2Uctd6NICTUYbZBrGrZAzPOm9efRZC5GF6y3resWrbutlzReNlDslWnXGZBZAMDXeTLVQ0ZCWPv6T7I9lyjUNpYpTpDCdYy7gCR8FJcCHyIxeBL", "sessionid"=>"30t7nqzrslu2r479kb11ziv4oepzdxw5"}
+  Rendering cmb/get_resources.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/get_resources.json.jbuilder (8.5ms)
+Completed 200 OK in 1332ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/send_batch?fbToken=EAAE998BGKHABANnMquLyONkj2zgU9emYEATQtX8wspx1Udycj5AYWZCx5elotvz4BzQm8eLm2Uctd6NICTUYbZBrGrZAzPOm9efRZC5GF6y3resWrbutlzReNlDslWnXGZBZAMDXeTLVQ0ZCWPv6T7I9lyjUNpYpTpDCdYy7gCR8FJcCHyIxeBL&format=json&sessionid=30t7nqzrslu2r479kb11ziv4oepzdxw5" for ::1 at 2017-01-10 21:23:48 +0100
+Processing by CmbController#send_batch as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABANnMquLyONkj2zgU9emYEATQtX8wspx1Udycj5AYWZCx5elotvz4BzQm8eLm2Uctd6NICTUYbZBrGrZAzPOm9efRZC5GF6y3resWrbutlzReNlDslWnXGZBZAMDXeTLVQ0ZCWPv6T7I9lyjUNpYpTpDCdYy7gCR8FJcCHyIxeBL", "sessionid"=>"30t7nqzrslu2r479kb11ziv4oepzdxw5"}
+  Rendering cmb/send_batch.json.jbuilder
+  Rendered cmb/send_batch.json.jbuilder (0.6ms)
+Completed 200 OK in 1469ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/give_take?customer_id=2244848&fbToken=EAAE998BGKHABANnMquLyONkj2zgU9emYEATQtX8wspx1Udycj5AYWZCx5elotvz4BzQm8eLm2Uctd6NICTUYbZBrGrZAzPOm9efRZC5GF6y3resWrbutlzReNlDslWnXGZBZAMDXeTLVQ0ZCWPv6T7I9lyjUNpYpTpDCdYy7gCR8FJcCHyIxeBL&format=json&sessionid=30t7nqzrslu2r479kb11ziv4oepzdxw5" for ::1 at 2017-01-10 21:23:59 +0100
+Processing by CmbController#give_take as JSON
+  Parameters: {"customer_id"=>"2244848", "fbToken"=>"EAAE998BGKHABANnMquLyONkj2zgU9emYEATQtX8wspx1Udycj5AYWZCx5elotvz4BzQm8eLm2Uctd6NICTUYbZBrGrZAzPOm9efRZC5GF6y3resWrbutlzReNlDslWnXGZBZAMDXeTLVQ0ZCWPv6T7I9lyjUNpYpTpDCdYy7gCR8FJcCHyIxeBL", "sessionid"=>"30t7nqzrslu2r479kb11ziv4oepzdxw5"}
+  Rendering cmb/give_take.json.jbuilder
+  Rendered cmb/_giveTakeElement.json.jbuilder (0.3ms)
+  Rendered cmb/give_take.json.jbuilder (2.2ms)
+Completed 200 OK in 1280ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/send_batch?fbToken=EAAE998BGKHABANnMquLyONkj2zgU9emYEATQtX8wspx1Udycj5AYWZCx5elotvz4BzQm8eLm2Uctd6NICTUYbZBrGrZAzPOm9efRZC5GF6y3resWrbutlzReNlDslWnXGZBZAMDXeTLVQ0ZCWPv6T7I9lyjUNpYpTpDCdYy7gCR8FJcCHyIxeBL&format=json&sessionid=30t7nqzrslu2r479kb11ziv4oepzdxw5" for ::1 at 2017-01-10 21:31:52 +0100
+Processing by CmbController#send_batch as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABANnMquLyONkj2zgU9emYEATQtX8wspx1Udycj5AYWZCx5elotvz4BzQm8eLm2Uctd6NICTUYbZBrGrZAzPOm9efRZC5GF6y3resWrbutlzReNlDslWnXGZBZAMDXeTLVQ0ZCWPv6T7I9lyjUNpYpTpDCdYy7gCR8FJcCHyIxeBL", "sessionid"=>"30t7nqzrslu2r479kb11ziv4oepzdxw5"}
+  Rendering cmb/send_batch.json.jbuilder
+  Rendered cmb/send_batch.json.jbuilder (0.7ms)
+Completed 200 OK in 2514ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-10 21:34:41 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 85ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAMdaLSFvv1Igf5FsU89wP0l3uJfwxL9TSYFiFJy6OsSfZBKHM5uLxpO6KEky90qphd2W6HNMcIavSaZBXVKcLZClseQ7ZCNSjjfoONJVhnAajr9YkXQ0aq1iRZBmtR6FhNmttT2ZCM3ZA0vuS9M1oqgn3w3vR8P1PRDOJG2XCRn&format=json" for ::1 at 2017-01-10 21:34:45 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAMdaLSFvv1Igf5FsU89wP0l3uJfwxL9TSYFiFJy6OsSfZBKHM5uLxpO6KEky90qphd2W6HNMcIavSaZBXVKcLZClseQ7ZCNSjjfoONJVhnAajr9YkXQ0aq1iRZBmtR6FhNmttT2ZCM3ZA0vuS9M1oqgn3w3vR8P1PRDOJG2XCRn"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/index.json.jbuilder (2.1ms)
+Completed 200 OK in 1730ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_resources?fbToken=EAAE998BGKHABAMdaLSFvv1Igf5FsU89wP0l3uJfwxL9TSYFiFJy6OsSfZBKHM5uLxpO6KEky90qphd2W6HNMcIavSaZBXVKcLZClseQ7ZCNSjjfoONJVhnAajr9YkXQ0aq1iRZBmtR6FhNmttT2ZCM3ZA0vuS9M1oqgn3w3vR8P1PRDOJG2XCRn&format=json&sessionid=wvuwhz6wnes04q6uiy2s0r8p33zvjm6a" for ::1 at 2017-01-10 21:34:50 +0100
+Processing by CmbController#get_resources as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAMdaLSFvv1Igf5FsU89wP0l3uJfwxL9TSYFiFJy6OsSfZBKHM5uLxpO6KEky90qphd2W6HNMcIavSaZBXVKcLZClseQ7ZCNSjjfoONJVhnAajr9YkXQ0aq1iRZBmtR6FhNmttT2ZCM3ZA0vuS9M1oqgn3w3vR8P1PRDOJG2XCRn", "sessionid"=>"wvuwhz6wnes04q6uiy2s0r8p33zvjm6a"}
+  Rendering cmb/get_resources.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_resources.json.jbuilder (7.7ms)
+Completed 200 OK in 1617ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/send_batch?fbToken=EAAE998BGKHABAMdaLSFvv1Igf5FsU89wP0l3uJfwxL9TSYFiFJy6OsSfZBKHM5uLxpO6KEky90qphd2W6HNMcIavSaZBXVKcLZClseQ7ZCNSjjfoONJVhnAajr9YkXQ0aq1iRZBmtR6FhNmttT2ZCM3ZA0vuS9M1oqgn3w3vR8P1PRDOJG2XCRn&format=json&sessionid=wvuwhz6wnes04q6uiy2s0r8p33zvjm6a" for ::1 at 2017-01-10 21:34:53 +0100
+Processing by CmbController#send_batch as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAMdaLSFvv1Igf5FsU89wP0l3uJfwxL9TSYFiFJy6OsSfZBKHM5uLxpO6KEky90qphd2W6HNMcIavSaZBXVKcLZClseQ7ZCNSjjfoONJVhnAajr9YkXQ0aq1iRZBmtR6FhNmttT2ZCM3ZA0vuS9M1oqgn3w3vR8P1PRDOJG2XCRn", "sessionid"=>"wvuwhz6wnes04q6uiy2s0r8p33zvjm6a"}
+  Rendering cmb/send_batch.json.jbuilder
+  Rendered cmb/send_batch.json.jbuilder (0.5ms)
+Completed 200 OK in 1967ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+

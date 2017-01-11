@@ -161,6 +161,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         $scope.bagels_history_flag = false   
         console.log 'Bagles History OK'   
       )
+
     $scope.getResources = ->
       $scope.get_resources_flag = true
       Cmb = $resource('/cmb/get_resources', { format: 'json' })
@@ -169,6 +170,23 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         $scope.ResourceInfo = results
         $scope.get_resources_flag = false
         console.log 'ResourceOk'
+      )
+
+    $scope.sendBatches = ->
+      if(not $scope.fbToken?)
+        alert "Please Click 'Login with Facebook'."
+        return
+
+      # if(not $scope.BagelInfo?) || (not $scope.BagelInfo.hex_id?) 
+      #   alert "Please Click 'Set Bagels'."
+      #   return
+      $scope.batches_flag = true
+      Cmb = $resource('/cmb/send_batch', { format: 'json' })
+      $scope.BatchesInfo = []
+      Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
+        $scope.BatchesInfo = results
+        $scope.batches_flag = false
+        console.log 'BatchOk'
       )
 
     $scope.photolabs = ->
