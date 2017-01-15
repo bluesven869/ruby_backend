@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :cmb, only: [:index]
+  get '/cmb/set_profileprocess1'
+  get '/cmb/set_profileprocess2'
+  get '/cmb/set_profileprocess3'
   get '/cmb/get_profile'
   get '/cmb/set_profile'
   get '/cmb/get_bagels'

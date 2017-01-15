@@ -1,0 +1,1 @@
+json.(responseResultElement, :Result)

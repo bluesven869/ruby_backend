@@ -43,6 +43,126 @@ class CmbController < ApplicationController
 		end
 	end
 
+	def set_profileprocess1
+		#Set Profile
+		#  IN     fbToken  : FaceBook Token
+		#         sessionid: CMB session id
+		#         user     : User Profile Info
+		#  Return
+		#         jsonObj  : User Profile Info (changed)
+
+		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
+			@cmbInfo = [{"loginResult": "Token Error", "sessionid":"NoSession","jsonObj": "Token"}]
+		else
+			fbToken = params[:fbToken].to_str
+			sessionid = params[:sessionid].to_str
+			@user 	= JSON.parse params[:user];
+			base_uri = 'https://api.coffeemeetsbagel.com/profile/me'		
+			my_cookie = "sessionid="+sessionid
+	      	headers = {
+		    	'AppStore-Version': '3.4.1.779',
+				'App-Version': '779',
+				'Client': 'Android',
+				'Content-Type': 'application/json',
+				'Facebook-Auth-Token': fbToken,
+				'Cookie': my_cookie	
+	      	}
+	      	options = {	    	
+		    	'id': @user["id"],
+		    	'language_code': @user["language_code"]
+			}	
+		    response = self.class.put(base_uri.to_str,
+		    	:body=> options.to_json,
+		      	:headers => headers)
+		    if response.success?
+		      	@processResult = [{"Result": "Set Profile Success"}]			  	
+			else
+			  	@processResult = [{"Result": "Set Profile Failed"}]
+			end	  
+		end
+	end
+
+	def set_profileprocess2
+		#Set Profile
+		#  IN     fbToken  : FaceBook Token
+		#         sessionid: CMB session id
+		#         user     : User Profile Info
+		#  Return
+		#         jsonObj  : User Profile Info (changed)
+
+		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
+			@cmbInfo = [{"loginResult": "Token Error", "sessionid":"NoSession","jsonObj": "Token"}]
+		else
+			fbToken = params[:fbToken].to_str
+			sessionid = params[:sessionid].to_str
+			@user 	= JSON.parse params[:user];
+			base_uri = 'https://api.coffeemeetsbagel.com/profile/me'		
+			my_cookie = "sessionid="+sessionid
+	      	headers = {
+		    	'AppStore-Version': '3.4.1.779',
+				'App-Version': '779',
+				'Client': 'Android',
+				'Content-Type': 'application/json',
+				'Facebook-Auth-Token': fbToken,
+				'Cookie': my_cookie	
+	      	}
+	      	options = {	    	
+		    	'id': @user["id"],
+		    	'gender': @user["gender"],
+		    	'birthday': @user["birthday"],
+		    	'criteria__gender': @user["criteria__gender"],
+		    	'user__email': @user["user__email"]
+			}	
+		    response = self.class.put(base_uri.to_str,
+		    	:body=> options.to_json,
+		      	:headers => headers)
+		    if response.success?
+		      	@processResult = [{"Result": "Set Profile Success"}]			  	
+			else
+			  	@processResult = [{"Result": "Set Profile Failed"}]
+			end  
+		end
+	end
+
+	def set_profileprocess3
+		#Set Profile
+		#  IN     fbToken  : FaceBook Token
+		#         sessionid: CMB session id
+		#         user     : User Profile Info
+		#  Return
+		#         jsonObj  : User Profile Info (changed)
+
+		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
+			@cmbInfo = [{"loginResult": "Token Error", "sessionid":"NoSession","jsonObj": "Token"}]
+		else
+			fbToken = params[:fbToken].to_str
+			sessionid = params[:sessionid].to_str
+			@user 	= JSON.parse params[:user];
+			base_uri = 'https://api.coffeemeetsbagel.com/profile/me'		
+			my_cookie = "sessionid="+sessionid
+	      	headers = {
+		    	'AppStore-Version': '3.4.1.779',
+				'App-Version': '779',
+				'Client': 'Android',
+				'Content-Type': 'application/json',
+				'Facebook-Auth-Token': fbToken,
+				'Cookie': my_cookie	
+	      	}
+	      	options = {	    	
+		    	'id': @user["id"],
+		    	'location': @user["location"]
+			}	
+		    response = self.class.put(base_uri.to_str,
+		    	:body=> options.to_json,
+		      	:headers => headers)
+		    if response.success?
+		      	@processResult = [{"Result": "Set Profile Success"}]			  	
+			else
+			  	@processResult = [{"Result": "Set Profile Failed"}]
+			end
+		end
+	end
+
 	def get_profile
 		#Get Profile
 		#  IN     fbToken  : FaceBook Token
@@ -103,19 +223,28 @@ class CmbController < ApplicationController
 				'Facebook-Auth-Token': fbToken,
 				'Cookie': my_cookie	
 	      	}
+	      	# options = {}
+	      	# options['id'] = @user["id"];
+	      	# options['name'] = @user["name"];
+	      	# options['gender'] = @user["gender"];
+	      	# options['birthday'] = @user["birthday"];
+	      	# options['user__email'] = @user["email"];
+	      	# options['criteria__gender'] = @user["criteria_gender"];
 	      	options = {	    	
 		    	'id': @user["id"],
+		    	'language_code': @user["language_code"],
 		    	'name': @user["name"],
 		    	'gender': @user["gender"],
 		    	'birthday': @user["birthday"],
 		    	'user__email': @user["email"],
 		    	'criteria__gender': @user["criteria_gender"],
+		    	'location': @user["location"]
 			}	
 		    response = self.class.put(base_uri.to_str,
 		    	:body=> options.to_json,
 		      	:headers => headers)
 		    if response.success?
-		      	@profileInfo = [{"loginResult": "Set Profile Success", "sessionid":sessionid,"jsonObj": response}]			  	
+		      	@profileInfo = [{"loginResult": "Set Profile Success", "sessionid": sessionid, "jsonObj": response}]			  	
 			else
 			  	@profileInfo = [{"loginResult": "Set Profile Failed", "sessionid": sessionid, "jsonObj": response}]
 			end	  

@@ -681,3 +681,1152 @@ Processing by CmbController#send_batch as JSON
 Completed 200 OK in 3986ms (Views: 15.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-01-12 11:31:49 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 2247ms (Views: 2243.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-12 16:03:34 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 75ms (Views: 72.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAOqrTVfamxW3DJQt6LqpolcFqpmH2I4LARxZA4JNr22PvymdLqK5K09kPu2W2LL6TGXX6EmIoewLvj9zZCUzHg1aUKAi4nssBZC62ZAkZCTAGMALzH13JCdmsWm3orh1z27ZC2TAzREUFWO2N3fyprZCzQrZB2gsPmw5vGwfT2ix&format=json" for ::1 at 2017-01-12 16:03:37 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAOqrTVfamxW3DJQt6LqpolcFqpmH2I4LARxZA4JNr22PvymdLqK5K09kPu2W2LL6TGXX6EmIoewLvj9zZCUzHg1aUKAi4nssBZC62ZAkZCTAGMALzH13JCdmsWm3orh1z27ZC2TAzREUFWO2N3fyprZCzQrZB2gsPmw5vGwfT2ix"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.7ms)
+  Rendered cmb/index.json.jbuilder (37.2ms)
+Completed 200 OK in 4229ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAE998BGKHABAOqrTVfamxW3DJQt6LqpolcFqpmH2I4LARxZA4JNr22PvymdLqK5K09kPu2W2LL6TGXX6EmIoewLvj9zZCUzHg1aUKAi4nssBZC62ZAkZCTAGMALzH13JCdmsWm3orh1z27ZC2TAzREUFWO2N3fyprZCzQrZB2gsPmw5vGwfT2ix&format=json&sessionid=po014gbpr91d8w4jfaym53hwy3tcmw0f" for ::1 at 2017-01-12 16:07:03 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAOqrTVfamxW3DJQt6LqpolcFqpmH2I4LARxZA4JNr22PvymdLqK5K09kPu2W2LL6TGXX6EmIoewLvj9zZCUzHg1aUKAi4nssBZC62ZAkZCTAGMALzH13JCdmsWm3orh1z27ZC2TAzREUFWO2N3fyprZCzQrZB2gsPmw5vGwfT2ix", "sessionid"=>"po014gbpr91d8w4jfaym53hwy3tcmw0f"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.5ms)
+  Rendered cmb/get_profile.json.jbuilder (3.4ms)
+Completed 200 OK in 35398ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-12 17:35:04 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 175ms (Views: 154.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-12 18:21:24 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 119ms (Views: 87.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-12 19:11:46 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 877ms (Views: 841.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-12 19:18:55 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 410ms (Views: 407.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-12 20:02:28 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2466ms (Views: 2463.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-12 20:04:17 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 848ms (Views: 844.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-12 20:04:54 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 850ms (Views: 847.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?format=json" for ::1 at 2017-01-12 20:04:56 +0100
+Processing by CmbController#index as JSON
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/index.json.jbuilder (5.0ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-12 20:06:51 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 416ms (Views: 414.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAO6PlFrvkvdKQuroNhgLPQTZCOLSXCZBZAYZB1jIe2HQfKeopsPRSl2310LFInaLy1zIlW7FjRJd8BZBWemDJafHHfRZCmTsc4EDrMghkN4K9EgzqJl6xxAiulYEt1WM4ILOSEAGrNq8pIxMqiVb9yLBnDYtUqyJCT5QPF1ZC4c&format=json" for ::1 at 2017-01-12 20:06:59 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAO6PlFrvkvdKQuroNhgLPQTZCOLSXCZBZAYZB1jIe2HQfKeopsPRSl2310LFInaLy1zIlW7FjRJd8BZBWemDJafHHfRZCmTsc4EDrMghkN4K9EgzqJl6xxAiulYEt1WM4ILOSEAGrNq8pIxMqiVb9yLBnDYtUqyJCT5QPF1ZC4c"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/index.json.jbuilder (2.1ms)
+Completed 200 OK in 2236ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-12 20:45:25 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 73ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABADYZA1ZAdmbWivIUubqxohAZCR8UscvRZCbp3HmtUffSRDwbs5BG4iVR4ymPUZBb4uj0W08nzIhAxsvZCgdB5VjsRAGpKjWP7eNND55rouZAnxPOiEdyBi9v2PYy4qv3yN5Eg8z9sYqjRYSh1ZBFwmdHllHf66VydMNs4zMe2IPy&format=json" for ::1 at 2017-01-12 20:45:29 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABADYZA1ZAdmbWivIUubqxohAZCR8UscvRZCbp3HmtUffSRDwbs5BG4iVR4ymPUZBb4uj0W08nzIhAxsvZCgdB5VjsRAGpKjWP7eNND55rouZAnxPOiEdyBi9v2PYy4qv3yN5Eg8z9sYqjRYSh1ZBFwmdHllHf66VydMNs4zMe2IPy"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/index.json.jbuilder (2.2ms)
+Completed 200 OK in 2047ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 04:10:49 +0100
+Started GET "/" for ::1 at 2017-01-13 04:10:50 +0100
+Processing by HomeController#index as HTML
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.0ms)
+  Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 2555ms (Views: 2552.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 2718ms (Views: 2711.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABANqCBxJi0Kzw5RYhk7nZB8qsx6WGEMM7DMwoWwFZAn37BQnZBrhCDSBIfwZAFBsRdcAEt1YsuKOAC5ZCaojAFUCd1gmRZCCAcZA3dLM6dRYKWAjFDmJXa3Fx8096u8vInmYKeZALyigibxNPPAOWOkMjaY2KimdgBcVbYbDcZCc9C&format=json" for ::1 at 2017-01-13 04:11:04 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABANqCBxJi0Kzw5RYhk7nZB8qsx6WGEMM7DMwoWwFZAn37BQnZBrhCDSBIfwZAFBsRdcAEt1YsuKOAC5ZCaojAFUCd1gmRZCCAcZA3dLM6dRYKWAjFDmJXa3Fx8096u8vInmYKeZALyigibxNPPAOWOkMjaY2KimdgBcVbYbDcZCc9C"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/index.json.jbuilder (26.2ms)
+Completed 200 OK in 4713ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 09:45:05 +0100
+Started GET "/" for ::1 at 2017-01-13 09:45:05 +0100
+Processing by HomeController#index as HTML
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 2779ms (Views: 2775.8ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 2786ms (Views: 2780.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?format=json" for ::1 at 2017-01-13 09:45:23 +0100
+Processing by CmbController#index as JSON
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.5ms)
+  Rendered cmb/index.json.jbuilder (24.3ms)
+Completed 200 OK in 88ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 09:47:04 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 143ms (Views: 141.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?format=json" for ::1 at 2017-01-13 09:48:07 +0100
+Processing by CmbController#index as JSON
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/index.json.jbuilder (3.7ms)
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAE998BGKHABAEtXYm6xf34Qv9YdZAlUoYD8bN3WMuuCQVlaIjD6WH6dmBEZAdZBIkXr0r9WYx3bqdPC0PZAZAxMHZAuW7B72ikqt1lZAa3E3VfXQiZAWi9wINs7EPAtix7peku4Irws1pxa2vgVmC21yHp2L78bXLrtHy0aAlJ93hZCT6qPC4j4e&format=json&sessionid=NoSession" for ::1 at 2017-01-13 09:48:09 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAEtXYm6xf34Qv9YdZAlUoYD8bN3WMuuCQVlaIjD6WH6dmBEZAdZBIkXr0r9WYx3bqdPC0PZAZAxMHZAuW7B72ikqt1lZAa3E3VfXQiZAWi9wINs7EPAtix7peku4Irws1pxa2vgVmC21yHp2L78bXLrtHy0aAlJ93hZCT6qPC4j4e", "sessionid"=>"NoSession"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_profile.json.jbuilder (2.5ms)
+Completed 200 OK in 5569ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAEtXYm6xf34Qv9YdZAlUoYD8bN3WMuuCQVlaIjD6WH6dmBEZAdZBIkXr0r9WYx3bqdPC0PZAZAxMHZAuW7B72ikqt1lZAa3E3VfXQiZAWi9wINs7EPAtix7peku4Irws1pxa2vgVmC21yHp2L78bXLrtHy0aAlJ93hZCT6qPC4j4e&format=json" for ::1 at 2017-01-13 09:48:19 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAEtXYm6xf34Qv9YdZAlUoYD8bN3WMuuCQVlaIjD6WH6dmBEZAdZBIkXr0r9WYx3bqdPC0PZAZAxMHZAuW7B72ikqt1lZAa3E3VfXQiZAWi9wINs7EPAtix7peku4Irws1pxa2vgVmC21yHp2L78bXLrtHy0aAlJ93hZCT6qPC4j4e"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/index.json.jbuilder (2.5ms)
+Completed 200 OK in 4197ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAE998BGKHABAFKLwIaUaILEXuM26iV0eTOXWZCVmCeg75edL1gioAd79ZAZBg9IWGVZAZCOtYsU9ZCRiGor2lMWEZCsm7yZAd193fGtBpbnyZBg1OZArLkIKpTWTYyi6Cg9GTavrPvnRGlizzpi8rR5vLYmril00bWzHwSLMu3rZCW3OpaHVHMXhGY&format=json&sessionid=txn38hvxvhm0m0ujqn0m2d2esibi08tb" for ::1 at 2017-01-13 09:48:26 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAFKLwIaUaILEXuM26iV0eTOXWZCVmCeg75edL1gioAd79ZAZBg9IWGVZAZCOtYsU9ZCRiGor2lMWEZCsm7yZAd193fGtBpbnyZBg1OZArLkIKpTWTYyi6Cg9GTavrPvnRGlizzpi8rR5vLYmril00bWzHwSLMu3rZCW3OpaHVHMXhGY", "sessionid"=>"txn38hvxvhm0m0ujqn0m2d2esibi08tb"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_profile.json.jbuilder (3.7ms)
+Completed 200 OK in 6116ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profile?fbToken=EAAE998BGKHABAFKLwIaUaILEXuM26iV0eTOXWZCVmCeg75edL1gioAd79ZAZBg9IWGVZAZCOtYsU9ZCRiGor2lMWEZCsm7yZAd193fGtBpbnyZBg1OZArLkIKpTWTYyi6Cg9GTavrPvnRGlizzpi8rR5vLYmril00bWzHwSLMu3rZCW3OpaHVHMXhGY&format=json&sessionid=txn38hvxvhm0m0ujqn0m2d2esibi08tb&user=%7B%22name%22:%22XXXXXXXXXXX+PPPPPPPPPP%22,%22id%22:%223192286%22,%22gender%22:%22m%22,%22birthday%22:%221981-09-26T00:00:00.000Z%22,%22email%22:%22tony19810925@coffeemeetsbagel.com%22,%22criteria_gender%22:%22f%22%7D" for ::1 at 2017-01-13 09:48:56 +0100
+Processing by CmbController#set_profile as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAFKLwIaUaILEXuM26iV0eTOXWZCVmCeg75edL1gioAd79ZAZBg9IWGVZAZCOtYsU9ZCRiGor2lMWEZCsm7yZAd193fGtBpbnyZBg1OZArLkIKpTWTYyi6Cg9GTavrPvnRGlizzpi8rR5vLYmril00bWzHwSLMu3rZCW3OpaHVHMXhGY", "sessionid"=>"txn38hvxvhm0m0ujqn0m2d2esibi08tb", "user"=>"{\"name\":\"XXXXXXXXXXX PPPPPPPPPP\",\"id\":\"3192286\",\"gender\":\"m\",\"birthday\":\"1981-09-26T00:00:00.000Z\",\"email\":\"tony19810925@coffeemeetsbagel.com\",\"criteria_gender\":\"f\"}"}
+  Rendering cmb/set_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/set_profile.json.jbuilder (2.0ms)
+Completed 200 OK in 8489ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAE998BGKHABAFKLwIaUaILEXuM26iV0eTOXWZCVmCeg75edL1gioAd79ZAZBg9IWGVZAZCOtYsU9ZCRiGor2lMWEZCsm7yZAd193fGtBpbnyZBg1OZArLkIKpTWTYyi6Cg9GTavrPvnRGlizzpi8rR5vLYmril00bWzHwSLMu3rZCW3OpaHVHMXhGY&format=json&sessionid=txn38hvxvhm0m0ujqn0m2d2esibi08tb" for ::1 at 2017-01-13 09:49:18 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAFKLwIaUaILEXuM26iV0eTOXWZCVmCeg75edL1gioAd79ZAZBg9IWGVZAZCOtYsU9ZCRiGor2lMWEZCsm7yZAd193fGtBpbnyZBg1OZArLkIKpTWTYyi6Cg9GTavrPvnRGlizzpi8rR5vLYmril00bWzHwSLMu3rZCW3OpaHVHMXhGY", "sessionid"=>"txn38hvxvhm0m0ujqn0m2d2esibi08tb"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_profile.json.jbuilder (3.0ms)
+Completed 200 OK in 6342ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAE998BGKHABAFKLwIaUaILEXuM26iV0eTOXWZCVmCeg75edL1gioAd79ZAZBg9IWGVZAZCOtYsU9ZCRiGor2lMWEZCsm7yZAd193fGtBpbnyZBg1OZArLkIKpTWTYyi6Cg9GTavrPvnRGlizzpi8rR5vLYmril00bWzHwSLMu3rZCW3OpaHVHMXhGY&format=json&sessionid=txn38hvxvhm0m0ujqn0m2d2esibi08tb" for ::1 at 2017-01-13 09:49:39 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAFKLwIaUaILEXuM26iV0eTOXWZCVmCeg75edL1gioAd79ZAZBg9IWGVZAZCOtYsU9ZCRiGor2lMWEZCsm7yZAd193fGtBpbnyZBg1OZArLkIKpTWTYyi6Cg9GTavrPvnRGlizzpi8rR5vLYmril00bWzHwSLMu3rZCW3OpaHVHMXhGY", "sessionid"=>"txn38hvxvhm0m0ujqn0m2d2esibi08tb"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_profile.json.jbuilder (3.0ms)
+Completed 200 OK in 1396ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 10:38:05 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 596ms (Views: 593.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 11:10:10 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1861ms (Views: 1821.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?format=json" for ::1 at 2017-01-13 11:10:14 +0100
+Processing by CmbController#index as JSON
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.7ms)
+  Rendered cmb/index.json.jbuilder (35.9ms)
+Completed 200 OK in 50ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAEvVRPWDDkvbbThEfm2OWanA4TOvWUVXK4f0rb5F82ZCkksopLuG8CF08dUB1IjXtnhFhYDZCCwmrawynx8bhGIZAPk86gttGD1kl9v24eiLcNEViVlFBofrQSYJYlwIRQl1R4JllCUWli79sYYEDPZBYcPrAmkN1WMIPnwO&format=json" for ::1 at 2017-01-13 11:10:18 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAEvVRPWDDkvbbThEfm2OWanA4TOvWUVXK4f0rb5F82ZCkksopLuG8CF08dUB1IjXtnhFhYDZCCwmrawynx8bhGIZAPk86gttGD1kl9v24eiLcNEViVlFBofrQSYJYlwIRQl1R4JllCUWli79sYYEDPZBYcPrAmkN1WMIPnwO"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.5ms)
+  Rendered cmb/index.json.jbuilder (2.9ms)
+Completed 200 OK in 3653ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess1?fbToken=EAAE998BGKHABAOZAyiAGcXvAptulDZALG24ap4iVZCQOYKXY0YvVcPG3tmb91h0GfdGwJ9LHg7K6MmtodnaywxZA1MysomNNSX3zuyl06OdVSOjZC6YgRARXZA3ge8WknxAHmqk2DIbRUCT0qZA148jTBLLT2QIJZBeHuZAc76dOZAsKlNxokVhUlA&format=json&sessionid=0helv2f0sl0gcj2p3qxv0yxww93qmvq0&user=%7B%22language_code%22:%22en%22%7D" for ::1 at 2017-01-13 11:10:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/cmb/set_profileprocess1"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [14 times] (51.9ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (34.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (199.8ms)
+Started GET "/" for ::1 at 2017-01-13 11:11:38 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 105ms (Views: 103.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?format=json" for ::1 at 2017-01-13 11:11:41 +0100
+Processing by CmbController#index as JSON
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.6ms)
+  Rendered cmb/index.json.jbuilder (4.5ms)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAAZCNWVKQItWhZCc0MFSZAh2xj9DWZBkxXg71JahEKjKnNOTts8WwvhwDQo5FbEREAoxfNZCNIKE4kYWUrrZBq1Pg9kXvtZAXPDZCbx1ZAHsFn7uiBsGF0kS0scJ6v3j2n4cT2zegRZB76ObNfZAZC34tLYX50mrPNkbUeoPtgee7t7ZB&format=json" for ::1 at 2017-01-13 11:11:44 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAAZCNWVKQItWhZCc0MFSZAh2xj9DWZBkxXg71JahEKjKnNOTts8WwvhwDQo5FbEREAoxfNZCNIKE4kYWUrrZBq1Pg9kXvtZAXPDZCbx1ZAHsFn7uiBsGF0kS0scJ6v3j2n4cT2zegRZB76ObNfZAZC34tLYX50mrPNkbUeoPtgee7t7ZB"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/index.json.jbuilder (2.2ms)
+Completed 200 OK in 10263ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess1?fbToken=EAAE998BGKHABALpGXMQfOZBpr0fPs1cUsJCI2v2r3ZAyIpKN0ZA20lOhUrfg3cq0uDsRQC0xTOvp2olortsADQnq2y59kG9lIQS4eDlPZBZBZADwaCzDSl2yVadQ2oD61ezLZCjS2b0S9UERAPn5TXEVEY00b4zvAvifAcQdwdC8sG1cxy1Yv65&format=json&sessionid=ierbbdgcf25gygoxelduk5zbihzxmola&user=%7B%22language_code%22:%22en%22%7D" for ::1 at 2017-01-13 11:11:59 +0100
+Processing by CmbController#set_profileprocess1 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABALpGXMQfOZBpr0fPs1cUsJCI2v2r3ZAyIpKN0ZA20lOhUrfg3cq0uDsRQC0xTOvp2olortsADQnq2y59kG9lIQS4eDlPZBZBZADwaCzDSl2yVadQ2oD61ezLZCjS2b0S9UERAPn5TXEVEY00b4zvAvifAcQdwdC8sG1cxy1Yv65", "sessionid"=>"ierbbdgcf25gygoxelduk5zbihzxmola", "user"=>"{\"language_code\":\"en\"}"}
+No template found for CmbController#set_profileprocess1, rendering head :no_content
+Completed 204 No Content in 2911ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess2?fbToken=EAAE998BGKHABALpGXMQfOZBpr0fPs1cUsJCI2v2r3ZAyIpKN0ZA20lOhUrfg3cq0uDsRQC0xTOvp2olortsADQnq2y59kG9lIQS4eDlPZBZBZADwaCzDSl2yVadQ2oD61ezLZCjS2b0S9UERAPn5TXEVEY00b4zvAvifAcQdwdC8sG1cxy1Yv65&format=json&sessionid=ierbbdgcf25gygoxelduk5zbihzxmola&user=%7B%22gender%22:%22m%22,%22birthday%22:%221997-07-29+00:00:00%22,%22criteria__gender%22:%22f%22,%22user__email%22:%22someemail@somemailserver.com%22%7D" for ::1 at 2017-01-13 11:12:06 +0100
+Processing by CmbController#set_profileprocess2 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABALpGXMQfOZBpr0fPs1cUsJCI2v2r3ZAyIpKN0ZA20lOhUrfg3cq0uDsRQC0xTOvp2olortsADQnq2y59kG9lIQS4eDlPZBZBZADwaCzDSl2yVadQ2oD61ezLZCjS2b0S9UERAPn5TXEVEY00b4zvAvifAcQdwdC8sG1cxy1Yv65", "sessionid"=>"ierbbdgcf25gygoxelduk5zbihzxmola", "user"=>"{\"gender\":\"m\",\"birthday\":\"1997-07-29 00:00:00\",\"criteria__gender\":\"f\",\"user__email\":\"someemail@somemailserver.com\"}"}
+No template found for CmbController#set_profileprocess2, rendering head :no_content
+Completed 204 No Content in 4218ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess3?fbToken=EAAE998BGKHABALpGXMQfOZBpr0fPs1cUsJCI2v2r3ZAyIpKN0ZA20lOhUrfg3cq0uDsRQC0xTOvp2olortsADQnq2y59kG9lIQS4eDlPZBZBZADwaCzDSl2yVadQ2oD61ezLZCjS2b0S9UERAPn5TXEVEY00b4zvAvifAcQdwdC8sG1cxy1Yv65&format=json&sessionid=ierbbdgcf25gygoxelduk5zbihzxmola&user=%7B%22location%22:%22Kiev,+UA%22%7D" for ::1 at 2017-01-13 11:12:12 +0100
+Processing by CmbController#set_profileprocess3 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABALpGXMQfOZBpr0fPs1cUsJCI2v2r3ZAyIpKN0ZA20lOhUrfg3cq0uDsRQC0xTOvp2olortsADQnq2y59kG9lIQS4eDlPZBZBZADwaCzDSl2yVadQ2oD61ezLZCjS2b0S9UERAPn5TXEVEY00b4zvAvifAcQdwdC8sG1cxy1Yv65", "sessionid"=>"ierbbdgcf25gygoxelduk5zbihzxmola", "user"=>"{\"location\":\"Kiev, UA\"}"}
+No template found for CmbController#set_profileprocess3, rendering head :no_content
+Completed 204 No Content in 2628ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_bagels?fbToken=EAAE998BGKHABALpGXMQfOZBpr0fPs1cUsJCI2v2r3ZAyIpKN0ZA20lOhUrfg3cq0uDsRQC0xTOvp2olortsADQnq2y59kG9lIQS4eDlPZBZBZADwaCzDSl2yVadQ2oD61ezLZCjS2b0S9UERAPn5TXEVEY00b4zvAvifAcQdwdC8sG1cxy1Yv65&format=json&sessionid=ierbbdgcf25gygoxelduk5zbihzxmola" for ::1 at 2017-01-13 11:12:19 +0100
+Processing by CmbController#get_bagels as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABALpGXMQfOZBpr0fPs1cUsJCI2v2r3ZAyIpKN0ZA20lOhUrfg3cq0uDsRQC0xTOvp2olortsADQnq2y59kG9lIQS4eDlPZBZBZADwaCzDSl2yVadQ2oD61ezLZCjS2b0S9UERAPn5TXEVEY00b4zvAvifAcQdwdC8sG1cxy1Yv65", "sessionid"=>"ierbbdgcf25gygoxelduk5zbihzxmola"}
+  Rendering cmb/get_bagels.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/get_bagels.json.jbuilder (2.5ms)
+Completed 200 OK in 2298ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAE998BGKHABALpGXMQfOZBpr0fPs1cUsJCI2v2r3ZAyIpKN0ZA20lOhUrfg3cq0uDsRQC0xTOvp2olortsADQnq2y59kG9lIQS4eDlPZBZBZADwaCzDSl2yVadQ2oD61ezLZCjS2b0S9UERAPn5TXEVEY00b4zvAvifAcQdwdC8sG1cxy1Yv65&format=json&sessionid=ierbbdgcf25gygoxelduk5zbihzxmola" for ::1 at 2017-01-13 11:12:31 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABALpGXMQfOZBpr0fPs1cUsJCI2v2r3ZAyIpKN0ZA20lOhUrfg3cq0uDsRQC0xTOvp2olortsADQnq2y59kG9lIQS4eDlPZBZBZADwaCzDSl2yVadQ2oD61ezLZCjS2b0S9UERAPn5TXEVEY00b4zvAvifAcQdwdC8sG1cxy1Yv65", "sessionid"=>"ierbbdgcf25gygoxelduk5zbihzxmola"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/get_profile.json.jbuilder (3.4ms)
+Completed 200 OK in 1959ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_bagels?fbToken=EAAE998BGKHABALpGXMQfOZBpr0fPs1cUsJCI2v2r3ZAyIpKN0ZA20lOhUrfg3cq0uDsRQC0xTOvp2olortsADQnq2y59kG9lIQS4eDlPZBZBZADwaCzDSl2yVadQ2oD61ezLZCjS2b0S9UERAPn5TXEVEY00b4zvAvifAcQdwdC8sG1cxy1Yv65&format=json&sessionid=ierbbdgcf25gygoxelduk5zbihzxmola" for ::1 at 2017-01-13 11:12:58 +0100
+Processing by CmbController#get_bagels as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABALpGXMQfOZBpr0fPs1cUsJCI2v2r3ZAyIpKN0ZA20lOhUrfg3cq0uDsRQC0xTOvp2olortsADQnq2y59kG9lIQS4eDlPZBZBZADwaCzDSl2yVadQ2oD61ezLZCjS2b0S9UERAPn5TXEVEY00b4zvAvifAcQdwdC8sG1cxy1Yv65", "sessionid"=>"ierbbdgcf25gygoxelduk5zbihzxmola"}
+  Rendering cmb/get_bagels.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/get_bagels.json.jbuilder (2.0ms)
+Completed 200 OK in 2030ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 11:17:47 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 852ms (Views: 848.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?format=json" for ::1 at 2017-01-13 11:17:50 +0100
+Processing by CmbController#index as JSON
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/index.json.jbuilder (5.7ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABALFw9fshEdgpaeZALSTECZBLV75uQU9travziK903gqUbZBhydHxUxOyWaTZC9XIzDZCZAkofslTu9fo9y9EyZBPBZCJn0mZAGyYx870CFdWgF7ZBzgZCj0l5u3denlzlZBa02o2TsRcaUQG3tS0TGNluKgloXUpXAnN0DxqD3l0JJv8&format=json" for ::1 at 2017-01-13 11:17:53 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABALFw9fshEdgpaeZALSTECZBLV75uQU9travziK903gqUbZBhydHxUxOyWaTZC9XIzDZCZAkofslTu9fo9y9EyZBPBZCJn0mZAGyYx870CFdWgF7ZBzgZCj0l5u3denlzlZBa02o2TsRcaUQG3tS0TGNluKgloXUpXAnN0DxqD3l0JJv8"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.5ms)
+  Rendered cmb/index.json.jbuilder (2.6ms)
+Completed 200 OK in 2227ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess1?fbToken=EAAE998BGKHABAIu14v6fnZC8QeN8VLwYYxtwCvJlw1byK4CN52RIZC0powMEjW7ADKXCUS7u6ZByRU5VZC3pOJ0BLutsb10DioxAKlllsV3na9XwipcHhQGohZBn54vZBjRhgDmb95s8fQKsZAcfwJk0VhOngBjPhyKuNDkCqfjcXS3ZBTuUrWRc&format=json&sessionid=zlc0cuwddl4c7cfnvtb0grikwuyeeqtk&user=%7B%22language_code%22:%22en%22%7D" for ::1 at 2017-01-13 11:17:58 +0100
+Processing by CmbController#set_profileprocess1 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAIu14v6fnZC8QeN8VLwYYxtwCvJlw1byK4CN52RIZC0powMEjW7ADKXCUS7u6ZByRU5VZC3pOJ0BLutsb10DioxAKlllsV3na9XwipcHhQGohZBn54vZBjRhgDmb95s8fQKsZAcfwJk0VhOngBjPhyKuNDkCqfjcXS3ZBTuUrWRc", "sessionid"=>"zlc0cuwddl4c7cfnvtb0grikwuyeeqtk", "user"=>"{\"language_code\":\"en\"}"}
+No template found for CmbController#set_profileprocess1, rendering head :no_content
+Completed 204 No Content in 1736ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess2?fbToken=EAAE998BGKHABAIu14v6fnZC8QeN8VLwYYxtwCvJlw1byK4CN52RIZC0powMEjW7ADKXCUS7u6ZByRU5VZC3pOJ0BLutsb10DioxAKlllsV3na9XwipcHhQGohZBn54vZBjRhgDmb95s8fQKsZAcfwJk0VhOngBjPhyKuNDkCqfjcXS3ZBTuUrWRc&format=json&sessionid=zlc0cuwddl4c7cfnvtb0grikwuyeeqtk&user=%7B%22gender%22:%22m%22,%22birthday%22:%221997-07-29+00:00:00%22,%22criteria__gender%22:%22f%22,%22user__email%22:%22someemail@somemailserver.com%22%7D" for ::1 at 2017-01-13 11:18:02 +0100
+Processing by CmbController#set_profileprocess2 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAIu14v6fnZC8QeN8VLwYYxtwCvJlw1byK4CN52RIZC0powMEjW7ADKXCUS7u6ZByRU5VZC3pOJ0BLutsb10DioxAKlllsV3na9XwipcHhQGohZBn54vZBjRhgDmb95s8fQKsZAcfwJk0VhOngBjPhyKuNDkCqfjcXS3ZBTuUrWRc", "sessionid"=>"zlc0cuwddl4c7cfnvtb0grikwuyeeqtk", "user"=>"{\"gender\":\"m\",\"birthday\":\"1997-07-29 00:00:00\",\"criteria__gender\":\"f\",\"user__email\":\"someemail@somemailserver.com\"}"}
+No template found for CmbController#set_profileprocess2, rendering head :no_content
+Completed 204 No Content in 1733ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess3?fbToken=EAAE998BGKHABAIu14v6fnZC8QeN8VLwYYxtwCvJlw1byK4CN52RIZC0powMEjW7ADKXCUS7u6ZByRU5VZC3pOJ0BLutsb10DioxAKlllsV3na9XwipcHhQGohZBn54vZBjRhgDmb95s8fQKsZAcfwJk0VhOngBjPhyKuNDkCqfjcXS3ZBTuUrWRc&format=json&sessionid=zlc0cuwddl4c7cfnvtb0grikwuyeeqtk&user=%7B%22location%22:%22Kiev,+UA%22%7D" for ::1 at 2017-01-13 11:18:06 +0100
+Processing by CmbController#set_profileprocess3 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAIu14v6fnZC8QeN8VLwYYxtwCvJlw1byK4CN52RIZC0powMEjW7ADKXCUS7u6ZByRU5VZC3pOJ0BLutsb10DioxAKlllsV3na9XwipcHhQGohZBn54vZBjRhgDmb95s8fQKsZAcfwJk0VhOngBjPhyKuNDkCqfjcXS3ZBTuUrWRc", "sessionid"=>"zlc0cuwddl4c7cfnvtb0grikwuyeeqtk", "user"=>"{\"location\":\"Kiev, UA\"}"}
+No template found for CmbController#set_profileprocess3, rendering head :no_content
+Completed 204 No Content in 2102ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAE998BGKHABAIu14v6fnZC8QeN8VLwYYxtwCvJlw1byK4CN52RIZC0powMEjW7ADKXCUS7u6ZByRU5VZC3pOJ0BLutsb10DioxAKlllsV3na9XwipcHhQGohZBn54vZBjRhgDmb95s8fQKsZAcfwJk0VhOngBjPhyKuNDkCqfjcXS3ZBTuUrWRc&format=json&sessionid=zlc0cuwddl4c7cfnvtb0grikwuyeeqtk" for ::1 at 2017-01-13 11:20:25 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAIu14v6fnZC8QeN8VLwYYxtwCvJlw1byK4CN52RIZC0powMEjW7ADKXCUS7u6ZByRU5VZC3pOJ0BLutsb10DioxAKlllsV3na9XwipcHhQGohZBn54vZBjRhgDmb95s8fQKsZAcfwJk0VhOngBjPhyKuNDkCqfjcXS3ZBTuUrWRc", "sessionid"=>"zlc0cuwddl4c7cfnvtb0grikwuyeeqtk"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/get_profile.json.jbuilder (3.4ms)
+Completed 200 OK in 2869ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 11:28:56 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 836ms (Views: 833.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?format=json" for ::1 at 2017-01-13 11:29:01 +0100
+Processing by CmbController#index as JSON
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.8ms)
+  Rendered cmb/index.json.jbuilder (6.0ms)
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAOd8wFnX85afbBrfezBsy0AZC69XW80n5kwdJwl8Op26b1pxfhxT8NIhZBy6rwWYcjNo9ii77ZAZA7XkepO7fNWFdtu3w3WgkqLPzUeUhW5tJQSH1onVDIrDUqKVRcFO1FW9MsMEjIXCqswTDiYubRA8RwRP9wA42r82XyIy&format=json" for ::1 at 2017-01-13 11:29:02 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAOd8wFnX85afbBrfezBsy0AZC69XW80n5kwdJwl8Op26b1pxfhxT8NIhZBy6rwWYcjNo9ii77ZAZA7XkepO7fNWFdtu3w3WgkqLPzUeUhW5tJQSH1onVDIrDUqKVRcFO1FW9MsMEjIXCqswTDiYubRA8RwRP9wA42r82XyIy"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/index.json.jbuilder (2.1ms)
+Completed 200 OK in 3335ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAE998BGKHABALaZCQCUBPFIyLrfbQfGEu6PD4ZAD48QZAauddopZAMpZC98jJgG8S4oAp8aLcQ5Qfr03g6RhNgs2ZCldpPQZClfWZB9iNcAH2uQlApPfDtFl1a4ttImV5ZCzcZAaEI9L8NtuZBg418IMHdr03ZAKohBnTTmM8MOSr6gpo3tUKZC5eTY7&format=json&sessionid=epl3pwakl6jards4zz31cxpununk9hh1" for ::1 at 2017-01-13 11:29:10 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABALaZCQCUBPFIyLrfbQfGEu6PD4ZAD48QZAauddopZAMpZC98jJgG8S4oAp8aLcQ5Qfr03g6RhNgs2ZCldpPQZClfWZB9iNcAH2uQlApPfDtFl1a4ttImV5ZCzcZAaEI9L8NtuZBg418IMHdr03ZAKohBnTTmM8MOSr6gpo3tUKZC5eTY7", "sessionid"=>"epl3pwakl6jards4zz31cxpununk9hh1"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_profile.json.jbuilder (3.2ms)
+Completed 200 OK in 1663ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 11:34:30 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 897ms (Views: 894.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?format=json" for ::1 at 2017-01-13 11:34:32 +0100
+Processing by CmbController#index as JSON
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.5ms)
+  Rendered cmb/index.json.jbuilder (3.4ms)
+Completed 200 OK in 23ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAH9nOYbUh5o78oZBDEW6XD4kPm9SEFZATCloOZCRbuisMi6c0iV90Ie3gpXZBXEPiMT8hQ0HdbQhb0XmIcGcFp6EJHWT7KZATiNfx6rPpw3HJTcTwcgirxyv9aZB4Irrdk2qCoEyePHs4SNXnbVUgzwPU6IE62h95proobQY9f&format=json" for ::1 at 2017-01-13 11:34:35 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAH9nOYbUh5o78oZBDEW6XD4kPm9SEFZATCloOZCRbuisMi6c0iV90Ie3gpXZBXEPiMT8hQ0HdbQhb0XmIcGcFp6EJHWT7KZATiNfx6rPpw3HJTcTwcgirxyv9aZB4Irrdk2qCoEyePHs4SNXnbVUgzwPU6IE62h95proobQY9f"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.6ms)
+  Rendered cmb/index.json.jbuilder (3.1ms)
+Completed 200 OK in 2231ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess1?fbToken=EAAE998BGKHABAIaMIS5mzmVrHclv7HZCFvTZANZAgsO5Iiy3o37c9yJmim5VSyZA6ZCZCwuvsf0hOrzHivwdlLRLlNhhK2AvsLInMCn08Ie4ggUuJTHC6EmcqLWZAAtbc7j7OV6FJBeZA4iOdZBtvykkxZCTFy2qVnCfxZAWBRU9ZAslVoiYzXvYRPN0&format=json&sessionid=wu8yf3s813nsoim1w97d8cg3kkerkodb&user=%7B%22language_code%22:%22en%22%7D" for ::1 at 2017-01-13 11:34:40 +0100
+Processing by CmbController#set_profileprocess1 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAIaMIS5mzmVrHclv7HZCFvTZANZAgsO5Iiy3o37c9yJmim5VSyZA6ZCZCwuvsf0hOrzHivwdlLRLlNhhK2AvsLInMCn08Ie4ggUuJTHC6EmcqLWZAAtbc7j7OV6FJBeZA4iOdZBtvykkxZCTFy2qVnCfxZAWBRU9ZAslVoiYzXvYRPN0", "sessionid"=>"wu8yf3s813nsoim1w97d8cg3kkerkodb", "user"=>"{\"language_code\":\"en\"}"}
+No template found for CmbController#set_profileprocess1, rendering head :no_content
+Completed 204 No Content in 3416ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess2?fbToken=EAAE998BGKHABAIaMIS5mzmVrHclv7HZCFvTZANZAgsO5Iiy3o37c9yJmim5VSyZA6ZCZCwuvsf0hOrzHivwdlLRLlNhhK2AvsLInMCn08Ie4ggUuJTHC6EmcqLWZAAtbc7j7OV6FJBeZA4iOdZBtvykkxZCTFy2qVnCfxZAWBRU9ZAslVoiYzXvYRPN0&format=json&sessionid=wu8yf3s813nsoim1w97d8cg3kkerkodb&user=%7B%22gender%22:%22m%22,%22birthday%22:%221997-07-29+00:00:00%22,%22criteria__gender%22:%22f%22,%22user__email%22:%22someemail@somemailserver.com%22%7D" for ::1 at 2017-01-13 11:34:54 +0100
+Processing by CmbController#set_profileprocess2 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAIaMIS5mzmVrHclv7HZCFvTZANZAgsO5Iiy3o37c9yJmim5VSyZA6ZCZCwuvsf0hOrzHivwdlLRLlNhhK2AvsLInMCn08Ie4ggUuJTHC6EmcqLWZAAtbc7j7OV6FJBeZA4iOdZBtvykkxZCTFy2qVnCfxZAWBRU9ZAslVoiYzXvYRPN0", "sessionid"=>"wu8yf3s813nsoim1w97d8cg3kkerkodb", "user"=>"{\"gender\":\"m\",\"birthday\":\"1997-07-29 00:00:00\",\"criteria__gender\":\"f\",\"user__email\":\"someemail@somemailserver.com\"}"}
+No template found for CmbController#set_profileprocess2, rendering head :no_content
+Completed 204 No Content in 1729ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess3?fbToken=EAAE998BGKHABAIaMIS5mzmVrHclv7HZCFvTZANZAgsO5Iiy3o37c9yJmim5VSyZA6ZCZCwuvsf0hOrzHivwdlLRLlNhhK2AvsLInMCn08Ie4ggUuJTHC6EmcqLWZAAtbc7j7OV6FJBeZA4iOdZBtvykkxZCTFy2qVnCfxZAWBRU9ZAslVoiYzXvYRPN0&format=json&sessionid=wu8yf3s813nsoim1w97d8cg3kkerkodb&user=%7B%22location%22:%22Kiev,+UA%22%7D" for ::1 at 2017-01-13 11:34:57 +0100
+Processing by CmbController#set_profileprocess3 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAIaMIS5mzmVrHclv7HZCFvTZANZAgsO5Iiy3o37c9yJmim5VSyZA6ZCZCwuvsf0hOrzHivwdlLRLlNhhK2AvsLInMCn08Ie4ggUuJTHC6EmcqLWZAAtbc7j7OV6FJBeZA4iOdZBtvykkxZCTFy2qVnCfxZAWBRU9ZAslVoiYzXvYRPN0", "sessionid"=>"wu8yf3s813nsoim1w97d8cg3kkerkodb", "user"=>"{\"location\":\"Kiev, UA\"}"}
+No template found for CmbController#set_profileprocess3, rendering head :no_content
+Completed 204 No Content in 7288ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_bagels?fbToken=EAAE998BGKHABAIaMIS5mzmVrHclv7HZCFvTZANZAgsO5Iiy3o37c9yJmim5VSyZA6ZCZCwuvsf0hOrzHivwdlLRLlNhhK2AvsLInMCn08Ie4ggUuJTHC6EmcqLWZAAtbc7j7OV6FJBeZA4iOdZBtvykkxZCTFy2qVnCfxZAWBRU9ZAslVoiYzXvYRPN0&format=json&sessionid=wu8yf3s813nsoim1w97d8cg3kkerkodb" for ::1 at 2017-01-13 11:35:06 +0100
+Processing by CmbController#get_bagels as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAIaMIS5mzmVrHclv7HZCFvTZANZAgsO5Iiy3o37c9yJmim5VSyZA6ZCZCwuvsf0hOrzHivwdlLRLlNhhK2AvsLInMCn08Ie4ggUuJTHC6EmcqLWZAAtbc7j7OV6FJBeZA4iOdZBtvykkxZCTFy2qVnCfxZAWBRU9ZAslVoiYzXvYRPN0", "sessionid"=>"wu8yf3s813nsoim1w97d8cg3kkerkodb"}
+  Rendering cmb/get_bagels.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.5ms)
+  Rendered cmb/get_bagels.json.jbuilder (2.7ms)
+Completed 200 OK in 1612ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAE998BGKHABAIaMIS5mzmVrHclv7HZCFvTZANZAgsO5Iiy3o37c9yJmim5VSyZA6ZCZCwuvsf0hOrzHivwdlLRLlNhhK2AvsLInMCn08Ie4ggUuJTHC6EmcqLWZAAtbc7j7OV6FJBeZA4iOdZBtvykkxZCTFy2qVnCfxZAWBRU9ZAslVoiYzXvYRPN0&format=json&sessionid=wu8yf3s813nsoim1w97d8cg3kkerkodb" for ::1 at 2017-01-13 11:35:16 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAIaMIS5mzmVrHclv7HZCFvTZANZAgsO5Iiy3o37c9yJmim5VSyZA6ZCZCwuvsf0hOrzHivwdlLRLlNhhK2AvsLInMCn08Ie4ggUuJTHC6EmcqLWZAAtbc7j7OV6FJBeZA4iOdZBtvykkxZCTFy2qVnCfxZAWBRU9ZAslVoiYzXvYRPN0", "sessionid"=>"wu8yf3s813nsoim1w97d8cg3kkerkodb"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_profile.json.jbuilder (3.2ms)
+Completed 200 OK in 3359ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess1?fbToken=EAAE998BGKHABAIaMIS5mzmVrHclv7HZCFvTZANZAgsO5Iiy3o37c9yJmim5VSyZA6ZCZCwuvsf0hOrzHivwdlLRLlNhhK2AvsLInMCn08Ie4ggUuJTHC6EmcqLWZAAtbc7j7OV6FJBeZA4iOdZBtvykkxZCTFy2qVnCfxZAWBRU9ZAslVoiYzXvYRPN0&format=json&sessionid=wu8yf3s813nsoim1w97d8cg3kkerkodb&user=%7B%22id%22:%223192286%22,%22language_code%22:%22en%22%7D" for ::1 at 2017-01-13 11:36:05 +0100
+Processing by CmbController#set_profileprocess1 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAIaMIS5mzmVrHclv7HZCFvTZANZAgsO5Iiy3o37c9yJmim5VSyZA6ZCZCwuvsf0hOrzHivwdlLRLlNhhK2AvsLInMCn08Ie4ggUuJTHC6EmcqLWZAAtbc7j7OV6FJBeZA4iOdZBtvykkxZCTFy2qVnCfxZAWBRU9ZAslVoiYzXvYRPN0", "sessionid"=>"wu8yf3s813nsoim1w97d8cg3kkerkodb", "user"=>"{\"id\":\"3192286\",\"language_code\":\"en\"}"}
+No template found for CmbController#set_profileprocess1, rendering head :no_content
+Completed 204 No Content in 3122ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 11:45:19 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 82ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?format=json" for ::1 at 2017-01-13 11:45:20 +0100
+Processing by CmbController#index as JSON
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/index.json.jbuilder (2.4ms)
+Completed 200 OK in 31ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAE7butDgr440hWjwYwcjbBubUXgdH3zMJhGvltkJaSnxZAXqSpRjRZBKJ6432qs92Ot0UZCyptoc7N5b4kmHFAfr1v1FFKo1AwlanTG2lRKzoiYzEASAtH1oINQCj2DntiTZCKccHf7E0iG1FuJnjOUZC0MWrnTNSwZBmAVnTq&format=json" for ::1 at 2017-01-13 11:45:23 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAE7butDgr440hWjwYwcjbBubUXgdH3zMJhGvltkJaSnxZAXqSpRjRZBKJ6432qs92Ot0UZCyptoc7N5b4kmHFAfr1v1FFKo1AwlanTG2lRKzoiYzEASAtH1oINQCj2DntiTZCKccHf7E0iG1FuJnjOUZC0MWrnTNSwZBmAVnTq"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/index.json.jbuilder (2.1ms)
+Completed 200 OK in 14407ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess1?fbToken=EAAE998BGKHABAFZCOVnwgdVkNSDi9KFtVZA6u461QwdwMyisQkuiAxe8s1BUMsFZAVf0LGNtoRQGZCn10C4PccwDil8YMqgQFKZAludGFRUaDOHPtZBKZBSml7Tnpch5oOqZBdZAxkWZAAeUs90gWxTt4ZBDBCA3zCSa6V1Nb5CHZBNvHVnFIVm0ZCG0S&format=json&sessionid=ypykk91a2jtfibop0lqrsf7cbjkz7j5k&user=%7B%22language_code%22:%22en%22%7D" for ::1 at 2017-01-13 11:45:40 +0100
+Processing by CmbController#set_profileprocess1 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAFZCOVnwgdVkNSDi9KFtVZA6u461QwdwMyisQkuiAxe8s1BUMsFZAVf0LGNtoRQGZCn10C4PccwDil8YMqgQFKZAludGFRUaDOHPtZBKZBSml7Tnpch5oOqZBdZAxkWZAAeUs90gWxTt4ZBDBCA3zCSa6V1Nb5CHZBNvHVnFIVm0ZCG0S", "sessionid"=>"ypykk91a2jtfibop0lqrsf7cbjkz7j5k", "user"=>"{\"language_code\":\"en\"}"}
+  Rendering cmb/set_profileprocess1.json.jbuilder
+  Rendered cmb/_responseResultElement.json.jbuilder (0.4ms)
+  Rendered cmb/set_profileprocess1.json.jbuilder (2.2ms)
+Completed 200 OK in 1711ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 11:46:14 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 440ms (Views: 437.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?format=json" for ::1 at 2017-01-13 11:46:16 +0100
+Processing by CmbController#index as JSON
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.5ms)
+  Rendered cmb/index.json.jbuilder (4.3ms)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAJsVspMqYx1UQrBZCSBRA1OJX7LBLBSbvYy74hQ2JmlwcFWHAy52GiQKcMtzbIiRenR8n2MtNBBzLHISrm47Kx8tieZBsZBSksqljtpyKlDZCt2RKHVBWbjf79VQyDVUoVqYyhRzDlNYUNDvvZANskWnNmdjARs3ChkcEZAAiQ&format=json" for ::1 at 2017-01-13 11:46:18 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAJsVspMqYx1UQrBZCSBRA1OJX7LBLBSbvYy74hQ2JmlwcFWHAy52GiQKcMtzbIiRenR8n2MtNBBzLHISrm47Kx8tieZBsZBSksqljtpyKlDZCt2RKHVBWbjf79VQyDVUoVqYyhRzDlNYUNDvvZANskWnNmdjARs3ChkcEZAAiQ"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/index.json.jbuilder (2.3ms)
+Completed 200 OK in 1835ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess1?fbToken=EAAE998BGKHABANuvOiZBi5JgE4no4ZAK9PBluOfJ7MW9PZC2IVylOVZAVUKHWi1SEbJIqQ3H2gk2jiQmI6ZBOpjxZANy9Ye5qCahCyqHhOZC3xExicEEZBF3YjyCSlBQb68IOEQf55cx3H9f2LDMEUZCcsLZCD1uXi8Dy5hfEYZAs1KNOeylxFHc2tv&format=json&sessionid=nbn1rbweycwb38elvitakks87u3pgp8r&user=%7B%22language_code%22:%22en%22%7D" for ::1 at 2017-01-13 11:46:24 +0100
+Processing by CmbController#set_profileprocess1 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABANuvOiZBi5JgE4no4ZAK9PBluOfJ7MW9PZC2IVylOVZAVUKHWi1SEbJIqQ3H2gk2jiQmI6ZBOpjxZANy9Ye5qCahCyqHhOZC3xExicEEZBF3YjyCSlBQb68IOEQf55cx3H9f2LDMEUZCcsLZCD1uXi8Dy5hfEYZAs1KNOeylxFHc2tv", "sessionid"=>"nbn1rbweycwb38elvitakks87u3pgp8r", "user"=>"{\"language_code\":\"en\"}"}
+  Rendering cmb/set_profileprocess1.json.jbuilder
+  Rendered cmb/_responseResultElement.json.jbuilder (0.3ms)
+  Rendered cmb/set_profileprocess1.json.jbuilder (2.0ms)
+Completed 200 OK in 2709ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 11:49:04 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 822ms (Views: 819.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?format=json" for ::1 at 2017-01-13 11:49:06 +0100
+Processing by CmbController#index as JSON
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/index.json.jbuilder (4.3ms)
+Completed 200 OK in 24ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAOJ4DiBzQZBrK8Cc49ZB3x4eqzbPorkRJZBO2rPwKWpWsENFdpwoIiI7my4gn2dOKrmvMelxO6GqDnJFcINtnlBf1vLVIMeH5mxAbsI7MtrwAx4LsUG9h5aH9dMfmrg2B9CSZAvZAkazG5sZCqJjl3wM7ZCHJWmaPr92y3GAow9&format=json" for ::1 at 2017-01-13 11:49:09 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAOJ4DiBzQZBrK8Cc49ZB3x4eqzbPorkRJZBO2rPwKWpWsENFdpwoIiI7my4gn2dOKrmvMelxO6GqDnJFcINtnlBf1vLVIMeH5mxAbsI7MtrwAx4LsUG9h5aH9dMfmrg2B9CSZAvZAkazG5sZCqJjl3wM7ZCHJWmaPr92y3GAow9"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/index.json.jbuilder (2.1ms)
+Completed 200 OK in 4009ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess1?fbToken=EAAE998BGKHABAHUxnWGthfiBCOnqU9g9dWZBq8fkjI1y0OrKbDBAlqH1AwWGy8RHmoK3HfaNNd6CFmmHbv2D8cGBesCCVZCtmn1guTZBg6gfcDCBsQazPp7JAfMZC4BuYwqZAvHBFkCZAE2wwXUZCp3wtqJINxw4ZBXU7kX9qlhGEQJvlvdLMkNM&format=json&sessionid=hgi77897zx2aqve812o9mj4n9tj9m6rp&user=%7B%22language_code%22:%22en%22%7D" for ::1 at 2017-01-13 11:49:15 +0100
+Processing by CmbController#set_profileprocess1 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAHUxnWGthfiBCOnqU9g9dWZBq8fkjI1y0OrKbDBAlqH1AwWGy8RHmoK3HfaNNd6CFmmHbv2D8cGBesCCVZCtmn1guTZBg6gfcDCBsQazPp7JAfMZC4BuYwqZAvHBFkCZAE2wwXUZCp3wtqJINxw4ZBXU7kX9qlhGEQJvlvdLMkNM", "sessionid"=>"hgi77897zx2aqve812o9mj4n9tj9m6rp", "user"=>"{\"language_code\":\"en\"}"}
+  Rendering cmb/set_profileprocess1.json.jbuilder
+  Rendered cmb/_responseResultElement.json.jbuilder (0.4ms)
+  Rendered cmb/set_profileprocess1.json.jbuilder (2.1ms)
+Completed 200 OK in 2705ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 11:51:31 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 915ms (Views: 911.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?format=json" for ::1 at 2017-01-13 11:51:37 +0100
+Processing by CmbController#index as JSON
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.7ms)
+  Rendered cmb/index.json.jbuilder (6.1ms)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABABmrJpDk5UdH8TzCjin2qZC994bstfYtXtJvbzV4XxA2vmic2NaQWAiCuZAT3RfR3ZCfVdOkSCVBSF5MpsMI4uVgWvrpns0UZBhoNdQ0DThZBKQ2rIo95j3JEEKBFlFRZAhPEBLnOXWwCMmrZALn45FAOthRzxoIHgtz9OsMIhF&format=json" for ::1 at 2017-01-13 11:51:39 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABABmrJpDk5UdH8TzCjin2qZC994bstfYtXtJvbzV4XxA2vmic2NaQWAiCuZAT3RfR3ZCfVdOkSCVBSF5MpsMI4uVgWvrpns0UZBhoNdQ0DThZBKQ2rIo95j3JEEKBFlFRZAhPEBLnOXWwCMmrZALn45FAOthRzxoIHgtz9OsMIhF"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.5ms)
+  Rendered cmb/index.json.jbuilder (2.6ms)
+Completed 200 OK in 5432ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess1?fbToken=EAAE998BGKHABAD7Mvac3HVhZBwZA75JqXnV9rtFwfPKTEsI8o70tV9wyWFTsZAgxgG4cHVgBQZCL83MsUBZBvhWsZCIxj5iZC4MfdtkEkZAX5ZCvD7pbsrmGflM0ELNyd2coLX7tlTuGhWWkY9iYCQagWZCCIEro8TITCbBZBAz4cC6qdHvsljttLzP&format=json&sessionid=htf6o1x9fr5mkdoqsfpj2qoqdeqfobrq&user=%7B%22language_code%22:%22en%22%7D" for ::1 at 2017-01-13 11:51:46 +0100
+Processing by CmbController#set_profileprocess1 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAD7Mvac3HVhZBwZA75JqXnV9rtFwfPKTEsI8o70tV9wyWFTsZAgxgG4cHVgBQZCL83MsUBZBvhWsZCIxj5iZC4MfdtkEkZAX5ZCvD7pbsrmGflM0ELNyd2coLX7tlTuGhWWkY9iYCQagWZCCIEro8TITCbBZBAz4cC6qdHvsljttLzP", "sessionid"=>"htf6o1x9fr5mkdoqsfpj2qoqdeqfobrq", "user"=>"{\"language_code\":\"en\"}"}
+  Rendering cmb/set_profileprocess1.json.jbuilder
+  Rendered cmb/_responseResultElement.json.jbuilder (0.4ms)
+  Rendered cmb/set_profileprocess1.json.jbuilder (2.1ms)
+Completed 200 OK in 18842ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess2?fbToken=EAAE998BGKHABAD7Mvac3HVhZBwZA75JqXnV9rtFwfPKTEsI8o70tV9wyWFTsZAgxgG4cHVgBQZCL83MsUBZBvhWsZCIxj5iZC4MfdtkEkZAX5ZCvD7pbsrmGflM0ELNyd2coLX7tlTuGhWWkY9iYCQagWZCCIEro8TITCbBZBAz4cC6qdHvsljttLzP&format=json&sessionid=htf6o1x9fr5mkdoqsfpj2qoqdeqfobrq&user=%7B%22gender%22:%22m%22,%22birthday%22:%221997-07-29+00:00:00%22,%22criteria__gender%22:%22f%22,%22user__email%22:%22someemail@somemailserver.com%22%7D" for ::1 at 2017-01-13 11:52:24 +0100
+Processing by CmbController#set_profileprocess2 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAD7Mvac3HVhZBwZA75JqXnV9rtFwfPKTEsI8o70tV9wyWFTsZAgxgG4cHVgBQZCL83MsUBZBvhWsZCIxj5iZC4MfdtkEkZAX5ZCvD7pbsrmGflM0ELNyd2coLX7tlTuGhWWkY9iYCQagWZCCIEro8TITCbBZBAz4cC6qdHvsljttLzP", "sessionid"=>"htf6o1x9fr5mkdoqsfpj2qoqdeqfobrq", "user"=>"{\"gender\":\"m\",\"birthday\":\"1997-07-29 00:00:00\",\"criteria__gender\":\"f\",\"user__email\":\"someemail@somemailserver.com\"}"}
+  Rendering cmb/set_profileprocess2.json.jbuilder
+  Rendered cmb/set_profileprocess2.json.jbuilder (0.8ms)
+Completed 200 OK in 2787ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess3?fbToken=EAAE998BGKHABAD7Mvac3HVhZBwZA75JqXnV9rtFwfPKTEsI8o70tV9wyWFTsZAgxgG4cHVgBQZCL83MsUBZBvhWsZCIxj5iZC4MfdtkEkZAX5ZCvD7pbsrmGflM0ELNyd2coLX7tlTuGhWWkY9iYCQagWZCCIEro8TITCbBZBAz4cC6qdHvsljttLzP&format=json&sessionid=htf6o1x9fr5mkdoqsfpj2qoqdeqfobrq&user=%7B%22location%22:%22Kiev,+UA%22%7D" for ::1 at 2017-01-13 11:52:29 +0100
+Processing by CmbController#set_profileprocess3 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAD7Mvac3HVhZBwZA75JqXnV9rtFwfPKTEsI8o70tV9wyWFTsZAgxgG4cHVgBQZCL83MsUBZBvhWsZCIxj5iZC4MfdtkEkZAX5ZCvD7pbsrmGflM0ELNyd2coLX7tlTuGhWWkY9iYCQagWZCCIEro8TITCbBZBAz4cC6qdHvsljttLzP", "sessionid"=>"htf6o1x9fr5mkdoqsfpj2qoqdeqfobrq", "user"=>"{\"location\":\"Kiev, UA\"}"}
+  Rendering cmb/set_profileprocess3.json.jbuilder
+  Rendered cmb/set_profileprocess3.json.jbuilder (0.8ms)
+Completed 200 OK in 5131ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 16:48:15 +0100
+Started GET "/" for ::1 at 2017-01-13 16:48:15 +0100
+Processing by HomeController#index as HTML
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2600ms (Views: 2593.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 2678ms (Views: 2675.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?format=json" for ::1 at 2017-01-13 16:50:08 +0100
+Processing by CmbController#index as JSON
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.7ms)
+  Rendered cmb/index.json.jbuilder (49.5ms)
+Completed 200 OK in 97ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAH0ZCnTcENVh9wVjJTvt49S9ucCuk7Iw3zXYusegM44oI8ADaTk5G0cZBm99KZAzZADoOnmlZCTQoLfZAGFzM23ZBgWU7ZAqAj6xPnrjJc1bmrVeOU8ZACynQZCSRVefqUPAeGZAWdRVGNTvOZBINZB6T0HRCNjVSTxHIHUaZCL8U29A1c&format=json" for ::1 at 2017-01-13 16:50:13 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAH0ZCnTcENVh9wVjJTvt49S9ucCuk7Iw3zXYusegM44oI8ADaTk5G0cZBm99KZAzZADoOnmlZCTQoLfZAGFzM23ZBgWU7ZAqAj6xPnrjJc1bmrVeOU8ZACynQZCSRVefqUPAeGZAWdRVGNTvOZBINZB6T0HRCNjVSTxHIHUaZCL8U29A1c"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/index.json.jbuilder (2.9ms)
+Completed 200 OK in 8135ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess2?fbToken=EAAE998BGKHABAGpDwBhMrc4ZAZAuhydRTeQ9HHXLPASJ6jPCQEx44jst1GMKYTq5PZCD7tSQchRbB8absjYV9TGCajGxo0T7EXDZCT3OZCuaEWcQ3nNZCyKpLvouRB5ZC1KL99VQKBqYg5WzxnQPEMu5YZASZCNqkYMySULAZBUfTMQch9GxxB8xPh&format=json&sessionid=bsl4wtq5c4dw6bdh01ogbkzeh33yx94a&user=%7B%22gender%22:%22m%22,%22birthday%22:%221997-07-29+00:00:00%22,%22criteria__gender%22:%22f%22,%22user__email%22:%22someemail@somemailserver.com%22%7D" for ::1 at 2017-01-13 17:25:47 +0100
+Processing by CmbController#set_profileprocess2 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAGpDwBhMrc4ZAZAuhydRTeQ9HHXLPASJ6jPCQEx44jst1GMKYTq5PZCD7tSQchRbB8absjYV9TGCajGxo0T7EXDZCT3OZCuaEWcQ3nNZCyKpLvouRB5ZC1KL99VQKBqYg5WzxnQPEMu5YZASZCNqkYMySULAZBUfTMQch9GxxB8xPh", "sessionid"=>"bsl4wtq5c4dw6bdh01ogbkzeh33yx94a", "user"=>"{\"gender\":\"m\",\"birthday\":\"1997-07-29 00:00:00\",\"criteria__gender\":\"f\",\"user__email\":\"someemail@somemailserver.com\"}"}
+  Rendering cmb/set_profileprocess2.json.jbuilder
+  Rendered cmb/set_profileprocess2.json.jbuilder (0.4ms)
+Completed 200 OK in 3468ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_bagels?fbToken=EAAE998BGKHABAGpDwBhMrc4ZAZAuhydRTeQ9HHXLPASJ6jPCQEx44jst1GMKYTq5PZCD7tSQchRbB8absjYV9TGCajGxo0T7EXDZCT3OZCuaEWcQ3nNZCyKpLvouRB5ZC1KL99VQKBqYg5WzxnQPEMu5YZASZCNqkYMySULAZBUfTMQch9GxxB8xPh&format=json&sessionid=bsl4wtq5c4dw6bdh01ogbkzeh33yx94a" for ::1 at 2017-01-13 17:27:14 +0100
+Processing by CmbController#get_bagels as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAGpDwBhMrc4ZAZAuhydRTeQ9HHXLPASJ6jPCQEx44jst1GMKYTq5PZCD7tSQchRbB8absjYV9TGCajGxo0T7EXDZCT3OZCuaEWcQ3nNZCyKpLvouRB5ZC1KL99VQKBqYg5WzxnQPEMu5YZASZCNqkYMySULAZBUfTMQch9GxxB8xPh", "sessionid"=>"bsl4wtq5c4dw6bdh01ogbkzeh33yx94a"}
+  Rendering cmb/get_bagels.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.8ms)
+  Rendered cmb/get_bagels.json.jbuilder (3.0ms)
+Completed 200 OK in 8643ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 18:18:47 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 539ms (Views: 536.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 18:31:24 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3077ms (Views: 3075.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?format=json" for ::1 at 2017-01-13 18:31:33 +0100
+Processing by CmbController#index as JSON
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.6ms)
+  Rendered cmb/index.json.jbuilder (4.8ms)
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 18:32:30 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 943ms (Views: 939.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?format=json" for ::1 at 2017-01-13 18:32:34 +0100
+Processing by CmbController#index as JSON
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/index.json.jbuilder (5.4ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 18:39:14 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 843ms (Views: 840.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 18:40:13 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 842ms (Views: 838.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 18:41:07 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 850ms (Views: 848.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 18:42:00 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 850ms (Views: 847.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAO4JIzKBk8wglZBGGfLOVR2u7t2q5NZCaBwQsHCAuFFSXwr0ZAR59C1m0dVq0RMi5GMEt1WcQwuPaMkI0ZC9kTb8cKu4JgpxmKsliKKHi9G74RfrxbqDn1msvZAUzc0tFFxiwjI9fZBlHmoQefMHJpfj1j1XDCrM9tfYZCj6VcY&format=json" for ::1 at 2017-01-13 18:42:04 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAO4JIzKBk8wglZBGGfLOVR2u7t2q5NZCaBwQsHCAuFFSXwr0ZAR59C1m0dVq0RMi5GMEt1WcQwuPaMkI0ZC9kTb8cKu4JgpxmKsliKKHi9G74RfrxbqDn1msvZAUzc0tFFxiwjI9fZBlHmoQefMHJpfj1j1XDCrM9tfYZCj6VcY"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/index.json.jbuilder (2.0ms)
+Completed 200 OK in 8083ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess1?fbToken=EAAE998BGKHABAO4JIzKBk8wglZBGGfLOVR2u7t2q5NZCaBwQsHCAuFFSXwr0ZAR59C1m0dVq0RMi5GMEt1WcQwuPaMkI0ZC9kTb8cKu4JgpxmKsliKKHi9G74RfrxbqDn1msvZAUzc0tFFxiwjI9fZBlHmoQefMHJpfj1j1XDCrM9tfYZCj6VcY&format=json&sessionid=h7cipwh087v5qfd7bxf7gsdviztl8k8h&user=%7B%22language_code%22:%22en%22%7D" for ::1 at 2017-01-13 18:42:16 +0100
+Processing by CmbController#set_profileprocess1 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAO4JIzKBk8wglZBGGfLOVR2u7t2q5NZCaBwQsHCAuFFSXwr0ZAR59C1m0dVq0RMi5GMEt1WcQwuPaMkI0ZC9kTb8cKu4JgpxmKsliKKHi9G74RfrxbqDn1msvZAUzc0tFFxiwjI9fZBlHmoQefMHJpfj1j1XDCrM9tfYZCj6VcY", "sessionid"=>"h7cipwh087v5qfd7bxf7gsdviztl8k8h", "user"=>"{\"language_code\":\"en\"}"}
+  Rendering cmb/set_profileprocess1.json.jbuilder
+  Rendered cmb/_responseResultElement.json.jbuilder (0.3ms)
+  Rendered cmb/set_profileprocess1.json.jbuilder (2.1ms)
+Completed 200 OK in 4145ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess2?fbToken=EAAE998BGKHABAO4JIzKBk8wglZBGGfLOVR2u7t2q5NZCaBwQsHCAuFFSXwr0ZAR59C1m0dVq0RMi5GMEt1WcQwuPaMkI0ZC9kTb8cKu4JgpxmKsliKKHi9G74RfrxbqDn1msvZAUzc0tFFxiwjI9fZBlHmoQefMHJpfj1j1XDCrM9tfYZCj6VcY&format=json&sessionid=h7cipwh087v5qfd7bxf7gsdviztl8k8h&user=%7B%22gender%22:%22m%22,%22birthday%22:%221997-07-29+00:00:00%22,%22criteria__gender%22:%22f%22,%22user__email%22:%22someemail@somemailserver.com%22%7D" for ::1 at 2017-01-13 18:42:44 +0100
+Processing by CmbController#set_profileprocess2 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAO4JIzKBk8wglZBGGfLOVR2u7t2q5NZCaBwQsHCAuFFSXwr0ZAR59C1m0dVq0RMi5GMEt1WcQwuPaMkI0ZC9kTb8cKu4JgpxmKsliKKHi9G74RfrxbqDn1msvZAUzc0tFFxiwjI9fZBlHmoQefMHJpfj1j1XDCrM9tfYZCj6VcY", "sessionid"=>"h7cipwh087v5qfd7bxf7gsdviztl8k8h", "user"=>"{\"gender\":\"m\",\"birthday\":\"1997-07-29 00:00:00\",\"criteria__gender\":\"f\",\"user__email\":\"someemail@somemailserver.com\"}"}
+Completed 500 Internal Server Error in 61348ms (ActiveRecord: 0.0ms)
+
+
+  
+Net::OpenTimeout (Net::OpenTimeout):
+  
+app/controllers/cmb_controller.rb:116:in `set_profileprocess2'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.5ms)
+Started GET "/" for ::1 at 2017-01-13 18:46:26 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 923ms (Views: 919.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABADQ1bYI6Pvw6xTvl9lkGkj3BFnoSLQDsRdkLgMQICUjWzpfisJLYBD35YuCG0pgpppKl3UUTj8zYqWaOeUlH0AW1x6BrMBZAPzs2wSRw6XTJijXTM5ZBUNLgQfJSURU1GFtpolZCS9UEwaLhwMykZB5aG69HiC7kWFz4zvZAa&format=json" for ::1 at 2017-01-13 18:46:33 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABADQ1bYI6Pvw6xTvl9lkGkj3BFnoSLQDsRdkLgMQICUjWzpfisJLYBD35YuCG0pgpppKl3UUTj8zYqWaOeUlH0AW1x6BrMBZAPzs2wSRw6XTJijXTM5ZBUNLgQfJSURU1GFtpolZCS9UEwaLhwMykZB5aG69HiC7kWFz4zvZAa"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/index.json.jbuilder (2.1ms)
+Completed 200 OK in 4808ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess1?fbToken=EAAE998BGKHABADQ1bYI6Pvw6xTvl9lkGkj3BFnoSLQDsRdkLgMQICUjWzpfisJLYBD35YuCG0pgpppKl3UUTj8zYqWaOeUlH0AW1x6BrMBZAPzs2wSRw6XTJijXTM5ZBUNLgQfJSURU1GFtpolZCS9UEwaLhwMykZB5aG69HiC7kWFz4zvZAa&format=json&sessionid=4l8npfe3tdhi8r46mtabygvgyni21gzf&user=%7B%22language_code%22:%22en%22%7D" for ::1 at 2017-01-13 18:46:40 +0100
+Processing by CmbController#set_profileprocess1 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABADQ1bYI6Pvw6xTvl9lkGkj3BFnoSLQDsRdkLgMQICUjWzpfisJLYBD35YuCG0pgpppKl3UUTj8zYqWaOeUlH0AW1x6BrMBZAPzs2wSRw6XTJijXTM5ZBUNLgQfJSURU1GFtpolZCS9UEwaLhwMykZB5aG69HiC7kWFz4zvZAa", "sessionid"=>"4l8npfe3tdhi8r46mtabygvgyni21gzf", "user"=>"{\"language_code\":\"en\"}"}
+  Rendering cmb/set_profileprocess1.json.jbuilder
+  Rendered cmb/_responseResultElement.json.jbuilder (0.4ms)
+  Rendered cmb/set_profileprocess1.json.jbuilder (1.8ms)
+Completed 200 OK in 3466ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess2?fbToken=EAAE998BGKHABADQ1bYI6Pvw6xTvl9lkGkj3BFnoSLQDsRdkLgMQICUjWzpfisJLYBD35YuCG0pgpppKl3UUTj8zYqWaOeUlH0AW1x6BrMBZAPzs2wSRw6XTJijXTM5ZBUNLgQfJSURU1GFtpolZCS9UEwaLhwMykZB5aG69HiC7kWFz4zvZAa&format=json&sessionid=4l8npfe3tdhi8r46mtabygvgyni21gzf&user=%7B%22gender%22:%22m%22,%22birthday%22:%221997-07-29+00:00:00%22,%22criteria__gender%22:%22f%22,%22user__email%22:%22someemail@somemailserver.com%22%7D" for ::1 at 2017-01-13 18:46:46 +0100
+Processing by CmbController#set_profileprocess2 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABADQ1bYI6Pvw6xTvl9lkGkj3BFnoSLQDsRdkLgMQICUjWzpfisJLYBD35YuCG0pgpppKl3UUTj8zYqWaOeUlH0AW1x6BrMBZAPzs2wSRw6XTJijXTM5ZBUNLgQfJSURU1GFtpolZCS9UEwaLhwMykZB5aG69HiC7kWFz4zvZAa", "sessionid"=>"4l8npfe3tdhi8r46mtabygvgyni21gzf", "user"=>"{\"gender\":\"m\",\"birthday\":\"1997-07-29 00:00:00\",\"criteria__gender\":\"f\",\"user__email\":\"someemail@somemailserver.com\"}"}
+  Rendering cmb/set_profileprocess2.json.jbuilder
+  Rendered cmb/set_profileprocess2.json.jbuilder (0.5ms)
+Completed 200 OK in 1348ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 18:47:28 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 198ms (Views: 195.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAK9dQCoaFBdKtNcN16Xl9WZBMkmrYrOfg7k6GS6YmtX2TU3aqZAZAmDQunZCnZB0ruijRoiVWYu6nVI7Qaf3qNgAvQoSEEZCv80jtoUkWNNq69Q8lTsQOcsGqs7l2WoHVK9XDEqosZCoIF9YNIvpQgnGxTZBmL4FCy63ZAiUGXIHJ&format=json" for ::1 at 2017-01-13 18:47:32 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAK9dQCoaFBdKtNcN16Xl9WZBMkmrYrOfg7k6GS6YmtX2TU3aqZAZAmDQunZCnZB0ruijRoiVWYu6nVI7Qaf3qNgAvQoSEEZCv80jtoUkWNNq69Q8lTsQOcsGqs7l2WoHVK9XDEqosZCoIF9YNIvpQgnGxTZBmL4FCy63ZAiUGXIHJ"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/index.json.jbuilder (1.8ms)
+Completed 200 OK in 7180ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess1?fbToken=EAAE998BGKHABAK9dQCoaFBdKtNcN16Xl9WZBMkmrYrOfg7k6GS6YmtX2TU3aqZAZAmDQunZCnZB0ruijRoiVWYu6nVI7Qaf3qNgAvQoSEEZCv80jtoUkWNNq69Q8lTsQOcsGqs7l2WoHVK9XDEqosZCoIF9YNIvpQgnGxTZBmL4FCy63ZAiUGXIHJ&format=json&sessionid=76dt8oisilpdh8zq92hr6hbpb297ycy5&user=%7B%22language_code%22:%22en%22%7D" for ::1 at 2017-01-13 18:47:44 +0100
+Processing by CmbController#set_profileprocess1 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAK9dQCoaFBdKtNcN16Xl9WZBMkmrYrOfg7k6GS6YmtX2TU3aqZAZAmDQunZCnZB0ruijRoiVWYu6nVI7Qaf3qNgAvQoSEEZCv80jtoUkWNNq69Q8lTsQOcsGqs7l2WoHVK9XDEqosZCoIF9YNIvpQgnGxTZBmL4FCy63ZAiUGXIHJ", "sessionid"=>"76dt8oisilpdh8zq92hr6hbpb297ycy5", "user"=>"{\"language_code\":\"en\"}"}
+  Rendering cmb/set_profileprocess1.json.jbuilder
+  Rendered cmb/_responseResultElement.json.jbuilder (0.3ms)
+  Rendered cmb/set_profileprocess1.json.jbuilder (1.7ms)
+Completed 200 OK in 4058ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess2?fbToken=EAAE998BGKHABAK9dQCoaFBdKtNcN16Xl9WZBMkmrYrOfg7k6GS6YmtX2TU3aqZAZAmDQunZCnZB0ruijRoiVWYu6nVI7Qaf3qNgAvQoSEEZCv80jtoUkWNNq69Q8lTsQOcsGqs7l2WoHVK9XDEqosZCoIF9YNIvpQgnGxTZBmL4FCy63ZAiUGXIHJ&format=json&sessionid=76dt8oisilpdh8zq92hr6hbpb297ycy5&user=%7B%22gender%22:%22m%22,%22birthday%22:%221997-07-29+00:00:00%22,%22criteria__gender%22:%22f%22,%22user__email%22:%22someemail@somemailserver.com%22%7D" for ::1 at 2017-01-13 18:47:52 +0100
+Processing by CmbController#set_profileprocess2 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAK9dQCoaFBdKtNcN16Xl9WZBMkmrYrOfg7k6GS6YmtX2TU3aqZAZAmDQunZCnZB0ruijRoiVWYu6nVI7Qaf3qNgAvQoSEEZCv80jtoUkWNNq69Q8lTsQOcsGqs7l2WoHVK9XDEqosZCoIF9YNIvpQgnGxTZBmL4FCy63ZAiUGXIHJ", "sessionid"=>"76dt8oisilpdh8zq92hr6hbpb297ycy5", "user"=>"{\"gender\":\"m\",\"birthday\":\"1997-07-29 00:00:00\",\"criteria__gender\":\"f\",\"user__email\":\"someemail@somemailserver.com\"}"}
+  Rendering cmb/set_profileprocess2.json.jbuilder
+  Rendered cmb/_responseResultElement.json.jbuilder (0.3ms)
+  Rendered cmb/set_profileprocess2.json.jbuilder (1.7ms)
+Completed 200 OK in 4585ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess3?fbToken=EAAE998BGKHABAK9dQCoaFBdKtNcN16Xl9WZBMkmrYrOfg7k6GS6YmtX2TU3aqZAZAmDQunZCnZB0ruijRoiVWYu6nVI7Qaf3qNgAvQoSEEZCv80jtoUkWNNq69Q8lTsQOcsGqs7l2WoHVK9XDEqosZCoIF9YNIvpQgnGxTZBmL4FCy63ZAiUGXIHJ&format=json&sessionid=76dt8oisilpdh8zq92hr6hbpb297ycy5&user=%7B%22location%22:%22Kiev,+UA%22%7D" for ::1 at 2017-01-13 18:48:00 +0100
+Processing by CmbController#set_profileprocess3 as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAK9dQCoaFBdKtNcN16Xl9WZBMkmrYrOfg7k6GS6YmtX2TU3aqZAZAmDQunZCnZB0ruijRoiVWYu6nVI7Qaf3qNgAvQoSEEZCv80jtoUkWNNq69Q8lTsQOcsGqs7l2WoHVK9XDEqosZCoIF9YNIvpQgnGxTZBmL4FCy63ZAiUGXIHJ", "sessionid"=>"76dt8oisilpdh8zq92hr6hbpb297ycy5", "user"=>"{\"location\":\"Kiev, UA\"}"}
+  Rendering cmb/set_profileprocess3.json.jbuilder
+  Rendered cmb/_responseResultElement.json.jbuilder (0.5ms)
+  Rendered cmb/set_profileprocess3.json.jbuilder (2.6ms)
+Completed 200 OK in 2727ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_bagels?fbToken=EAAE998BGKHABAK9dQCoaFBdKtNcN16Xl9WZBMkmrYrOfg7k6GS6YmtX2TU3aqZAZAmDQunZCnZB0ruijRoiVWYu6nVI7Qaf3qNgAvQoSEEZCv80jtoUkWNNq69Q8lTsQOcsGqs7l2WoHVK9XDEqosZCoIF9YNIvpQgnGxTZBmL4FCy63ZAiUGXIHJ&format=json&sessionid=76dt8oisilpdh8zq92hr6hbpb297ycy5" for ::1 at 2017-01-13 18:48:09 +0100
+Processing by CmbController#get_bagels as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAK9dQCoaFBdKtNcN16Xl9WZBMkmrYrOfg7k6GS6YmtX2TU3aqZAZAmDQunZCnZB0ruijRoiVWYu6nVI7Qaf3qNgAvQoSEEZCv80jtoUkWNNq69Q8lTsQOcsGqs7l2WoHVK9XDEqosZCoIF9YNIvpQgnGxTZBmL4FCy63ZAiUGXIHJ", "sessionid"=>"76dt8oisilpdh8zq92hr6hbpb297ycy5"}
+  Rendering cmb/get_bagels.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_bagels.json.jbuilder (1.9ms)
+Completed 200 OK in 6368ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAE998BGKHABAK9dQCoaFBdKtNcN16Xl9WZBMkmrYrOfg7k6GS6YmtX2TU3aqZAZAmDQunZCnZB0ruijRoiVWYu6nVI7Qaf3qNgAvQoSEEZCv80jtoUkWNNq69Q8lTsQOcsGqs7l2WoHVK9XDEqosZCoIF9YNIvpQgnGxTZBmL4FCy63ZAiUGXIHJ&format=json&sessionid=76dt8oisilpdh8zq92hr6hbpb297ycy5" for ::1 at 2017-01-13 18:48:20 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAK9dQCoaFBdKtNcN16Xl9WZBMkmrYrOfg7k6GS6YmtX2TU3aqZAZAmDQunZCnZB0ruijRoiVWYu6nVI7Qaf3qNgAvQoSEEZCv80jtoUkWNNq69Q8lTsQOcsGqs7l2WoHVK9XDEqosZCoIF9YNIvpQgnGxTZBmL4FCy63ZAiUGXIHJ", "sessionid"=>"76dt8oisilpdh8zq92hr6hbpb297ycy5"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/get_profile.json.jbuilder (3.4ms)
+Completed 200 OK in 7955ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 18:57:03 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 393ms (Views: 391.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAEGKJEYV6fEb13r8lZCZAHqeXUJRtOZAo6glObyjwPlnFWN9e2V1ggMamRUvrnfSpoPzTccZCUMEvGuR0StiMbrvHcZBDjcqd6VLE9koSAhoVYDAwBXso8bT4ZCTZCdJGPOAPt8RUmruOefcZCAAS6R9iM7D6ugJ70NeUwizvMD0&format=json" for ::1 at 2017-01-13 18:57:15 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAEGKJEYV6fEb13r8lZCZAHqeXUJRtOZAo6glObyjwPlnFWN9e2V1ggMamRUvrnfSpoPzTccZCUMEvGuR0StiMbrvHcZBDjcqd6VLE9koSAhoVYDAwBXso8bT4ZCTZCdJGPOAPt8RUmruOefcZCAAS6R9iM7D6ugJ70NeUwizvMD0"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/index.json.jbuilder (2.5ms)
+Completed 200 OK in 6049ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_bagels?fbToken=EAAE998BGKHABAEGKJEYV6fEb13r8lZCZAHqeXUJRtOZAo6glObyjwPlnFWN9e2V1ggMamRUvrnfSpoPzTccZCUMEvGuR0StiMbrvHcZBDjcqd6VLE9koSAhoVYDAwBXso8bT4ZCTZCdJGPOAPt8RUmruOefcZCAAS6R9iM7D6ugJ70NeUwizvMD0&format=json&sessionid=4agzmr4wayy0o01iqppplsos98d5lpsr" for ::1 at 2017-01-13 18:57:27 +0100
+Processing by CmbController#get_bagels as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAEGKJEYV6fEb13r8lZCZAHqeXUJRtOZAo6glObyjwPlnFWN9e2V1ggMamRUvrnfSpoPzTccZCUMEvGuR0StiMbrvHcZBDjcqd6VLE9koSAhoVYDAwBXso8bT4ZCTZCdJGPOAPt8RUmruOefcZCAAS6R9iM7D6ugJ70NeUwizvMD0", "sessionid"=>"4agzmr4wayy0o01iqppplsos98d5lpsr"}
+  Rendering cmb/get_bagels.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_bagels.json.jbuilder (1.8ms)
+Completed 200 OK in 2731ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAE998BGKHABAEGKJEYV6fEb13r8lZCZAHqeXUJRtOZAo6glObyjwPlnFWN9e2V1ggMamRUvrnfSpoPzTccZCUMEvGuR0StiMbrvHcZBDjcqd6VLE9koSAhoVYDAwBXso8bT4ZCTZCdJGPOAPt8RUmruOefcZCAAS6R9iM7D6ugJ70NeUwizvMD0&format=json&sessionid=4agzmr4wayy0o01iqppplsos98d5lpsr" for ::1 at 2017-01-13 18:57:31 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAEGKJEYV6fEb13r8lZCZAHqeXUJRtOZAo6glObyjwPlnFWN9e2V1ggMamRUvrnfSpoPzTccZCUMEvGuR0StiMbrvHcZBDjcqd6VLE9koSAhoVYDAwBXso8bT4ZCTZCdJGPOAPt8RUmruOefcZCAAS6R9iM7D6ugJ70NeUwizvMD0", "sessionid"=>"4agzmr4wayy0o01iqppplsos98d5lpsr"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_profile.json.jbuilder (2.9ms)
+Completed 200 OK in 9338ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 19:00:50 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 403ms (Views: 400.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 19:02:01 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 433ms (Views: 429.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tinder?fbToken=EAAE998BGKHABABFaWifrPhtuHkXQSf5pFZCi0TCmL6rxbvVWDY7GZB2BZAMPT5UL2r7R1qZBhpOVXpZBehOGsDDjcnLyj5VZC8k390Cig7UhZBt991dd3LZBmFOPF0NVZBgZAQP8NNBwOwyj3pEK2bRNzT1sbBa4CpqztJibgAmZAkalKHEltlzXlrG&fbUserID=189552508182575&format=json" for ::1 at 2017-01-13 19:02:06 +0100
+Processing by TinderController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABABFaWifrPhtuHkXQSf5pFZCi0TCmL6rxbvVWDY7GZB2BZAMPT5UL2r7R1qZBhpOVXpZBehOGsDDjcnLyj5VZC8k390Cig7UhZBt991dd3LZBmFOPF0NVZBgZAQP8NNBwOwyj3pEK2bRNzT1sbBa4CpqztJibgAmZAkalKHEltlzXlrG", "fbUserID"=>"189552508182575"}
+  Rendering tinder/index.json.jbuilder
+  Rendered tinder/_tinderInfoElement.json.jbuilder (0.7ms)
+  Rendered tinder/index.json.jbuilder (57.3ms)
+Completed 200 OK in 2237ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 19:05:43 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 414ms (Views: 411.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 19:08:27 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 437ms (Views: 435.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-14 03:09:59 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 3122ms (Views: 3118.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-14 04:50:20 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 156ms (Views: 120.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tinder?fbToken=EAAE998BGKHABAB7Lw6CfHZAiFCZAGrtHkXyCaSEWbbrQ6oEeg0YSlvitRZCKbmlBR30ZBpiQmeGlfpr0pMOvQ9xEIZCl8TZAE1g33WAZBGmUuPkyKqtX3UVfGGIGFr6xhzxZCUQepgomVqZAUMZCtjxCYvrsaezZB3troMg7hd8l1cZAfjcomMQuwlhq&fbUserID=189552508182575&format=json" for ::1 at 2017-01-14 04:50:23 +0100
+Processing by TinderController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAB7Lw6CfHZAiFCZAGrtHkXyCaSEWbbrQ6oEeg0YSlvitRZCKbmlBR30ZBpiQmeGlfpr0pMOvQ9xEIZCl8TZAE1g33WAZBGmUuPkyKqtX3UVfGGIGFr6xhzxZCUQepgomVqZAUMZCtjxCYvrsaezZB3troMg7hd8l1cZAfjcomMQuwlhq", "fbUserID"=>"189552508182575"}
+  Rendering tinder/index.json.jbuilder
+  Rendered tinder/_tinderInfoElement.json.jbuilder (0.4ms)
+  Rendered tinder/index.json.jbuilder (25.0ms)
+Completed 200 OK in 2985ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 13:31:39 +0100
+Started GET "/" for ::1 at 2017-01-15 13:31:39 +0100
+Processing by HomeController#index as HTML
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3358ms (Views: 3290.5ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 3334ms (Views: 3310.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 13:42:13 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 558ms (Views: 556.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABABRt9x56uY9LgnZCz610970JJKcwyx2aG11ZApF1akcvxI4XkjTLL6ZBJfMqYWqCr8rNP5JOCu3Cy6pRn3rkfeIcIBg1MN27cx0JLdYttBea2v3b6fkSxz7YZBaJDkMovzVvbLXfK4ajiuuEZBXGHyNdKVLpNPysXf7KSgKB8&format=json" for ::1 at 2017-01-15 13:42:18 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABABRt9x56uY9LgnZCz610970JJKcwyx2aG11ZApF1akcvxI4XkjTLL6ZBJfMqYWqCr8rNP5JOCu3Cy6pRn3rkfeIcIBg1MN27cx0JLdYttBea2v3b6fkSxz7YZBaJDkMovzVvbLXfK4ajiuuEZBXGHyNdKVLpNPysXf7KSgKB8"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.5ms)
+  Rendered cmb/index.json.jbuilder (16.7ms)
+Completed 200 OK in 5266ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAE998BGKHABABRt9x56uY9LgnZCz610970JJKcwyx2aG11ZApF1akcvxI4XkjTLL6ZBJfMqYWqCr8rNP5JOCu3Cy6pRn3rkfeIcIBg1MN27cx0JLdYttBea2v3b6fkSxz7YZBaJDkMovzVvbLXfK4ajiuuEZBXGHyNdKVLpNPysXf7KSgKB8&format=json&sessionid=pwrs2ytjvdt58t0qicxqrfrb9kw3jhsr" for ::1 at 2017-01-15 13:42:27 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABABRt9x56uY9LgnZCz610970JJKcwyx2aG11ZApF1akcvxI4XkjTLL6ZBJfMqYWqCr8rNP5JOCu3Cy6pRn3rkfeIcIBg1MN27cx0JLdYttBea2v3b6fkSxz7YZBaJDkMovzVvbLXfK4ajiuuEZBXGHyNdKVLpNPysXf7KSgKB8", "sessionid"=>"pwrs2ytjvdt58t0qicxqrfrb9kw3jhsr"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_profile.json.jbuilder (2.9ms)
+Completed 200 OK in 5437ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 13:44:47 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 97ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABALdkKqCpQsapYZBHolVJQRie3XG3dIenVibgT5AlZBrao5KuNkoQqYkvFPso6ZArEAJL7vsMQmFh7ZBmsHdoQpAkDYQWOwHicAJ1rGBkk5ZAwZBgqK2EZB6xNie2ZBaZBNZB88jAekjAzuIDNvxZAneiBQHbZC6XHydfZBxmw40YFWj7r&format=json" for ::1 at 2017-01-15 13:44:51 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABALdkKqCpQsapYZBHolVJQRie3XG3dIenVibgT5AlZBrao5KuNkoQqYkvFPso6ZArEAJL7vsMQmFh7ZBmsHdoQpAkDYQWOwHicAJ1rGBkk5ZAwZBgqK2EZB6xNie2ZBaZBNZB88jAekjAzuIDNvxZAneiBQHbZC6XHydfZBxmw40YFWj7r"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/index.json.jbuilder (2.1ms)
+Completed 200 OK in 14567ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAE998BGKHABALdkKqCpQsapYZBHolVJQRie3XG3dIenVibgT5AlZBrao5KuNkoQqYkvFPso6ZArEAJL7vsMQmFh7ZBmsHdoQpAkDYQWOwHicAJ1rGBkk5ZAwZBgqK2EZB6xNie2ZBaZBNZB88jAekjAzuIDNvxZAneiBQHbZC6XHydfZBxmw40YFWj7r&format=json&sessionid=fkxcmwcc2e9qtt41s5gebqxekfz0batc" for ::1 at 2017-01-15 13:45:18 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABALdkKqCpQsapYZBHolVJQRie3XG3dIenVibgT5AlZBrao5KuNkoQqYkvFPso6ZArEAJL7vsMQmFh7ZBmsHdoQpAkDYQWOwHicAJ1rGBkk5ZAwZBgqK2EZB6xNie2ZBaZBNZB88jAekjAzuIDNvxZAneiBQHbZC6XHydfZBxmw40YFWj7r", "sessionid"=>"fkxcmwcc2e9qtt41s5gebqxekfz0batc"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.6ms)
+  Rendered cmb/get_profile.json.jbuilder (3.4ms)
+Completed 200 OK in 17355ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 13:55:26 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3274ms (Views: 3271.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 13:56:37 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 868ms (Views: 865.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 14:00:45 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 90ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 14:27:16 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 103ms (Views: 99.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAE998BGKHABAC1e9ukw9m4NAnyBZAV2XERCrg4QwPZBMHKFwBzdxE72WWnZCqr8IbtnBIKf3xuMeNjUZAgZAu6ytAnbGLvau5h1KtIdCY4vLjZBMANPFcM9vLNR2kqzOC0FWBTTxEtiK7RXavO9q3ZCokvbgj2ZCO9cn7RAd6ME1PiDu3K14AJA&format=json" for ::1 at 2017-01-15 14:27:35 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAC1e9ukw9m4NAnyBZAV2XERCrg4QwPZBMHKFwBzdxE72WWnZCqr8IbtnBIKf3xuMeNjUZAgZAu6ytAnbGLvau5h1KtIdCY4vLjZBMANPFcM9vLNR2kqzOC0FWBTTxEtiK7RXavO9q3ZCokvbgj2ZCO9cn7RAd6ME1PiDu3K14AJA"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/index.json.jbuilder (3.5ms)
+Completed 200 OK in 4724ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAE998BGKHABAC1e9ukw9m4NAnyBZAV2XERCrg4QwPZBMHKFwBzdxE72WWnZCqr8IbtnBIKf3xuMeNjUZAgZAu6ytAnbGLvau5h1KtIdCY4vLjZBMANPFcM9vLNR2kqzOC0FWBTTxEtiK7RXavO9q3ZCokvbgj2ZCO9cn7RAd6ME1PiDu3K14AJA&format=json&sessionid=m2vzvg27fwnbqunga4nf1ynqk2fy65d3" for ::1 at 2017-01-15 14:27:43 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAE998BGKHABAC1e9ukw9m4NAnyBZAV2XERCrg4QwPZBMHKFwBzdxE72WWnZCqr8IbtnBIKf3xuMeNjUZAgZAu6ytAnbGLvau5h1KtIdCY4vLjZBMANPFcM9vLNR2kqzOC0FWBTTxEtiK7RXavO9q3ZCokvbgj2ZCO9cn7RAd6ME1PiDu3K14AJA", "sessionid"=>"m2vzvg27fwnbqunga4nf1ynqk2fy65d3"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/get_profile.json.jbuilder (3.7ms)
+Completed 200 OK in 5766ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 14:36:30 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 917ms (Views: 914.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 14:36:58 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 103ms (Views: 100.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 14:37:07 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 84ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+

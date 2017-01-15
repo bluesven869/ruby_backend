@@ -20,7 +20,8 @@ aggregate_dating.config([ '$facebookProvider',
  	($facebookProvider)->
       	$facebookProvider
         .init({
-            appId: '349609268750448'
+            # appId: '349609268750448'
+            appId: '273145509408031'
         })
 ])
 
@@ -36,33 +37,90 @@ controllers = angular.module('controllers',[])
 controllers.controller("CMBController", [ '$scope', '$routeParams', '$location', '$facebook', '$http', '$resource', 'Upload'
   ($scope,$routeParams,$location,$facebook,$http,$resource, Upload)->
     
+    $scope.fblogin_flag = false
     $scope.login_flag = false
     #if(not $scope.fbToken?)
     console.log $routeParams
+
     $scope.loginFacebook = ->
       #   Login with FaceBook           
-      $scope.login_flag = true
-      $facebook.login(scope: 'email').then ((response) ->
+      $scope.fblogin_flag = true
+      $facebook.login(scope: 'public_profile, email, user_friends, user_birthday').then ((response) ->
         authtoken = response.authResponse.accessToken
         console.log 'FB Login Success', authtoken
         console.log response.authResponse
         $scope.fbToken = authtoken
         $scope.fbUserID = response.authResponse.userID
-        $scope.loginCMB(authtoken)
+        # $scope.loginCMB(authtoken)
+        $scope.fblogin_flag = false
     ), (response) ->
         console.log 'FB Login Error', response
 	
-    $scope.loginCMB = (authtoken) ->
+    $scope.loginCMB = ->
       #login with CMB
       #CURL commands:
       # 1. curl https://api.coffeemeetsbagel.com/profile/me -H "App-version: 779" -H
-      $scope.cmbInfo = [] 
-      Cmb = $resource('/cmb', { format: 'json' })
-      Cmb.query(fbToken: authtoken , (results) -> 
-        $scope.cmbInfo = results
-        $scope.sessionid = results[0].sessionid
-        $scope.login_flag = false
+      $scope.loginFacebook().then ((response) ->
+        if $scope.fblogin_flag == true
+          return  
+
+        $scope.login_flag = true;
+        $scope.cmbInfo = [] 
+        Cmb = $resource('/cmb', { format: 'json' })
+        Cmb.query(fbToken: $scope.fbToken , (results) -> 
+          $scope.cmbInfo = results
+          $scope.sessionid = results[0].sessionid
+          $scope.login_flag = false
+        )
+        console.log 'loginFacebook Halt'
       )
+
+      
+    $scope.setMyProfileProcess1 = ->
+      # Set values and Send to Server
+      $scope.profile_flag = true
+      $scope.user = {}
+      $scope.user.id = $scope.userid
+      $scope.user.language_code = "en"
+
+      Cmb = $resource('/cmb/set_profileprocess1', { format: 'json' })
+      Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, user: $scope.user , (results) -> 
+        $scope.profileProcessResult = results
+        $scope.profile_flag = false
+        console.log 'data OK'   
+      )
+
+    $scope.setMyProfileProcess2 = ->
+      # Set values and Send to Server
+      $scope.profile_flag = true
+      $scope.user = {}
+      $scope.user.id = $scope.userid
+      $scope.user.gender = "m"
+      $scope.user.birthday = "1997-07-29 00:00:00"
+      $scope.user.criteria__gender = "f"
+      $scope.user.user__email = "someemail@somemailserver.com"
+
+      Cmb = $resource('/cmb/set_profileprocess2', { format: 'json' })
+      Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, user: $scope.user , (results) -> 
+        $scope.profileProcessResult = results
+        $scope.profile_flag = false
+        console.log 'data OK'
+      )
+
+    $scope.setMyProfileProcess3 = ->
+      # Set values and Send to Server
+      $scope.profile_flag = true
+      $scope.user = {}
+      $scope.user.id = $scope.userid
+      $scope.user.location = "Kiev, UA"
+
+      Cmb = $resource('/cmb/set_profileprocess3', { format: 'json' })
+      Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, user: $scope.user , (results) -> 
+        $scope.profileProcessResult = results
+        $scope.profile_flag = false
+        console.log 'data OK'   
+      )
+
     $scope.getMyProfile = ->
       # Set my profile
       # Check Input values
@@ -76,11 +134,13 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
         $scope.profileInfo = results        
         $scope.userid = results[0].jsonObj.id
+        $scope.user_language_code = results[0].jsonObj.language_code
         $scope.user_gender = results[0].jsonObj.gender
         $scope.user_name = results[0].jsonObj.full_name
         $scope.user_email = results[0].jsonObj.user__email        
         $scope.user_criteria_gender = results[0].jsonObj.criteria__gender        
         $scope.user_birthday = new Date(results[0].jsonObj.birthday)
+        $scope.user_location = results[0].jsonObj.location
         $scope.firebaseToken = results[0].jsonObj.firebase_token
         $scope.get_profile_flag = false         
       )
@@ -113,12 +173,14 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       # Set values and Send to Server
       $scope.profile_flag = true
       $scope.user = {}
+      $scope.user.language_code = $scope.user_language_code
       $scope.user.name = $scope.user_name
       $scope.user.id = $scope.userid
       $scope.user.gender = $scope.user_gender
       $scope.user.birthday = $scope.user_birthday
       $scope.user.email = $scope.user_email
       $scope.user.criteria_gender = $scope.user_criteria_gender 
+      $scope.user.location = $scope.user_location
 
       Cmb = $resource('/cmb/set_profile', { format: 'json' })
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, user: $scope.user , (results) -> 

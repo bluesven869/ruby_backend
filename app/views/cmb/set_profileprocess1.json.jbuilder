@@ -1,0 +1,1 @@
+json.array! @processResult, partial: 'responseResultElement', as: :responseResultElement
