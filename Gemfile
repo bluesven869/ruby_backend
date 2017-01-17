@@ -27,6 +27,7 @@ gem 'sass', '3.2.19'
 gem 'bower-rails'
 gem 'angular-rails-templates'
 gem 'httparty', '~> 0.13.7'
+gem 'omniauth-facebook'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

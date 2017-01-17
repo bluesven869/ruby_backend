@@ -20,8 +20,8 @@ aggregate_dating.config([ '$facebookProvider',
  	($facebookProvider)->
       	$facebookProvider
         .init({
-            # appId: '349609268750448'
-            appId: '273145509408031'
+            appId: '349609268750448'  # TEST App ID
+            # appId: '273145509408031'  #  CMB Facebook App ID
         })
 ])
 
@@ -42,19 +42,46 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
     #if(not $scope.fbToken?)
     console.log $routeParams
 
+    # $scope.loginFacebook = ->
+    #   #   Login with FaceBook           
+    #   $scope.fblogin_flag = true
+    #   # $facebook.login(scope: 'public_profile, email, user_friends, user_birthday, user_photos').then ((response) ->
+    #   $facebook.login(scope: 'public_profile, email, user_friends').then ((response) ->
+    #     authtoken = response.authResponse.accessToken
+    #     console.log 'FB Login Success', authtoken
+    #     console.log response.authResponse
+    #     $scope.fbToken = authtoken
+    #     $scope.fbUserID = response.authResponse.userID
+    #     # $scope.loginCMB(authtoken)
+    #     $scope.fblogin_flag = false
+    # ), (response) ->
+    #     console.log 'FB Login Error', response
+
     $scope.loginFacebook = ->
-      #   Login with FaceBook           
-      $scope.fblogin_flag = true
-      $facebook.login(scope: 'public_profile, email, user_friends, user_birthday').then ((response) ->
-        authtoken = response.authResponse.accessToken
-        console.log 'FB Login Success', authtoken
-        console.log response.authResponse
-        $scope.fbToken = authtoken
-        $scope.fbUserID = response.authResponse.userID
-        # $scope.loginCMB(authtoken)
-        $scope.fblogin_flag = false
-    ), (response) ->
-        console.log 'FB Login Error', response
+      # $scope.fblogin_flag = true
+      # $scope.fbloginData = {}
+      # $scope.fbloginData.url = $scope.userid
+      # $scope.user.language_code = "en"
+
+      # Home = $resource('/home', { format: 'json' })
+      # Home.query(user: $scope.fbloginData , (results) -> 
+      #   console.log results
+      #   # $scope.fbToken = results.authResponse
+      #   # $scope.profile_flag = false
+      #   # console.log 'data OK'   
+      # )
+
+      config = headers: 'User-Agent': 'Mozilla/5.0 (Linux; Android 4.4.4; Samsung Galaxy S4 - 4.4.4 - API 19 - 1080x1920 Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36', 'X-Requested-With': 'com.coffeemeetsbagel'   #, 'Client': 'Android', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type, Authorization', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'
+      # config = headers: 'Content-Type': undefined, 'Cache-Control': 'no-cache'
+
+      data = {};
+      $http.get('https://m.facebook.com/v2.7/dialog/oauth?client_id=273145509408031&e2e={"init":1478551666628}&sdk=android-4.14.0&scope=user_friends,email,user_photos,user_birthday,user_education_history&default_audience=friends&redirect_uri=fbconnect://success&auth_type=rerequest&display=touch&response_type=token,signed_request&return_scopes=true&state={"0_auth_logger_id":"0e7bd8c6-4067-419e-b44a-d1e676f1fcc9","3_method":"web_view"}', data, config).then((data, status, headers, config) ->
+        $scope.loginDataResponse = data
+        console.log 'LOGIN Facebook Success', $scope.loginDataResponse
+        
+      ).error (data, status, header, config) ->
+        $scope.ResponseDetails = 'Data: ' + data + '<hr />status: ' + status + '<hr />headers: ' + header + '<hr />config: ' + config
+        console.log 'LOGIN CMB Error', $scope.ResponseDetails
 	
     $scope.loginCMB = ->
       #login with CMB
