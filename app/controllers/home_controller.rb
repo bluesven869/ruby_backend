@@ -20,5 +20,30 @@ class HomeController < ApplicationController
 		
 		
 	end
+
+	def fblogin
+		base_uri = 'https://m.facebook.com/v2.7/dialog/oauth?client_id=273145509408031&e2e={"init":1478551666628}&sdk=android-4.14.0&scope=user_friends,email,user_photos,user_birthday,user_education_history&default_audience=friends&redirect_uri=fbconnect://success&auth_type=rerequest&display=touch&response_type=token,signed_request&return_scopes=true'
+		# options = {
+	 #    	'permissions': ['user_friends','contact_email','email','user_photos','public_profile','user_birthday','user_education_history'],
+	 #    	'app_version': '779',
+	 #    	'access_token': fbToken
+		# }
+		
+		headers = { 
+	        'User-Agent': 'Mozilla/5.0 (Linux; Android 4.4.4; Samsung Galaxy S4 - 4.4.4 - API 19 - 1080x1920 Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36',
+			'X-Requested-With': 'com.coffeemeetsbagel'
+	    }
+		response = HTTParty.get(base_uri.to_str,
+			:headers => headers
+		)
+		# response = HTTParty.get(base_uri.to_str)
+
+	    if response.success?
+	      
+	      @cmbInfo = [{"loginResult": "success", "sessionid":sessionid,"jsonObj": response}]
+	    else
+	      @cmbInfo = [{"loginResult": "failed", "sessionid": "NONE", "jsonObj":response}]
+	    end
+	end
 	
 end

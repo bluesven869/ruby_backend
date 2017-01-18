@@ -18,5 +18,14 @@ Rails.application.routes.draw do
   get '/cmb/purchase'
   get '/cmb/report'
   get '/cmb/photo'
+
+  get '/home/fblogin'
+
+  get '/auth/:provider/callback' => 'home#fblogin'
+
+  # get '/signout' => 'sessions#destroy', :as => :signout
+
+  # get '/signin' => 'sessions#new', :as => :signin
+
   resources :tinder, only: [:index]
 end

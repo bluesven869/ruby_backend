@@ -58,31 +58,40 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
     #     console.log 'FB Login Error', response
 
     $scope.loginFacebook = ->
-      # $scope.fblogin_flag = true
-      # $scope.fbloginData = {}
-      # $scope.fbloginData.url = $scope.userid
-      # $scope.user.language_code = "en"
-
-      # Home = $resource('/home', { format: 'json' })
-      # Home.query(user: $scope.fbloginData , (results) -> 
-      #   console.log results
-      #   # $scope.fbToken = results.authResponse
-      #   # $scope.profile_flag = false
-      #   # console.log 'data OK'   
-      # )
-
-      config = headers: 'User-Agent': 'Mozilla/5.0 (Linux; Android 4.4.4; Samsung Galaxy S4 - 4.4.4 - API 19 - 1080x1920 Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36', 'X-Requested-With': 'com.coffeemeetsbagel'   #, 'Client': 'Android', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type, Authorization', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'
-      # config = headers: 'Content-Type': undefined, 'Cache-Control': 'no-cache'
-
-      data = {};
-      $http.get('https://m.facebook.com/v2.7/dialog/oauth?client_id=273145509408031&e2e={"init":1478551666628}&sdk=android-4.14.0&scope=user_friends,email,user_photos,user_birthday,user_education_history&default_audience=friends&redirect_uri=fbconnect://success&auth_type=rerequest&display=touch&response_type=token,signed_request&return_scopes=true&state={"0_auth_logger_id":"0e7bd8c6-4067-419e-b44a-d1e676f1fcc9","3_method":"web_view"}', data, config).then((data, status, headers, config) ->
-        $scope.loginDataResponse = data
-        console.log 'LOGIN Facebook Success', $scope.loginDataResponse
+      FBLogin = $resource('/home/fblogin', { format: 'json' })
+      FBLogin.query( (results) -> 
         
-      ).error (data, status, header, config) ->
-        $scope.ResponseDetails = 'Data: ' + data + '<hr />status: ' + status + '<hr />headers: ' + header + '<hr />config: ' + config
-        console.log 'LOGIN CMB Error', $scope.ResponseDetails
-	
+        console.log 'data OK'   
+      )
+
+      # config = headers: 'User-Agent': 'Mozilla/5.0 (Linux; Android 4.4.4; Samsung Galaxy S4 - 4.4.4 - API 19 - 1080x1920 Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36', 'X-Requested-With': 'com.coffeemeetsbagel'   #, 'Client': 'Android', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type, Authorization', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'
+      # # config = headers: 'Content-Type': undefined, 'Cache-Control': 'no-cache'
+
+      # data = {};
+      # $http.get('https://m.facebook.com/v2.7/dialog/oauth?client_id=273145509408031&e2e={"init":1478551666628}&sdk=android-4.14.0&scope=user_friends,email,user_photos,user_birthday,user_education_history&default_audience=friends&redirect_uri=fbconnect://success&auth_type=rerequest&display=touch&response_type=token,signed_request&return_scopes=true&state={"0_auth_logger_id":"0e7bd8c6-4067-419e-b44a-d1e676f1fcc9","3_method":"web_view"}', data, config).then((data, status, headers, config) ->
+      #   $scope.loginDataResponse = data
+      #   console.log 'LOGIN Facebook Success', $scope.loginDataResponse
+        
+      # ).error (data, status, header, config) ->
+      #   $scope.ResponseDetails = 'Data: ' + data + '<hr />status: ' + status + '<hr />headers: ' + header + '<hr />config: ' + config
+      #   console.log 'LOGIN CMB Error', $scope.ResponseDetails
+
+      # openUrl = '/auth/facebook/?account_id=' + $scope.accountTokens['id'] + '&eid=' + eventId
+      # openUrl = '/auth/facebook/'
+      # window.$windowScope = $scope
+      # window.open openUrl, 'Authenticate Account', 'width=500, height=500'
+      # console.log 'END OF LOGIN FACEBOOK'
+
+    $scope.handlePopupAuthentication = (network, account) ->
+
+      #Note: using $scope.$apply wrapping
+      #the window popup will call this 
+      #and is unwatched func 
+      #so we need to wrap
+      $scope.$apply ->
+        $scope.applyNetwork network, account
+        return
+
     $scope.loginCMB = ->
       #login with CMB
       #CURL commands:
