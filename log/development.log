@@ -2410,3 +2410,2290 @@ app/controllers/home_controller.rb:36:in `fblogin'
   Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
   Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.3ms)
+Started GET "/" for ::1 at 2017-01-18 14:37:50 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 545ms (Views: 530.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-18 14:37:54 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 60093ms (ActiveRecord: 0.0ms)
+
+
+  
+Net::OpenTimeout (execution expired):
+  
+app/controllers/home_controller.rb:36:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.7ms)
+Started GET "/" for ::1 at 2017-01-18 15:27:02 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 300ms (Views: 296.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-18 15:27:22 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 60020ms (ActiveRecord: 0.0ms)
+
+
+  
+Net::OpenTimeout (execution expired):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.8ms)
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-18 15:29:22 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 60027ms (ActiveRecord: 0.0ms)
+
+
+  
+Net::OpenTimeout (execution expired):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.5ms)
+Started GET "/" for ::1 at 2017-01-18 16:25:26 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 5334ms (Views: 5331.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-18 16:26:17 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30018ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to www.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.7ms)
+Started GET "/" for ::1 at 2017-01-18 17:16:30 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 655ms (Views: 651.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 17:17:40 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 64ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-18 17:17:43 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30018ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.0ms)
+Started GET "/" for ::1 at 2017-01-18 17:26:26 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 405ms (Views: 402.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 17:33:01 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 68ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 17:34:09 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 403ms (Views: 400.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 17:37:26 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 412ms (Views: 409.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 17:40:20 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 554ms (Views: 549.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 17:40:22 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 105ms (Views: 101.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 17:43:46 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 124ms (Views: 121.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 19:47:11 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4973ms (Views: 4944.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-18 19:50:12 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30021ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.6ms)
+Started GET "/" for ::1 at 2017-01-18 19:58:17 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 833ms (Views: 829.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAD4bKUPbR8BAJhN2LdnSbEgWuoo3hUDlQD7b2Ypg6h3lhYYodKswOvvN5IWQJz9gsBN1wIrGJbH3Ysrg2K920wnhfAIxkSzIA17KxNesOvCpVl7026ZAF43wFwcEG2Ahzk11fJ99FxX9j85mZAiFZBhiNZClG456n6Wq8y6YFbRK9ODII2HGj4OpRiy2hpMZCvdIqsV8INMorQdSPE1p&format=json" for ::1 at 2017-01-18 19:58:20 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAD4bKUPbR8BAJhN2LdnSbEgWuoo3hUDlQD7b2Ypg6h3lhYYodKswOvvN5IWQJz9gsBN1wIrGJbH3Ysrg2K920wnhfAIxkSzIA17KxNesOvCpVl7026ZAF43wFwcEG2Ahzk11fJ99FxX9j85mZAiFZBhiNZClG456n6Wq8y6YFbRK9ODII2HGj4OpRiy2hpMZCvdIqsV8INMorQdSPE1p"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/index.json.jbuilder (25.5ms)
+Completed 200 OK in 5451ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess1?fbToken=EAAD4bKUPbR8BAJhN2LdnSbEgWuoo3hUDlQD7b2Ypg6h3lhYYodKswOvvN5IWQJz9gsBN1wIrGJbH3Ysrg2K920wnhfAIxkSzIA17KxNesOvCpVl7026ZAF43wFwcEG2Ahzk11fJ99FxX9j85mZAiFZBhiNZClG456n6Wq8y6YFbRK9ODII2HGj4OpRiy2hpMZCvdIqsV8INMorQdSPE1p&format=json&sessionid=7o3k3kuotyhgo8oyr7b2nfacl1piooqg&user=%7B%22language_code%22:%22en%22%7D" for ::1 at 2017-01-18 19:58:33 +0100
+Processing by CmbController#set_profileprocess1 as JSON
+  Parameters: {"fbToken"=>"EAAD4bKUPbR8BAJhN2LdnSbEgWuoo3hUDlQD7b2Ypg6h3lhYYodKswOvvN5IWQJz9gsBN1wIrGJbH3Ysrg2K920wnhfAIxkSzIA17KxNesOvCpVl7026ZAF43wFwcEG2Ahzk11fJ99FxX9j85mZAiFZBhiNZClG456n6Wq8y6YFbRK9ODII2HGj4OpRiy2hpMZCvdIqsV8INMorQdSPE1p", "sessionid"=>"7o3k3kuotyhgo8oyr7b2nfacl1piooqg", "user"=>"{\"language_code\":\"en\"}"}
+  Rendering cmb/set_profileprocess1.json.jbuilder
+  Rendered cmb/_responseResultElement.json.jbuilder (0.7ms)
+  Rendered cmb/set_profileprocess1.json.jbuilder (7.2ms)
+Completed 200 OK in 2662ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess2?fbToken=EAAD4bKUPbR8BAJhN2LdnSbEgWuoo3hUDlQD7b2Ypg6h3lhYYodKswOvvN5IWQJz9gsBN1wIrGJbH3Ysrg2K920wnhfAIxkSzIA17KxNesOvCpVl7026ZAF43wFwcEG2Ahzk11fJ99FxX9j85mZAiFZBhiNZClG456n6Wq8y6YFbRK9ODII2HGj4OpRiy2hpMZCvdIqsV8INMorQdSPE1p&format=json&sessionid=7o3k3kuotyhgo8oyr7b2nfacl1piooqg&user=%7B%22gender%22:%22m%22,%22birthday%22:%221997-07-29+00:00:00%22,%22criteria__gender%22:%22f%22,%22user__email%22:%22someemail@somemailserver.com%22%7D" for ::1 at 2017-01-18 19:58:37 +0100
+Processing by CmbController#set_profileprocess2 as JSON
+  Parameters: {"fbToken"=>"EAAD4bKUPbR8BAJhN2LdnSbEgWuoo3hUDlQD7b2Ypg6h3lhYYodKswOvvN5IWQJz9gsBN1wIrGJbH3Ysrg2K920wnhfAIxkSzIA17KxNesOvCpVl7026ZAF43wFwcEG2Ahzk11fJ99FxX9j85mZAiFZBhiNZClG456n6Wq8y6YFbRK9ODII2HGj4OpRiy2hpMZCvdIqsV8INMorQdSPE1p", "sessionid"=>"7o3k3kuotyhgo8oyr7b2nfacl1piooqg", "user"=>"{\"gender\":\"m\",\"birthday\":\"1997-07-29 00:00:00\",\"criteria__gender\":\"f\",\"user__email\":\"someemail@somemailserver.com\"}"}
+  Rendering cmb/set_profileprocess2.json.jbuilder
+  Rendered cmb/_responseResultElement.json.jbuilder (0.3ms)
+  Rendered cmb/set_profileprocess2.json.jbuilder (1.8ms)
+Completed 200 OK in 12246ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/set_profileprocess3?fbToken=EAAD4bKUPbR8BAJhN2LdnSbEgWuoo3hUDlQD7b2Ypg6h3lhYYodKswOvvN5IWQJz9gsBN1wIrGJbH3Ysrg2K920wnhfAIxkSzIA17KxNesOvCpVl7026ZAF43wFwcEG2Ahzk11fJ99FxX9j85mZAiFZBhiNZClG456n6Wq8y6YFbRK9ODII2HGj4OpRiy2hpMZCvdIqsV8INMorQdSPE1p&format=json&sessionid=7o3k3kuotyhgo8oyr7b2nfacl1piooqg&user=%7B%22location%22:%22Kiev,+UA%22%7D" for ::1 at 2017-01-18 19:58:51 +0100
+Processing by CmbController#set_profileprocess3 as JSON
+  Parameters: {"fbToken"=>"EAAD4bKUPbR8BAJhN2LdnSbEgWuoo3hUDlQD7b2Ypg6h3lhYYodKswOvvN5IWQJz9gsBN1wIrGJbH3Ysrg2K920wnhfAIxkSzIA17KxNesOvCpVl7026ZAF43wFwcEG2Ahzk11fJ99FxX9j85mZAiFZBhiNZClG456n6Wq8y6YFbRK9ODII2HGj4OpRiy2hpMZCvdIqsV8INMorQdSPE1p", "sessionid"=>"7o3k3kuotyhgo8oyr7b2nfacl1piooqg", "user"=>"{\"location\":\"Kiev, UA\"}"}
+  Rendering cmb/set_profileprocess3.json.jbuilder
+  Rendered cmb/_responseResultElement.json.jbuilder (0.4ms)
+  Rendered cmb/set_profileprocess3.json.jbuilder (2.3ms)
+Completed 200 OK in 3728ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAD4bKUPbR8BAJhN2LdnSbEgWuoo3hUDlQD7b2Ypg6h3lhYYodKswOvvN5IWQJz9gsBN1wIrGJbH3Ysrg2K920wnhfAIxkSzIA17KxNesOvCpVl7026ZAF43wFwcEG2Ahzk11fJ99FxX9j85mZAiFZBhiNZClG456n6Wq8y6YFbRK9ODII2HGj4OpRiy2hpMZCvdIqsV8INMorQdSPE1p&format=json&sessionid=7o3k3kuotyhgo8oyr7b2nfacl1piooqg" for ::1 at 2017-01-18 19:58:57 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAD4bKUPbR8BAJhN2LdnSbEgWuoo3hUDlQD7b2Ypg6h3lhYYodKswOvvN5IWQJz9gsBN1wIrGJbH3Ysrg2K920wnhfAIxkSzIA17KxNesOvCpVl7026ZAF43wFwcEG2Ahzk11fJ99FxX9j85mZAiFZBhiNZClG456n6Wq8y6YFbRK9ODII2HGj4OpRiy2hpMZCvdIqsV8INMorQdSPE1p", "sessionid"=>"7o3k3kuotyhgo8oyr7b2nfacl1piooqg"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_profile.json.jbuilder (3.2ms)
+Completed 200 OK in 6785ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_bagels?fbToken=EAAD4bKUPbR8BAJhN2LdnSbEgWuoo3hUDlQD7b2Ypg6h3lhYYodKswOvvN5IWQJz9gsBN1wIrGJbH3Ysrg2K920wnhfAIxkSzIA17KxNesOvCpVl7026ZAF43wFwcEG2Ahzk11fJ99FxX9j85mZAiFZBhiNZClG456n6Wq8y6YFbRK9ODII2HGj4OpRiy2hpMZCvdIqsV8INMorQdSPE1p&format=json&sessionid=7o3k3kuotyhgo8oyr7b2nfacl1piooqg" for ::1 at 2017-01-18 19:59:12 +0100
+Processing by CmbController#get_bagels as JSON
+  Parameters: {"fbToken"=>"EAAD4bKUPbR8BAJhN2LdnSbEgWuoo3hUDlQD7b2Ypg6h3lhYYodKswOvvN5IWQJz9gsBN1wIrGJbH3Ysrg2K920wnhfAIxkSzIA17KxNesOvCpVl7026ZAF43wFwcEG2Ahzk11fJ99FxX9j85mZAiFZBhiNZClG456n6Wq8y6YFbRK9ODII2HGj4OpRiy2hpMZCvdIqsV8INMorQdSPE1p", "sessionid"=>"7o3k3kuotyhgo8oyr7b2nfacl1piooqg"}
+  Rendering cmb/get_bagels.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_bagels.json.jbuilder (23.9ms)
+Completed 200 OK in 6238ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_bagels_history?bagel=%7B%22hex_id%22:%223386dc70-ddb0-11e6-8e6c-8aaccc4b9d8c%22,%22cursor_after%22:%221484539200.0-630552803%22,%22cursor_before%22:%221483588800.0-606214251%22,%22more_after%22:false,%22more_before%22:true%7D&fbToken=EAAD4bKUPbR8BAJhN2LdnSbEgWuoo3hUDlQD7b2Ypg6h3lhYYodKswOvvN5IWQJz9gsBN1wIrGJbH3Ysrg2K920wnhfAIxkSzIA17KxNesOvCpVl7026ZAF43wFwcEG2Ahzk11fJ99FxX9j85mZAiFZBhiNZClG456n6Wq8y6YFbRK9ODII2HGj4OpRiy2hpMZCvdIqsV8INMorQdSPE1p&format=json&sessionid=7o3k3kuotyhgo8oyr7b2nfacl1piooqg" for ::1 at 2017-01-18 20:00:28 +0100
+Processing by CmbController#get_bagels_history as JSON
+  Parameters: {"bagel"=>"{\"hex_id\":\"3386dc70-ddb0-11e6-8e6c-8aaccc4b9d8c\",\"cursor_after\":\"1484539200.0-630552803\",\"cursor_before\":\"1483588800.0-606214251\",\"more_after\":false,\"more_before\":true}", "fbToken"=>"EAAD4bKUPbR8BAJhN2LdnSbEgWuoo3hUDlQD7b2Ypg6h3lhYYodKswOvvN5IWQJz9gsBN1wIrGJbH3Ysrg2K920wnhfAIxkSzIA17KxNesOvCpVl7026ZAF43wFwcEG2Ahzk11fJ99FxX9j85mZAiFZBhiNZClG456n6Wq8y6YFbRK9ODII2HGj4OpRiy2hpMZCvdIqsV8INMorQdSPE1p", "sessionid"=>"7o3k3kuotyhgo8oyr7b2nfacl1piooqg"}
+  Rendering cmb/get_bagels_history.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_bagels_history.json.jbuilder (19.9ms)
+Completed 200 OK in 20017ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 20:11:22 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 114ms (Views: 110.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 20:11:38 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 86ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 21:15:55 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2716ms (Views: 2675.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-19 02:53:17 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1101ms (Views: 1068.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 02:53:22 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30022ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.8ms)
+Started GET "/" for ::1 at 2017-01-19 03:12:30 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 996ms (Views: 957.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 03:12:34 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30023ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.3ms)
+Started GET "/" for ::1 at 2017-01-19 03:21:32 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 942ms (Views: 938.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 03:21:38 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30026ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.5ms)
+Started GET "/" for ::1 at 2017-01-19 04:21:23 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1383ms (Views: 1342.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 04:21:28 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/auth/facebook?appid=273145509408031" for ::1 at 2017-01-19 04:21:28 +0100
+Started GET "/auth/facebook/callback?code=AQBNKisVbr6O9ydl3KDbBlNKdM9_ow1vvtVEVMA4-ByKzFWLH8oFaBghxcaNA32o73i1eAM5OumMPeri-YaoXWUPdNMioKNJ91dhBhPnJoj0nFqQxTtSs240YwOVBwip6PCUf7U5Sni4iEcBTYjPs9BJ_7N0otRF7KsmoacjPkeSX1qiyNkjwaoTCuPSBMZvYumGE3m0OwqHsBAIpHjzQWHqCp22oXLdFn8UG5RX5RbGuKLtyW-qIyWSlEydgducnzlU-T35cPRnFP06SuF6IwoMa19EmMuGoKZdk5b0HNwdw5b7YnUzk4-ZrBP8Nto58SB9HneHFAw28mqcPLXvkQFE&state=aadbf881969966373b02d42b71c17813b49fae30ccae1c5a" for ::1 at 2017-01-19 04:21:28 +0100
+Completed 500 Internal Server Error in 30023ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.5ms)
+  
+Faraday::ConnectionFailed (Failed to open TCP connection to graph.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:882:in `rescue in block in connect'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:879:in `block in connect'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/timeout.rb:91:in `block in timeout'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/timeout.rb:101:in `timeout'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:878:in `connect'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:863:in `do_start'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:852:in `start'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:1398:in `request'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:82:in `perform_request'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:40:in `block in call'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:87:in `with_net_http_connection'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:32:in `call'
+faraday (0.9.2) lib/faraday/request/url_encoded.rb:15:in `call'
+faraday (0.9.2) lib/faraday/rack_builder.rb:139:in `build_response'
+faraday (0.9.2) lib/faraday/connection.rb:377:in `run_request'
+oauth2 (1.2.0) lib/oauth2/client.rb:93:in `request'
+oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
+oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
+omniauth-oauth2 (1.3.1) lib/omniauth/strategies/oauth2.rb:93:in `build_access_token'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:114:in `build_access_token'
+omniauth-oauth2 (1.3.1) lib/omniauth/strategies/oauth2.rb:77:in `callback_phase'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:71:in `block in callback_phase'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:135:in `with_authorization_code!'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:70:in `callback_phase'
+omniauth (1.3.1) lib/omniauth/strategy.rb:227:in `callback_call'
+omniauth (1.3.1) lib/omniauth/strategy.rb:184:in `call!'
+omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.9ms)
+Started GET "/" for ::1 at 2017-01-19 04:21:59 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 93ms (Views: 89.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook?appid=273145509408031" for ::1 at 2017-01-19 04:22:06 +0100
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 04:22:06 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/auth/facebook/callback?code=AQBd8-bwYWB-4-MTU4aRcNzO_JuESIXyLkFZXOWWSiK4AlRC0Z2xcKRLnKeD_C64pUY1J3vf_pKZzYF4n-3OrKnzPYdoEy0CWOtIDjZRhGEbQEl_OPqDzcV_XrczLvIVDOVnrPatJZoob632uQQuCpHeuDwEiGXwStwHbEu0mClviy7FG_z6iZaCiEWcXxIc-GsGe6wMm4X9SLK4ykFk30TEBwizCYB0fogtK089ldf5OJbTX2D66Xue4rRv-sMO08VB7Okfa6MhhQx6R_DAtw8tWIUmKZ9Jrx5Ms3M2p38nRg2ZL_IABEzGb0b6eIMTf0lCgA39Ynywg7Jortzp5lJq&state=20b99111f1014ae2d8b2270e878745511436d5497987e21b" for ::1 at 2017-01-19 04:22:06 +0100
+Completed 500 Internal Server Error in 30026ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.7ms)
+  
+Faraday::ConnectionFailed (Failed to open TCP connection to graph.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:882:in `rescue in block in connect'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:879:in `block in connect'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/timeout.rb:91:in `block in timeout'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/timeout.rb:101:in `timeout'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:878:in `connect'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:863:in `do_start'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:852:in `start'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:1398:in `request'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:82:in `perform_request'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:40:in `block in call'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:87:in `with_net_http_connection'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:32:in `call'
+faraday (0.9.2) lib/faraday/request/url_encoded.rb:15:in `call'
+faraday (0.9.2) lib/faraday/rack_builder.rb:139:in `build_response'
+faraday (0.9.2) lib/faraday/connection.rb:377:in `run_request'
+oauth2 (1.2.0) lib/oauth2/client.rb:93:in `request'
+oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
+oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
+omniauth-oauth2 (1.3.1) lib/omniauth/strategies/oauth2.rb:93:in `build_access_token'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:114:in `build_access_token'
+omniauth-oauth2 (1.3.1) lib/omniauth/strategies/oauth2.rb:77:in `callback_phase'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:71:in `block in callback_phase'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:135:in `with_authorization_code!'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:70:in `callback_phase'
+omniauth (1.3.1) lib/omniauth/strategy.rb:227:in `callback_call'
+omniauth (1.3.1) lib/omniauth/strategy.rb:184:in `call!'
+omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.2ms)
+Started GET "/" for ::1 at 2017-01-19 04:29:18 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 81ms (Views: 77.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook?appid=273145509408031" for ::1 at 2017-01-19 04:29:21 +0100
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 04:29:21 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30021ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.0ms)
+Started GET "/" for ::1 at 2017-01-19 04:30:40 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 75ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook?appid=273145509408031" for ::1 at 2017-01-19 04:30:42 +0100
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 04:30:42 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30031ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.0ms)
+Started GET "/" for ::1 at 2017-01-19 04:31:30 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 70ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 04:31:32 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/auth/facebook?appid=273145509408031" for ::1 at 2017-01-19 04:31:32 +0100
+Started GET "/auth/facebook/callback?code=AQC1jCC_fKrEOvMZZei7K_C2Hi3gW_JVmujYUwMpKuR9DSbWTvuKwOIEzf5U8xb1QJoYpJpERwKrJwBAr4B6RU50-P__bPvue9RsCehWNxPcMdg0dJL3BDB0GC4pUCHFWWikm_liQDdmUPYn-YTTgppMty77MeKfVKm7t4KFYPjiB58NcyAn8e0Tt5vRqjsl0iCZ9WI5L0UxrlUk39Ag8tPqU58NVcYLk9iTrv--z6nibHdFMMgIP625kzwzbH2G2FTUBHlxL6kVvYU50zbf-5QA-dCOzkOgA5onMHjPxtDZ5IFWg6pBFoOSqsdMXPHgf48ibaDBFlCd6ptX9Feev7lg&state=df4139ab38b0ee845f0a09254416317d50b932b14636c16a" for ::1 at 2017-01-19 04:31:33 +0100
+Started GET "/" for ::1 at 2017-01-19 04:31:52 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 82ms (Views: 78.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook?appid=273145509408031" for ::1 at 2017-01-19 04:31:55 +0100
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 04:31:55 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30020ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.4ms)
+  
+Faraday::ConnectionFailed (Failed to open TCP connection to graph.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:882:in `rescue in block in connect'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:879:in `block in connect'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/timeout.rb:91:in `block in timeout'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/timeout.rb:101:in `timeout'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:878:in `connect'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:863:in `do_start'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:852:in `start'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:1398:in `request'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:82:in `perform_request'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:40:in `block in call'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:87:in `with_net_http_connection'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:32:in `call'
+faraday (0.9.2) lib/faraday/request/url_encoded.rb:15:in `call'
+faraday (0.9.2) lib/faraday/rack_builder.rb:139:in `build_response'
+faraday (0.9.2) lib/faraday/connection.rb:377:in `run_request'
+oauth2 (1.2.0) lib/oauth2/client.rb:93:in `request'
+oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
+oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
+omniauth-oauth2 (1.3.1) lib/omniauth/strategies/oauth2.rb:93:in `build_access_token'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:114:in `build_access_token'
+omniauth-oauth2 (1.3.1) lib/omniauth/strategies/oauth2.rb:77:in `callback_phase'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:71:in `block in callback_phase'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:135:in `with_authorization_code!'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:70:in `callback_phase'
+omniauth (1.3.1) lib/omniauth/strategy.rb:227:in `callback_call'
+omniauth (1.3.1) lib/omniauth/strategy.rb:184:in `call!'
+omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.6ms)
+Completed 500 Internal Server Error in 17185ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.2ms)
+Started GET "/" for ::1 at 2017-01-19 04:33:00 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 999ms (Views: 996.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook?appid=273145509408031" for ::1 at 2017-01-19 04:33:03 +0100
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 04:33:03 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/" for ::1 at 2017-01-19 04:33:11 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 79ms (Views: 76.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 04:33:13 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/auth/facebook?appid=273145509408031" for ::1 at 2017-01-19 04:33:13 +0100
+Started GET "/auth/facebook/callback?code=AQDFnvo0uuxRIu-54BPSk0rlcthPnWm8bYRbRKG0RY_khxVTUg24hUgm0o46luJkALXiZ5YG_lBrl6UvL19UjvRpgEutFfhJHNXAN_NH4cG4N8x1mGx9QW95biAVPfny0_dK4i234iFAW9A_WsQePqu_Wv2M-RjOnIDLnJPnd-IZHVaeiYyHCqzMg-PE64Mznv0eTzb6dxHynZdGG9GusqTloqKL9SPh5YPhMY7Mwx1CPsdOmiQ8wjs_Xa6O6haqLKLYoklGIK_oKUWtFQbWIUmVD5ThLKd7qCInsPiZCDDSLBeytqifazXVU_cZaTtOqZOpLpxg0x_7srGFfgr_TmJN&state=3ef01cb6c2138a26d67bba5aeca271d6a334f0b8b15a55e2" for ::1 at 2017-01-19 04:33:14 +0100
+Completed 500 Internal Server Error in 30026ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.4ms)
+Completed 500 Internal Server Error in 30092ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.0ms)
+  
+Faraday::ConnectionFailed (Failed to open TCP connection to graph.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:882:in `rescue in block in connect'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:879:in `block in connect'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/timeout.rb:91:in `block in timeout'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/timeout.rb:101:in `timeout'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:878:in `connect'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:863:in `do_start'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:852:in `start'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:1398:in `request'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:82:in `perform_request'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:40:in `block in call'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:87:in `with_net_http_connection'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:32:in `call'
+faraday (0.9.2) lib/faraday/request/url_encoded.rb:15:in `call'
+faraday (0.9.2) lib/faraday/rack_builder.rb:139:in `build_response'
+faraday (0.9.2) lib/faraday/connection.rb:377:in `run_request'
+oauth2 (1.2.0) lib/oauth2/client.rb:93:in `request'
+oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
+oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
+omniauth-oauth2 (1.3.1) lib/omniauth/strategies/oauth2.rb:93:in `build_access_token'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:114:in `build_access_token'
+omniauth-oauth2 (1.3.1) lib/omniauth/strategies/oauth2.rb:77:in `callback_phase'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:71:in `block in callback_phase'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:135:in `with_authorization_code!'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:70:in `callback_phase'
+omniauth (1.3.1) lib/omniauth/strategy.rb:227:in `callback_call'
+omniauth (1.3.1) lib/omniauth/strategy.rb:184:in `call!'
+omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.0ms)
+Started GET "/" for ::1 at 2017-01-19 04:33:44 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 76ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-19 04:33:47 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 76ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook?appid=273145509408031" for ::1 at 2017-01-19 04:45:04 +0100
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 04:45:04 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30024ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.3ms)
+Started GET "/" for ::1 at 2017-01-19 04:46:28 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 330ms (Views: 327.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 04:46:36 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/auth/facebook?appid=273145509408031" for ::1 at 2017-01-19 04:46:37 +0100
+Started GET "/auth/facebook/callback?code=AQAQ11DEErlW4PehyZQV7rx5Fq-zkY60qJN1iXrT3cxmR7wUUJuhk5xTC3ijmvwTrnWeANDZXg74mEtL7hiIRdmtlH_dTKuacXOfmnliNCPYLpW_70H6cBAAmyIrDXXTrQ39Gi94MXwF5YyRLi0d0eh5EegN9V0AlYjbs-C5LZmc0xko6jkJKCaQMlf10lm4UenN9YWoawr0VgtTr-iR6WOiHI2QEESJhf2Hci3MWsytg_WqiByHBfxbsGqI49V-PtSukOpH6hcVvVrDPs0I_lXpbyU3CJNFX42WYAIb0S4je6Vhmsaff6Lex-A1m8mefqNysmiVBTDAzeEYAGI0Lq1e&state=a455d4a0f97cd5a1b11954797e25f7cbef43ca03cc224920" for ::1 at 2017-01-19 04:46:37 +0100
+Started GET "/" for ::1 at 2017-01-19 04:46:44 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 76ms (Views: 74.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 500 Internal Server Error in 30027ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.1ms)
+  
+Faraday::ConnectionFailed (Failed to open TCP connection to graph.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:882:in `rescue in block in connect'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:879:in `block in connect'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/timeout.rb:91:in `block in timeout'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/timeout.rb:101:in `timeout'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:878:in `connect'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:863:in `do_start'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:852:in `start'
+/Users/per/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/net/http.rb:1398:in `request'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:82:in `perform_request'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:40:in `block in call'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:87:in `with_net_http_connection'
+faraday (0.9.2) lib/faraday/adapter/net_http.rb:32:in `call'
+faraday (0.9.2) lib/faraday/request/url_encoded.rb:15:in `call'
+faraday (0.9.2) lib/faraday/rack_builder.rb:139:in `build_response'
+faraday (0.9.2) lib/faraday/connection.rb:377:in `run_request'
+oauth2 (1.2.0) lib/oauth2/client.rb:93:in `request'
+oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
+oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
+omniauth-oauth2 (1.3.1) lib/omniauth/strategies/oauth2.rb:93:in `build_access_token'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:114:in `build_access_token'
+omniauth-oauth2 (1.3.1) lib/omniauth/strategies/oauth2.rb:77:in `callback_phase'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:71:in `block in callback_phase'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:135:in `with_authorization_code!'
+omniauth-facebook (3.0.0) lib/omniauth/strategies/facebook.rb:70:in `callback_phase'
+omniauth (1.3.1) lib/omniauth/strategy.rb:227:in `callback_call'
+omniauth (1.3.1) lib/omniauth/strategy.rb:184:in `call!'
+omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.6ms)
+Started GET "/auth/facebook?appid=273145509408031" for ::1 at 2017-01-19 04:48:26 +0100
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 04:48:26 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30033ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.0ms)
+Started GET "/" for ::1 at 2017-01-19 04:49:19 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 79ms (Views: 74.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook?appid=273145509408031" for ::1 at 2017-01-19 04:49:24 +0100
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 04:49:24 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30022ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.0ms)
+Started GET "/" for ::1 at 2017-01-19 09:24:57 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 3616ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:5:9: unexpected .):
+    4:     <title>AggregateDating</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___2650136897808184620_70181401162740'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.7ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (103.2ms)
+Started GET "/" for ::1 at 2017-01-19 09:36:04 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 892ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:5:9: unexpected .):
+    4:     <title>AggregateDating</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___4323185396263638775_70346481826340'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.9ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (94.0ms)
+Started GET "/" for ::1 at 2017-01-19 09:38:22 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1638ms (Views: 1635.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 09:40:27 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/" for ::1 at 2017-01-19 09:40:44 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 87ms (Views: 84.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 09:40:56 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30022ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.0ms)
+Completed 500 Internal Server Error in 11338ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.6ms)
+Started GET "/" for ::1 at 2017-01-19 09:41:28 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 98ms (Views: 95.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 09:41:30 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.2ms)
+Started GET "/" for ::1 at 2017-01-19 10:07:15 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1034ms (Views: 1015.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 10:07:20 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 60028ms (ActiveRecord: 0.0ms)
+
+
+  
+Net::OpenTimeout (execution expired):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.1ms)
+Started GET "/" for ::1 at 2017-01-19 10:27:28 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1028ms (Views: 1025.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 10:27:33 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30029ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.0ms)
+Started GET "/" for ::1 at 2017-01-19 10:29:00 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 865ms (Views: 861.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 10:29:08 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/" for ::1 at 2017-01-19 10:29:19 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 99ms (Views: 95.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 10:29:23 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30020ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.4ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.3ms)
+Completed 500 Internal Server Error in 26105ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.4ms)
+Started GET "/" for ::1 at 2017-01-19 10:47:19 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 400ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:91:15: unexpected .):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___4323185396263638775_70346479404380'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.3ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.2ms)
+Started GET "/" for ::1 at 2017-01-19 10:47:59 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 937ms (Views: 933.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 10:48:04 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30021ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.6ms)
+Started GET "/" for ::1 at 2017-01-19 10:57:29 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 948ms (Views: 945.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 10:57:36 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/" for ::1 at 2017-01-19 10:57:50 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 946ms (Views: 943.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 10:57:55 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30024ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.5ms)
+Completed 500 Internal Server Error in 21578ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.0ms)
+Started GET "/" for ::1 at 2017-01-19 10:58:57 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 952ms (Views: 949.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 10:59:00 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.0ms)
+Started GET "/" for ::1 at 2017-01-19 10:59:50 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 985ms (Views: 981.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 11:00:09 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30030ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.1ms)
+Started GET "/" for ::1 at 2017-01-19 11:01:20 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 131ms (Views: 128.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 11:01:24 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/" for ::1 at 2017-01-19 11:01:37 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 933ms (Views: 930.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 11:01:42 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30024ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.0ms)
+Completed 500 Internal Server Error in 22634ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.5ms)
+Started GET "/" for ::1 at 2017-01-19 11:02:27 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 918ms (Views: 915.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 11:02:31 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.4ms)
+Started GET "/" for ::1 at 2017-01-19 11:03:01 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 918ms (Views: 914.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 11:03:05 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/" for ::1 at 2017-01-19 11:03:21 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 957ms (Views: 954.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 11:03:26 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30027ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.4ms)
+Completed 500 Internal Server Error in 19017ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.1ms)
+Started GET "/" for ::1 at 2017-01-19 11:03:49 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 935ms (Views: 932.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 11:03:54 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.9ms)
+Started GET "/" for ::1 at 2017-01-19 11:04:09 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 932ms (Views: 928.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 11:04:14 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.9ms)
+Started GET "/" for ::1 at 2017-01-19 11:06:52 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 921ms (Views: 916.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 11:06:58 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30024ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.3ms)
+Started GET "/" for ::1 at 2017-01-19 11:07:56 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 977ms (Views: 973.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 11:08:01 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30021ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.3ms)
+Started GET "/" for ::1 at 2017-01-19 11:09:45 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 947ms (Views: 944.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook?appid=273145509408031" for ::1 at 2017-01-19 11:09:52 +0100
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 11:09:52 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30024ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.3ms)
+Started GET "/" for ::1 at 2017-01-19 11:10:24 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 96ms (Views: 93.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 11:10:35 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/auth/facebook?appid=273145509408031" for ::1 at 2017-01-19 11:10:35 +0100
+Started GET "/" for ::1 at 2017-01-19 11:10:53 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 73ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 11:10:56 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30020ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.7ms)
+Completed 500 Internal Server Error in 19822ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.7ms)
+Started GET "/" for ::1 at 2017-01-19 14:32:52 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1898ms (Views: 1882.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 14:32:59 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/" for ::1 at 2017-01-19 14:32:59 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 96ms (Views: 93.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-19 14:33:16 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1024ms (Views: 1021.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 14:33:20 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/auth/facebook?appid=273145509408031" for ::1 at 2017-01-19 14:33:20 +0100
+Completed 500 Internal Server Error in 30428ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.6ms)
+Started GET "/" for ::1 at 2017-01-19 14:33:33 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 91ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 14:33:35 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/" for ::1 at 2017-01-19 14:33:35 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 88ms (Views: 85.5ms | ActiveRecord: 0.0ms)
+
+
+Completed 500 Internal Server Error in 19362ms (ActiveRecord: 0.0ms)
+
+
+Completed 500 Internal Server Error in 4436ms (ActiveRecord: 0.0ms)
+
+
+  
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (137.6ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (242.7ms)
+Started GET "/" for ::1 at 2017-01-19 14:35:05 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 881ms (Views: 877.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 14:35:09 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/" for ::1 at 2017-01-19 14:35:09 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 219ms (Views: 215.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 500 Internal Server Error in 30019ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.0ms)
+Started GET "/" for ::1 at 2017-01-19 14:54:54 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 877ms (Views: 874.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 14:54:58 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/" for ::1 at 2017-01-19 14:54:58 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 115ms (Views: 108.8ms | ActiveRecord: 0.0ms)
+
+
+Completed 500 Internal Server Error in 30019ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.3ms)
+Started GET "/" for ::1 at 2017-01-19 14:55:59 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 908ms (Views: 905.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 14:56:05 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/" for ::1 at 2017-01-19 14:56:05 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 104ms (Views: 101.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-19 14:56:14 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 78ms (Views: 74.9ms | ActiveRecord: 0.0ms)
+
+
+Completed 500 Internal Server Error in 30019ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.0ms)
+Started GET "/" for ::1 at 2017-01-19 14:56:37 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 883ms (Views: 880.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 14:56:41 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/" for ::1 at 2017-01-19 14:56:55 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 95ms (Views: 92.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 14:56:59 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30021ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.5ms)
+Completed 500 Internal Server Error in 23252ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.6ms)
+Started GET "/" for ::1 at 2017-01-19 15:01:46 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 862ms (Views: 860.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 15:01:49 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/" for ::1 at 2017-01-19 15:02:03 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 951ms (Views: 947.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 15:02:06 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/" for ::1 at 2017-01-19 15:02:06 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 130ms (Views: 127.6ms | ActiveRecord: 0.0ms)
+
+
+Completed 500 Internal Server Error in 30021ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.7ms)
+Completed 500 Internal Server Error in 23011ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.3ms)
+Started GET "/" for ::1 at 2017-01-19 15:23:34 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1001ms (Views: 969.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-19 15:24:04 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 408ms (Views: 405.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 15:24:08 +0100
+Processing by HomeController#fblogin as JSON
+Started GET "/" for ::1 at 2017-01-19 15:24:16 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 104ms (Views: 101.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 15:24:20 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30020ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.1ms)
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 15:24:44 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 27896ms (ActiveRecord: 0.0ms)
+
+
+Completed 500 Internal Server Error in 4074ms (ActiveRecord: 0.0ms)
+
+
+  
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (169.0ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (289.4ms)
+Started GET "/" for ::1 at 2017-01-19 15:25:07 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 73ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 15:25:12 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.9ms)
+Started GET "/" for ::1 at 2017-01-19 15:27:14 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 844ms (Views: 841.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAD4bKUPbR8BAFHNV2FI6g8hKaxWKapZBenDIt7PQgdUcl2ZBm3jKvmVTP2mdjYHf2iu83f8TYNOfVnS9uXUoqO9yRFYZBaqAWNZBr3GLDoUO6TEDnahR1efwB8PIU1dJ9EQffY0eAAlDI2B4W5FC5jfQR6Rf6tVv5c1WaSeLQZDZD&format=json" for ::1 at 2017-01-19 15:27:19 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAD4bKUPbR8BAFHNV2FI6g8hKaxWKapZBenDIt7PQgdUcl2ZBm3jKvmVTP2mdjYHf2iu83f8TYNOfVnS9uXUoqO9yRFYZBaqAWNZBr3GLDoUO6TEDnahR1efwB8PIU1dJ9EQffY0eAAlDI2B4W5FC5jfQR6Rf6tVv5c1WaSeLQZDZD"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.5ms)
+  Rendered cmb/index.json.jbuilder (42.6ms)
+Completed 200 OK in 4426ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAD4bKUPbR8BAFHNV2FI6g8hKaxWKapZBenDIt7PQgdUcl2ZBm3jKvmVTP2mdjYHf2iu83f8TYNOfVnS9uXUoqO9yRFYZBaqAWNZBr3GLDoUO6TEDnahR1efwB8PIU1dJ9EQffY0eAAlDI2B4W5FC5jfQR6Rf6tVv5c1WaSeLQZDZD&format=json&sessionid=p1t4p7iv7pkz4rr18n6jsfk41j8jypil" for ::1 at 2017-01-19 15:27:27 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAD4bKUPbR8BAFHNV2FI6g8hKaxWKapZBenDIt7PQgdUcl2ZBm3jKvmVTP2mdjYHf2iu83f8TYNOfVnS9uXUoqO9yRFYZBaqAWNZBr3GLDoUO6TEDnahR1efwB8PIU1dJ9EQffY0eAAlDI2B4W5FC5jfQR6Rf6tVv5c1WaSeLQZDZD", "sessionid"=>"p1t4p7iv7pkz4rr18n6jsfk41j8jypil"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.5ms)
+  Rendered cmb/get_profile.json.jbuilder (4.8ms)
+Completed 200 OK in 39061ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_bagels?fbToken=EAAD4bKUPbR8BAFHNV2FI6g8hKaxWKapZBenDIt7PQgdUcl2ZBm3jKvmVTP2mdjYHf2iu83f8TYNOfVnS9uXUoqO9yRFYZBaqAWNZBr3GLDoUO6TEDnahR1efwB8PIU1dJ9EQffY0eAAlDI2B4W5FC5jfQR6Rf6tVv5c1WaSeLQZDZD&format=json&sessionid=p1t4p7iv7pkz4rr18n6jsfk41j8jypil" for ::1 at 2017-01-19 15:28:24 +0100
+Processing by CmbController#get_bagels as JSON
+  Parameters: {"fbToken"=>"EAAD4bKUPbR8BAFHNV2FI6g8hKaxWKapZBenDIt7PQgdUcl2ZBm3jKvmVTP2mdjYHf2iu83f8TYNOfVnS9uXUoqO9yRFYZBaqAWNZBr3GLDoUO6TEDnahR1efwB8PIU1dJ9EQffY0eAAlDI2B4W5FC5jfQR6Rf6tVv5c1WaSeLQZDZD", "sessionid"=>"p1t4p7iv7pkz4rr18n6jsfk41j8jypil"}
+  Rendering cmb/get_bagels.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_bagels.json.jbuilder (25.7ms)
+Completed 200 OK in 8349ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_bagels_history?bagel=%7B%22hex_id%22:%228a6f532a-de53-11e6-9646-86bf28fd31b2%22,%22cursor_after%22:%221484539200.0-630552803%22,%22cursor_before%22:%221483588800.0-606214251%22,%22more_after%22:false,%22more_before%22:true%7D&fbToken=EAAD4bKUPbR8BAFHNV2FI6g8hKaxWKapZBenDIt7PQgdUcl2ZBm3jKvmVTP2mdjYHf2iu83f8TYNOfVnS9uXUoqO9yRFYZBaqAWNZBr3GLDoUO6TEDnahR1efwB8PIU1dJ9EQffY0eAAlDI2B4W5FC5jfQR6Rf6tVv5c1WaSeLQZDZD&format=json&sessionid=p1t4p7iv7pkz4rr18n6jsfk41j8jypil" for ::1 at 2017-01-19 15:36:47 +0100
+Processing by CmbController#get_bagels_history as JSON
+  Parameters: {"bagel"=>"{\"hex_id\":\"8a6f532a-de53-11e6-9646-86bf28fd31b2\",\"cursor_after\":\"1484539200.0-630552803\",\"cursor_before\":\"1483588800.0-606214251\",\"more_after\":false,\"more_before\":true}", "fbToken"=>"EAAD4bKUPbR8BAFHNV2FI6g8hKaxWKapZBenDIt7PQgdUcl2ZBm3jKvmVTP2mdjYHf2iu83f8TYNOfVnS9uXUoqO9yRFYZBaqAWNZBr3GLDoUO6TEDnahR1efwB8PIU1dJ9EQffY0eAAlDI2B4W5FC5jfQR6Rf6tVv5c1WaSeLQZDZD", "sessionid"=>"p1t4p7iv7pkz4rr18n6jsfk41j8jypil"}
+  Rendering cmb/get_bagels_history.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.3ms)
+  Rendered cmb/get_bagels_history.json.jbuilder (45.8ms)
+Completed 200 OK in 15114ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_photolabs?fbToken=EAAD4bKUPbR8BAFHNV2FI6g8hKaxWKapZBenDIt7PQgdUcl2ZBm3jKvmVTP2mdjYHf2iu83f8TYNOfVnS9uXUoqO9yRFYZBaqAWNZBr3GLDoUO6TEDnahR1efwB8PIU1dJ9EQffY0eAAlDI2B4W5FC5jfQR6Rf6tVv5c1WaSeLQZDZD&format=json&sessionid=p1t4p7iv7pkz4rr18n6jsfk41j8jypil" for ::1 at 2017-01-19 15:58:54 +0100
+Processing by CmbController#get_photolabs as JSON
+  Parameters: {"fbToken"=>"EAAD4bKUPbR8BAFHNV2FI6g8hKaxWKapZBenDIt7PQgdUcl2ZBm3jKvmVTP2mdjYHf2iu83f8TYNOfVnS9uXUoqO9yRFYZBaqAWNZBr3GLDoUO6TEDnahR1efwB8PIU1dJ9EQffY0eAAlDI2B4W5FC5jfQR6Rf6tVv5c1WaSeLQZDZD", "sessionid"=>"p1t4p7iv7pkz4rr18n6jsfk41j8jypil"}
+  Rendering cmb/get_photolabs.json.jbuilder
+  Rendered cmb/_bagelsInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/get_photolabs.json.jbuilder (5.3ms)
+Completed 200 OK in 38119ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-19 16:26:54 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1835ms (Views: 1796.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 16:27:05 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30022ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.9ms)
+Started GET "/" for ::1 at 2017-01-19 16:28:16 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 883ms (Views: 880.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-19 16:28:19 +0100
+Processing by HomeController#fblogin as JSON
+Completed 500 Internal Server Error in 30028ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to m.facebook.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:37:in `fblogin'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.2ms)

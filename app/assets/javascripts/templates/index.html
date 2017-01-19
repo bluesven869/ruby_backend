@@ -4,9 +4,10 @@
 
 <div class="general_div unverified">
   <section>
-    <button type="button" class="btn btn-primary btn-large" data-ng-click="loginFacebook()">Login with Facebook</button>
+    <button type="button" class="btn btn-primary btn-large" data-ng-click="loginFacebook('cmb')">Login with Facebook For CMB</button>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <span class='loading-bar' ng-if="fblogin_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    
   </section>
   <section ng-if="!fblogin_flag ">
     <div class="fb_info">
@@ -16,10 +17,16 @@
       <br />
     </div>
   </section>
+  <section>
+    <label>Input FB Token</label>
+    <input type="text" name="input" placeholder="" ng-model="user_fbToken" required>
+    <br/>
+    <button type="button" class="btn btn-primary btn-large" data-ng-click="setFBToken()">Set value</button>
+  </section>
 </div>
 
 <!-- TINDER SECTION -->
-<div class="tinder-section" ng-hide="false">
+<div class="tinder-section" ng-hide="true">
   <div class="general_div unverified">
     <section>
       <button type="button" class="btn btn-primary btn-large" data-ng-click="loginFacebookForTinder()">Tinder Login with Facebook</button>

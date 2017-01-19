@@ -20,8 +20,8 @@ aggregate_dating.config([ '$facebookProvider',
  	($facebookProvider)->
       	$facebookProvider
         .init({
-            appId: '349609268750448'  # TEST App ID
-            # appId: '273145509408031'  #  CMB Facebook App ID
+            # appId: '349609268750448'  # TEST App ID
+            appId: '273145509408031'  #  CMB Facebook App ID
         })
 ])
 
@@ -33,6 +33,8 @@ aggregate_dating.config(['$qProvider',
 
 cmbInfo = []
 
+appID = {'cmb': '273145509408031'}
+
 controllers = angular.module('controllers',[])
 controllers.controller("CMBController", [ '$scope', '$routeParams', '$location', '$facebook', '$http', '$resource', 'Upload'
   ($scope,$routeParams,$location,$facebook,$http,$resource, Upload)->
@@ -41,6 +43,11 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
     $scope.login_flag = false
     #if(not $scope.fbToken?)
     console.log $routeParams
+
+    # assign token fetched manually
+    # $scope.fbToken = 'EAAD4bKUPbR8BAJhN2LdnSbEgWuoo3hUDlQD7b2Ypg6h3lhYYodKswOvvN5IWQJz9gsBN1wIrGJbH3Ysrg2K920wnhfAIxkSzIA17KxNesOvCpVl7026ZAF43wFwcEG2Ahzk11fJ99FxX9j85mZAiFZBhiNZClG456n6Wq8y6YFbRK9ODII2HGj4OpRiy2hpMZCvdIqsV8INMorQdSPE1p'
+    
+    # loginFacebook function which use Javascript SDK
 
     # $scope.loginFacebook = ->
     #   #   Login with FaceBook           
@@ -57,7 +64,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
     # ), (response) ->
     #     console.log 'FB Login Error', response
 
-    $scope.loginFacebook = ->
+    $scope.loginFacebook = (network)->
       FBLogin = $resource('/home/fblogin', { format: 'json' })
       FBLogin.query( (results) -> 
         
@@ -76,11 +83,49 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       #   $scope.ResponseDetails = 'Data: ' + data + '<hr />status: ' + status + '<hr />headers: ' + header + '<hr />config: ' + config
       #   console.log 'LOGIN CMB Error', $scope.ResponseDetails
 
-      # openUrl = '/auth/facebook/?account_id=' + $scope.accountTokens['id'] + '&eid=' + eventId
-      # openUrl = '/auth/facebook/'
-      # window.$windowScope = $scope
-      # window.open openUrl, 'Authenticate Account', 'width=500, height=500'
-      # console.log 'END OF LOGIN FACEBOOK'
+      # openUrl = '/auth/facebook?appid=273145509408031'
+      # openUrl = '/'
+      openUrl = 'https://www.facebook.com/dialog/oauth?client_id=' + appID[network] + '&redirect_uri=fbconnect://success&scope=user_friends,email,user_photos,user_birthday,user_education_history&response_type=token'
+      
+      window.$windowScope = $scope
+      window.popup = window.open openUrl, 'Authenticate Account', 'width=800, height=500'
+      # window.popup.addEventListener 'load', onHashChange, false
+
+      window.popup.addEventListener 'load', (->
+        console.log 'ALLERTT'
+        return
+      ), true 
+
+      window.popup.addEventListener 'hashchange', (->
+        console.log 'ALLERTT1'
+        return
+      ), true 
+
+      window.popup.addEventListener 'click', (->
+        console.log 'ALLERTT2'
+        window.popup.close
+        return
+      ), true 
+
+      window.popup.addEventListener 'submit', (->
+        console.log 'ALLERTT3'
+        return
+      ), true 
+
+
+      # window.onhashchange = onHashChange
+      # try
+      #   window.opener.$windowScope.handlePopupAuthentication 'facebook', 'account'
+      # catch err
+      # window.close();
+
+
+
+      console.log 'END OF LOGIN FACEBOOK'
+
+    # $scope.onHashChange = ->
+      # console.log 'ON HASH CHANGE'
+      # return
 
     $scope.handlePopupAuthentication = (network, account) ->
 
@@ -92,13 +137,17 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         $scope.applyNetwork network, account
         return
 
+    $scope.setFBToken = () ->
+      $scope.fbToken = $scope.user_fbToken
+
     $scope.loginCMB = ->
       #login with CMB
       #CURL commands:
       # 1. curl https://api.coffeemeetsbagel.com/profile/me -H "App-version: 779" -H
-      $scope.loginFacebook().then ((response) ->
-        if $scope.fblogin_flag == true
-          return  
+      
+      # $scope.loginFacebook().then ((response) ->    #commented because we use manually set FBToken
+      #   if $scope.fblogin_flag == true
+      #     return  
 
         $scope.login_flag = true;
         $scope.cmbInfo = [] 
@@ -109,7 +158,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
           $scope.login_flag = false
         )
         console.log 'loginFacebook Halt'
-      )
+      # )
 
       
     $scope.setMyProfileProcess1 = ->

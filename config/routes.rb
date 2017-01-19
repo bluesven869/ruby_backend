@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   get '/home/fblogin'
 
+  resources :home, only: [:index]
+
   get '/auth/:provider/callback' => 'home#fblogin'
 
   # get '/signout' => 'sessions#destroy', :as => :signout

@@ -18,10 +18,11 @@ class HomeController < ApplicationController
 	def index
 		# response = HTTParty.post(base_uri, headers: headers)
 		
-		
+		Rails.logger.debug 'INSIDE HOME CONTROLLER'
 	end
 
 	def fblogin
+		# base_uri = 'https://www.facebook.com/v2.7/dialog/oauth?client_id=273145509408031&e2e={"init":1478551666628}&sdk=android-4.14.0&scope=user_friends,email,user_photos,user_birthday,user_education_history&default_audience=friends&redirect_uri=fbconnect://success&auth_type=rerequest&display=touch&response_type=token,signed_request&return_scopes=true'
 		base_uri = 'https://m.facebook.com/v2.7/dialog/oauth?client_id=273145509408031&e2e={"init":1478551666628}&sdk=android-4.14.0&scope=user_friends,email,user_photos,user_birthday,user_education_history&default_audience=friends&redirect_uri=fbconnect://success&auth_type=rerequest&display=touch&response_type=token,signed_request&return_scopes=true'
 		# options = {
 	 #    	'permissions': ['user_friends','contact_email','email','user_photos','public_profile','user_birthday','user_education_history'],
