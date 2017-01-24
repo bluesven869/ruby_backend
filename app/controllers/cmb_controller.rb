@@ -281,10 +281,10 @@ class CmbController < ApplicationController
 		    	:body=> options.to_json,
 		      	:headers => headers)
 		    if response.success?
-		      	@BaglesInfo = [{"success": true, "jsonObj": response}]
+		      	@bagelsInfo = [{"success": true, "jsonObj": response}]
 		    else
 			  	loginResult = "fail get bagels"
-			  	@BaglesInfo = [{"success": false, "jsonObj": response}]
+			  	@bagelsInfo = [{"success": false, "jsonObj": response}]
 			end
 		end
 	end
