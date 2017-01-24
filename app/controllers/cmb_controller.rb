@@ -263,7 +263,7 @@ class CmbController < ApplicationController
 		else
 			fbToken = params[:fbToken].to_str
 			sessionid = params[:sessionid].to_str
-			base_uri = 'https://api.coffeemeetsbagel.com/bagels'		
+			base_uri = 'https://api.coffeemeetsbagel.com/bagels?embed=profile&prefetch=true'		
 			my_cookie = "sessionid="+sessionid
 	      	headers = {
 		    	'AppStore-Version': '3.4.1.779',
@@ -273,18 +273,15 @@ class CmbController < ApplicationController
 				'Facebook-Auth-Token': fbToken,
 				'Cookie': my_cookie	
 	      	}
-	      	options = {	    	
-		    	'embed': 'profile',
-		    	'prefetch': true
-			}	
 		    response = self.class.get(base_uri.to_str,
-		    	:body=> options.to_json,
+		    	# :body=> options.to_json,
 		      	:headers => headers)
+
 		    if response.success?
-		      	@bagelsInfo = [{"success": true, "jsonObj": response}]
+		      	@BaglesInfo = [{"success": true, "jsonObj": response}]
 		    else
 			  	loginResult = "fail get bagels"
-			  	@bagelsInfo = [{"success": false, "jsonObj": response}]
+			  	@BaglesInfo = [{"success": false, "jsonObj": response}]
 			end
 		end
 	end
