@@ -274,7 +274,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         console.log 'data OK'   
       )
       
-    $scope.setBagels = ->
+    $scope.getBagels = ->
       if(not $scope.fbToken?)
         alert "Please Click 'Login with Facebook'."
         return     

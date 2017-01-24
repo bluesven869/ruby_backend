@@ -7278,3 +7278,363 @@ Processing by CmbController#index as JSON
 Completed 200 OK in 3973ms (Views: 10.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-01-24 11:21:24 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 1915ms (Views: 1911.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-24 11:22:20 +0100
+Processing by HomeController#fblogin as JSON
+Completed 406 Not Acceptable in 58ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (HomeController#fblogin is missing a template for this request format and variant.
+
+request.formats: ["application/json"]
+request.variant: []):
+  
+actionpack (5.0.1) lib/action_controller/metal/implicit_render.rb:43:in `default_render'
+actionpack (5.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+omniauth (1.3.1) lib/omniauth/strategy.rb:186:in `call!'
+omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.4ms)
+Started GET "/cmb?fbToken=EAAD4bKUPbR8BAAQw3JzN3978h6zO3jEEP7FB9mPpZBfTkzEG0HClcGVjGDjkvWZB5aHCHdVbeUZAW5YN2RRD7jgHokpBFlNEYOFHkzNbkaVnwWirLRU9JRi6P9ARWLjSQhpGv1u6ZCmN5UgMTLFkeXSr4g8MRHtQua5uIeTZCtQZDZD&format=json" for ::1 at 2017-01-24 11:22:34 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAD4bKUPbR8BAAQw3JzN3978h6zO3jEEP7FB9mPpZBfTkzEG0HClcGVjGDjkvWZB5aHCHdVbeUZAW5YN2RRD7jgHokpBFlNEYOFHkzNbkaVnwWirLRU9JRi6P9ARWLjSQhpGv1u6ZCmN5UgMTLFkeXSr4g8MRHtQua5uIeTZCtQZDZD"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/index.json.jbuilder (15.9ms)
+Completed 200 OK in 2379ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_profile?fbToken=EAAD4bKUPbR8BAAQw3JzN3978h6zO3jEEP7FB9mPpZBfTkzEG0HClcGVjGDjkvWZB5aHCHdVbeUZAW5YN2RRD7jgHokpBFlNEYOFHkzNbkaVnwWirLRU9JRi6P9ARWLjSQhpGv1u6ZCmN5UgMTLFkeXSr4g8MRHtQua5uIeTZCtQZDZD&format=json&sessionid=q4n6vhhl52e4zypyo863ijgnsqedkn7a" for ::1 at 2017-01-24 11:23:07 +0100
+Processing by CmbController#get_profile as JSON
+  Parameters: {"fbToken"=>"EAAD4bKUPbR8BAAQw3JzN3978h6zO3jEEP7FB9mPpZBfTkzEG0HClcGVjGDjkvWZB5aHCHdVbeUZAW5YN2RRD7jgHokpBFlNEYOFHkzNbkaVnwWirLRU9JRi6P9ARWLjSQhpGv1u6ZCmN5UgMTLFkeXSr4g8MRHtQua5uIeTZCtQZDZD", "sessionid"=>"q4n6vhhl52e4zypyo863ijgnsqedkn7a"}
+  Rendering cmb/get_profile.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.4ms)
+  Rendered cmb/get_profile.json.jbuilder (3.6ms)
+Completed 200 OK in 7631ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-24 11:24:09 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2313ms (Views: 2299.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-24 11:24:15 +0100
+Processing by HomeController#fblogin as JSON
+Completed 406 Not Acceptable in 75ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (HomeController#fblogin is missing a template for this request format and variant.
+
+request.formats: ["application/json"]
+request.variant: []):
+  
+actionpack (5.0.1) lib/action_controller/metal/implicit_render.rb:43:in `default_render'
+actionpack (5.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+omniauth (1.3.1) lib/omniauth/strategy.rb:186:in `call!'
+omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.0ms)
+Started GET "/" for ::1 at 2017-01-24 11:24:30 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 88ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb?fbToken=EAAD4bKUPbR8BADChtWESZCy32iDMZCLDUNSEj9QYfwdoLIpLsd3vZCjGU4hgDBGkFPOMBnZB2JQDFnyHtHx95F6duEMjhL6OPhZAL96UNMizpsLi4FOOj3d2r48FTgnb8JR6tdvwkmzOZA7IJSZBOfXCzlZCmudrxrtzP3n2GU4uzQZDZD&format=json" for ::1 at 2017-01-24 11:24:35 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAD4bKUPbR8BADChtWESZCy32iDMZCLDUNSEj9QYfwdoLIpLsd3vZCjGU4hgDBGkFPOMBnZB2JQDFnyHtHx95F6duEMjhL6OPhZAL96UNMizpsLi4FOOj3d2r48FTgnb8JR6tdvwkmzOZA7IJSZBOfXCzlZCmudrxrtzP3n2GU4uzQZDZD"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.5ms)
+  Rendered cmb/index.json.jbuilder (2.8ms)
+Completed 200 OK in 3051ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_bagels?fbToken=EAAD4bKUPbR8BADChtWESZCy32iDMZCLDUNSEj9QYfwdoLIpLsd3vZCjGU4hgDBGkFPOMBnZB2JQDFnyHtHx95F6duEMjhL6OPhZAL96UNMizpsLi4FOOj3d2r48FTgnb8JR6tdvwkmzOZA7IJSZBOfXCzlZCmudrxrtzP3n2GU4uzQZDZD&format=json&sessionid=0j1bqe7unpa4mv1zvftmr9svr4tw9j5y" for ::1 at 2017-01-24 11:24:53 +0100
+Processing by CmbController#get_bagels as JSON
+  Parameters: {"fbToken"=>"EAAD4bKUPbR8BADChtWESZCy32iDMZCLDUNSEj9QYfwdoLIpLsd3vZCjGU4hgDBGkFPOMBnZB2JQDFnyHtHx95F6duEMjhL6OPhZAL96UNMizpsLi4FOOj3d2r48FTgnb8JR6tdvwkmzOZA7IJSZBOfXCzlZCmudrxrtzP3n2GU4uzQZDZD", "sessionid"=>"0j1bqe7unpa4mv1zvftmr9svr4tw9j5y"}
+  Rendering cmb/get_bagels.json.jbuilder
+  Rendered cmb/get_bagels.json.jbuilder (0.5ms)
+Completed 200 OK in 5524ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-24 11:26:08 +0100
+Processing by HomeController#index as HTML
+INSIDE HOME CONTROLLER
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 295ms (Views: 292.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/fblogin?format=json" for ::1 at 2017-01-24 11:26:18 +0100
+Processing by HomeController#fblogin as JSON
+Completed 406 Not Acceptable in 65ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (HomeController#fblogin is missing a template for this request format and variant.
+
+request.formats: ["application/json"]
+request.variant: []):
+  
+actionpack (5.0.1) lib/action_controller/metal/implicit_render.rb:43:in `default_render'
+actionpack (5.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+omniauth (1.3.1) lib/omniauth/strategy.rb:186:in `call!'
+omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendering /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/per/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (139.4ms)
+Started GET "/cmb?fbToken=EAAD4bKUPbR8BALGcGePzb3YBAXyhxA7Wlv2pWJ8bUQRYIO8cfB4XagfoZAJQs07bSv1dExgXi4oOjx3n4SZAHFcrljfGoiTRA4T40WJuUvVrZBHxpJaTUi9zsfGVHrZBvLZA0yY1Ka2VGFj0MxPNJPO82SblthCZATsgg0KUFQmQZDZD&format=json" for ::1 at 2017-01-24 11:26:34 +0100
+Processing by CmbController#index as JSON
+  Parameters: {"fbToken"=>"EAAD4bKUPbR8BALGcGePzb3YBAXyhxA7Wlv2pWJ8bUQRYIO8cfB4XagfoZAJQs07bSv1dExgXi4oOjx3n4SZAHFcrljfGoiTRA4T40WJuUvVrZBHxpJaTUi9zsfGVHrZBvLZA0yY1Ka2VGFj0MxPNJPO82SblthCZATsgg0KUFQmQZDZD"}
+  Rendering cmb/index.json.jbuilder
+  Rendered cmb/_cmbInfoElement.json.jbuilder (0.7ms)
+  Rendered cmb/index.json.jbuilder (22.1ms)
+Completed 200 OK in 1627ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cmb/get_bagels?fbToken=EAAD4bKUPbR8BALGcGePzb3YBAXyhxA7Wlv2pWJ8bUQRYIO8cfB4XagfoZAJQs07bSv1dExgXi4oOjx3n4SZAHFcrljfGoiTRA4T40WJuUvVrZBHxpJaTUi9zsfGVHrZBvLZA0yY1Ka2VGFj0MxPNJPO82SblthCZATsgg0KUFQmQZDZD&format=json&sessionid=lfo8phgvm2sh48a16x19flteji1da8qp" for ::1 at 2017-01-24 11:26:41 +0100
+Processing by CmbController#get_bagels as JSON
+  Parameters: {"fbToken"=>"EAAD4bKUPbR8BALGcGePzb3YBAXyhxA7Wlv2pWJ8bUQRYIO8cfB4XagfoZAJQs07bSv1dExgXi4oOjx3n4SZAHFcrljfGoiTRA4T40WJuUvVrZBHxpJaTUi9zsfGVHrZBvLZA0yY1Ka2VGFj0MxPNJPO82SblthCZATsgg0KUFQmQZDZD", "sessionid"=>"lfo8phgvm2sh48a16x19flteji1da8qp"}
+  Rendering cmb/get_bagels.json.jbuilder
+  Rendered cmb/get_bagels.json.jbuilder (0.6ms)
+Completed 200 OK in 3095ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
