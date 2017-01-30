@@ -1,0 +1,1 @@
+json.(happnInfoElement, :Result, :jsonObj)

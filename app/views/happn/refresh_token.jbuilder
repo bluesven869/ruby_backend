@@ -1,0 +1,1 @@
+json.array! @happnInfo, partial: 'happnInfoElement', as: :happnInfoElement

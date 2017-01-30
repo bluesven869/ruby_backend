@@ -30,4 +30,9 @@ Rails.application.routes.draw do
   # get '/signin' => 'sessions#new', :as => :signin
 
   resources :tinder, only: [:index]
+  
+  resources :happn, only: [:index]
+  get '/happn/register_device'
+  get '/happn/set_profile_first'
+  get '/happn/refresh_token'
 end

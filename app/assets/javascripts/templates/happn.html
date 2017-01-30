@@ -1,0 +1,158 @@
+<header class="row">
+  <h1 class="text-center col-md-6 col-md-offset-3">Happen API Test</h1>
+</header>
+
+<div class="general_div unverified">
+  <section>
+    <button type="button" class="btn btn-primary btn-large" data-ng-click="loginFacebook('happn')">Login with Facebook For Happen</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <span class='loading-bar' ng-if="fblogin_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    
+  </section>
+  <section ng-if="!fblogin_flag ">
+    <div class="fb_info">
+      <label>FaceBook Token</label> <span class='my_info'>{{fbToken}}</span>
+      <br />
+      <label>FaceBook ID</label><span class='my_info'>{{fbUserID}}</span>
+      <br />
+    </div>
+  </section>
+  <section>
+    <label>Input FB Token</label>
+    <input type="text" name="input" placeholder="" ng-model="user_fbToken_for_happn" required>
+    <br/>
+    <label>Client_ID</label>
+    <input type="text" name="input" placeholder="" ng-model="user_client_id" required>
+    <br/>
+    <label>client_secret</label>
+    <input type="text" name="input" placeholder="" ng-model="user_client_secret" required>
+    <br/>
+    <label>android id</label>
+    <input type="text" name="input" placeholder="" ng-model="user_android_id" required>
+    <br/>
+    <button type="button" class="btn btn-primary btn-large" data-ng-click="setFBTokenForHappn()">Set value</button>
+  </section>
+</div>
+
+<!-- CMB SECTION -->
+<div class="cmb-section" ng-hide="false">
+  <div class="general_div completed">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="loginHappn()">Happn Login with Facebook</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <span class='loading-bar' ng-if="login_happn_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <section ng-if="!login_happn_flag && happnInfo">
+      <div class="cmb_info">     
+        <div>
+          <label>access Token</label> <span class='my_info'>{{happnInfo.access_token}}</span>
+          <br />
+          <label>user_id</label><span class='my_info'>{{happnInfo.user_id}}</span>
+          <br />
+          <label>is_new</label> <span class='my_info'>{{happnInfo.is_new}}</span>
+          <br />
+          <label>refresh_token</label> <span class='my_info'>{{happnInfo.refresh_token}}</span>
+          <br />
+        </div>   
+      </div>
+    </section>
+  </div>
+
+  <!-- TEST Process -->
+  <div class="general_div completed">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="RegisterDevice()">Register device</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="register_device_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <span class="my_info">
+      {{happnInfo.device}}
+    </span> &nbsp;&nbsp;
+  </div>
+
+  <div class="general_div completed">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="SetProfileFirst()">Set Profile First</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="profile_first_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <div class="detail_info">
+      <label>FB_ID </label> <span class="my_info">{{happnInfo.profile.fb_id}}</span> <br />
+      <label>Twitter ID </label> <span class="my_info">{{happnInfo.profile.twitter_id}}</span><br />
+      <label>Role </label> <span class="my_info">{{happnInfo.profile.role}}</span><br />
+      <label>Name </label> <span class="my_info">{{happnInfo.profile.first_name}}</span><br />
+      <label>Age </label> <span class="my_info">{{happnInfo.profile.age}}</span><br />
+      <label>Birthday </label> <span class="my_info">{{happnInfo.profile.birth_date}}</span><br />
+      <label>Gender </label> <span class="my_info">{{happnInfo.profile.gender}}</span><br />
+      <label>RegisterDate </label> <span class="my_info">{{happnInfo.profile.register_date}}</span><br />
+      <label>matching_preferences </label> <span class="my_info">{{happnInfo.profile.matching_preferences}}</span><br />
+      <label>notification_settings </label> <span class="my_info">{{happnInfo.profile.notification_settings}}</span><br />
+      
+    </div>
+    <div class="photo"><img ng-src='{{happnInfo.profile.profiles[0].url}}' width=200px height=200px alt="no-set" /></div>
+    
+  </div>
+
+  <div class="general_div completed">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="RefreshToken()">Refresh Token</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="refresh_token_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <div>
+      <label>access Token</label> <span class='my_info'>{{happnInfo.access_token}}</span>
+      <br />      
+      <label>refresh_token</label> <span class='my_info'>{{happnInfo.refresh_token}}</span>
+      <br />
+    </div>   
+  </div>
+
+  <!-- TEST Components -->
+
+  <div class="general_div unverified">
+    <form name='myForm'>
+      <section>
+        <button type="button" class="btn btn-primary btn-large" data-ng-click="getMyProfile()">Get my profile</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="get_profile_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      </section>
+      <label>Language Code</label>
+      <input type='text' ng-model='user_language_code' placeholder="Language Code" />
+      <br />
+      <label>User Gender</label>
+      <input type='text' ng-model='user_gender' placeholder="m/f" />
+      <br />
+      <label>Birthday</label>
+      <input type="date" id="user_birthday" name="user_birthday" ng-model="user_birthday" placeholder="YYYY-MM-DD" min="1600-01-01" max="2099-12-31" required />
+      <span role="alert">
+        <span class="error" ng-show="myForm.user_birthday.$error.required">
+        Required!</span>
+        <span class="error" ng-show="myForm.user_birthday.$error.date">
+        Not a valid date!</span>
+      </span>
+      <br />
+      <label>Criteria Gender</label>
+      <input type='text' ng-model='user_criteria_gender' placeholder="m/f" />
+      <br />
+      <label>User Email</label>
+      <input type="email" name="input" placeholder="example@email.com" ng-model="user_email" required>
+      <span role="alert">
+        <span class="error" ng-show="myForm.input.$error.required">
+        Required!</span>
+        <span class="error" ng-show="myForm.input.$error.email">
+        Not valid email!</span>
+      </span>
+      <br />
+      <label>Location</label>
+      <input type='text' ng-model='user_location' placeholder="Location" />
+      <br />
+      <section>
+        <button type="button" class="btn btn-primary btn-large" data-ng-click="setMyProfile()">Set my profile</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="profile_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      </section>
+      <span class="my_info">
+        {{profileInfo[0].jsonObj}}
+      </span> &nbsp;&nbsp;
+      <span class="my_info">
+        {{setProfileInfo[0].jsonObj}}
+      </span>
+    </form>
+  </div>
+
+</div>

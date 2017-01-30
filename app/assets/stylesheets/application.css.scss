@@ -51,6 +51,7 @@ canvas {
 	min-height:250px;
 	padding:10px;
 	margin:10px;
+	position: relative;
 	label{
 		width:120px;
 		font-family: Arial;
@@ -75,5 +76,15 @@ canvas {
 	.report_section{
 		height:200px;
 		overflow:auto;
+	}
+	.detail_info{
+		margin-right:220px;
+	}
+	.photo{
+		position: absolute;
+		right:10px;
+		top:10px;
+		width:200px;
+		height:200px;
 	}
 }

@@ -14,6 +14,10 @@ aggregate_dating.config([ '$routeProvider',
           templateUrl: "index.html"
           controller: 'CMBController'
         )
+        .when('/happn',
+          templateUrl: "happn.html"
+          controller: 'HappenController'
+        )
 ])
 
 aggregate_dating.config([ '$facebookProvider',
@@ -33,7 +37,7 @@ aggregate_dating.config(['$qProvider',
 
 cmbInfo = []
 
-appID = {'cmb': '273145509408031'}
+appID = {'cmb': '273145509408031','happn': '247294518656661'}
 
 controllers = angular.module('controllers',[])
 controllers.controller("CMBController", [ '$scope', '$routeParams', '$location', '$facebook', '$http', '$resource', 'Upload'
@@ -495,5 +499,151 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       Tinder.query(fbToken: $scope.fbToken, fbUserID: $scope.fbUserID , (results) -> 
         $scope.tinderInfo = results        
         $scope.tinder_login_flag = false
+      )
+  ])
+
+controllers.controller("HappenController", [ '$scope', '$routeParams', '$location', '$facebook', '$http', '$resource', 'Upload'
+  ($scope,$routeParams,$location,$facebook,$http,$resource, Upload)->
+    
+    $scope.fblogin_flag = false
+    $scope.login_happn_flag = false
+    #if(not $scope.fbToken?)
+    $scope.happnInfo = []
+    $scope.user_client_id       = "FUE-idSEP-f7AqCyuMcPr2K-1iCIU_YlvK-M-im3c"
+    $scope.user_client_secret   = "brGoHSwZsPjJ-lBk0HqEXVtb3UFu-y5l_JcOjD-Ekv"
+    $scope.user_android_id      = "a363d47528091227"
+
+    $scope.loginFacebook = (network)->
+      
+      # config = headers: 'User-Agent': 'Mozilla/5.0 (Linux; Android 4.4.4; Samsung Galaxy S4 - 4.4.4 - API 19 - 1080x1920 Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36', 'X-Requested-With': 'com.coffeemeetsbagel'   #, 'Client': 'Android', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type, Authorization', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'
+      # # config = headers: 'Content-Type': undefined, 'Cache-Control': 'no-cache'
+
+      # data = {};
+      # $http.get('https://m.facebook.com/v2.7/dialog/oauth?client_id=273145509408031&e2e={"init":1478551666628}&sdk=android-4.14.0&scope=user_friends,email,user_photos,user_birthday,user_education_history&default_audience=friends&redirect_uri=fbconnect://success&auth_type=rerequest&display=touch&response_type=token,signed_request&return_scopes=true&state={"0_auth_logger_id":"0e7bd8c6-4067-419e-b44a-d1e676f1fcc9","3_method":"web_view"}', data, config).then((data, status, headers, config) ->
+      #   $scope.loginDataResponse = data
+      #   console.log 'LOGIN Facebook Success', $scope.loginDataResponse
+        
+      # ).error (data, status, header, config) ->
+      #   $scope.ResponseDetails = 'Data: ' + data + '<hr />status: ' + status + '<hr />headers: ' + header + '<hr />config: ' + config
+      #   console.log 'LOGIN CMB Error', $scope.ResponseDetails
+
+      # openUrl = '/auth/facebook?appid=273145509408031'
+      # openUrl = '/'
+      openUrl = 'https://www.facebook.com/dialog/oauth?client_id=' + appID[network] + '&redirect_uri=fbconnect://success&scope=user_friends,email,user_photos,user_birthday,user_education_history&response_type=token'
+      console.log openUrl
+      window.$windowScope = $scope
+      window.popup = window.open openUrl, 'Authenticate Account', 'width=800, height=500'
+      # window.popup.addEventListener 'load', onHashChange, false
+
+      window.popup.addEventListener 'load', (->
+        console.log 'ALLERTT'
+        return
+      ), true 
+
+      window.popup.addEventListener 'hashchange', (->
+        console.log 'ALLERTT1'
+        return
+      ), true 
+
+      window.popup.addEventListener 'click', (->
+        console.log 'ALLERTT2'
+        window.popup.close
+        return
+      ), true 
+
+      window.popup.addEventListener 'submit', (->
+        console.log 'ALLERTT3'
+        return
+      ), true 
+
+
+      # window.onhashchange = onHashChange
+      # try
+      #   window.opener.$windowScope.handlePopupAuthentication 'facebook', 'account'
+      # catch err
+      # window.close();
+
+
+
+      console.log 'END OF LOGIN FACEBOOK'
+
+    # $scope.onHashChange = ->
+      # console.log 'ON HASH CHANGE'
+      # return
+
+    $scope.handlePopupAuthentication = (network, account) ->
+
+      #Note: using $scope.$apply wrapping
+      #the window popup will call this 
+      #and is unwatched func 
+      #so we need to wrap
+      $scope.$apply ->
+        $scope.applyNetwork network, account
+        return
+
+    $scope.setFBTokenForHappn = ->
+      $scope.fbTokenForHappn      = $scope.user_fbToken_for_happn
+      $scope.clientIDForHappn     = $scope.user_client_id
+      $scope.clientSecretForHappn = $scope.user_client_secret
+      $scope.clientAndroidID      = $scope.user_android_id
+
+    $scope.loginHappn = ->
+      #login with Happn
+      if($scope.fbTokenForHappn == undefined || $scope.fbTokenForHappn == "")
+        alert("Please input FB Token")
+        return
+      $scope.login_happn_flag = true
+      Happn = $resource('/happn', { format: 'json' })
+      Happn.query(fbToken: $scope.fbTokenForHappn, client_id: $scope.clientIDForHappn, client_sercret: $scope.clientSecretForHappn , (results) -> 
+        $scope.happnInfo = results[0].jsonObj
+        $scope.login_happn_flag = false
+      )
+    $scope.RegisterDevice = ->
+      #register device
+      access_token = $scope.happnInfo.access_token
+      userid = $scope.happnInfo.user_id
+      if(access_token == undefined || userid == undefined)
+        alert "Please Happn Login with Facebook."
+        return
+      
+      $scope.register_device_flag = true
+      Happn = $resource('/happn/register_device', { format: 'json' })
+      Happn.query(token: access_token, user_id: userid, android_id: $scope.clientAndroidID, (results) -> 
+        
+        $scope.happnInfo.device = results[0].jsonObj.data
+        $scope.register_device_flag = false
+      )
+    $scope.SetProfileFirst = ->
+      access_token = $scope.happnInfo.access_token
+      userid = $scope.happnInfo.user_id
+      if(access_token == undefined || userid == undefined)
+        alert "Please Happn Login with Facebook."
+        return
+      $scope.profile_first_flag = true
+      Happn = $resource('/happn/set_profile_first', { format: 'json' })
+      Happn.query(token: access_token, user_id: userid , (results) -> 
+        
+        $scope.happnInfo.profile = results[0].jsonObj.data
+        $scope.profile_first_flag = false
+      )
+    $scope.RefreshToken = ->
+      refreshtoken = $scope.happnInfo.refresh_token
+      userid = $scope.happnInfo.user_id
+      
+      if($scope.happnInfo.device == undefined)
+        alert "Please Register Device."
+        return
+      devid = $scope.happnInfo.device.id
+      if(refreshtoken == undefined || userid == undefined )
+        alert "Please Happn Login with Facebook."
+        return
+      $scope.refresh_token_flag = true
+      Happn = $resource('/happn/refresh_token', { format: 'json' })
+      
+      Happn.query(refresh_token: refreshtoken, user_id: userid, dev_id: devid, client_id: $scope.clientIDForHappn, client_secret: $scope.clientSecretForHappn, (results) -> 
+        
+        $scope.happnInfo.access_token = results[0].jsonObj.access_token
+        $scope.happnInfo.refresh_token = results[0].jsonObj.refresh_token
+        $scope.refresh_token_flag = false
       )
   ])
