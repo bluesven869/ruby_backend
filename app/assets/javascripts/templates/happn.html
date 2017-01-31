@@ -106,53 +106,90 @@
 
   <!-- TEST Components -->
 
-  <div class="general_div unverified">
-    <form name='myForm'>
-      <section>
-        <button type="button" class="btn btn-primary btn-large" data-ng-click="getMyProfile()">Get my profile</button>
-        &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="get_profile_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-      </section>
-      <label>Language Code</label>
-      <input type='text' ng-model='user_language_code' placeholder="Language Code" />
-      <br />
-      <label>User Gender</label>
-      <input type='text' ng-model='user_gender' placeholder="m/f" />
-      <br />
-      <label>Birthday</label>
-      <input type="date" id="user_birthday" name="user_birthday" ng-model="user_birthday" placeholder="YYYY-MM-DD" min="1600-01-01" max="2099-12-31" required />
-      <span role="alert">
-        <span class="error" ng-show="myForm.user_birthday.$error.required">
-        Required!</span>
-        <span class="error" ng-show="myForm.user_birthday.$error.date">
-        Not a valid date!</span>
-      </span>
-      <br />
-      <label>Criteria Gender</label>
-      <input type='text' ng-model='user_criteria_gender' placeholder="m/f" />
-      <br />
-      <label>User Email</label>
-      <input type="email" name="input" placeholder="example@email.com" ng-model="user_email" required>
-      <span role="alert">
-        <span class="error" ng-show="myForm.input.$error.required">
-        Required!</span>
-        <span class="error" ng-show="myForm.input.$error.email">
-        Not valid email!</span>
-      </span>
-      <br />
-      <label>Location</label>
-      <input type='text' ng-model='user_location' placeholder="Location" />
-      <br />
-      <section>
-        <button type="button" class="btn btn-primary btn-large" data-ng-click="setMyProfile()">Set my profile</button>
-        &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="profile_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-      </section>
-      <span class="my_info">
-        {{profileInfo[0].jsonObj}}
-      </span> &nbsp;&nbsp;
-      <span class="my_info">
-        {{setProfileInfo[0].jsonObj}}
-      </span>
-    </form>
+  <div class="general_div completed">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="getUserProfile()">Get User profile</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="get_profile_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <label>User ID</label>
+    <input type='text' ng-model='other_user_id' placeholder="<user_id>" />
+    <span class="my_info">
+      {{other_user_profile}}
+    </span> &nbsp;&nbsp;
+  </div>
+  <div class="general_div completed">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="DiscoverNewProspect()">Discover new prospects</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="discover_prospect_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <div>
+      <span class='my_info'>{{happnInfo.new_prospects}}</span>
+      
+    </div>   
+  </div>
+  <div class="general_div completed">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="GetChatList()">Get list of chats</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="chat_list_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <div>
+      <span class='my_info'>{{happnInfo.chat_list}}</span>
+    </div>   
+  </div>
+  <div class="general_div completed">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="GetChatMsg()">Get Conversation Messages</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="chat_msg_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <div>
+      <label>MessageID</label><input ng_model="msg_id" placeholder="<partner_id>_<my_user_id>" />
+      <span class='my_info'>{{happnInfo.messages}}</span>
+    </div>   
+  </div>
+  <div class="general_div completed">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="SendChatMsg()">Send Messages</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="send_msg_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <div>
+      <label>MessageID</label><input ng_model="msg_id" placeholder="<partner_id>_<my_user_id>" /> <br />
+      <label>Message</label><input ng_model="msg" placeholder="" />
+      <span class='my_info'>{{happnInfo.send_msg_result}}</span>
+    </div>   
   </div>
 
+  <div class="general_div completed">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="LikeSomebody()">Like</button>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="CharmSomebody()">Charm</button>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="RejectSomebody()">Reject</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="somebody_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <div>
+      <label>Somebody ID</label><input ng_model="partner_id" placeholder="<partner_id>" /> <br />      
+      <span class='my_info'>{{somebody_msg}}</span>
+    </div>   
+  </div>
+  <div class="general_div completed">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="UpdateUserProfile()">Update User Profile</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="update_user_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <div>
+      <label>Job</label><input ng_model="job" placeholder="Please input job" /> <br />      
+      <label>Employer</label><input ng_model="workplace" placeholder="Please input employer" /> <br />      
+      <label>School</label><input ng_model="school" placeholder="Please input school" /> <br />      
+      <label>About me</label><input ng_model="about" placeholder="Please input about me" /> <br />      
+      <span class='my_info'>{{update_msg}}</span>
+    </div>   
+  </div>
+  <div class="general_div completed">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="GetUserSetting()">Get User Setting</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="get_user_setting_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <div>
+      <span class='my_info'>{{user_setting}}</span>
+    </div>   
+  </div>
 </div>

@@ -29,7 +29,7 @@ class HappnController < ApplicationController
 			headers = { 
 		        'User-Agent': 'happn/19.12.0 android/16',
 				'Accept-Language': 'en-US;q=1,en;q=0.75',
-				'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
 				'Host': 'api.happn.fr'
 		    }
 			response = self.class.post(base_uri.to_str, 
@@ -64,7 +64,7 @@ class HappnController < ApplicationController
 		        'User-Agent': 'happn/19.12.0 android/16',
 				'Accept-Language': 'en-US;q=1,en;q=0.75',
 				'Authorization': oauth_str,
-				'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
 				'Host': 'api.happn.fr'
 		    }
 
@@ -110,7 +110,7 @@ class HappnController < ApplicationController
 		        'User-Agent': 'happn/19.12.0 android/16',
 				'Accept-Language': 'en-US;q=1,en;q=0.75',
 				'Authorization': oauth_str,
-				'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
 				'Host': 'api.happn.fr'
 		    }
 
@@ -140,18 +140,17 @@ class HappnController < ApplicationController
 		#  Return
 		#         jsonObj  : user Profile Info
 
-		if (not params.has_key?(:refresh_token)) || (not params.has_key?(:user_id))
-			@happnInfo = [{"Result": "Token / User ID Error","jsonObj": "Token/UserID"}]
+		if (not params.has_key?(:refresh_token)) || (not params.has_key?(:dev_id))
+			@happnInfo = [{"Result": "Token / DeviceID Error","jsonObj": "Token/DeviceID"}]
 		else
-			refresh_token 	= params[:refresh_token].to_str
-			user_id 		= params[:user_id].to_str
+			refresh_token 	= params[:refresh_token].to_str			
 			dev_id			= params[:dev_id].to_str
 			client_id		= params[:client_id].to_str
 			client_secret	= params[:client_secret].to_str
 			headers = { 
 		        'User-Agent': 'happn/19.12.0 android/16',
 				'Accept-Language': 'en-US;q=1,en;q=0.75',
-				'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
 				'Host': 'api.happn.fr',
 				'X-Happn-DID': dev_id
 		    }
@@ -178,416 +177,436 @@ class HappnController < ApplicationController
 		end
 	end
 
-	def get_profile
-		#Get Profile
-		#  IN     fbToken  : FaceBook Token
-		#         sessionid: CMB session id
+	def discover_new_prospects
+		# Discover New Prospects
+		#
+		#  IN     token  	: Happn Access Token
+		#         user_id	: user_id from Happn
+		#         dev_id	: RegisterdDevice ID 
 		#  Return
-		#         jsonObj  : User Profile Info
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
-			@profileInfo = [{"loginResult": "Token Error", "sessionid":"NoSession","jsonObj": "Token"}]
-		else
-			fbToken = params[:fbToken].to_str
-			sessionid = params[:sessionid].to_str
-			base_uri = "https://api.coffeemeetsbagel.com/profile/me"
-          	my_cookie = "sessionid="+sessionid
-          	options = {
+		#         jsonObj  : New Prospects Array
 
-          	}
-	      	headers = {
-	    	  'AppStore-Version': '3.4.1.779',
-			  'App-Version': '779',
-			  'Client': 'Android',
-			  'Device-Name': 'Genymotion Samsung Galaxy S4 - 4.4.4 - API 19 - 1080x1920',
-			  'Content-Type': 'application/json',
-			  'Facebook-Auth-Token': fbToken,
-			  'Cookie': my_cookie	
-	      	}
-	      	response = self.class.get(base_uri.to_str,
-	      	  :body=> options.to_json,
-	      	  :headers => headers)
-		  	if response.success?
-		  	  @profileInfo = [{"loginResult": "success", "sessionid":sessionid,"jsonObj": response}]
-		  	else
-			  @profileInfo = [{"loginResult": "failed", "sessionid": sessionid, "jsonObj": response}]
-			end	 
+		if (not params.has_key?(:token)) || (not params.has_key?(:user_id))|| (not params.has_key?(:dev_id))
+			@happnInfo = [{"Result": "Token / User ID / Device ID Error","jsonObj": "Token/UserID/DeviceID"}]
+		else
+			access_token	= params[:token].to_str
+			user_id 		= params[:user_id].to_str
+			dev_id			= params[:dev_id].to_str
+			oauth_str 		= 'OAuth="'+access_token+'"'
+			headers = { 
+		        'User-Agent': 'happn/19.12.0 android/16',
+				'Accept-Language': 'en-US;q=1,en;q=0.75',
+				'Content-Type': 'application/json; charset=UTF-8',
+				'Authorization': oauth_str,
+				'Host': 'api.happn.fr',
+				'X-Happn-DID': dev_id
+		    }
+
+	      	options = {	    			    	
+			}	
+
+			base_uri 		= 'https://api.happn.fr/api/users/'+user_id+'/crossings?offset=0&limit=16&fields=id,modification_date,notification_type,nb_times,notifier.fields(id,type,job,is_accepted,workplace,my_relation,distance,gender,is_charmed,nb_photos,first_name,age,already_charmed,has_charmed_me,availability,is_invited,last_invite_received,profiles.mode(1).width(720).height(1232).fields(width,height,mode,url))'
+			
+			
+		    response = self.class.get(base_uri.to_str,
+		    	:body=> options,
+		      	:headers => headers)
+		    if response.success?
+		      	@happnInfo = [{"Result": "success","jsonObj": response}]
+			else
+			  	@happnInfo = [{"Result": "failed","jsonObj": response}]
+			end	  
+		end
+	end
+	def get_list_of_chats
+		# Get List Of Chats
+		#
+		#  IN     token  	: Happn Access Token
+		#         user_id	: user_id from Happn
+		#         dev_id	: RegisterdDevice ID 
+		#  Return
+		#         jsonObj  : New Prospects Array
+
+		if (not params.has_key?(:token)) || (not params.has_key?(:user_id))|| (not params.has_key?(:dev_id))
+			@happnInfo = [{"Result": "Token / User ID / Device ID Error","jsonObj": "Token/UserID/DeviceID"}]
+		else
+			access_token	= params[:token].to_str
+			user_id 		= params[:user_id].to_str
+			dev_id			= params[:dev_id].to_str
+			oauth_str 		= 'OAuth="'+access_token+'"'
+			headers = { 
+		        'User-Agent': 'happn/19.12.0 android/16',
+				'Accept-Language': 'en-US;q=1,en;q=0.75',
+				'Content-Type': 'application/json; charset=UTF-8',
+				'Authorization': oauth_str,
+				'Host': 'api.happn.fr',
+				'X-Happn-DID': dev_id
+		    }
+
+	      	options = {	    			    	
+			}	
+
+			base_uri 		= 'https://api.happn.fr/api/users/'+user_id+'/conversations?offset=0&limit=16&fields=id,participants.fields(user.fields(id,first_name,age,is_moderator,profiles.mode(0).width(72).height(72).fields(width,height,mode,url))),is_read,creation_date,modification_date,last_message.fields(creation_date,message,sender)'
+			
+			
+		    response = self.class.get(base_uri.to_str,
+		    	:body=> options,
+		      	:headers => headers)
+		    if response.success?
+		      	@happnInfo = [{"Result": "success","jsonObj": response}]
+			else
+			  	@happnInfo = [{"Result": "failed","jsonObj": response}]
+			end	  
+		end
+	end 
+	def get_conversation_msg
+		# Get List Of Chats
+		#
+		#  IN     token  	: Happn Access Token
+		#         dev_id	: RegisterdDevice ID 
+		# 		  msg_id	: <partner_id>-<my_id> 
+		#  Return
+		#         jsonObj  : New Prospects Array
+
+		if (not params.has_key?(:token)) || (not params.has_key?(:msg_id))|| (not params.has_key?(:dev_id))
+			@happnInfo = [{"Result": "Token / Message ID / Device ID Error","jsonObj": "Token/MessageID/DeviceID"}]
+		else
+			access_token	= params[:token].to_str
+			dev_id			= params[:dev_id].to_str
+			msg_id			= params[:msg_id].to_str
+			oauth_str 		= 'OAuth="'+access_token+'"'
+			headers = { 
+		        'User-Agent': 'happn/19.12.0 android/16',
+				'Accept-Language': 'en-US;q=1,en;q=0.75',
+				'Content-Type': 'application/json; charset=UTF-8',
+				'Authorization': oauth_str,
+				'Host': 'api.happn.fr',
+				'X-Happn-DID': dev_id
+		    }
+
+	      	options = {	    			    	
+			}	
+
+			base_uri 		= 'https://api.happn.fr/api/conversations/'+msg_id+'/messages/?offset=0&limit=16&fields=id,message,creation_date,sender.fields(id,first_name,age,profiles.mode(0).width(36).height(36).fields(mode,width,height,url),clickable_profile_link,clickable_message_link)'
+			
+			
+		    response = self.class.get(base_uri.to_str,
+		    	:body=> options,
+		      	:headers => headers)
+		    if response.success?
+		      	@happnInfo = [{"Result": "success","jsonObj": response}]
+			else
+			  	@happnInfo = [{"Result": "failed","jsonObj": response}]
+			end	  
 		end
 	end 
 
-	def set_profile
-		#Set Profile
-		#  IN     fbToken  : FaceBook Token
-		#         sessionid: CMB session id
-		#         user     : User Profile Info
+	def send_conversation_msg
+		# Send Messages
+		#
+		#  IN     token  	: Happn Access Token
+		#         user_id	: user_id from Happn
+		#         dev_id	: RegisterdDevice ID 
+		# 		  msg_id	: <partner_id>-<my_id> 
+		#         msg       : Real Send Message
 		#  Return
-		#         jsonObj  : User Profile Info (changed)
+		#         jsonObj  : New Prospects Array
 
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
-			@cmbInfo = [{"loginResult": "Token Error", "sessionid":"NoSession","jsonObj": "Token"}]
+		if (not params.has_key?(:token)) || (not params.has_key?(:msg_id))|| (not params.has_key?(:dev_id))
+			@happnInfo = [{"Result": "Token / msg_id / Device ID Error","jsonObj": "Token/msg_id/DeviceID"}]
 		else
-			fbToken = params[:fbToken].to_str
-			sessionid = params[:sessionid].to_str
-			@user 	= JSON.parse params[:user];
-			base_uri = 'https://api.coffeemeetsbagel.com/profile/me'		
-			my_cookie = "sessionid="+sessionid
-	      	headers = {
-		    	'AppStore-Version': '3.4.1.779',
-				'App-Version': '779',
-				'Client': 'Android',
-				'Content-Type': 'application/json',
-				'Facebook-Auth-Token': fbToken,
-				'Cookie': my_cookie	
-	      	}
-	      	# options = {}
-	      	# options['id'] = @user["id"];
-	      	# options['name'] = @user["name"];
-	      	# options['gender'] = @user["gender"];
-	      	# options['birthday'] = @user["birthday"];
-	      	# options['user__email'] = @user["email"];
-	      	# options['criteria__gender'] = @user["criteria_gender"];
-	      	options = {	    	
-		    	'id': @user["id"],
-		    	'language_code': @user["language_code"],
-		    	'name': @user["name"],
-		    	'gender': @user["gender"],
-		    	'birthday': @user["birthday"],
-		    	'user__email': @user["email"],
-		    	'criteria__gender': @user["criteria_gender"],
-		    	'location': @user["location"]
+			access_token	= params[:token].to_str
+			dev_id			= params[:dev_id].to_str
+			msg_id			= params[:msg_id].to_str
+			msg				= params[:msg].to_str
+			oauth_str 		= 'OAuth="'+access_token+'"'
+			headers = { 
+		        'User-Agent': 'happn/19.12.0 android/16',
+				'Accept-Language': 'en-US;q=1,en;q=0.75',
+				'Content-Type': 'application/json; charset=UTF-8',
+				'Authorization': oauth_str,
+				'Host': 'api.happn.fr',
+				'X-Happn-DID': dev_id
+		    }
+
+	      	options = {
+	      		"fields": "message,creation_date,sender.fields(id)",
+    			"message": msg # text we’re going to send	    			    	
 			}	
-		    response = self.class.put(base_uri.to_str,
-		    	:body=> options.to_json,
+
+			base_uri 		= 'https://api.happn.fr/api/conversations/'+msg_id+'/messages/'
+			
+		    response = self.class.post(base_uri.to_str,
+		    	:body=> options,
 		      	:headers => headers)
 		    if response.success?
-		      	@profileInfo = [{"loginResult": "Set Profile Success", "sessionid": sessionid, "jsonObj": response}]			  	
+		      	@happnInfo = [{"Result": "success","jsonObj": response}]
 			else
-			  	@profileInfo = [{"loginResult": "Set Profile Failed", "sessionid": sessionid, "jsonObj": response}]
+			  	@happnInfo = [{"Result": "failed","jsonObj": response}]
 			end	  
 		end
-	end
+	end 
 
-	def get_bagels
-		# Get Bagels
-		#    IN      fbToken : FaceBook Token
-		#            sessionid: CMB Session ID
-		#    OUT     
-		#	         jsonObj : Today's Bagel Info 
+	def get_user_profile
+		# Get User's Profile
+		#
+		#  IN     token  		: Happn Access Token
+		#         dev_id		: RegisterdDevice ID 
+		# 		  other_user_id	: user id to view		
+		#  Return
+		#         jsonObj  : New Prospects Array
 
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
-			@BaglesInfo = [{"success": false, "jsonObj": "No Authenticated"}]
+		if (not params.has_key?(:token)) || (not params.has_key?(:other_user_id))|| (not params.has_key?(:dev_id))
+			@happnInfo = [{"Result": "Token / User ID / Device ID Error","jsonObj": "Token/UserID/DeviceID"}]
 		else
-			fbToken = params[:fbToken].to_str
-			sessionid = params[:sessionid].to_str
-			base_uri = 'https://api.coffeemeetsbagel.com/bagels?embed=profile&prefetch=true'		
-			my_cookie = "sessionid="+sessionid
-	      	headers = {
-		    	'AppStore-Version': '3.4.1.779',
-				'App-Version': '779',
-				'Client': 'Android',
-				'Content-Type': 'application/json',
-				'Facebook-Auth-Token': fbToken,
-				'Cookie': my_cookie	
-	      	}
-		    response = self.class.get(base_uri.to_str,
-		    	# :body=> options.to_json,
-		      	:headers => headers)
+			access_token	= params[:token].to_str
+			dev_id			= params[:dev_id].to_str
+			other_user_id	= params[:other_user_id].to_str			
+			oauth_str 		= 'OAuth="'+access_token+'"'
+			headers = { 
+		        'User-Agent': 'happn/19.12.0 android/16',
+				'Accept-Language': 'en-US;q=1,en;q=0.75',
+				'Content-Type': 'application/json; charset=UTF-8',
+				'Authorization': oauth_str,
+				'Host': 'api.happn.fr',
+				'X-Happn-DID': dev_id
+		    }
 
-		    if response.success?
-		      	@BaglesInfo = [{"success": true, "jsonObj": response}]
-		    else
-			  	loginResult = "fail get bagels"
-			  	@BaglesInfo = [{"success": false, "jsonObj": response}]
-			end
-		end
-	end
-	def get_bagels_history
-		# Get Bagels History
-		#    IN      fbToken : FaceBook Token
-		#            sessionid: CMB Session ID
-		#            @bagel : BagelObject(hex_id, cursor_after)
-		#    OUT     
-		#	         jsonObj : Bagels History before cursor_after 
-
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)) || (not params.has_key?(:bagel))
-			@BaglesInfo = [{"success": false, "jsonObj": "Params Error"}]
-		else
-			fbToken = params[:fbToken].to_str
-			sessionid = params[:sessionid].to_str		
-			@bagel 	= JSON.parse params[:bagel];
-			base_uri = 'https://api.coffeemeetsbagel.com/bagels'		
-			my_cookie = "sessionid="+sessionid
-	      	headers = {
-		    	'AppStore-Version': '3.4.1.779',
-				'App-Version': '779',
-				'Client': 'Android',
-				'Content-Type': 'application/json',
-				'Facebook-Auth-Token': fbToken,
-				'Cookie': my_cookie	
-	      	}
-	      	options = {	    	
-		    	'embed': 'profile',
-		    	'prefetch': true,
-		    	'cursor_after': @bagel["cursor_after"],
-		    	'updated_after': @bagel["hex_id"],
+	      	options = {			    	
 			}	
+
+			base_uri 		= 'https://api.happn.fr/api/users/'+other_user_id+'?fields=type,about,is_accepted,first_name,age,job,workplace,school,modification_date,profiles.mode(1).width(720).height(1232).fields(url,width,height,mode),last_meet_position,my_relation,is_charmed,distance,gender,spotify_tracks,social_synchronization.fields(instagram),clickable_profile_link,clickable_message_link,availability,is_invited,last_invite_received'
+			
 		    response = self.class.get(base_uri.to_str,
-		    	:body=> options.to_json,
+		    	:body=> options,
 		      	:headers => headers)
 		    if response.success?
-		      	@BaglesList = [{"success": true, "jsonObj": response}]
-		    else		  	
-			  	@BaglesList = [{"success": false, "jsonObj": response}]
+		      	@happnInfo = [{"Result": "success","jsonObj": response}]
+			else
+			  	@happnInfo = [{"Result": "failed","jsonObj": response}]
 			end	  
 		end
-	end
-	def send_batch
-		# Batch Command
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))# || (not params.has_key?(:hex_id))
-			@BaglesInfo = [{"success": false, "jsonObj": "Params Error"}]
-		else
-			fbToken = params[:fbToken].to_str
-			sessionid = params[:sessionid].to_str
-			if params.has_key?(:hex_id)
-				hex_id = params[:hex_id].to_str
-			end
-			
-			base_uri = 'https://api.coffeemeetsbagel.com/batch'		
-			my_cookie = "sessionid="+sessionid
-	      	headers = {
-		    	'AppStore-Version': '3.4.1.779',
-				'App-Version': '779',
-				'Client': 'Android',
-				'Content-Type': 'application/json',
-				'Facebook-Auth-Token': fbToken,
-				'Cookie': my_cookie	
-	      	}
+	end 
 
-	      	addedString = ''
-	      	if hex_id
-	      		addedString = '&updated_after='+hex_id	
-	      	end
-	    
-	      	options = [	    	
-		    	{
-		    		'relative_url': 'givetakes?embed=profile'+addedString,
-		    		'method': 'GET'
-		    	},
-		    	{
-		    		'relative_url': 'price',
-		    		'method': 'GET'
-		    	},
-		    	{
-		    		'relative_url': 'reportmeta?embed=profile'+addedString,
-		    		'method': 'GET'
-		    	},
-		    	{
-		    		'relative_url': 'risinggivetakes?embed=profile'+addedString,
-		    		'method': 'GET'
-		    	},
-		    	{
-		    		'relative_url': 'feature',
-		    		'method': 'GET'
-		    	},
-		    	{
-		    		'relative_url': 'reward',
-		    		'method': 'GET'
-		    	},
-		    	{
-		    		'relative_url': 'profile\/me',
-		    		'method': 'GET'
-		    	}
-			]	
+	def like_somebody
+		# Like SomeBody
+		#
+		#  IN     token  		: Happn Access Token
+		#         user_id		: user_id from Happn
+		#         other_user_id	: PartnerID
+		#         dev_id		: RegisterdDevice ID 
+		#  Return
+		#         jsonObj 		: Result
+
+		if (not params.has_key?(:token)) || (not params.has_key?(:user_id))|| (not params.has_key?(:other_user_id))|| (not params.has_key?(:dev_id))
+			@happnInfo = [{"Result": "failed","jsonObj": "Token/UserID/PartnerID/DeviceID ERROR"}]
+		else
+			access_token	= params[:token].to_str
+			user_id 		= params[:user_id].to_str
+			other_user_id	= params[:other_user_id].to_str
+			dev_id			= params[:dev_id].to_str
+			oauth_str 		= 'OAuth="'+access_token+'"'
+			headers = { 
+		        'User-Agent': 'happn/19.12.0 android/16',
+				'Accept-Language': 'en-US;q=1,en;q=0.75',
+				'Content-Type': 'application/json; charset=UTF-8;',
+				'Authorization': oauth_str,
+				'Host': 'api.happn.fr',
+				'X-Happn-DID': dev_id
+		    }
+
+	      	options = {	    			    	
+			}	
+
+			base_uri 		= 'https://api.happn.fr/api/users/'+user_id+'/accepted/'+other_user_id
+			
 			
 		    response = self.class.post(base_uri.to_str,
-		    	:body=> options.to_json,
+		    	:body=> options,
 		      	:headers => headers)
 		    if response.success?
-		      	@BaglesInfo = [{"success": true, "jsonObj": response}]
-		    else		  	
-			  	@BaglesInfo = [{"success": false, "jsonObj": response}]
+		      	@happnInfo = [{"Result": "success","jsonObj": response}]
+			else
+			  	@happnInfo = [{"Result": "failed","jsonObj": response}]
 			end	  
 		end
 	end
-	def get_resources
-		# Get Resource
-		#    IN      fbToken : FaceBook Token
-		#            sessionid: CMB Session ID
-		#    OUT     
-		#	         jsonObj : Resource of App.
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
-			@ResourceInfo = [{"success": false, "jsonObj": "No Authenticated"}]
+	
+	def charm_somebody
+		# Charm SomeBody
+		#
+		#  IN     token  		: Happn Access Token
+		#         user_id		: user_id from Happn
+		#         other_user_id	: PartnerID
+		#         dev_id		: RegisterdDevice ID 
+		#  Return
+		#         jsonObj 		: Result
+
+		if (not params.has_key?(:token)) || (not params.has_key?(:user_id))|| (not params.has_key?(:other_user_id))|| (not params.has_key?(:dev_id))
+			@happnInfo = [{"Result": "failed","jsonObj": "Token/UserID/PartnerID/DeviceID ERROR"}]
 		else
-			fbToken = params[:fbToken].to_str
-			sessionid = params[:sessionid].to_str
-			base_uri = 'https://api.coffeemeetsbagel.com/resource/locale/en_us.json'		
-			my_cookie = "sessionid="+sessionid
-	      	headers = {
-		    	'AppStore-Version': '3.4.1.779',
-				'App-Version': '779',
-				'Client': 'Android',
-				'Content-Type': 'application/json',
-				'Facebook-Auth-Token': fbToken,
-				'Cookie': my_cookie	
-	      	}
-	      	options = {	    	
-		    	
+			access_token	= params[:token].to_str
+			user_id 		= params[:user_id].to_str
+			other_user_id	= params[:other_user_id].to_str
+			dev_id			= params[:dev_id].to_str
+			oauth_str 		= 'OAuth="'+access_token+'"'
+			headers = { 
+		        'User-Agent': 'happn/19.12.0 android/16',
+				'Accept-Language': 'en-US;q=1,en;q=0.75',
+				'Content-Type': 'application/json; charset=UTF-8;',
+				'Authorization': oauth_str,
+				'Host': 'api.happn.fr',
+				'X-Happn-DID': dev_id
+		    }
+
+	      	options = {	    			    	
 			}	
-		    response = self.class.get(base_uri.to_str,
-		    	:body=> options.to_json,
+
+			base_uri 		= 'https://api.happn.fr/api/users/'+user_id+'/pokes/'+other_user_id
+			
+			
+		    response = self.class.post(base_uri.to_str,
+		    	:body=> options,
 		      	:headers => headers)
 		    if response.success?
-		      	@ResourceInfo = [{"success": true, "jsonObj": response}]
-		    else
-			  	@ResourceInfo = [{"success": false, "jsonObj": response}]
+		      	@happnInfo = [{"Result": "success","jsonObj": response}]
+			else
+			  	@happnInfo = [{"Result": "failed","jsonObj": response}]
 			end	  
 		end
 	end
-	def get_photolabs
-		#Get Bagels
-		#    IN      fbToken : FaceBook Token
-		#            sessionid: CMB Session ID
-		#    OUT     
-		#	         jsonObj : Photo Labs
 
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
-			@PhotoLabs = [{"success": false, "jsonObj": "No Authenticated"}]
+	def reject_somebody
+		# Reject SomeBody
+		#
+		#  IN     token  		: Happn Access Token
+		#         user_id		: user_id from Happn
+		#         other_user_id	: PartnerID
+		#         dev_id		: RegisterdDevice ID 
+		#  Return
+		#         jsonObj 		: Result
+
+		if (not params.has_key?(:token)) || (not params.has_key?(:user_id))|| (not params.has_key?(:other_user_id))|| (not params.has_key?(:dev_id))
+			@happnInfo = [{"Result": "failed","jsonObj": "Token/UserID/PartnerID/DeviceID ERROR"}]
 		else
-			fbToken = params[:fbToken].to_str
-			sessionid = params[:sessionid].to_str
-			base_uri = 'https://api.coffeemeetsbagel.com/photolabs'		
-			my_cookie = "sessionid="+sessionid
-	      	headers = {
-		    	'AppStore-Version': '3.4.1.779',
-				'App-Version': '779',
-				'Client': 'Android',
-				'Content-Type': 'application/json',
-				'Facebook-Auth-Token': fbToken,
-				'Cookie': my_cookie	
-	      	}
-	      	options = {	    	
-		    	
+			access_token	= params[:token].to_str
+			user_id 		= params[:user_id].to_str
+			other_user_id	= params[:other_user_id].to_str
+			dev_id			= params[:dev_id].to_str
+			oauth_str 		= 'OAuth="'+access_token+'"'
+			headers = { 
+		        'User-Agent': 'happn/19.12.0 android/16',
+				'Accept-Language': 'en-US;q=1,en;q=0.75',
+				'Content-Type': 'application/json; charset=UTF-8;',
+				'Authorization': oauth_str,
+				'Host': 'api.happn.fr',
+				'X-Happn-DID': dev_id
+		    }
+
+	      	options = {	    			    	
 			}	
-		    response = self.class.get(base_uri.to_str,
-		    	:body=> options.to_json,
+
+			base_uri 		= 'https://api.happn.fr/api/users/'+user_id+'/rejected/'+other_user_id
+			
+			
+		    response = self.class.post(base_uri.to_str,
+		    	:body=> options,
 		      	:headers => headers)
 		    if response.success?
-		      	@PhotoLabs = [{"success": true, "jsonObj": response}]
-		    else
-			  	@PhotoLabs = [{"success": false, "jsonObj": response}]
-			end
+		      	@happnInfo = [{"Result": "success","jsonObj": response}]
+			else
+			  	@happnInfo = [{"Result": "failed","jsonObj": response}]
+			end	  
 		end
 	end
+	def update_profile
+		# Update user profile
+		#
+		#  IN     token  		: Happn Access Token
+		#         user_id		: user_id from Happn
+		#         user_info		: PartnerID
+		#         dev_id		: RegisterdDevice ID 
+		#  Return
+		#         jsonObj 		: Result
 
-	def give_take
-		# Give Take
-		#    IN      fbToken : FaceBook Token
-		#            sessionid: CMB Session ID
-		#  			 customer_id : Bagel_id
-		#    OUT     
-		#	         success : take result
-
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)) || (not params.has_key?(:customer_id) )
-			@GiveTakeResult = [{"success": false, "jsonObj": "Params Error"}]
+		if (not params.has_key?(:token)) || (not params.has_key?(:user_id))|| (not params.has_key?(:dev_id))
+			@happnInfo = [{"Result": "failed","jsonObj": "Token/UserID/DeviceID ERROR"}]
 		else
-			fbToken 		= params[:fbToken].to_str
-			sessionid 		= params[:sessionid].to_str
-			customer_id 	= params[:customer_id].to_str
-			base_uri 		= 'https://api.coffeemeetsbagel.com/givetake'		
-			my_cookie = "sessionid="+sessionid
-	      	headers = {
-		    	'AppStore-Version': '3.4.1.779',
-				'App-Version': '779',
-				'Client': 'Android',
-				'Content-Type': 'application/json',
-				'Facebook-Auth-Token': fbToken,
-				'Cookie': my_cookie	
-	      	}
-	      	options = {	    	
-		    	"id":customer_id,
-		    	"shown":true
+			access_token	= params[:token].to_str
+			user_id 		= params[:user_id].to_str
+			dev_id			= params[:dev_id].to_str
+			@user_info 		= JSON.parse params[:u_info];
+			oauth_str 		= 'OAuth="'+access_token+'"'
+			headers = { 
+		        'User-Agent': 'happn/19.12.0 android/16',
+				'Accept-Language': 'en-US;q=1,en;q=0.75',
+				'Content-Type': 'application/json; charset=UTF-8;',
+				'Authorization': oauth_str,
+				'Host': 'api.happn.fr',
+				'X-Happn-DID': dev_id
+		    }
+
+	      	options = {	
+	      		'job': @user_info['job'],
+	      		'workplace': @user_info['workplace'],
+	      		'school': @user_info['school'],
+	      		'about': @user_info['about']
 			}	
+
+			base_uri 		= 'https://api.happn.fr/api/users/'+user_id
+			
+			
 		    response = self.class.put(base_uri.to_str,
-		    	:body=> options.to_json,
-		      	:headers => headers)	    
+		    	:body=> options,
+		      	:headers => headers)
 		    if response.success?
-		      	@GiveTakeResult = [{"success": true}]
-		    else
-			  	@GiveTakeResult = [{"success": false}]
-			end	     
-		end 
+		      	@happnInfo = [{"Result": "success","jsonObj": response}]
+			else
+			  	@happnInfo = [{"Result": "failed","jsonObj": response}]
+			end	  
+		end
 	end
 
-	def purchase
-		# Purchase
-		#    IN      fbToken : FaceBook Token
-		#            sessionid: CMB Session ID
-		#  			 @purchase : Purchase Info(item_count, item_name, expected_price, give_ten_id)
-		#    OUT     
-		#	         success : take result
+	def get_user_setting
+		# Get user Setting
+		#
+		#  IN     token  		: Happn Access Token
+		#         user_id		: user_id from Happn
+		#         dev_id		: RegisterdDevice ID 
+		#  Return
+		#         jsonObj 		: Result
 
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)) || (not params.has_key?(:purchase))
-			@PurchaseResult = [{"success": false, "jsonObj": "Params Error"}]
+		if (not params.has_key?(:token)) || (not params.has_key?(:user_id))|| (not params.has_key?(:dev_id))
+			@happnInfo = [{"Result": "failed","jsonObj": "Token/UserID/DeviceID ERROR"}]
 		else
-			fbToken 		= params[:fbToken].to_str
-			sessionid 		= params[:sessionid].to_str
-			@purchase 	= JSON.parse params[:purchase];
-			base_uri 		= 'https://api.coffeemeetsbagel.com/purchase'		
-			my_cookie = "sessionid="+sessionid
-	      	headers = {
-		    	'AppStore-Version': '3.4.1.779',
-				'App-Version': '779',
-				'Client': 'Android',
-				'Content-Type': 'application/json',
-				'Facebook-Auth-Token': fbToken,
-				'Cookie': my_cookie	
-	      	}
-	      	options = {	    	
-		    	"item_count":@purchase["item_count"],
-		    	"item_name":@purchase["item_name"],
-		    	"expected_price":@purchase["expected_price"],
-		    	"give_ten_id":@purchase["give_ten_id"]
+			access_token	= params[:token].to_str
+			user_id 		= params[:user_id].to_str
+			dev_id			= params[:dev_id].to_str
+			oauth_str 		= 'OAuth="'+access_token+'"'
+			headers = { 
+		        'User-Agent': 'happn/19.12.0 android/16',
+				'Accept-Language': 'en-US;q=1,en;q=0.75',
+				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+				'Authorization': oauth_str,
+				'Host': 'api.happn.fr',
+				'X-Happn-DID': dev_id
+		    }
+
+	      	options = {	
+	      		
 			}	
-		    response = self.class.post(base_uri.to_str,
-		    	:body=> options.to_json,
-		      	:headers => headers)	    
-		    if response.success?
-		      	@PurchaseResult = [{"success": true}]
-		    else
-			  	@PurchaseResult = [{"success": false}]
-			end
-		end    
-	end
 
-	def report
-		#Report
-		#    IN      fbToken : FaceBook Token
-		#            sessionid: CMB Session ID
-		#    OUT     
-		#	         jsonObj : Report Result
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
-			@ReportResult = [{"success": false, "jsonObj": "No Authenticated"}]
-		else
-			fbToken 		= params[:fbToken].to_str
-			sessionid 		= params[:sessionid].to_str
-			base_uri 		= 'https://api.coffeemeetsbagel.com/report/4'		
-			my_cookie = "sessionid="+sessionid
-	      	headers = {
-		    	'AppStore-Version': '3.4.1.779',
-				'App-Version': '779',
-				'Client': 'Android',
-				'Content-Type': 'application/json',
-				'Facebook-Auth-Token': fbToken,
-				'Cookie': my_cookie	
-	      	}
-	      	options = {}	
+			base_uri 		= 'https://api.happn.fr/api/users/'+user_id+'?fields=matching_preferences,notification_settings'
+			
+			
 		    response = self.class.get(base_uri.to_str,
-		    	:body=> options.to_json,
-		      	:headers => headers)	    
+		    	:body=> options,
+		      	:headers => headers)
 		    if response.success?
-		      	@ReportResult = [{"success": true, jsonObj:response}]
-		    else
-			  	@ReportResult = [{"success": false, jsonObj:response}]
-			end	   
-		end   
+		      	@happnInfo = [{"Result": "success","jsonObj": response}]
+			else
+			  	@happnInfo = [{"Result": "failed","jsonObj": response}]
+			end	  
+		end
 	end
 end

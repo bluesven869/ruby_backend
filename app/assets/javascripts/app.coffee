@@ -46,7 +46,6 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
     $scope.fblogin_flag = false
     $scope.login_flag = false
     #if(not $scope.fbToken?)
-    console.log $routeParams
 
     # assign token fetched manually
     # $scope.fbToken = 'EAAD4bKUPbR8BAJhN2LdnSbEgWuoo3hUDlQD7b2Ypg6h3lhYYodKswOvvN5IWQJz9gsBN1wIrGJbH3Ysrg2K920wnhfAIxkSzIA17KxNesOvCpVl7026ZAF43wFwcEG2Ahzk11fJ99FxX9j85mZAiFZBhiNZClG456n6Wq8y6YFbRK9ODII2HGj4OpRiy2hpMZCvdIqsV8INMorQdSPE1p'
@@ -512,7 +511,7 @@ controllers.controller("HappenController", [ '$scope', '$routeParams', '$locatio
     $scope.user_client_id       = "FUE-idSEP-f7AqCyuMcPr2K-1iCIU_YlvK-M-im3c"
     $scope.user_client_secret   = "brGoHSwZsPjJ-lBk0HqEXVtb3UFu-y5l_JcOjD-Ekv"
     $scope.user_android_id      = "a363d47528091227"
-
+    $scope.user_fbToken_for_happn = "EAADg6b3wfpUBAKA6ofUy2effLZABBN4V4ZCViqK5qF4FNZBtYBz10B7jU09ZBbRCG03130ZAnpxXTYiDBof2x1JaoiQs173vBFEmlbtivX80tCyo4Gkv0ZADEZCueLZBzZCp77DD0mDSmDl3CAJeNmSwF4MydPXIwxDJZAZCYmkUqtZAsQZDZD"
     $scope.loginFacebook = (network)->
       
       # config = headers: 'User-Agent': 'Mozilla/5.0 (Linux; Android 4.4.4; Samsung Galaxy S4 - 4.4.4 - API 19 - 1080x1920 Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36', 'X-Requested-With': 'com.coffeemeetsbagel'   #, 'Client': 'Android', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type, Authorization', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'
@@ -627,23 +626,234 @@ controllers.controller("HappenController", [ '$scope', '$routeParams', '$locatio
         $scope.profile_first_flag = false
       )
     $scope.RefreshToken = ->
-      refreshtoken = $scope.happnInfo.refresh_token
+      refreshtoken = $scope.happnInfo.refresh_token      
+      
+      if($scope.happnInfo.device == undefined)
+        alert "Please Register Device."
+        return
+      devid = $scope.happnInfo.device.id
+      if(refreshtoken == undefined )
+        alert "Please Happn Login with Facebook."
+        return
+      $scope.refresh_token_flag = true
+      Happn = $resource('/happn/refresh_token', { format: 'json' })
+      
+      Happn.query(refresh_token: refreshtoken, dev_id: devid, client_id: $scope.clientIDForHappn, client_secret: $scope.clientSecretForHappn, (results) -> 
+        
+        $scope.happnInfo.access_token = results[0].jsonObj.access_token
+        $scope.happnInfo.refresh_token = results[0].jsonObj.refresh_token
+        $scope.refresh_token_flag = false
+      )
+    $scope.DiscoverNewProspect = ->
+      access_token = $scope.happnInfo.access_token
       userid = $scope.happnInfo.user_id
       
       if($scope.happnInfo.device == undefined)
         alert "Please Register Device."
         return
       devid = $scope.happnInfo.device.id
-      if(refreshtoken == undefined || userid == undefined )
+      if(access_token == undefined || userid == undefined )
         alert "Please Happn Login with Facebook."
         return
-      $scope.refresh_token_flag = true
-      Happn = $resource('/happn/refresh_token', { format: 'json' })
+      $scope.discover_prospect_flag = true
+      Happn = $resource('/happn/discover_new_prospects', { format: 'json' })
       
-      Happn.query(refresh_token: refreshtoken, user_id: userid, dev_id: devid, client_id: $scope.clientIDForHappn, client_secret: $scope.clientSecretForHappn, (results) -> 
-        
-        $scope.happnInfo.access_token = results[0].jsonObj.access_token
-        $scope.happnInfo.refresh_token = results[0].jsonObj.refresh_token
-        $scope.refresh_token_flag = false
+      Happn.query(token: access_token, user_id: userid, dev_id: devid, (results) ->         
+        $scope.happnInfo.new_prospects = results[0].jsonObj;
+        $scope.discover_prospect_flag = false
+      )
+
+    $scope.GetChatList = ->
+      access_token = $scope.happnInfo.access_token
+      userid = $scope.happnInfo.user_id
+      
+      if($scope.happnInfo.device == undefined)
+        alert "Please Register Device."
+        return
+      devid = $scope.happnInfo.device.id
+      if(access_token == undefined || userid == undefined )
+        alert "Please Happn Login with Facebook."
+        return
+      $scope.chat_list_flag = true
+      Happn = $resource('/happn/get_list_of_chats', { format: 'json' })
+      
+      Happn.query(token: access_token, user_id: userid, dev_id: devid, (results) ->         
+        $scope.happnInfo.chat_list = results[0].jsonObj;
+        $scope.chat_list_flag = false
+      )
+
+    $scope.GetChatMsg = ->
+      if($scope.msg_id == undefined)
+        alert "Please input MessageID"
+        return
+      access_token = $scope.happnInfo.access_token
+      
+      if($scope.happnInfo.device == undefined)
+        alert "Please Register Device."
+        return
+      devid = $scope.happnInfo.device.id
+      if(access_token == undefined  )
+        alert "Please Happn Login with Facebook."
+        return
+      $scope.chat_msg_flag = true
+      Happn = $resource('/happn/get_conversation_msg', { format: 'json' })
+      
+      Happn.query(token: access_token, dev_id: devid,msg_id: $scope.msg_id, (results) ->         
+        $scope.happnInfo.messages = results[0].jsonObj
+        $scope.chat_msg_flag = false
+      )
+
+    $scope.SendChatMsg = ->
+      if($scope.msg_id == undefined)
+        alert "Please input MessageID"
+        return
+      if($scope.msg == undefined)
+        alert "Please input Message"
+        return
+      access_token = $scope.happnInfo.access_token
+      
+      if($scope.happnInfo.device == undefined)
+        alert "Please Register Device."
+        return
+      devid = $scope.happnInfo.device.id
+      if(access_token == undefined  )
+        alert "Please Happn Login with Facebook."
+        return
+      $scope.send_msg_flag = true
+      Happn = $resource('/happn/send_conversation_msg', { format: 'json' })
+      
+      Happn.query(token: access_token,  dev_id: devid,msg_id: $scope.msg_id,msg: $scope.msg, (results) ->         
+        $scope.happnInfo.send_msg_result = results[0].jsonObj
+        $scope.send_msg_flag = false
+      )
+
+    $scope.getUserProfile = ->
+      if($scope.other_user_id == undefined)
+        alert "Please input Partner ID"
+        return
+      access_token = $scope.happnInfo.access_token
+      
+      if($scope.happnInfo.device == undefined)
+        alert "Please Register Device."
+        return
+      devid = $scope.happnInfo.device.id
+      if(access_token == undefined )
+        alert "Please Happn Login with Facebook."
+        return
+      $scope.get_profile_flag = true
+      Happn = $resource('/happn/get_user_profile', { format: 'json' })
+      
+      Happn.query(token: access_token, dev_id: devid,other_user_id: $scope.other_user_id, (results) ->         
+        $scope.other_user_profile = results[0].jsonObj
+        $scope.get_profile_flag = false
+      )
+
+    $scope.LikeSomebody = ->
+      if($scope.partner_id == undefined)
+        alert "Please input Partner ID"
+        return
+      access_token = $scope.happnInfo.access_token
+      userid = $scope.happnInfo.user_id
+      
+      if($scope.happnInfo.device == undefined)
+        alert "Please Register Device."
+        return
+      devid = $scope.happnInfo.device.id
+      if(access_token == undefined || userid == undefined )
+        alert "Please Happn Login with Facebook."
+        return
+      $scope.somebody_flag = true
+      Happn = $resource('/happn/like_somebody', { format: 'json' })
+      
+      Happn.query(token: access_token, dev_id: devid, user_id: userid,other_user_id: $scope.partner_id, (results) ->  
+        console.log results       
+        $scope.somebody_msg = results[0].jsonObj
+        $scope.somebody_flag = false
+      )
+
+    $scope.CharmSomebody = ->
+      if($scope.partner_id == undefined)
+        alert "Please input Partner ID"
+        return
+      access_token = $scope.happnInfo.access_token
+      userid = $scope.happnInfo.user_id
+      
+      if($scope.happnInfo.device == undefined)
+        alert "Please Register Device."
+        return
+      devid = $scope.happnInfo.device.id
+      if(access_token == undefined || userid == undefined )
+        alert "Please Happn Login with Facebook."
+        return
+      $scope.somebody_flag = true
+      Happn = $resource('/happn/charm_somebody', { format: 'json' })
+      
+      Happn.query(token: access_token, dev_id: devid, user_id: userid,other_user_id: $scope.partner_id, (results) ->         
+        $scope.somebody_msg = results[0].jsonObj
+        $scope.somebody_flag = false
+      )
+
+    $scope.RejectSomebody = ->
+      if($scope.partner_id == undefined)
+        alert "Please input Partner ID"
+        return
+      access_token = $scope.happnInfo.access_token
+      userid = $scope.happnInfo.user_id
+      
+      if($scope.happnInfo.device == undefined)
+        alert "Please Register Device."
+        return
+      devid = $scope.happnInfo.device.id
+      if(access_token == undefined || userid == undefined )
+        alert "Please Happn Login with Facebook."
+        return
+      $scope.somebody_flag = true
+      Happn = $resource('/happn/reject_somebody', { format: 'json' })
+      
+      Happn.query(token: access_token, dev_id: devid, user_id: userid,other_user_id: $scope.partner_id, (results) ->         
+        $scope.somebody_msg = results[0].jsonObj
+        $scope.somebody_flag = false
+      )
+
+    $scope.UpdateUserProfile = ->      
+      access_token = $scope.happnInfo.access_token
+      userid = $scope.happnInfo.user_id      
+      if($scope.happnInfo.device == undefined)
+        alert "Please Register Device."
+        return
+      devid = $scope.happnInfo.device.id
+      if(access_token == undefined || userid == undefined )
+        alert "Please Happn Login with Facebook."
+        return
+      $scope.update_user_flag = true
+      Happn = $resource('/happn/update_profile', { format: 'json' })
+      #Job, Workplace, School and About myself
+      user_info = {}
+      user_info.job       = $scope.job
+      user_info.workplace = $scope.workplace
+      user_info.school    = $scope.school
+      user_info.about     = $scope.about
+      Happn.query(token: access_token, dev_id: devid, user_id: userid,u_info: user_info, (results) ->         
+        $scope.update_msg = results[0].jsonObj
+        $scope.update_user_flag = false
+      )
+
+    $scope.GetUserSetting = ->      
+      access_token = $scope.happnInfo.access_token
+      userid = $scope.happnInfo.user_id      
+      if($scope.happnInfo.device == undefined)
+        alert "Please Register Device."
+        return
+      devid = $scope.happnInfo.device.id
+      if(access_token == undefined || userid == undefined )
+        alert "Please Happn Login with Facebook."
+        return
+      $scope.get_user_setting_flag = true
+      Happn = $resource('/happn/get_user_setting', { format: 'json' })
+      #Job, Workplace, School and About myself
+      
+      Happn.query(token: access_token, dev_id: devid, user_id: userid, (results) ->         
+        $scope.user_setting = results[0].jsonObj
+        $scope.get_user_setting_flag = false
       )
   ])
