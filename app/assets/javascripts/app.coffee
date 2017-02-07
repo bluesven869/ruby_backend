@@ -850,9 +850,9 @@ controllers.controller("HappenController", [ '$scope', '$routeParams', '$locatio
         return
       $scope.get_user_setting_flag = true
       Happn = $resource('/happn/get_user_setting', { format: 'json' })
-      #Job, Workplace, School and About myself
       
       Happn.query(token: access_token, dev_id: devid, user_id: userid, (results) ->         
+        console.log results
         $scope.user_setting = results[0].jsonObj
         $scope.get_user_setting_flag = false
       )

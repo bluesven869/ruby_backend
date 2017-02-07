@@ -586,7 +586,7 @@ class HappnController < ApplicationController
 			headers = { 
 		        'User-Agent': 'happn/19.12.0 android/16',
 				'Accept-Language': 'en-US;q=1,en;q=0.75',
-				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+				'Content-Type': 'application/json; charset=UTF-8',
 				'Authorization': oauth_str,
 				'Host': 'api.happn.fr',
 				'X-Happn-DID': dev_id

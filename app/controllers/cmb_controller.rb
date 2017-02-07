@@ -9,7 +9,6 @@ class CmbController < ApplicationController
 		# Login to CoffeeMeetBagel		
 		# IN    fbToken : FaceBook Token
 		# Return sessionid
-		
 		if (not params.has_key?(:fbToken))
 			@cmbInfo = [{"loginResult": "Token Error", "sessionid":"NoSession","jsonObj": "Token"}]
 		else
@@ -32,6 +31,8 @@ class CmbController < ApplicationController
 				:headers => headers
 			)
 		    if response.success?
+		      # when I get Response as successfully.
+		      # this statement return value
 		      resHeader = response.headers['set-cookie']
 		      splittedStr = resHeader.split(/[;]/)
 		      splittedStr = splittedStr[3].split(/[=]/)

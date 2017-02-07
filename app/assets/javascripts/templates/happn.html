@@ -192,4 +192,15 @@
       <span class='my_info'>{{user_setting}}</span>
     </div>   
   </div>
+
+  <div class="general_div completed">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="GetUserSetting()">Set User Setting</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="get_user_setting_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <div>
+    
+      <span class='my_info'>{{user_setting}}</span>
+    </div>   
+  </div>
 </div>
