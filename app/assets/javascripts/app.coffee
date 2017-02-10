@@ -575,30 +575,19 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
 
     $scope.list_Chat = ->
       
-      if($scope.cmb_chat_step < 2)
-        alert "Please click login chat."
+      if(not $scope.fbToken?)
+        alert "Please Click 'Login with Facebook'."
         return
-      tmp_str = "/chats/"+$scope.cmb_chat_my_id+"/messages"
-      console.log tmp_str
-      $scope.list_chat_req = {  
-           "d": {  
-              "b": {  
-                 "h": "",
-                 "q": {  
-                    "vf": "r",
-                    "l": 30
-                 },
-                 "t": 1,
-                 "p": tmp_str
-              },
-              "r": 2,
-              "a": "q"
-           },
-           "t": "d"
-        }
-      list_req = JSON.stringify($scope.list_chat_req)            
-      $scope.cmb_chat_step = 3         # Get List
-      $scope.webSocket.send list_req  # send firebase_token to firebase server. 
+      #$file_name 
+      Cmb = $resource('/cmb/get_chat_list', { format: 'json' })      
+      
+      $scope.chat_list_flag = true
+      $scope.ChatList = []
+      Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
+        $scope.ChatList = results
+        $scope.chat_list_flag = false
+        console.log 'Report'
+      )    
   ])
 
 controllers.controller("HappenController", [ '$scope', '$routeParams', '$location', '$facebook', '$http', '$resource', 'Upload'
