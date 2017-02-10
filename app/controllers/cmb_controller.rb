@@ -338,8 +338,7 @@ class CmbController < ApplicationController
 			@BaglesInfo = [{"success": false, "jsonObj": "Params Error"}]
 		else
 			fbToken = params[:fbToken].to_str
-			sessionid = params[:sessionid].to_str		
-			@bagel 	= JSON.parse params[:bagel];
+			sessionid = params[:sessionid].to_str					
 			base_uri = 'https://api.coffeemeetsbagel.com/bagels'		
 			my_cookie = "sessionid="+sessionid
 	      	headers = {
