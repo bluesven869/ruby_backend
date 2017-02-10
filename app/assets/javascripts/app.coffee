@@ -587,7 +587,9 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         chat_list = results[0].jsonObj.results
         $scope.chat_list_flag = false
         for d,i in chat_list          
-          $scope.ChatList.push d.profile_id
+          if(d.couple_id == null) 
+            continue
+          $scope.ChatList.push d.couple_id
         console.log $scope.ChatList.length
       )   
     $scope.get_chat_message = ->
@@ -597,7 +599,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       if( not $scope.msg_id?)
         alert "Please input Partner ID."
         return
-      tmp_url = "/chats/"+$scope.cmb_chat_my_id+"/details/"+$scope.msg_id
+      tmp_url = "/chats/"+$scope.msg_id+"/details/"+$scope.cmb_chat_my_id
       $scope.get_msg_packet = {  
          "d": {  
             "b": {  
