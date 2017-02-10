@@ -105,6 +105,24 @@
 
   <!-- TEST Components -->
 
+  <div class="general_div">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="login_Chat()">Chat Login</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="chat_login_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <section class='ChatResult' ng-if="!chat_login_flag && ChatResult">
+      <span class='my_info'>{{ChatResult}}</span>
+    </section>
+  </div>
+  <div class="general_div">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="list_Chat()">Get Chat List</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="chat_list_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <section class='ChatResult' ng-if="!chat_list_flag && ChatList">
+      <span class='my_info'>{{ChatList}}</span>
+    </section>
+  </div>
   <div class="general_div unverified">
     <form name='myForm'>
       <section>
@@ -284,13 +302,4 @@
     </section>
   </div>
 
-  <div class="general_div">
-    <section>
-      <button type="button" class="btn btn-primary btn-large" data-ng-click="login_ChatMessage()">Chat Messages</button>
-      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="chat_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-    </section>
-    <section class='report_section' ng-if="!chat_flag && ReportResult">
-      <span class='my_info'>{{ReportResult}}</span>
-    </section>
-  </div>
 </div>
