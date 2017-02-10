@@ -334,7 +334,7 @@ class CmbController < ApplicationController
 		#    OUT     
 		#	         jsonObj : Bagels History before cursor_after 
 
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)))
+		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
 			@BaglesInfo = [{"success": false, "jsonObj": "Params Error"}]
 		else
 			fbToken = params[:fbToken].to_str
@@ -655,8 +655,5 @@ class CmbController < ApplicationController
 			  ws.send STDIN.gets.strip
 			end
 		end
-	end
-	def get_chat_list
-		ws.send 
 	end
 end

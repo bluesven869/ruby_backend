@@ -586,7 +586,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
         $scope.ChatList = results
         $scope.chat_list_flag = false
-        console.log 'Report'
+        console.log 'Chat List'
       )    
   ])
 
