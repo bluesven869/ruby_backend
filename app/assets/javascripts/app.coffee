@@ -45,7 +45,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
     
     $scope.fblogin_flag = false
     $scope.login_flag = false
-    $scope.fbToken = "EAAD4bKUPbR8BACVlh3vsLlZAdbFBj5inLtHLFz2QZCPJDxZBmg8V6vH5LSjex1u9LebAZB5JIBdT5XBmmctSGpacZB3GjoxvVEMjpxF0XE1UYw6wTuLWv0nTHWAuYznczK7YkFa1CIQ1UwrcsX5WomTWQ1uXjZCr9tA5wWekMotZBfjSe83EkcZC"
+    $scope.fbToken = "EAAD4bKUPbR8BAOIwe7pwA7BWYtjmNEb8gKgW7ibTBt2c6WJ23U3X0rmoxIMc7C8C2Tfz7LXyXgOR8bMjeY4gh2ynLteX3ivzlw2UZBwG1mzc2p2ClwEGSOkxYtaRRvbCUnGaXW2ovPSzg2Vf5pvCIhDQ60l4s51CYDQ0NeOvMGodKZBVrA"
     $scope.cmb_chat_step = 0  # 0: NONE
                               # 1: Connected
                               # 2: Authorized
@@ -594,6 +594,24 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       if( $scope.cmb_chat_step < 2)
         alert "Please Click 'Chat Login'."
         return
+      if( not $scope.msg_id?)
+        alert "Please input Partner ID."
+        return
+      tmp_url = "/chats/"+$scope.cmb_chat_my_id+"/details/"+$scope.msg_id
+      $scope.get_msg_packet = {  
+         "d": {  
+            "b": {  
+               "h": "",
+               "p": tmp_url
+            },
+            "r": 3,
+            "a": "q"
+         },
+         "t": "d"
+      }
+      get_msg_data = JSON.stringify($scope.get_msg_packet)            
+      $scope.cmb_chat_step = 3         # connected
+      $scope.webSocket.send get_msg_data  # send firebase_token to firebase server. 
   ])
 
 controllers.controller("HappenController", [ '$scope', '$routeParams', '$location', '$facebook', '$http', '$resource', 'Upload'
