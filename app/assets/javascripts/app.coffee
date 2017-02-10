@@ -45,6 +45,12 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
     
     $scope.fblogin_flag = false
     $scope.login_flag = false
+    $scope.fbToken = "EAAD4bKUPbR8BACVlh3vsLlZAdbFBj5inLtHLFz2QZCPJDxZBmg8V6vH5LSjex1u9LebAZB5JIBdT5XBmmctSGpacZB3GjoxvVEMjpxF0XE1UYw6wTuLWv0nTHWAuYznczK7YkFa1CIQ1UwrcsX5WomTWQ1uXjZCr9tA5wWekMotZBfjSe83EkcZC"
+    $scope.cmb_chat_step = 0  # 0: NONE
+                              # 1: Connected
+                              # 2: Authorized
+    $scope.cmb_chat_my_id = 0  # my_chat_profile_id
+
     #if(not $scope.fbToken?)
 
     # assign token fetched manually
@@ -499,6 +505,100 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         $scope.tinderInfo = results        
         $scope.tinder_login_flag = false
       )
+    $scope.login_Chat = ->
+      if(not $scope.sessionid?)
+        alert "Please Click 'Login with Facebook'."
+        return
+      #cmb = $resource('/cmb/chat_message', { format: 'json' })
+      #cmb.query(firebaseToken: $scope.firebaseToken, (results) -> 
+      #  $scope.tinderInfo = results        
+      #  $scope.tinder_login_flag = false
+      #)
+      if($scope.cmb_chat_step >= 2)
+        alert "You are authorized yet."
+        return
+      $scope.chat_login_flag = true
+      
+      Cmb = $resource('/cmb/get_profile', { format: 'json' })
+      Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
+        $scope.profileInfo = results        
+        $scope.userid = results[0].jsonObj.id
+        $scope.user_language_code = results[0].jsonObj.language_code
+        $scope.user_gender = results[0].jsonObj.gender
+        $scope.user_name = results[0].jsonObj.full_name
+        $scope.user_email = results[0].jsonObj.user__email        
+        $scope.user_criteria_gender = results[0].jsonObj.criteria__gender        
+        $scope.user_birthday = new Date(results[0].jsonObj.birthday)
+        $scope.user_location = results[0].jsonObj.location
+        $scope.firebaseToken = results[0].jsonObj.firebase_token
+        
+        $scope.authData = {  
+             "d":{  
+                "b":{  
+                   "cred": $scope.firebaseToken
+                },
+                "r":0,
+                "a":"auth"
+             },
+             "t":"d"
+          }
+        $scope.webSocket = new WebSocket('wss://s-usc1c-nss-135.firebaseio.com/.ws?ns=cmb-prod&v=5')
+        
+        $scope.webSocket.onopen = ->
+          #$scope.webSocket.send $scope.authData
+          # Send the message 'Ping' to the server
+          return
+
+        # Log errors
+
+        $scope.webSocket.onerror = (error) ->
+          console.log 'WebSocket Error ' + error
+          return
+
+        # Log messages from the server
+        $scope.webSocket.onmessage = (e) ->
+          data = JSON.parse(e.data)          
+          if($scope.cmb_chat_step == 0)  
+            auth_data = JSON.stringify($scope.authData)            
+            $scope.cmb_chat_step = 1         # connected
+            $scope.webSocket.send auth_data  # send firebase_token to firebase server.  
+          else if ($scope.cmb_chat_step == 1)
+            $scope.cmb_chat_step = 2
+            $scope.cmb_chat_my_id = data.d.b.d.auth.profile_id
+            $scope.chat_login_flag = false
+            $scope.ChatResult = data   
+            console.log "my_id : " + $scope.cmb_chat_my_id
+          else if ($scope.cmb_chat_step == 3)
+            console.log data
+          return
+      )
+
+    $scope.list_Chat = ->
+      
+      if($scope.cmb_chat_step < 2)
+        alert "Please click login chat."
+        return
+      tmp_str = "/chats/"+$scope.cmb_chat_my_id+"/messages"
+      console.log tmp_str
+      $scope.list_chat_req = {  
+           "d": {  
+              "b": {  
+                 "h": "",
+                 "q": {  
+                    "vf": "r",
+                    "l": 30
+                 },
+                 "t": 1,
+                 "p": tmp_str
+              },
+              "r": 2,
+              "a": "q"
+           },
+           "t": "d"
+        }
+      list_req = JSON.stringify($scope.list_chat_req)            
+      $scope.cmb_chat_step = 3         # Get List
+      $scope.webSocket.send list_req  # send firebase_token to firebase server. 
   ])
 
 controllers.controller("HappenController", [ '$scope', '$routeParams', '$location', '$facebook', '$http', '$resource', 'Upload'
