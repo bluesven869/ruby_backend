@@ -584,10 +584,16 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       $scope.chat_list_flag = true
       $scope.ChatList = []
       Cmb.query(fbToken: $scope.fbToken, sessionid: $scope.sessionid, (results) -> 
-        $scope.ChatList = results
+        chat_list = results[0].jsonObj.results
         $scope.chat_list_flag = false
-        console.log 'Chat List'
-      )    
+        for d,i in chat_list          
+          $scope.ChatList.push d.profile_id
+        console.log $scope.ChatList.length
+      )   
+    $scope.get_chat_message = ->
+      if( $scope.cmb_chat_step < 2)
+        alert "Please Click 'Chat Login'."
+        return
   ])
 
 controllers.controller("HappenController", [ '$scope', '$routeParams', '$location', '$facebook', '$http', '$resource', 'Upload'
