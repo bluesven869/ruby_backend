@@ -1,1 +1,1 @@
-json.array! @profileInfo, partial: 'cmbInfoElement', as: :cmbInfoElement
+json.array! @BaglesList, partial: 'bagelsInfoElement', as: :bagelsInfoElement
