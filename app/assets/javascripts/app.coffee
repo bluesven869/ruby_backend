@@ -569,7 +569,9 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
             $scope.ChatResult = data   
             console.log "my_id : " + $scope.cmb_chat_my_id
           else if ($scope.cmb_chat_step == 3)
-            console.log data
+            $scope.LastMsg = data 
+          else if ($scope.cmb_chat_step == 4)
+            $scope.ChatMsg = data 
           return
       )
 
@@ -592,7 +594,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
           $scope.ChatList.push d.couple_id
         console.log $scope.ChatList.length
       )   
-    $scope.get_chat_message = ->
+    $scope.get_last_message = ->
       if( $scope.cmb_chat_step < 2)
         alert "Please Click 'Chat Login'."
         return
@@ -600,7 +602,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         alert "Please input Partner ID."
         return
       tmp_url = "/chats/"+$scope.msg_id+"/details/"+$scope.cmb_chat_my_id
-      $scope.get_msg_packet = {  
+      $scope.get_last_msg_packet = {  
          "d": {  
             "b": {  
                "h": "",
@@ -611,8 +613,35 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
          },
          "t": "d"
       }
-      get_msg_data = JSON.stringify($scope.get_msg_packet)            
+      get_last_msg_data = JSON.stringify($scope.get_last_msg_packet)            
       $scope.cmb_chat_step = 3         # connected
+      $scope.webSocket.send get_last_msg_data  # send firebase_token to firebase server. 
+    $scope.get_chat_message = ->
+      if( $scope.cmb_chat_step < 2)
+        alert "Please Click 'Chat Login'."
+        return
+      if( not $scope.partner_id?)
+        alert "Please input Partner ID."
+        return
+      tmp_url = "/chats/"+$scope.partner_id+"/messagess"
+      $scope.get_msg_packet = {  
+         "d":{  
+            "b":{  
+               "h":"",
+               "q":{  
+                  "vf":"r",
+                  "l":30
+               },
+               "t":1,
+               "p":tmp_url
+            },
+            "r":2,
+            "a":"q"
+         },
+         "t":"d"
+      }
+      get_msg_data = JSON.stringify($scope.get_msg_packet)            
+      $scope.cmb_chat_step = 4         # connected
       $scope.webSocket.send get_msg_data  # send firebase_token to firebase server. 
   ])
 
