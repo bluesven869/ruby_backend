@@ -1,9 +1,9 @@
 require 'httparty'
 require 'json'
+require 'websocket-client-simple'
 class CmbController < ApplicationController
 	include HTTParty
 	debug_output $stdout
-	
 
 	def index
 		# Login to CoffeeMeetBagel		
@@ -171,7 +171,7 @@ class CmbController < ApplicationController
 		#  Return
 		#         jsonObj  : User Profile Info
 		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
-			@profileInfo = [{"loginResult": "Token Error", "sessionid":"NoSession","jsonObj": "Token"}]
+			@profileInfo = [{"loginResult": "Token Error", "sessionid": "NoSession","jsonObj": "Token"}]
 		else
 			fbToken = params[:fbToken].to_str
 			sessionid = params[:sessionid].to_str
@@ -193,7 +193,7 @@ class CmbController < ApplicationController
 	      	  :body=> options.to_json,
 	      	  :headers => headers)
 		  	if response.success?
-		  	  @profileInfo = [{"loginResult": "success", "sessionid":sessionid,"jsonObj": response}]
+		  	  @profileInfo = [{"loginResult": "success", "sessionid": sessionid,"jsonObj": response}]
 		  	else
 			  @profileInfo = [{"loginResult": "failed", "sessionid": sessionid, "jsonObj": response}]
 			end	 
@@ -315,6 +315,45 @@ class CmbController < ApplicationController
 		    	'prefetch': true,
 		    	'cursor_after': @bagel["cursor_after"],
 		    	'updated_after': @bagel["hex_id"],
+			}	
+		    response = self.class.get(base_uri.to_str,
+		    	:body=> options.to_json,
+		      	:headers => headers)
+		    if response.success?
+		      	@BaglesList = [{"success": true, "jsonObj": response}]
+		    else		  	
+			  	@BaglesList = [{"success": false, "jsonObj": response}]
+			end	  
+		end
+	end
+
+	def get_chat_list
+		# Get Chat List
+		#    IN      fbToken : FaceBook Token
+		#            sessionid: CMB Session ID		
+		#    OUT     
+		#	         jsonObj : Bagels History before cursor_after 
+
+		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)))
+			@BaglesInfo = [{"success": false, "jsonObj": "Params Error"}]
+		else
+			fbToken = params[:fbToken].to_str
+			sessionid = params[:sessionid].to_str		
+			@bagel 	= JSON.parse params[:bagel];
+			base_uri = 'https://api.coffeemeetsbagel.com/bagels'		
+			my_cookie = "sessionid="+sessionid
+	      	headers = {
+		    	'AppStore-Version': '3.4.1.779',
+				'App-Version': '779',
+				'Client': 'Android',
+				'Content-Type': 'application/json',
+				'Facebook-Auth-Token': fbToken,
+				'Cookie': my_cookie	
+	      	}	      	 
+	      	options = {	    	
+		    	'embed': 'profile',
+		    	'prefetch': true,
+		    	'couples_only': true
 			}	
 		    response = self.class.get(base_uri.to_str,
 		    	:body=> options.to_json,
@@ -575,5 +614,49 @@ class CmbController < ApplicationController
 			  	@ReportResult = [{"success": false, jsonObj:response}]
 			end	   
 		end   
+	end
+	def chat_message
+		#Report
+		#    IN      firebaseToken : FireBase Token
+		#    OUT     
+		#	         jsonObj : Report Result
+		if (not params.has_key?(:firebaseToken))
+			@ReportResult = [{"success": false, "jsonObj": "No Firbase Token"}]
+		else
+			ws = WebSocket::Client::Simple.connect 'wss://s-usc1c-nss-135.firebaseio.com/.ws?ns=cmb-prod&v=5'
+			firebaseToken = params[:firebaseToken].to_str
+			ws.on :message do |msg|
+	  			puts msg.data
+	  		end
+	  		ws.on :open do
+	  			d = {
+					d: {
+						b: {
+							cred: firebaseToken
+						},
+						r: 0,
+						a: "auth"
+					},
+					t: "d"
+				}
+				puts d
+			 	ws.send d
+			end
+			ws.on :close do |e|
+			  p e
+			  exit 1
+			end
+
+			ws.on :error do |e|
+			  p e
+			end
+
+			loop do
+			  ws.send STDIN.gets.strip
+			end
+		end
+	end
+	def get_chat_list
+		ws.send 
 	end
 end
