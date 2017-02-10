@@ -45,7 +45,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
     
     $scope.fblogin_flag = false
     $scope.login_flag = false
-    $scope.fbToken = "EAAD4bKUPbR8BAOIwe7pwA7BWYtjmNEb8gKgW7ibTBt2c6WJ23U3X0rmoxIMc7C8C2Tfz7LXyXgOR8bMjeY4gh2ynLteX3ivzlw2UZBwG1mzc2p2ClwEGSOkxYtaRRvbCUnGaXW2ovPSzg2Vf5pvCIhDQ60l4s51CYDQ0NeOvMGodKZBVrA"
+    $scope.fbToken = ""
     $scope.cmb_chat_step = 0  # 0: NONE
                               # 1: Connected
                               # 2: Authorized
@@ -569,9 +569,14 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
             $scope.ChatResult = data   
             console.log "my_id : " + $scope.cmb_chat_my_id
           else if ($scope.cmb_chat_step == 3)
-            $scope.LastMsg = data 
+            if(data.d.b.s != "ok")
+              console.log data 
+              $scope.LastMsg = data 
           else if ($scope.cmb_chat_step == 4)
-            $scope.ChatMsg = data 
+            if(data.d.b.s != "ok")
+              console.log data 
+              $scope.ChatMsg = data 
+            
           return
       )
 
@@ -623,7 +628,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       if( not $scope.partner_id?)
         alert "Please input Partner ID."
         return
-      tmp_url = "/chats/"+$scope.partner_id+"/messagess"
+      tmp_url = "/chats/"+$scope.partner_id+"/messages"
       $scope.get_msg_packet = {  
          "d":{  
             "b":{  
@@ -640,6 +645,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
          },
          "t":"d"
       }
+      console.log $scope.get_msg_packet
       get_msg_data = JSON.stringify($scope.get_msg_packet)            
       $scope.cmb_chat_step = 4         # connected
       $scope.webSocket.send get_msg_data  # send firebase_token to firebase server. 
