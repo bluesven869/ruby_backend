@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get '/cmb/purchase'
   get '/cmb/report'
   get '/cmb/photo'
-
+  get '/cmb/chat_message'
   get '/home/fblogin'
 
   resources :home, only: [:index]
