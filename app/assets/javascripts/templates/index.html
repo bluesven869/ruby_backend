@@ -123,6 +123,16 @@
       <span class='my_info'>{{ChatList}}</span>
     </section>
   </div>
+  <div class="general_div">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="get_chat_message()">Get Chat Message</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="chat_list_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <div>
+      <label>MessageID</label><input ng_model="msg_id" placeholder="<partner_id>" />
+      <span class='my_info'>{{MsgResult}}</span>
+    </div>   
+  </div>
   <div class="general_div unverified">
     <form name='myForm'>
       <section>
