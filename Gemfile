@@ -61,3 +61,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rails_12factor', group: :production
 gem 'angularjs-file-upload-rails', '~> 2.2.0'
+gem 'fcm'
+gem 'websocket-client-simple'
