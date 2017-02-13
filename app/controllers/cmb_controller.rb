@@ -326,44 +326,6 @@ class CmbController < ApplicationController
 			end	  
 		end
 	end
-
-	def get_chat_list
-		# Get Chat List
-		#    IN      fbToken : FaceBook Token
-		#            sessionid: CMB Session ID		
-		#    OUT     
-		#	         jsonObj : Bagels History before cursor_after 
-
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))
-			@BaglesInfo = [{"success": false, "jsonObj": "Params Error"}]
-		else
-			fbToken = params[:fbToken].to_str
-			sessionid = params[:sessionid].to_str					
-			base_uri = 'https://api.coffeemeetsbagel.com/bagels'		
-			my_cookie = "sessionid="+sessionid
-	      	headers = {
-		    	'AppStore-Version': '3.4.1.779',
-				'App-Version': '779',
-				'Client': 'Android',
-				'Content-Type': 'application/json',
-				'Facebook-Auth-Token': fbToken,
-				'Cookie': my_cookie	
-	      	}	      	 
-	      	options = {	    	
-		    	'embed': 'profile',
-		    	'prefetch': true,
-		    	'couples_only': true
-			}	
-		    response = self.class.get(base_uri.to_str,
-		    	:body=> options.to_json,
-		      	:headers => headers)
-		    if response.success?
-		      	@BaglesList = [{"success": true, "jsonObj": response}]
-		    else		  	
-			  	@BaglesList = [{"success": false, "jsonObj": response}]
-			end	  
-		end
-	end
 	def send_batch
 		# Batch Command
 		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid))# || (not params.has_key?(:hex_id))
@@ -654,5 +616,8 @@ class CmbController < ApplicationController
 			  ws.send STDIN.gets.strip
 			end
 		end
+	end
+	def get_chat_list
+		ws.send 
 	end
 end

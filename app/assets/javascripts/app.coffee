@@ -621,6 +621,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       get_last_msg_data = JSON.stringify($scope.get_last_msg_packet)            
       $scope.cmb_chat_step = 3         # connected
       $scope.webSocket.send get_last_msg_data  # send firebase_token to firebase server. 
+      
     $scope.get_chat_message = ->
       if( $scope.cmb_chat_step < 2)
         alert "Please Click 'Chat Login'."
