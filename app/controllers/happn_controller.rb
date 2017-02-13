@@ -148,11 +148,11 @@ class HappnController < ApplicationController
 			client_id		= params[:client_id].to_str
 			client_secret	= params[:client_secret].to_str
 			headers = { 
-		        'User-Agent': 'happn/19.12.0 android/16',
-				'Accept-Language': 'en-US;q=1,en;q=0.75',
-				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-				'Host': 'api.happn.fr',
-				'X-Happn-DID': dev_id
+		        'User-Agent' => 'happn/19.12.0 android/16',
+				'Accept-Language' => 'en-US;q=1,en;q=0.75',
+				'Content-Type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+				'Host' => 'api.happn.fr',
+				'X-Happn-DID' => dev_id
 		    }
 
 	      	options = {	    	
@@ -194,12 +194,12 @@ class HappnController < ApplicationController
 			dev_id			= params[:dev_id].to_str
 			oauth_str 		= 'OAuth="'+access_token+'"'
 			headers = { 
-		        'User-Agent': 'happn/19.12.0 android/16',
-				'Accept-Language': 'en-US;q=1,en;q=0.75',
-				'Content-Type': 'application/json; charset=UTF-8',
-				'Authorization': oauth_str,
-				'Host': 'api.happn.fr',
-				'X-Happn-DID': dev_id
+		        'User-Agent' => 'happn/19.12.0 android/16',
+				'Accept-Language' => 'en-US;q=1,en;q=0.75',
+				'Content-Type' => 'application/json; charset=UTF-8',
+				'Authorization' => oauth_str,
+				'Host' => 'api.happn.fr',
+				'X-Happn-DID' => dev_id
 		    }
 
 	      	options = {	    			    	
@@ -235,12 +235,12 @@ class HappnController < ApplicationController
 			dev_id			= params[:dev_id].to_str
 			oauth_str 		= 'OAuth="'+access_token+'"'
 			headers = { 
-		        'User-Agent': 'happn/19.12.0 android/16',
-				'Accept-Language': 'en-US;q=1,en;q=0.75',
-				'Content-Type': 'application/json; charset=UTF-8',
-				'Authorization': oauth_str,
-				'Host': 'api.happn.fr',
-				'X-Happn-DID': dev_id
+		        'User-Agent' => 'happn/19.12.0 android/16',
+				'Accept-Language' => 'en-US;q=1,en;q=0.75',
+				'Content-Type' => 'application/json; charset=UTF-8',
+				'Authorization' => oauth_str,
+				'Host' => 'api.happn.fr',
+				'X-Happn-DID' => dev_id
 		    }
 
 	      	options = {	    			    	
@@ -276,12 +276,12 @@ class HappnController < ApplicationController
 			msg_id			= params[:msg_id].to_str
 			oauth_str 		= 'OAuth="'+access_token+'"'
 			headers = { 
-		        'User-Agent': 'happn/19.12.0 android/16',
-				'Accept-Language': 'en-US;q=1,en;q=0.75',
-				'Content-Type': 'application/json; charset=UTF-8',
-				'Authorization': oauth_str,
-				'Host': 'api.happn.fr',
-				'X-Happn-DID': dev_id
+		        'User-Agent' => 'happn/19.12.0 android/16',
+				'Accept-Language' => 'en-US;q=1,en;q=0.75',
+				'Content-Type' => 'application/json; charset=UTF-8',
+				'Authorization' => oauth_str,
+				'Host' => 'api.happn.fr',
+				'X-Happn-DID' => dev_id
 		    }
 
 	      	options = {	    			    	
@@ -321,12 +321,12 @@ class HappnController < ApplicationController
 			msg				= params[:msg].to_str
 			oauth_str 		= 'OAuth="'+access_token+'"'
 			headers = { 
-		        'User-Agent': 'happn/19.12.0 android/16',
-				'Accept-Language': 'en-US;q=1,en;q=0.75',
-				'Content-Type': 'application/json; charset=UTF-8',
-				'Authorization': oauth_str,
-				'Host': 'api.happn.fr',
-				'X-Happn-DID': dev_id
+		        'User-Agent' => 'happn/19.12.0 android/16',
+				'Accept-Language' => 'en-US;q=1,en;q=0.75',
+				'Content-Type' => 'application/json; charset=UTF-8',
+				'Authorization' => oauth_str,
+				'Host' => 'api.happn.fr',
+				'X-Happn-DID' => dev_id
 		    }
 
 	      	options = {
@@ -364,12 +364,12 @@ class HappnController < ApplicationController
 			other_user_id	= params[:other_user_id].to_str			
 			oauth_str 		= 'OAuth="'+access_token+'"'
 			headers = { 
-		        'User-Agent': 'happn/19.12.0 android/16',
-				'Accept-Language': 'en-US;q=1,en;q=0.75',
-				'Content-Type': 'application/json; charset=UTF-8',
-				'Authorization': oauth_str,
-				'Host': 'api.happn.fr',
-				'X-Happn-DID': dev_id
+		        'User-Agent' => 'happn/19.12.0 android/16',
+				'Accept-Language' => 'en-US;q=1,en;q=0.75',
+				'Content-Type' => 'application/json; charset=UTF-8',
+				'Authorization' => oauth_str,
+				'Host' => 'api.happn.fr',
+				'X-Happn-DID' => dev_id
 		    }
 
 	      	options = {			    	
@@ -407,12 +407,12 @@ class HappnController < ApplicationController
 			dev_id			= params[:dev_id].to_str
 			oauth_str 		= 'OAuth="'+access_token+'"'
 			headers = { 
-		        'User-Agent': 'happn/19.12.0 android/16',
-				'Accept-Language': 'en-US;q=1,en;q=0.75',
-				'Content-Type': 'application/json; charset=UTF-8;',
-				'Authorization': oauth_str,
-				'Host': 'api.happn.fr',
-				'X-Happn-DID': dev_id
+		        'User-Agent' => 'happn/19.12.0 android/16',
+				'Accept-Language' => 'en-US;q=1,en;q=0.75',
+				'Content-Type' => 'application/json; charset=UTF-8;',
+				'Authorization' => oauth_str,
+				'Host' => 'api.happn.fr',
+				'X-Happn-DID' => dev_id
 		    }
 
 	      	options = {	    			    	
@@ -451,12 +451,12 @@ class HappnController < ApplicationController
 			dev_id			= params[:dev_id].to_str
 			oauth_str 		= 'OAuth="'+access_token+'"'
 			headers = { 
-		        'User-Agent': 'happn/19.12.0 android/16',
-				'Accept-Language': 'en-US;q=1,en;q=0.75',
-				'Content-Type': 'application/json; charset=UTF-8;',
-				'Authorization': oauth_str,
-				'Host': 'api.happn.fr',
-				'X-Happn-DID': dev_id
+		        'User-Agent' => 'happn/19.12.0 android/16',
+				'Accept-Language' => 'en-US;q=1,en;q=0.75',
+				'Content-Type' => 'application/json; charset=UTF-8;',
+				'Authorization' => oauth_str,
+				'Host' => 'api.happn.fr',
+				'X-Happn-DID' => dev_id
 		    }
 
 	      	options = {	    			    	
@@ -495,12 +495,12 @@ class HappnController < ApplicationController
 			dev_id			= params[:dev_id].to_str
 			oauth_str 		= 'OAuth="'+access_token+'"'
 			headers = { 
-		        'User-Agent': 'happn/19.12.0 android/16',
-				'Accept-Language': 'en-US;q=1,en;q=0.75',
-				'Content-Type': 'application/json; charset=UTF-8;',
-				'Authorization': oauth_str,
-				'Host': 'api.happn.fr',
-				'X-Happn-DID': dev_id
+		        'User-Agent' => 'happn/19.12.0 android/16',
+				'Accept-Language' => 'en-US;q=1,en;q=0.75',
+				'Content-Type' => 'application/json; charset=UTF-8;',
+				'Authorization' => oauth_str,
+				'Host' => 'api.happn.fr',
+				'X-Happn-DID' => dev_id
 		    }
 
 	      	options = {	    			    	
@@ -538,12 +538,12 @@ class HappnController < ApplicationController
 			@user_info 		= JSON.parse params[:u_info];
 			oauth_str 		= 'OAuth="'+access_token+'"'
 			headers = { 
-		        'User-Agent': 'happn/19.12.0 android/16',
-				'Accept-Language': 'en-US;q=1,en;q=0.75',
-				'Content-Type': 'application/json; charset=UTF-8;',
-				'Authorization': oauth_str,
-				'Host': 'api.happn.fr',
-				'X-Happn-DID': dev_id
+		        'User-Agent' => 'happn/19.12.0 android/16',
+				'Accept-Language' => 'en-US;q=1,en;q=0.75',
+				'Content-Type' => 'application/json; charset=UTF-8;',
+				'Authorization' => oauth_str,
+				'Host' => 'api.happn.fr',
+				'X-Happn-DID' => dev_id
 		    }
 
 	      	options = {	
@@ -584,12 +584,12 @@ class HappnController < ApplicationController
 			dev_id			= params[:dev_id].to_str
 			oauth_str 		= 'OAuth="'+access_token+'"'
 			headers = { 
-		        'User-Agent': 'happn/19.12.0 android/16',
-				'Accept-Language': 'en-US;q=1,en;q=0.75',
-				'Content-Type': 'application/json; charset=UTF-8',
-				'Authorization': oauth_str,
-				'Host': 'api.happn.fr',
-				'X-Happn-DID': dev_id
+		        'User-Agent' => 'happn/19.12.0 android/16',
+				'Accept-Language' => 'en-US;q=1,en;q=0.75',
+				'Content-Type' => 'application/json; charset=UTF-8',
+				'Authorization' => oauth_str,
+				'Host' => 'api.happn.fr',
+				'X-Happn-DID' => dev_id
 		    }
 
 	      	options = {	
