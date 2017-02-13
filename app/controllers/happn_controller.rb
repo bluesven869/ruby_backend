@@ -525,7 +525,6 @@ class HappnController < ApplicationController
 		#
 		#  IN     token  		: Happn Access Token
 		#         user_id		: user_id from Happn
-		#         other_user_id	: PartnerID
 		#         dev_id		: RegisterdDevice ID
 		# 		  altitude		: Altitude
 		# 		  lat 			: Latitude
