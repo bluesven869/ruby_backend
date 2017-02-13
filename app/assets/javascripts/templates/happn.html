@@ -199,8 +199,23 @@
       &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="get_user_setting_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
     </section>
     <div>
-    
+      <label>Job</label><input ng_model="job" placeholder="Please input job" /> <br />      
+      <label>Employer</label><input ng_model="workplace" placeholder="Please input employer" /> <br />      
+      <label>School</label><input ng_model="school" placeholder="Please input school" /> <br />    
       <span class='my_info'>{{user_setting}}</span>
+    </div>   
+  </div>
+
+  <div class="general_div completed">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="SetUserLocation()">Set User Location</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="set_user_location_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <div>
+      <label>Altitude</label><input ng_model="altitude" placeholder="Please input altitude" /> <br />
+      <label>Latitude</label><input ng_model="latitude" placeholder="Please input latitude" /> <br />
+      <label>Longitude</label><input ng_model="longitude" placeholder="Please input longitude" /> <br />
+      <span class='my_info'>{{user_location}}</span>
     </div>   
   </div>
 </div>
