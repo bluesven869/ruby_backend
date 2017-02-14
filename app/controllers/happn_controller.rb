@@ -8,6 +8,7 @@ class HappnController < ApplicationController
 	def index
 		# Login to Happn		
 		# IN    fbToken : FaceBook Token
+		#     Login with FBToken to CMB
 		# Return sessionid
 		
 		if (not params.has_key?(:fbToken))
