@@ -297,6 +297,10 @@ class CmbController < ApplicationController
 		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)) || (not params.has_key?(:bagel))
 			@BaglesInfo = [{"success": false, "jsonObj": "Params Error"}]
 		else
+			fbToken = params[:fbToken].to_str
+			sessionid = params[:sessionid].to_str		
+			@bagel 	= JSON.parse params[:bagel];
+			base_uri = 'https://api.coffeemeetsbagel.com/bagels'	
 		end	
 	end
 	def get_bagels_history
