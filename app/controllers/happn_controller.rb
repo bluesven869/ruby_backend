@@ -50,6 +50,7 @@ class HappnController < ApplicationController
 		#  IN     token  		: Happn Access Token
 		#         user_id		: user_id from Happn
 		#         android_id	: Android ID
+		#  Problem : How can we get android_id as automatically.
 		#  Return
 		#         jsonObj  : Device Object
 
