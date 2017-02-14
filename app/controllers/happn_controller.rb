@@ -99,6 +99,7 @@ class HappnController < ApplicationController
 		# Register Device
 		#  IN     token  	: Happn Access Token
 		#         user_id	: user_id from Happn
+		#         Set Profiole First function is needed?
 		#  Return
 		#         jsonObj  : user Profile Info
 
