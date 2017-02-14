@@ -286,46 +286,7 @@ class CmbController < ApplicationController
 			end
 		end
 	end
-	def get_bagel_info
-		# Get Bagels History
-		#    IN      fbToken : FaceBook Token
-		#            sessionid: CMB Session ID
-		#            @bagel : BagelObject(hex_id, cursor_after)
-		#    OUT     
-		#	         jsonObj : Bagels History before cursor_after 
-
-		if (not params.has_key?(:fbToken)) || (not params.has_key?(:sessionid)) || (not params.has_key?(:bagel))
-			@BaglesInfo = [{"success": false, "jsonObj": "Params Error"}]
-		else
-			fbToken = params[:fbToken].to_str
-			sessionid = params[:sessionid].to_str		
-			@bagel 	= JSON.parse params[:bagel];
-			base_uri = 'https://api.coffeemeetsbagel.com/bagels'	
-			my_cookie = "sessionid="+sessionid
-	      	headers = {
-		    	'AppStore-Version': '3.4.1.779',
-				'App-Version': '779',
-				'Client': 'Android',
-				'Content-Type': 'application/json',
-				'Facebook-Auth-Token': fbToken,
-				'Cookie': my_cookie	
-	      	}
-	      	options = {	    	
-		    	'embed': 'profile',
-		    	'prefetch': true,
-		    	'cursor_after': @bagel["cursor_after"],
-		    	'updated_after': @bagel["hex_id"],
-			}	
-		    response = self.class.get(base_uri.to_str,
-		    	:body=> options.to_json,
-		      	:headers => headers)
-		    if response.success?
-		      	@BaglesList = [{"success": true, "jsonObj": response}]
-		    else		  	
-			  	@BaglesList = [{"success": false, "jsonObj": response}]
-			end	  
-		end	
-	end
+	
 	def get_bagels_history
 		# Get Bagels History
 		#    IN      fbToken : FaceBook Token
