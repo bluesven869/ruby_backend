@@ -33,7 +33,7 @@ class HappnController < ApplicationController
 				'Host': 'api.happn.fr'
 		    }
 			response = self.class.post(base_uri.to_str, 
-				:body=> options,
+				:body => options,
 				:headers => headers
 			)
 		    if response.success?		      
