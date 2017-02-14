@@ -47,4 +47,5 @@ Rails.application.routes.draw do
   get '/happn/update_profile'  
   get '/happn/get_user_setting'  
   get '/happn/set_user_setting'  
+  get '/happn/set_location' 
 end

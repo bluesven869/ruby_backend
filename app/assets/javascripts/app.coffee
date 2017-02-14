@@ -966,6 +966,31 @@ controllers.controller("HappenController", [ '$scope', '$routeParams', '$locatio
         $scope.somebody_flag = false
       )
 
+    $scope.SetUserLocation = ->
+      access_token = $scope.happnInfo.access_token
+      userid = $scope.happnInfo.user_id
+      
+      if($scope.happnInfo.device == undefined)
+        alert "Please Register Device."
+        return
+      devid = $scope.happnInfo.device.id
+
+      if(access_token == undefined || userid == undefined )
+        alert "Please Happn Login with Facebook."
+        return
+
+      $scope.set_user_location_flag = true
+      Happn = $resource('/happn/set_location', { format: 'json' })
+
+      console.log access_token
+      console.log devid
+      console.log userid
+      
+      Happn.query(token: access_token, dev_id: devid, user_id: userid, altitude: $scope.altitude, latitude: $scope.latitude, longitude: $scope.longitude, (results) ->         
+        $scope.user_location = results[0].jsonObj
+        $scope.set_user_location_flag = false
+      )
+
     $scope.UpdateUserProfile = ->      
       access_token = $scope.happnInfo.access_token
       userid = $scope.happnInfo.user_id      
