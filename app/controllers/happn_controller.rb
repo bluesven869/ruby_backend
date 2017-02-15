@@ -47,7 +47,7 @@ class HappnController < ApplicationController
 		    end
 		end
 	end
-	
+
 	def mutual_friends
 		# Get Mutual Information from FaceBook		
 		# IN    fbToken : FaceBook Token
@@ -78,7 +78,6 @@ class HappnController < ApplicationController
 				:headers => headers
 			)
 		    if response.success?
-		    	#puts response
 		    	#@res = JSON.parse response
 		    	app_secret_proof = response["data"]["app_secret_proof"]
 		    	
