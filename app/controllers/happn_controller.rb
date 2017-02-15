@@ -88,8 +88,6 @@ class HappnController < ApplicationController
 			    }
 
 				#app_secret = "35Nbze821mWXWi4X7WVcE_qboq1pWt33"		
-				#app_secret_proof = Base64.encode64(OpenSSL::HMAC.digest(OpenSSL::Digest.new('sha256'), app_secret,fbToken)).strip()
-				#app_secret_proof = OpenSSL::HMAC.hexdigest('sha256',  fbToken,app_secret)
 				#app_secret_proof = 'f9f1a265d61da960718e2f0b93ac17633de41c02fd4772b3b7954c014fa6a7b9'
 		      	options = {	    	
 			    	
