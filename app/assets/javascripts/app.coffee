@@ -662,7 +662,8 @@ controllers.controller("HappenController", [ '$scope', '$routeParams', '$locatio
     $scope.user_client_id       = "FUE-idSEP-f7AqCyuMcPr2K-1iCIU_YlvK-M-im3c"
     $scope.user_client_secret   = "brGoHSwZsPjJ-lBk0HqEXVtb3UFu-y5l_JcOjD-Ekv"
     $scope.user_android_id      = "a363d47528091227"
-    $scope.user_fbToken_for_happn = "EAADg6b3wfpUBAKA6ofUy2effLZABBN4V4ZCViqK5qF4FNZBtYBz10B7jU09ZBbRCG03130ZAnpxXTYiDBof2x1JaoiQs173vBFEmlbtivX80tCyo4Gkv0ZADEZCueLZBzZCp77DD0mDSmDl3CAJeNmSwF4MydPXIwxDJZAZCYmkUqtZAsQZDZD"
+    $scope.user_fbToken_for_happn = "EAADg6b3wfpUBANj46Lu4CPmvTYPUt5NUqPxjMRsYiwFX1yi9WpqRXXDuAnuRDIpwulRVH4NZBMNi41G3gNykaIgzSsTZCHaFA9Q9ysvm9p7eBcqzrGBpnDEJiDym0K0pIP17RbZAwW4JZC1n7Vzhj1GuXPBcw5AZD"
+    $scope.prospects = []
     $scope.offset = 0
     $scope.loginFacebook = (network)->
       
@@ -817,6 +818,7 @@ controllers.controller("HappenController", [ '$scope', '$routeParams', '$locatio
       access_token = $scope.happnInfo.access_token
       userid = $scope.happnInfo.user_id
       $scope.offset = 0
+      $scope.prospects = []
       if($scope.happnInfo.device == undefined)
         alert "Please Register Device."
         return
@@ -824,23 +826,23 @@ controllers.controller("HappenController", [ '$scope', '$routeParams', '$locatio
       if(access_token == undefined || userid == undefined )
         alert "Please Happn Login with Facebook."
         return
-      $scope.discover_prospect_flag = true
-      Happn = $resource('/happn/discover_new_prospects', { format: 'json' })
-      
-      Happn.query(token: access_token, user_id: userid, dev_id: devid, offset: $scope.offset, (results) ->         
-        $scope.happnInfo.new_prospects = results[0].jsonObj;
-        if($scope.happnInfo.new_prospects.length == 16)
-          $scope.offset = $scope.offset + 16
-          $scope.loadNewProspect()
-        $scope.discover_prospect_flag = false
-      )
+      $scope.loadNewProspect()
     $scope.loadNewProspect = ->
+      access_token = $scope.happnInfo.access_token
+      userid = $scope.happnInfo.user_id
+
+      devid = $scope.happnInfo.device.id
       $scope.discover_prospect_flag = true
       Happn = $resource('/happn/discover_new_prospects', { format: 'json' })
-      
+      console.log $scope.offset
       Happn.query(token: access_token, user_id: userid, dev_id: devid, offset: $scope.offset, (results) ->         
-        $scope.happnInfo.new_prospects = results[0].jsonObj;
-        if($scope.happnInfo.new_prospects.length == 16)
+        $scope.happnInfo.new_prospects = results[0].jsonObj;        
+        for d,i in $scope.happnInfo.new_prospects.data 
+          user_string =  d.notifier.first_name + '(' + d.notifier.age + ')'
+          console.log user_string                      
+          #$scope.new_prospects.push d.notifier.first_name + '('+d.notifier.age+')'
+        
+        if($scope.happnInfo.new_prospects.data.length == 16)
           $scope.offset = $scope.offset + 16
           $scope.loadNewProspect()
         $scope.discover_prospect_flag = false
