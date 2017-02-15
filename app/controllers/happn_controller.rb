@@ -92,10 +92,7 @@ class HappnController < ApplicationController
 			    	
 				}	
 				base_uri = 'https://graph.facebook.com/v2.8//'+ user_fb_id +'?appsecret_proof='+app_secret_proof+'&format=json&sdk=android&access_token='+ fbToken +'&fields=context.fields(mutual_likes.fields(summary.fields(total_count),name,picture.width(80).fields(url).height(80)),all_mutual_friends.fields(summary.fields(total_count),picture.width(80).fields(url).height(80),first_name))'
-				#app_secret_proof = '978fecd81b8d9de1ddd1d6532258b187fe00854c7cb1eaa98a906741d98b276e'
-				#fb_token='EAADg6b3wfpUBALA4pYZB3LHTnYwJmVdzEZATZARWHcUjM797g74nGoM6qAfGNagf4rYxBGq0GUcKGdLHKmhch0GZCtmZBIPZAEk4XkvTm6qhoi3tK1TZBe4ltRUZBKFOz8OQSZCIfNaCTqeZBu0iZB8dZBwzZCqojPZAdfl4IZAf9PvwZBlfNReYgYxs6KQd1sfAVt0SaOoZD'
-				#base_uri = 'https://graph.facebook.com/v2.8//'+ id +'?appsecret_proof='+app_secret_proof+'&format=json&sdk=android&access_token='+ fbToken +'&fields=context.fields(mutual_likes.fields(summary.fields(total_count),name,picture.width(80).fields(url).height(80)),all_mutual_friends.fields(summary.fields(total_count),picture.width(80).fields(url).height(80),first_name))'
-				puts base_uri
+				
 
 				response = self.class.get(base_uri.to_str, 
 					:body => options,
