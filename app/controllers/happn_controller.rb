@@ -78,11 +78,8 @@ class HappnController < ApplicationController
 				:headers => headers
 			)
 		    if response.success?
-		    	#@res = JSON.parse response
 		    	app_secret_proof = response["data"]["app_secret_proof"]
 		    	
-		    	#curl -H 'User-Agent: FBAndroidSDK.4.16.1' -H 'Accept-Language: en_US' -H 'Content-Type: application/x-www-form-urlencoded' 
-		    	#-H 'Host: graph.facebook.com' --compressed 'https://graph.facebook.com/v2.8//10203490074712402?appsecret_proof=978fecd81b8d9de1ddd1d6532258b187fe00854c7cb1eaa98a906741d98b276e&format=json&sdk=android&access_token=EAADg6b3wfpUBALA4pYZB3LHTnYwJmVdzEZATZARWHcUjM797g74nGoM6qAfGNagf4rYxBGq0GUcKGdLHKmhch0GZCtmZBIPZAEk4XkvTm6qhoi3tK1TZBe4ltRUZBKFOz8OQSZCIfNaCTqeZBu0iZB8dZBwzZCqojPZAdfl4IZAf9PvwZBlfNReYgYxs6KQd1sfAVt0SaOoZD&fields=context.fields(mutual_likes.fields(summary.fields(total_count)%2Cname%2Cpicture.width(80).fields(url).height(80))%2Call_mutual_friends.fields(summary.fields(total_count)%2Cpicture.width(80).fields(url).height(80)%2Cfirst_name))'
 		    	headers = { 
 			        'User-Agent' => 'FBAndroidSDK.4.16.1',
 					'Accept-Language' => 'en-US',
