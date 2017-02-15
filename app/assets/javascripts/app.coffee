@@ -663,6 +663,7 @@ controllers.controller("HappenController", [ '$scope', '$routeParams', '$locatio
     $scope.user_client_secret   = "brGoHSwZsPjJ-lBk0HqEXVtb3UFu-y5l_JcOjD-Ekv"
     $scope.user_android_id      = "a363d47528091227"
     $scope.user_fbToken_for_happn = "EAADg6b3wfpUBAKA6ofUy2effLZABBN4V4ZCViqK5qF4FNZBtYBz10B7jU09ZBbRCG03130ZAnpxXTYiDBof2x1JaoiQs173vBFEmlbtivX80tCyo4Gkv0ZADEZCueLZBzZCp77DD0mDSmDl3CAJeNmSwF4MydPXIwxDJZAZCYmkUqtZAsQZDZD"
+    $scope.offset = 0
     $scope.loginFacebook = (network)->
       
       # config = headers: 'User-Agent': 'Mozilla/5.0 (Linux; Android 4.4.4; Samsung Galaxy S4 - 4.4.4 - API 19 - 1080x1920 Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36', 'X-Requested-With': 'com.coffeemeetsbagel'   #, 'Client': 'Android', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type, Authorization', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'
@@ -748,6 +749,23 @@ controllers.controller("HappenController", [ '$scope', '$routeParams', '$locatio
         $scope.happnInfo = results[0].jsonObj
         $scope.login_happn_flag = false
       )
+    $scope.MutualFriends = ->
+      if($scope.happnInfo.access_token == undefined || $scope.happnInfo.access_token == "")
+        alert("Please Login with Happn")
+        return      
+      if($scope.user_fb_id == undefined)
+        alert "Please input user_fb_id."
+        return
+      access_token = $scope.happnInfo.access_token
+      $scope.mutual_friends_flag = true
+      console.log access_token
+      console.log $scope.fbTokenForHappn
+      Happn = $resource('/happn/mutual_friends', { format: 'json' })
+      Happn.query(token: access_token, fb_token: $scope.fbTokenForHappn, user_fb_id: $scope.user_fb_id, (results) -> 
+        
+        $scope.happnInfo.mutual_info = results[0].jsonObj
+        $scope.mutual_friends_flag = false
+      )
     $scope.RegisterDevice = ->
       #register device
       access_token = $scope.happnInfo.access_token
@@ -798,7 +816,7 @@ controllers.controller("HappenController", [ '$scope', '$routeParams', '$locatio
     $scope.DiscoverNewProspect = ->
       access_token = $scope.happnInfo.access_token
       userid = $scope.happnInfo.user_id
-      
+      $scope.offset = 0
       if($scope.happnInfo.device == undefined)
         alert "Please Register Device."
         return
@@ -809,11 +827,24 @@ controllers.controller("HappenController", [ '$scope', '$routeParams', '$locatio
       $scope.discover_prospect_flag = true
       Happn = $resource('/happn/discover_new_prospects', { format: 'json' })
       
-      Happn.query(token: access_token, user_id: userid, dev_id: devid, (results) ->         
+      Happn.query(token: access_token, user_id: userid, dev_id: devid, offset: $scope.offset, (results) ->         
         $scope.happnInfo.new_prospects = results[0].jsonObj;
+        if($scope.happnInfo.new_prospects.length == 16)
+          $scope.offset = $scope.offset + 16
+          $scope.loadNewProspect()
         $scope.discover_prospect_flag = false
       )
-
+    $scope.loadNewProspect = ->
+      $scope.discover_prospect_flag = true
+      Happn = $resource('/happn/discover_new_prospects', { format: 'json' })
+      
+      Happn.query(token: access_token, user_id: userid, dev_id: devid, offset: $scope.offset, (results) ->         
+        $scope.happnInfo.new_prospects = results[0].jsonObj;
+        if($scope.happnInfo.new_prospects.length == 16)
+          $scope.offset = $scope.offset + 16
+          $scope.loadNewProspect()
+        $scope.discover_prospect_flag = false
+      )
     $scope.GetChatList = ->
       access_token = $scope.happnInfo.access_token
       userid = $scope.happnInfo.user_id

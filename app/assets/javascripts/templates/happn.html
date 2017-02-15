@@ -61,6 +61,17 @@
   <!-- TEST Process -->
   <div class="general_div completed">
     <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="MutualFriends()">Get mutual friends/interests</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="mutual_friends_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <label>UserFB ID</label><input ng_model="user_fb_id" placeholder="<partner_fb_id>" /> <br />
+    <span class="my_info">
+
+      {{happnInfo.mutual_info}}
+    </span> &nbsp;&nbsp;
+  </div>
+  <div class="general_div completed">
+    <section>
       <button type="button" class="btn btn-primary btn-large" data-ng-click="RegisterDevice()">Register device</button>
       &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="register_device_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
     </section>

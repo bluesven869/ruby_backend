@@ -48,4 +48,5 @@ Rails.application.routes.draw do
   get '/happn/get_user_setting'  
   get '/happn/set_user_setting'  
   get '/happn/set_location' 
+  get '/happn/mutual_friends'
 end

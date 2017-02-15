@@ -1,5 +1,8 @@
 require 'httparty'
 require 'json'
+require 'openssl'
+require 'base64'
+
 class HappnController < ApplicationController
 	include HTTParty
 	debug_output $stdout
@@ -41,6 +44,78 @@ class HappnController < ApplicationController
 		      @happnInfo = [{"Result": "success","jsonObj": response}]
 		    else
 		      @happnInfo = [{"Result": "failed", "jsonObj": response}]
+		    end
+		end
+	end
+	
+	def mutual_friends
+		# Get Mutual Information from FaceBook		
+		# IN    fbToken : FaceBook Token
+		# Return  Mutual Information
+		
+		if (not params.has_key?(:token))
+			@happnInfo = [{"Result": "Token Error","jsonObj": "Token"}]
+		else
+
+			
+			access_token = params[:token].to_str
+			fbToken = params[:fb_token].to_str			
+			user_fb_id = params[:user_fb_id].to_str
+			oauth_str 		= 'OAuth="'+access_token+'"'
+			base_uri = 'https://api.happn.fr/api/auth/proof'
+			options = {		    	
+		    	'facebook_access_token': fbToken,
+			}
+			headers = { 
+		        'User-Agent' => 'happn/19.12.0 android/16',
+				'Accept-Language' => 'en-US;q=1,en;q=0.75',
+				'Authorization' => oauth_str,
+				'Content-Type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+				'Host' => 'api.happn.fr'
+		    }
+			response = self.class.post(base_uri.to_str, 
+				:body => options,
+				:headers => headers
+			)
+		    if response.success?
+		    	#puts response
+		    	#@res = JSON.parse response
+		    	app_secret_proof = response["data"]["app_secret_proof"]
+		    	
+		    	#curl -H 'User-Agent: FBAndroidSDK.4.16.1' -H 'Accept-Language: en_US' -H 'Content-Type: application/x-www-form-urlencoded' 
+		    	#-H 'Host: graph.facebook.com' --compressed 'https://graph.facebook.com/v2.8//10203490074712402?appsecret_proof=978fecd81b8d9de1ddd1d6532258b187fe00854c7cb1eaa98a906741d98b276e&format=json&sdk=android&access_token=EAADg6b3wfpUBALA4pYZB3LHTnYwJmVdzEZATZARWHcUjM797g74nGoM6qAfGNagf4rYxBGq0GUcKGdLHKmhch0GZCtmZBIPZAEk4XkvTm6qhoi3tK1TZBe4ltRUZBKFOz8OQSZCIfNaCTqeZBu0iZB8dZBwzZCqojPZAdfl4IZAf9PvwZBlfNReYgYxs6KQd1sfAVt0SaOoZD&fields=context.fields(mutual_likes.fields(summary.fields(total_count)%2Cname%2Cpicture.width(80).fields(url).height(80))%2Call_mutual_friends.fields(summary.fields(total_count)%2Cpicture.width(80).fields(url).height(80)%2Cfirst_name))'
+		    	headers = { 
+			        'User-Agent' => 'FBAndroidSDK.4.16.1',
+					'Accept-Language' => 'en-US',
+					'Content-Type' => 'application/x-www-form-urlencoded',
+					'Host' => 'graph.facebook.com'
+			    }
+
+				#app_secret = "35Nbze821mWXWi4X7WVcE_qboq1pWt33"		
+				#app_secret_proof = Base64.encode64(OpenSSL::HMAC.digest(OpenSSL::Digest.new('sha256'), app_secret,fbToken)).strip()
+				#app_secret_proof = OpenSSL::HMAC.hexdigest('sha256',  fbToken,app_secret)
+				#app_secret_proof = 'f9f1a265d61da960718e2f0b93ac17633de41c02fd4772b3b7954c014fa6a7b9'
+		      	options = {	    	
+			    	
+				}	
+				base_uri = 'https://graph.facebook.com/v2.8//'+ user_fb_id +'?appsecret_proof='+app_secret_proof+'&format=json&sdk=android&access_token='+ fbToken +'&fields=context.fields(mutual_likes.fields(summary.fields(total_count),name,picture.width(80).fields(url).height(80)),all_mutual_friends.fields(summary.fields(total_count),picture.width(80).fields(url).height(80),first_name))'
+				#id = @res["id"]
+				#app_secret_proof = '978fecd81b8d9de1ddd1d6532258b187fe00854c7cb1eaa98a906741d98b276e'
+				#fb_token='EAADg6b3wfpUBALA4pYZB3LHTnYwJmVdzEZATZARWHcUjM797g74nGoM6qAfGNagf4rYxBGq0GUcKGdLHKmhch0GZCtmZBIPZAEk4XkvTm6qhoi3tK1TZBe4ltRUZBKFOz8OQSZCIfNaCTqeZBu0iZB8dZBwzZCqojPZAdfl4IZAf9PvwZBlfNReYgYxs6KQd1sfAVt0SaOoZD'
+				#base_uri = 'https://graph.facebook.com/v2.8//'+ id +'?appsecret_proof='+app_secret_proof+'&format=json&sdk=android&access_token='+ fbToken +'&fields=context.fields(mutual_likes.fields(summary.fields(total_count),name,picture.width(80).fields(url).height(80)),all_mutual_friends.fields(summary.fields(total_count),picture.width(80).fields(url).height(80),first_name))'
+				puts base_uri
+
+				response = self.class.get(base_uri.to_str, 
+					:body => options,
+					:headers => headers
+				)
+				if response.success?
+					@happnInfo = [{"Result": "success","jsonObj": response}]
+			    else
+			      	@happnInfo = [{"Result": "failed", "jsonObj": response}]
+			    end			    
+		    else
+		      	@happnInfo = [{"Result": "failed", "jsonObj": response}]
 		    end
 		end
 	end
@@ -195,6 +270,7 @@ class HappnController < ApplicationController
 			access_token	= params[:token].to_str
 			user_id 		= params[:user_id].to_str
 			dev_id			= params[:dev_id].to_str
+			offset			= params[:offset].to_str
 			oauth_str 		= 'OAuth="'+access_token+'"'
 			headers = { 
 		        'User-Agent' => 'happn/19.12.0 android/16',
@@ -208,7 +284,7 @@ class HappnController < ApplicationController
 	      	options = {	    			    	
 			}	
 
-			base_uri 		= 'https://api.happn.fr/api/users/'+user_id+'/crossings?offset=0&limit=16&fields=id,modification_date,notification_type,nb_times,notifier.fields(id,type,job,is_accepted,workplace,my_relation,distance,gender,is_charmed,nb_photos,first_name,age,already_charmed,has_charmed_me,availability,is_invited,last_invite_received,profiles.mode(1).width(720).height(1232).fields(width,height,mode,url))'
+			base_uri 		= 'https://api.happn.fr/api/users/'+user_id+'/crossings?offset='+offset+'&limit=16&fields=id,modification_date,notification_type,nb_times,notifier.fields(id,type,job,is_accepted,workplace,my_relation,distance,gender,is_charmed,nb_photos,first_name,age,already_charmed,has_charmed_me,availability,is_invited,last_invite_received,profiles.mode(1).width(720).height(1232).fields(width,height,mode,url))'
 			
 			
 		    response = self.class.get(base_uri.to_str,
@@ -546,7 +622,7 @@ class HappnController < ApplicationController
 			longitude 		= params[:longitude].to_str
 			altitude 		= params[:altitude].to_str
 			headers = { 
-		        'User-Agent' => 'happn/19.12.0 android/16',
+		        'User-Agent' => 'happn/20.1.0 android/16',
 				'Accept-Language' => 'en-US;q=1,en;q=0.75',
 				'Content-Type' => 'application/json; charset=UTF-8;',
 				'Authorization' => oauth_str,
