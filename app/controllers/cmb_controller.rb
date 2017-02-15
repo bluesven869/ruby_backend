@@ -32,7 +32,7 @@ class CmbController < ApplicationController
 			)
 		    if response.success?
 		      # when I get Response as successfully.
-		      # this statement return value
+		      
 		      resHeader = response.headers['set-cookie']
 		      splittedStr = resHeader.split(/[;]/)
 		      splittedStr = splittedStr[3].split(/[=]/)
