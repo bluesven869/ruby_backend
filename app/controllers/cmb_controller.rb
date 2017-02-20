@@ -629,7 +629,15 @@ class CmbController < ApplicationController
 			fbToken 		= params[:fbToken].to_str
 			sessionid 		= params[:sessionid].to_str
 			base_uri 		= 'https://api.coffeemeetsbagel.com/report/4'		
-			
+			options = {}	
+		    response = self.class.get(base_uri.to_str,
+		    	:body=> options.to_json,
+		      	:headers => headers)	    
+		    if response.success?
+		      	@ReportResult = [{"success": true, jsonObj:response}]
+		    else
+			  	@ReportResult = [{"success": false, jsonObj:response}]
+			end	   
 		end
 	end
 end
