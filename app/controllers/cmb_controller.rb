@@ -619,6 +619,14 @@ class CmbController < ApplicationController
 		end
 	end
 	def get_chat_list
-		ws.send 
+		#Report
+		#    IN      firebaseToken : FireBase Token
+		#    OUT     
+		#	         jsonObj : Report Result
+		if (not params.has_key?(:firebaseToken))
+			@ReportResult = [{"success": false, "jsonObj": "No Firbase Token"}]
+		else
+			
+		end
 	end
 end
