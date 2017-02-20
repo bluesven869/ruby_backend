@@ -735,7 +735,20 @@ class HappnController < ApplicationController
 		if (not params.has_key?(:token)) || (not params.has_key?(:user_id))|| (not params.has_key?(:dev_id))
 			@happnInfo = [{"Result": "failed","jsonObj": "Token/UserID/DeviceID ERROR"}]
 		else
-		
+			access_token	= params[:token].to_str
+			user_id 		= params[:user_id].to_str
+			dev_id			= params[:dev_id].to_str
+			oauth_str 		= 'OAuth="'+access_token+'"'
+			headers = { 
+		        'User-Agent' => 'happn/19.12.0 android/16',
+				'Accept-Language' => 'en-US;q=1,en;q=0.75',
+				'Content-Type' => 'application/json; charset=UTF-8',
+				'Authorization' => oauth_str,
+				'Host' => 'api.happn.fr',
+				'X-Happn-DID' => dev_id
+		    }
+
+	      	
 		end
 	end
 end
