@@ -618,26 +618,5 @@ class CmbController < ApplicationController
 			end
 		end
 	end
-	def get_chat_list
-		#Report
-		#    IN      firebaseToken : FireBase Token
-		#    OUT     
-		#	         jsonObj : Report Result
-		if (not params.has_key?(:firebaseToken))
-			@ReportResult = [{"success": false, "jsonObj": "No Firbase Token"}]
-		else
-			fbToken 		= params[:fbToken].to_str
-			sessionid 		= params[:sessionid].to_str
-			base_uri 		= 'https://api.coffeemeetsbagel.com/report/4'		
-			options = {}	
-		    response = self.class.get(base_uri.to_str,
-		    	:body=> options.to_json,
-		      	:headers => headers)	    
-		    if response.success?
-		      	@ReportResult = [{"success": true, jsonObj:response}]
-		    else
-			  	@ReportResult = [{"success": false, jsonObj:response}]
-			end	   
-		end
-	end
+	
 end
