@@ -626,6 +626,9 @@ class CmbController < ApplicationController
 		if (not params.has_key?(:firebaseToken))
 			@ReportResult = [{"success": false, "jsonObj": "No Firbase Token"}]
 		else
+			fbToken 		= params[:fbToken].to_str
+			sessionid 		= params[:sessionid].to_str
+			base_uri 		= 'https://api.coffeemeetsbagel.com/report/4'		
 			
 		end
 	end
