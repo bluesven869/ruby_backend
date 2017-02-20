@@ -730,7 +730,13 @@ class HappnController < ApplicationController
 		end
 	end
 	def get_user_setting
-		
+		# Get user Setting
+		#
+		#  IN     token  		: Happn Access Token
+		#         user_id		: user_id from Happn
+		#         dev_id		: RegisterdDevice ID 
+		#  Return
+		#         jsonObj 		: Result
 
 		if (not params.has_key?(:token)) || (not params.has_key?(:user_id))|| (not params.has_key?(:dev_id))
 			@happnInfo = [{"Result": "failed","jsonObj": "Token/UserID/DeviceID ERROR"}]
