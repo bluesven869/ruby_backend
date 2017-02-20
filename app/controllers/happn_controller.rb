@@ -748,7 +748,21 @@ class HappnController < ApplicationController
 				'X-Happn-DID' => dev_id
 		    }
 
-	      	
+	      	options = {	
+	      		
+			}	
+
+			base_uri 		= 'https://api.happn.fr/api/users/'+user_id+'?fields=matching_preferences,notification_settings'
+			
+			
+		    response = self.class.get(base_uri.to_str,
+		    	:body=> options,
+		      	:headers => headers)
+		    if response.success?
+		      	@happnInfo = [{"Result": "success","jsonObj": response}]
+			else
+			  	@happnInfo = [{"Result": "failed","jsonObj": response}]
+			end	  
 		end
 	end
 end
