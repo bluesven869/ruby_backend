@@ -729,4 +729,34 @@ class HappnController < ApplicationController
 			end	  
 		end
 	end
+	def get_chat_list
+		#Report
+		#    IN      firebaseToken : FireBase Token
+		#    OUT     
+		#	         jsonObj : Report Result
+		if (not params.has_key?(:firebaseToken))
+			@ReportResult = [{"success": false, "jsonObj": "No Firbase Token"}]
+		else
+			fbToken 		= params[:fbToken].to_str
+			sessionid 		= params[:sessionid].to_str
+			base_uri 		= 'https://api.coffeemeetsbagel.com/report/4'		
+			options = {}	
+			headers = { 
+		        'User-Agent' => 'happn/19.12.0 android/16',
+				'Accept-Language' => 'en-US;q=1,en;q=0.75',
+				'Content-Type' => 'application/json; charset=UTF-8',
+				'Authorization' => oauth_str,
+				'Host' => 'api.happn.fr',
+				'X-Happn-DID' => dev_id
+		    }
+		    response = self.class.get(base_uri.to_str,
+		    	:body=> options.to_json,
+		      	:headers => headers)	    
+		    if response.success?
+		      	@ReportResult = [{"success": true, jsonObj:response}]
+		    else
+			  	@ReportResult = [{"success": false, jsonObj:response}]
+			end	   
+		end
+	end
 end
