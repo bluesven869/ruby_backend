@@ -622,5 +622,7 @@ class CmbController < ApplicationController
 			end
 		end
 	end
-	
+	def get_chat_list
+		ws.send 
+	end
 end
