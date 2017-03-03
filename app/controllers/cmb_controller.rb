@@ -301,7 +301,9 @@ class CmbController < ApplicationController
 			fbToken = params[:fbToken].to_str
 			sessionid = params[:sessionid].to_str		
 			@bagel 	= JSON.parse params[:bagel];
-			base_uri = 'https://api.coffeemeetsbagel.com/bagels'		
+			base_uri = 'https://api.coffeemeetsbagel.com/bagels?embed=profile&couples_only=true'  # &cursor_after=' + @bagel["cursor_after"] + '&updated_after=' + @bagel["hex_id"]
+			
+
 			my_cookie = "sessionid="+sessionid
 	      	headers = {
 		    	'AppStore-Version': '3.4.1.779',
@@ -311,12 +313,14 @@ class CmbController < ApplicationController
 				'Facebook-Auth-Token': fbToken,
 				'Cookie': my_cookie	
 	      	}
-	      	options = {	    	
-		    	'embed': 'profile',
-		    	'prefetch': true,
-		    	'cursor_after': @bagel["cursor_after"],
-		    	'updated_after': @bagel["hex_id"],
-			}	
+	      	# options doesn't apply in GET request
+	  	#     	options = {
+		 #    	'embed': 'profile',
+		 #    	'couples_only': 'true',
+		 #    	'prefetch': true,
+		 #    	'cursor_after': @bagel["cursor_after"],
+		 #    	'updated_after': @bagel["hex_id"]
+			# }	
 		    response = self.class.get(base_uri.to_str,
 		    	:body=> options.to_json,
 		      	:headers => headers)
@@ -618,5 +622,7 @@ class CmbController < ApplicationController
 			end
 		end
 	end
-	
+	def get_chat_list
+		ws.send 
+	end
 end
