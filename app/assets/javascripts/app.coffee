@@ -40,8 +40,8 @@ cmbInfo = []
 appID = {'cmb': '273145509408031','happn': '247294518656661'}
 
 controllers = angular.module('controllers',[])
-controllers.controller("CMBController", [ '$scope', '$routeParams', '$location', '$facebook', '$http', '$resource', 'Upload'
-  ($scope,$routeParams,$location,$facebook,$http,$resource, Upload)->
+controllers.controller("CMBController", [ '$scope','$rootScope', '$routeParams', '$location', '$facebook', '$http', '$resource', 'Upload'
+  ($scope,$rootScope,$routeParams,$location,$facebook,$http,$resource, Upload)->
     
     $scope.fblogin_flag = false
     $scope.login_flag = false
@@ -50,7 +50,8 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
                               # 1: Connected
                               # 2: Authorized
     $scope.cmb_chat_my_id = 0  # my_chat_profile_id
-
+    $rootScope.webSocket = {};
+    $rootScope.webSocket1 = {};
     #if(not $scope.fbToken?)
 
     # assign token fetched manually
@@ -505,6 +506,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
         $scope.tinderInfo = results        
         $scope.tinder_login_flag = false
       )
+    
     $scope.login_Chat = ->
       if(not $scope.sessionid?)
         alert "Please Click 'Login with Facebook'."
@@ -542,43 +544,48 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
              },
              "t":"d"
           }
-        $scope.webSocket = new WebSocket('wss://s-usc1c-nss-135.firebaseio.com/.ws?ns=cmb-prod&v=5')
         
-        $scope.webSocket.onopen = ->
-          #$scope.webSocket.send $scope.authData
-          # Send the message 'Ping' to the server
-          return
-
-        # Log errors
-
-        $scope.webSocket.onerror = (error) ->
-          console.log 'WebSocket Error ' + error
-          return
-
-        # Log messages from the server
-        $scope.webSocket.onmessage = (e) ->
-          data = JSON.parse(e.data)          
-          if($scope.cmb_chat_step == 0)  
-            auth_data = JSON.stringify($scope.authData)            
-            $scope.cmb_chat_step = 1         # connected
-            $scope.webSocket.send auth_data  # send firebase_token to firebase server.  
-          else if ($scope.cmb_chat_step == 1)
-            $scope.cmb_chat_step = 2
-            $scope.cmb_chat_my_id = data.d.b.d.auth.profile_id
-            $scope.chat_login_flag = false
-            $scope.ChatResult = data   
-            console.log "my_id : " + $scope.cmb_chat_my_id
-          else if ($scope.cmb_chat_step == 3)
-            if(data.d.b.s != "ok")
-              console.log data 
-              $scope.LastMsg = data 
-          else if ($scope.cmb_chat_step == 4)
-            if(data.d.b.s != "ok")
-              console.log data 
-              $scope.ChatMsg = data 
-            
-          return
+        $rootScope.webSocket1 = new WebSocket('wss://cmb-prod.firebaseio.com/.ws?ns=cmb-prod&v=5')
+        
       )
+      $rootScope.webSocket1.onmessage = (e) ->          
+        data = JSON.parse(e.data)
+        $scope.webSocket1.close()   
+        $rootScope.webSocket= new WebSocket('wss://'+data.d.d+'/.ws?ns=cmb-prod&v=5')
+        $scope.cmb_chat_step = 0         # connected
+      $rootScope.webSocket.onopen = ->
+        #$scope.webSocket.send $scope.authData
+        # Send the message 'Ping' to the server
+        return
+      $rootScope.webSocket.onerror = (error) ->
+        console.log 'WebSocket Error ' + error
+        return
+
+          # Log messages from the server
+      $rootScope.webSocket.onmessage = (e) ->
+        console.log  e.data 
+        data = JSON.parse(e.data)    
+        console.log $scope.cmb_chat_step      
+        if($scope.cmb_chat_step == 0)  
+          auth_data = JSON.stringify($scope.authData)            
+          $scope.cmb_chat_step = 1         # connected
+          console.log auth_data;
+          $rootScope.webSocket.send auth_data  # send firebase_token to firebase server.  
+        else if ($scope.cmb_chat_step == 1)
+          $scope.cmb_chat_step = 2
+          $scope.cmb_chat_my_id = data.d.b.d.auth.profile_id
+          $scope.chat_login_flag = false
+          $scope.ChatResult = data   
+          console.log "my_id : " + $scope.cmb_chat_my_id
+        else if ($scope.cmb_chat_step == 3)
+          if(data.d.b.s != "ok")
+            console.log data 
+            $scope.LastMsg = data 
+        else if ($scope.cmb_chat_step == 4)
+          if(data.d.b.s != "ok")
+            console.log data 
+            $scope.ChatMsg = data 
+        return
 
     $scope.list_Chat = ->
       
@@ -620,7 +627,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       }
       get_last_msg_data = JSON.stringify($scope.get_last_msg_packet)            
       $scope.cmb_chat_step = 3         # connected
-      $scope.webSocket.send get_last_msg_data  # send firebase_token to firebase server. 
+      $rootScope.webSocket.send get_last_msg_data  # send firebase_token to firebase server. 
       
     $scope.get_chat_message = ->
       if( $scope.cmb_chat_step < 2)
@@ -649,7 +656,7 @@ controllers.controller("CMBController", [ '$scope', '$routeParams', '$location',
       console.log $scope.get_msg_packet
       get_msg_data = JSON.stringify($scope.get_msg_packet)            
       $scope.cmb_chat_step = 4         # connected
-      $scope.webSocket.send get_msg_data  # send firebase_token to firebase server. 
+      $rootScope.webSocket.send get_msg_data  # send firebase_token to firebase server. 
   ])
 
 controllers.controller("HappenController", [ '$scope', '$routeParams', '$location', '$facebook', '$http', '$resource', 'Upload'
@@ -837,12 +844,17 @@ controllers.controller("HappenController", [ '$scope', '$routeParams', '$locatio
       console.log $scope.offset
       Happn.query(token: access_token, user_id: userid, dev_id: devid, offset: $scope.offset, (results) ->         
         $scope.happnInfo.new_prospects = results[0].jsonObj;        
-        for d,i in $scope.happnInfo.new_prospects.data 
-          user_string =  d.notifier.first_name + '(' + d.notifier.age + ')'
-          console.log user_string                      
+        for d,i in $scope.happnInfo.new_prospects.data           
+          user_string =  d.notifier.first_name + '(' + d.notifier.age + ', ' +d.notifier.my_relation+ ')'
+          console.log user_string
+          if(d.notifier.my_relation == 0)
+            $scope.new_prospects.push d
+
+
+            #$scope.new_prospects.push(user_string)
           #$scope.new_prospects.push d.notifier.first_name + '('+d.notifier.age+')'
-        
-        if($scope.happnInfo.new_prospects.data.length == 16)
+        console.log $scope.new_prospects.length
+        if($scope.new_prospects.length < 16)
           $scope.offset = $scope.offset + 16
           $scope.loadNewProspect()
         $scope.discover_prospect_flag = false
