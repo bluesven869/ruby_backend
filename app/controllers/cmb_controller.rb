@@ -15,9 +15,9 @@ class CmbController < ApplicationController
 			base_uri = 'https://api.coffeemeetsbagel.com/login'			
 			fbToken = params[:fbToken].to_str
 			options = {
-		    	'permissions': ['user_friends','contact_email','email','user_photos','public_profile','user_birthday','user_education_history'],
-		    	'app_version': '779',
-		    	'access_token': fbToken
+		    	'permissions' => ['user_friends','contact_email','email','user_photos','public_profile','user_birthday','user_education_history'],
+		    	'app_version' => '779',
+		    	'access_token' => fbToken
 			}
 			
 			headers = { 
@@ -69,8 +69,8 @@ class CmbController < ApplicationController
 				'Cookie' => my_cookie	
 	      	}
 	      	options = {	    	
-		    	'id': @user["id"],
-		    	'language_code': @user["language_code"]
+		    	'id' => @user["id"],
+		    	'language_code' => @user["language_code"]
 			}	
 		    response = self.class.put(base_uri.to_str,
 		    	:body=> options.to_json,
@@ -108,11 +108,11 @@ class CmbController < ApplicationController
 				'Cookie' => my_cookie	
 	      	}
 	      	options = {	    	
-		    	'id': @user["id"],
-		    	'gender': @user["gender"],
-		    	'birthday': @user["birthday"],
-		    	'criteria__gender': @user["criteria__gender"],
-		    	'user__email': @user["user__email"]
+		    	'id' => @user["id"],
+		    	'gender' => @user["gender"],
+		    	'birthday' => @user["birthday"],
+		    	'criteria__gender' => @user["criteria__gender"],
+		    	'user__email' => @user["user__email"]
 			}	
 		    response = self.class.put(base_uri.to_str,
 		    	:body=> options.to_json,
@@ -150,8 +150,8 @@ class CmbController < ApplicationController
 				'Cookie' => my_cookie	
 	      	}
 	      	options = {	    	
-		    	'id': @user["id"],
-		    	'location': @user["location"]
+		    	'id' => @user["id"],
+		    	'location' => @user["location"]
 			}	
 		    response = self.class.put(base_uri.to_str,
 		    	:body=> options.to_json,
@@ -232,14 +232,14 @@ class CmbController < ApplicationController
 	      	# options['user__email'] = @user["email"];
 	      	# options['criteria__gender'] = @user["criteria_gender"];
 	      	options = {	    	
-		    	'id': @user["id"],
-		    	'language_code': @user["language_code"],
-		    	'name': @user["name"],
-		    	'gender': @user["gender"],
-		    	'birthday': @user["birthday"],
-		    	'user__email': @user["email"],
-		    	'criteria__gender': @user["criteria_gender"],
-		    	'location': @user["location"]
+		    	'id' => @user["id"],
+		    	'language_code' => @user["language_code"],
+		    	'name' => @user["name"],
+		    	'gender' => @user["gender"],
+		    	'birthday' => @user["birthday"],
+		    	'user__email' => @user["email"],
+		    	'criteria__gender' => @user["criteria_gender"],
+		    	'location' => @user["location"]
 			}	
 		    response = self.class.put(base_uri.to_str,
 		    	:body=> options.to_json,
@@ -360,32 +360,32 @@ class CmbController < ApplicationController
 	    
 	      	options = [	    	
 		    	{
-		    		'relative_url': 'givetakes?embed=profile'+addedString,
-		    		'method': 'GET'
+		    		'relative_url' => 'givetakes?embed=profile'+addedString,
+		    		'method' => 'GET'
 		    	},
 		    	{
-		    		'relative_url': 'price',
-		    		'method': 'GET'
+		    		'relative_url' => 'price',
+		    		'method' => 'GET'
 		    	},
 		    	{
-		    		'relative_url': 'reportmeta?embed=profile'+addedString,
-		    		'method': 'GET'
+		    		'relative_url' => 'reportmeta?embed=profile'+addedString,
+		    		'method' => 'GET'
 		    	},
 		    	{
-		    		'relative_url': 'risinggivetakes?embed=profile'+addedString,
-		    		'method': 'GET'
+		    		'relative_url' => 'risinggivetakes?embed=profile'+addedString,
+		    		'method' => 'GET'
 		    	},
 		    	{
-		    		'relative_url': 'feature',
-		    		'method': 'GET'
+		    		'relative_url' => 'feature',
+		    		'method' => 'GET'
 		    	},
 		    	{
-		    		'relative_url': 'reward',
-		    		'method': 'GET'
+		    		'relative_url' => 'reward',
+		    		'method' => 'GET'
 		    	},
 		    	{
-		    		'relative_url': 'profile\/me',
-		    		'method': 'GET'
+		    		'relative_url' => 'profile\/me',
+		    		'method' => 'GET'
 		    	}
 			]	
 			
@@ -494,8 +494,8 @@ class CmbController < ApplicationController
 				'Cookie' => my_cookie	
 	      	}
 	      	options = {	    	
-		    	"id":customer_id,
-		    	"shown":true
+		    	"id" => customer_id,
+		    	"shown" => true
 			}	
 		    response = self.class.put(base_uri.to_str,
 		    	:body=> options.to_json,
@@ -533,10 +533,10 @@ class CmbController < ApplicationController
 				'Cookie' => my_cookie	
 	      	}
 	      	options = {	    	
-		    	"item_count":@purchase["item_count"],
-		    	"item_name":@purchase["item_name"],
-		    	"expected_price":@purchase["expected_price"],
-		    	"give_ten_id":@purchase["give_ten_id"]
+		    	"item_count" => @purchase["item_count"],
+		    	"item_name" => @purchase["item_name"],
+		    	"expected_price" => @purchase["expected_price"],
+		    	"give_ten_id" => @purchase["give_ten_id"]
 			}	
 		    response = self.class.post(base_uri.to_str,
 		    	:body=> options.to_json,
