@@ -108,7 +108,7 @@
   <div class="general_div">
     <section>
       <button type="button" class="btn btn-primary btn-large" data-ng-click="login_Chat()">Chat Login</button>
-      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="chat_login_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="$rootScope.chat_login_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
     </section>
     <section class='ChatResult' ng-if="!chat_login_flag && ChatResult">
       <span class='my_info'>{{ChatResult}}</span>
@@ -121,6 +121,31 @@
     </section>
     <section class='ChatResult' ng-if="!chat_list_flag && ChatList">
       <span class='my_info'>{{ChatList}}</span>
+    </section>
+  </div>
+  <div class="general_div">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="get_chat_message()">Get Chat Message</button>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="chat_list_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <label>PartnerID </label><input ng-model="partner_id" placeholder="partner id" />
+    <section class='ChatResult' ng-if="!chat_list_flag && ChatList">
+
+      <span class='my_info'>{{$rootScope.ChatMessageList}}</span>
+    </section>
+  </div>
+  <div class="general_div">
+    <section>
+      <button type="button" class="btn btn-primary btn-large" data-ng-click="send_message_aaa()">Send Message</button>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class='loading-bar' ng-if="send_msg_flag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </section>
+    <label>PartnerID </label><input ng-model="partner_id" placeholder="partner id" />
+    <label>Send Message </label><input ng-model="send_msg" placeholder="Please write here to send " />
+    <section class='ChatResult' ng-if="!send_msg_flag && SendResult">
+
+      <span class='my_info'>{{$rootScope.SendResult}}</span>
     </section>
   </div>
   <div class="general_div unverified">
