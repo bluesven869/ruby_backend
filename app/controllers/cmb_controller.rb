@@ -641,12 +641,12 @@ class CmbController < ApplicationController
 
 			my_cookie = "sessionid="+sessionid
 	      	headers = {
-		    	'AppStore-Version': '3.4.1.779',
-				'App-Version': '779',
-				'Client': 'Android',
-				'Content-Type': 'application/json',
-				'Facebook-Auth-Token': fbToken,
-				'Cookie': my_cookie	
+		    	'AppStore-Version' => '3.4.1.779',
+				'App-Version' => '779',
+				'Client' => 'Android',
+				'Content-Type' => 'application/json',
+				'Facebook-Auth-Token' => fbToken,
+				'Cookie' => my_cookie	
 	      	}
 	      	# options doesn't apply in GET request
 	  	    options = {
