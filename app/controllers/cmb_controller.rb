@@ -264,7 +264,7 @@ class CmbController < ApplicationController
 		else
 			fbToken = params[:fbToken].to_str
 			sessionid = params[:sessionid].to_str
-			base_uri = 'https://api.coffeemeetsbagel.com/bagels?embed=profile&prefetch=true'		
+			base_uri = 'https://api.coffeemeetsbagel.com/bagels?embed=profile&cursor_before=1486461600.0-680962423&update_before=192c0370-024d-11e7-b964-68d5052cde51'		
 			my_cookie = "sessionid="+sessionid
 	      	headers = {
 		    	'AppStore-Version' => '3.4.1.779',
@@ -638,7 +638,6 @@ class CmbController < ApplicationController
 			sessionid = params[:sessionid].to_str		
 			base_uri = 'https://api.coffeemeetsbagel.com/bagels?embed=profile&couples_only=true'  # &cursor_after=' + @bagel["cursor_after"] + '&updated_after=' + @bagel["hex_id"]
 			
-
 			my_cookie = "sessionid="+sessionid
 	      	headers = {
 		    	'AppStore-Version' => '3.4.1.779',
@@ -651,7 +650,7 @@ class CmbController < ApplicationController
 	      	# options doesn't apply in GET request
 	  	    options = {
 		
-			}	
+			}
 		    response = self.class.get(base_uri.to_str,
 		    	:body=> options.to_json,
 		      	:headers => headers)
