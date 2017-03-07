@@ -50,8 +50,11 @@ controllers.controller("CMBController", [ '$scope','$rootScope', '$routeParams',
                               # 1: Connected
                               # 2: Authorized
     $rootScope.cmb_chat_my_id = 0  # my_chat_profile_id
+    $rootScope.sending_flag = 0
+        
     $rootScope.webSocket = {};
     $rootScope.webSocket1 = {};
+
     #if(not $scope.fbToken?)
 
     # assign token fetched manually
@@ -73,11 +76,57 @@ controllers.controller("CMBController", [ '$scope','$rootScope', '$routeParams',
     #     $scope.fblogin_flag = false
     # ), (response) ->
     #     console.log 'FB Login Error', response
+    $rootScope.on_msg_1 = (e) ->  
+      data = JSON.parse(e.data)
+      console.log(data);
+      $rootScope.webSocket1.close()   
+      $rootScope.firebase_url = 'wss://'+data.d.d+'/.ws?ns=cmb-prod&v=5';
+      $rootScope.webSocket= new WebSocket($rootScope.firebase_url)
+      $rootScope.webSocket.onopen = $rootScope.on_open_2
+      $rootScope.webSocket.onerror = $rootScope.on_error_2
+      $rootScope.webSocket.onmessage = $rootScope.on_msg_2
+      $rootScope.cmb_chat_step = 0         # connected
+    $rootScope.on_open_2 = ->
+      #$scope.webSocket.send $scope.authData
+      # Send the message 'Ping' to the server
+      return
+    $rootScope.on_error_2 = (error) ->
+      console.log 'WebSocket Error ' + error
+      return
 
+        # Log messages from the server
+    $rootScope.on_msg_2 = (e) -> 
+      console.log e.data    
+      data = JSON.parse(e.data)                
+      if($rootScope.cmb_chat_step == 0)  
+        auth_data = JSON.stringify($rootScope.authData)            
+        $rootScope.cmb_chat_step = 1         # connected
+        $rootScope.webSocket.send auth_data  # send firebase_token to firebase server.  
+      else if ($rootScope.cmb_chat_step == 1)
+        $rootScope.cmb_chat_step = 2
+        $rootScope.cmb_chat_my_id = data.d.b.d.auth.profile_id
+        $rootScope.chat_login_flag = false
+        $rootScope.ChatResult = data   
+        if($rootScope.sending_flag == 1)
+          $rootScope.cmb_chat_step = $rootScope.cmb_chat_prev_step
+          $rootScope.webSocket.send $rootScope.sending_msg
+          $rootScope.sending_flag = 0
+
+      else if ($rootScope.cmb_chat_step == 3)
+        if(data.d.b.s != "ok")                
+          $rootScope.LastMsg = data 
+      else if ($rootScope.cmb_chat_step == 4)
+        # get message result
+        if(data.d.b.s != "ok")
+          $rootScope.ChatMessageList = data 
+      else if ($rootScope.cmb_chat_step == 5)
+        #send Message result
+        if(data.d.b.s != "ok")
+          $rootScope.SendResult = data 
+      return
     $scope.loginFacebook = (network)->
       FBLogin = $resource('/home/fblogin', { format: 'json' })
       FBLogin.query( (results) -> 
-        
         console.log 'data OK'   
       )
 
@@ -546,54 +595,12 @@ controllers.controller("CMBController", [ '$scope','$rootScope', '$routeParams',
           }
         
         $rootScope.webSocket1 = new WebSocket('wss://cmb-prod.firebaseio.com/.ws?ns=cmb-prod&v=5')
-        
-        $rootScope.webSocket1.onmessage = (e) ->  
-          data = JSON.parse(e.data)
-          console.log(data);
-          $rootScope.webSocket1.close()   
-          $rootScope.webSocket= new WebSocket('wss://'+data.d.d+'/.ws?ns=cmb-prod&v=5')
-          $rootScope.cmb_chat_step = 0         # connected
-          $rootScope.webSocket.onopen = ->
-            #$scope.webSocket.send $scope.authData
-            # Send the message 'Ping' to the server
-            return
-          $rootScope.webSocket.onerror = (error) ->
-            console.log 'WebSocket Error ' + error
-            return
-
-              # Log messages from the server
-          $rootScope.webSocket.onmessage = (e) -> 
-            console.log e.data    
-            data = JSON.parse(e.data)                
-            if($rootScope.cmb_chat_step == 0)  
-              auth_data = JSON.stringify($rootScope.authData)            
-              $rootScope.cmb_chat_step = 1         # connected
-              $rootScope.webSocket.send auth_data  # send firebase_token to firebase server.  
-            else if ($rootScope.cmb_chat_step == 1)
-              $rootScope.cmb_chat_step = 2
-              $rootScope.cmb_chat_my_id = data.d.b.d.auth.profile_id
-              $rootScope.chat_login_flag = false
-              $rootScope.ChatResult = data   
-              console.log "my_id : " + $rootScope.cmb_chat_my_id
-
-            else if ($rootScope.cmb_chat_step == 3)
-              if(data.d.b.s != "ok")                
-                $rootScope.LastMsg = data 
-            else if ($rootScope.cmb_chat_step == 4)
-              # get message result
-              if(data.d.b.s != "ok")
-                $rootScope.ChatMessageList = data 
-            else if ($rootScope.cmb_chat_step == 5)
-              #send Message result
-              if(data.d.b.s != "ok")
-                $rootScope.SendResult = data 
-            return
+        $rootScope.webSocket1.onmessage = $rootScope.on_msg_1
       )
       
       
 
     $scope.list_Chat = ->
-      
       if(not $scope.fbToken?)
         alert "Please Click 'Login with Facebook'."
         return
@@ -608,14 +615,9 @@ controllers.controller("CMBController", [ '$scope','$rootScope', '$routeParams',
         for d,i in chat_list          
           if(d.couple_id == null) 
             continue
-          console.log d
           $scope.ChatList.push d.couple_id
-        console.log $scope.ChatList.length
       )   
     $scope.get_last_message = ->
-      if( $rootScope.cmb_chat_step < 2)
-        alert "Please Click 'Chat Login'."
-        return
       if( not $rootScope.msg_id?)
         alert "Please input Partner ID."
         return
@@ -633,12 +635,20 @@ controllers.controller("CMBController", [ '$scope','$rootScope', '$routeParams',
       }
       get_last_msg_data = JSON.stringify($scope.get_last_msg_packet)            
       $rootScope.cmb_chat_step = 3         # connected
-      $rootScope.webSocket.send get_last_msg_data  # send firebase_token to firebase server. 
+
+      if($rootScope.webSocket.readyState == undefined || $rootScope.webSocket.readyState != $rootScope.webSocket.OPEN )
+        $rootScope.sending_flag = 1 
+        $rootScope.sending_msg = get_msg_data
+        $rootScope.cmb_chat_prev_step = $rootScope.cmb_chat_step
+        $rootScope.cmb_chat_step = 0
+        $scope.login_Chat()
+      else      
+        $rootScope.sending_flag = 0 
+        $rootScope.webSocket.send get_msg_data  # send firebase_token to firebase server.   
       
-    $scope.get_chat_message = ->
-      if( $rootScope.cmb_chat_step < 2)
-        alert "Please Click 'Chat Login'."
-        return
+      
+      
+    $scope.get_chat_message = ->      
       if( not $scope.partner_id?)
         alert "Please input Partner ID."
         return
@@ -659,11 +669,18 @@ controllers.controller("CMBController", [ '$scope','$rootScope', '$routeParams',
          },
          "t":"d"
       }
-      console.log $rootScope.webSocket
-      console.log $scope.get_msg_packet
       get_msg_data = JSON.stringify($scope.get_msg_packet)            
       $rootScope.cmb_chat_step = 4         # connected
-      $rootScope.webSocket.send get_msg_data  # send firebase_token to firebase server. 
+      if($rootScope.webSocket.readyState == undefined || $rootScope.webSocket.readyState != $rootScope.webSocket.OPEN )
+        $rootScope.sending_flag = 1 
+        $rootScope.sending_msg = get_msg_data
+        $rootScope.cmb_chat_prev_step = $rootScope.cmb_chat_step
+        $rootScope.cmb_chat_step = 0
+        $scope.login_Chat()
+      else      
+        $rootScope.sending_flag = 0 
+        $rootScope.webSocket.send get_msg_data  # send firebase_token to firebase server.   
+      
 
     $scope.send_message_aaa = ->
       d = new Date()
@@ -708,7 +725,17 @@ controllers.controller("CMBController", [ '$scope','$rootScope', '$routeParams',
       }
       send_msg_packet = JSON.stringify($scope.send_msg_packet)            
       $rootScope.cmb_chat_step = 5         # send message
-      $rootScope.webSocket.send send_msg_packet  # send firebase_token to firebase server. 
+      if($rootScope.webSocket.readyState == undefined || $rootScope.webSocket.readyState != $rootScope.webSocket.OPEN )
+        $rootScope.sending_flag = 1 
+        $rootScope.sending_msg = get_msg_data
+        $rootScope.cmb_chat_prev_step = $rootScope.cmb_chat_step
+        $rootScope.cmb_chat_step = 0
+        $scope.login_Chat()
+      else      
+        $rootScope.sending_flag = 0 
+        $rootScope.webSocket.send get_msg_data  # send firebase_token to firebase server.   
+      
+      #$rootScope.webSocket.send send_msg_packet  # send firebase_token to firebase server. 
       
       return
 
