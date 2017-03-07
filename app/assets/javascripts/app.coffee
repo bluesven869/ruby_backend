@@ -720,7 +720,7 @@ controllers.controller("CMBController", [ '$scope','$rootScope', '$routeParams',
       temp_time= miliseconds
       while i >= 0
         n = temp_time % 64;
-        str = str + original_str.charAt(n)
+        str =  original_str.charAt(n) + str
         temp_time /= 64
         temp_time = parseInt(temp_time)
         i--
